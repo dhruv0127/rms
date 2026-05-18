@@ -1,22 +1,28 @@
 {{ 'idiom-theme.css' | asset_url | stylesheet_tag }}
 
 <style>
-  .idiom-brand-story {
-    position: relative;
-    background: var(--idiom-olive);
-    width: 100%;
-    padding: 80px 48px;
-    overflow: hidden;
-    text-align: center;
+  .idiom-brand-story-section {
+    overflow: visible;
+    padding: 0 20px;
+    margin-bottom: 160px;
   }
 
-  /* Butterfly — left, partially clipped */
+  .idiom-brand-story {
+    position: relative;
+    background: #8b8b2a;
+    width: 100%;
+    padding: 72px 48px;
+    overflow: visible;
+    text-align: center;
+    border-radius: 28px;
+  }
+
+  /* Butterfly — top-left, large, mostly off the top edge */
   .idiom-brand-story__butterfly {
     position: absolute;
-    top: 50%;
-    left: -40px;
-    transform: translateY(-55%);
-    width: 340px;
+    top: -60px;
+    left: -20px;
+    width: 380px;
     pointer-events: none;
     z-index: 1;
   }
@@ -27,15 +33,14 @@
     display: block;
   }
 
-  /* Moon — right, partially clipped */
+  /* Moon — bottom-right, about 45% hanging below the section */
   .idiom-brand-story__moon {
     position: absolute;
-    top: 50%;
-    right: -80px;
-    transform: translateY(-50%);
-    width: 300px;
+    bottom: -160px;
+    right: -20px;
+    width: 380px;
     pointer-events: none;
-    z-index: 1;
+    z-index: 3;
   }
 
   .idiom-brand-story__moon img {
@@ -86,14 +91,16 @@
     background: #1a1a1a;
     color: #ffffff;
     border: none;
-    border-radius: 999px;
-    padding: 14px 48px;
+    border-radius: 8px;
+    padding: 14px 0;
     font-size: 15px;
     font-weight: 600;
     text-decoration: none;
     letter-spacing: 0.01em;
     margin-top: 8px;
-    min-width: 200px;
+    width: 360px;
+    max-width: 100%;
+    text-align: center;
     transition: background 0.2s;
   }
 
@@ -127,18 +134,24 @@
 
   /* Tablet */
   @media (max-width: 768px) {
+    .idiom-brand-story-section {
+      padding: 0 12px;
+    }
+
     .idiom-brand-story {
       padding: 60px 32px;
     }
 
     .idiom-brand-story__butterfly {
-      width: 220px;
-      left: -20px;
+      width: 260px;
+      top: -40px;
+      left: -10px;
     }
 
     .idiom-brand-story__moon {
-      width: 200px;
-      right: -50px;
+      width: 260px;
+      bottom: -120px;
+      right: -10px;
     }
 
     .idiom-brand-story__heading {
@@ -148,14 +161,19 @@
 
   /* Mobile */
   @media (max-width: 480px) {
+    .idiom-brand-story-section {
+      padding: 0 8px;
+    }
+
     .idiom-brand-story {
       padding: 48px 16px;
+      border-radius: 16px;
     }
 
     .idiom-brand-story__butterfly {
-      width: 160px;
-      left: -30px;
-      top: 40%;
+      width: 180px;
+      top: -30px;
+      left: -10px;
     }
 
     .idiom-brand-story__moon {
