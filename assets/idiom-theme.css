@@ -1,0 +1,108 @@
+/* ============================================
+   idiom Theme — Shared CSS Foundation
+   ============================================ */
+
+/* --- Global resets --- */
+* { box-sizing: border-box; }
+img { max-width: 100%; }
+
+/* --- Brand tokens --- */
+:root {
+  --idiom-cream: #faf6f0;
+  --idiom-olive: #5a5a1e;
+  --idiom-olive-dark: #3d3d1a;
+  --idiom-black: #1a1a1a;
+  --idiom-white: #ffffff;
+}
+
+/* --- Marquee / ticker strip --- */
+.idiom-marquee {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.idiom-marquee-track {
+  display: inline-flex;
+  animation: idiom-marquee 30s linear infinite;
+}
+
+@keyframes idiom-marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* --- Product card base --- */
+.idiom-product-card-wrap {
+  position: relative;
+}
+
+.idiom-product-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+}
+
+.idiom-product-card__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.idiom-product-card__bottle {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 75%;
+  object-fit: contain;
+  z-index: 2;
+}
+
+/* --- Personality tag badge --- */
+.idiom-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: var(--idiom-cream);
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 12px;
+  z-index: 3;
+  transform: rotate(-3deg);
+  white-space: nowrap;
+}
+
+/* --- CTA buttons --- */
+.idiom-btn {
+  display: inline-block;
+  background: var(--idiom-olive);
+  color: var(--idiom-white);
+  border-radius: 999px;
+  padding: 10px 24px;
+  font-size: 14px;
+  border: 2px solid var(--idiom-olive);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.idiom-btn--outline {
+  background: transparent;
+  color: var(--idiom-olive);
+}
+
+/* --- Section heading pair --- */
+.idiom-section-heading h2 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.idiom-section-heading p {
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 6px;
+  opacity: 0.7;
+}

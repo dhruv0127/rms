@@ -1,0 +1,52 @@
+<style>
+.idiom-layering { background: var(--idiom-olive); display: flex; align-items: center; min-height: 320px; padding: 40px 48px; gap: 40px; }
+.idiom-layering__text { flex: 0 0 30%; }
+.idiom-layering__heading { color: #fff; font-size: 40px; font-weight: 700; line-height: 1; margin: 0; }
+.idiom-layering__subtext { color: #fff; font-style: italic; font-size: 14px; margin-top: 12px; }
+.idiom-layering__fine { color: rgba(255,255,255,0.7); font-style: italic; font-size: 11px; margin-top: 4px; }
+.idiom-layering__products { flex: 1 1 0; display: flex; gap: 16px; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; padding-bottom: 4px; }
+.idiom-layering__products::-webkit-scrollbar { display: none; }
+.idiom-layering__products .idiom-product-card-link { flex: 0 0 200px; }
+@media (max-width: 768px) {
+  .idiom-layering { flex-direction: column; padding: 40px 16px; min-height: auto; }
+  .idiom-layering__text { flex: none; width: 100%; }
+  .idiom-layering__products { width: 100%; }
+}
+</style>
+
+<section class="idiom-layering">
+  <div class="idiom-layering__text">
+    <p class="idiom-layering__heading">{{ section.settings.heading_solo }}</p>
+    <p class="idiom-layering__heading">{{ section.settings.heading_layer }}</p>
+    <p class="idiom-layering__subtext">{{ section.settings.subtext }}</p>
+    <p class="idiom-layering__fine">{{ section.settings.fine_print }}</p>
+  </div>
+
+  <div class="idiom-layering__products">
+    {%- assign layer_products = product.metafields.custom.layer_with_products.value -%}
+    {%- if layer_products != blank -%}
+      {%- for lp in layer_products -%}
+        {% render 'idiom-product-card', product: lp %}
+      {%- endfor -%}
+    {%- elsif section.settings.layering_collection != blank -%}
+      {%- assign layer_col = collections[section.settings.layering_collection] -%}
+      {%- for lp in layer_col.products limit: 6 -%}
+        {% render 'idiom-product-card', product: lp %}
+      {%- endfor -%}
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Layering Row",
+  "settings": [
+    { "type": "text", "id": "heading_solo", "label": "Line 1", "default": "wear solo," },
+    { "type": "text", "id": "heading_layer", "label": "Line 2", "default": "or layer me with:" },
+    { "type": "text", "id": "subtext", "label": "Subtext", "default": "we don't do signature scents..." },
+    { "type": "text", "id": "fine_print", "label": "Fine print", "default": "* that's your part." },
+    { "type": "collection", "id": "layering_collection", "label": "Fallback collection" }
+  ],
+  "presets": [{ "name": "Layering Row" }]
+}
+{% endschema %}

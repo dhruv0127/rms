@@ -1,0 +1,33 @@
+[    1252ms] [LOG] AZ: Google Font & Custom Fonts v1.0.2 @ https://idiomfragrances.com/:716
+[    1282ms] [INFO] [HotReload] CLI hot reload disabled - No hot reload port specified. @ https://idiomfragrances.com/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:316
+[    6362ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3119
+[    6364ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3119
+[    6366ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :2752
+[   18799ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3119
+[   18801ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3119
+[   18802ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :2752
+[   22675ms] [ERROR] Failed to load resource: net::ERR_TIMED_OUT @ https://shop.app/checkouts/internal/preloads.js?locale=en-GB&shop_id=91491172729:0
+[   26397ms] [WARNING] The resource https://idiomfragrances.com/cdn/shop/files/idiom_logo_black_150x45.png?v=1746711320 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://idiomfragrances.com/:0
+[   26397ms] [WARNING] The resource https://idiomfragrances.com/cdn/shop/t/8/assets/loading.svg?v=91665432863842511931779072698 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://idiomfragrances.com/:0
+[   40016ms] [WARNING] The resource https://idiomfragrances.com/cdn/shop/files/idiom_logo_black_150x45.png?v=1746711320 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://idiomfragrances.com/:0
+[   40016ms] [WARNING] The resource https://idiomfragrances.com/cdn/shop/t/8/assets/loading.svg?v=91665432863842511931779072698 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://idiomfragrances.com/:0
+[   50510ms] [WARNING] The resource https://idiomfragrances.com/cdn/shop/files/idiom_logo_black_150x45.png?v=1746711320 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://idiomfragrances.com/:0
+[   50510ms] [WARNING] The resource https://idiomfragrances.com/cdn/shop/t/8/assets/loading.svg?v=91665432863842511931779072698 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://idiomfragrances.com/:0
+[   62127ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3119
+[   62129ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3119
+[   62130ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :2752
+[   70839ms] [WARNING] The resource https://idiomfragrances.com/cdn/shop/files/idiom_logo_black_150x45.png?v=1746711320 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://idiomfragrances.com/:0
+[   70839ms] [WARNING] The resource https://idiomfragrances.com/cdn/shop/t/8/assets/loading.svg?v=91665432863842511931779072698 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://idiomfragrances.com/:0
+[   88364ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3119
+[   88366ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3119
+[   88367ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :2752
+[   91854ms] [WARNING] The resource https://idiomfragrances.com/cdn/shop/files/idiom_logo_black_150x45.png?v=1746711320 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://idiomfragrances.com/:0
+[   91854ms] [WARNING] The resource https://idiomfragrances.com/cdn/shop/t/8/assets/loading.svg?v=91665432863842511931779072698 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://idiomfragrances.com/:0
+[   94196ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3119
+[   94198ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3119
+[   94199ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :2752
+[  343915ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3119
+[  343916ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3119
+[  343918ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :2752
+[  346957ms] [WARNING] The resource https://idiomfragrances.com/cdn/shop/files/idiom_logo_black_150x45.png?v=1746711320 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://idiomfragrances.com/:0
+[  346957ms] [WARNING] The resource https://idiomfragrances.com/cdn/shop/t/8/assets/loading.svg?v=91665432863842511931779072698 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://idiomfragrances.com/:0

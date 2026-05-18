@@ -1,0 +1,308 @@
+- generic [active] [ref=e1]:
+  - alertdialog "Cookie consent" [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - heading "Cookie consent" [level=2] [ref=e5]
+        - paragraph [ref=e6]:
+          - text: We and our partners, including Shopify, use cookies and other technologies to personalize your experience, show you ads, and perform analytics, and we will not use cookies or other technologies for these purposes unless you accept them. Learn more in our
+          - link "Privacy Policy" [ref=e7] [cursor=pointer]:
+            - /url: http://idiomfragrances.com/policies/privacy-policy
+      - generic [ref=e8]:
+        - button "Manage preferences" [ref=e9] [cursor=pointer]
+        - button "Accept" [ref=e10] [cursor=pointer]
+        - button "Decline" [ref=e11] [cursor=pointer]
+  - link "Skip to content" [ref=e12] [cursor=pointer]:
+    - /url: "#MainContent"
+  - banner [ref=e14]:
+    - generic [ref=e15]:
+      - heading "idiom®" [level=1] [ref=e16]:
+        - link "idiom®" [ref=e17] [cursor=pointer]:
+          - /url: /
+          - img [ref=e18]
+      - navigation [ref=e20]:
+        - generic [ref=e21]:
+          - link "Home" [ref=e23] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e24]: Home
+          - navigation [ref=e25]:
+            - link "Shop" [ref=e26] [cursor=pointer]:
+              - /url: /collections/shop-everything
+              - generic [ref=e27]: Shop
+          - link "Gallery" [ref=e29] [cursor=pointer]:
+            - /url: /pages/gallery
+            - generic [ref=e30]: Gallery
+          - link "About" [ref=e32] [cursor=pointer]:
+            - /url: /pages/story
+            - generic [ref=e33]: About
+        - generic [ref=e34]:
+          - group [ref=e36]:
+            - button "Open search bar" [ref=e37] [cursor=pointer]:
+              - img
+              - generic [ref=e38]: Open search bar
+          - link "My Account" [ref=e40] [cursor=pointer]:
+            - /url: /account
+            - generic [ref=e41]: My Account
+            - img
+          - link "Open cart" [ref=e43] [cursor=pointer]:
+            - /url: /cart
+            - generic [ref=e44]: Open cart
+            - img
+  - group [ref=e49]:
+    - generic [ref=e51]:
+      - generic [ref=e56]:
+        - text: free domestic shipping orders £40+
+        - strong [ref=e57]: "["
+        - link [ref=e378] [cursor=pointer]:
+          - /url: /collections/shop-everything
+          - strong [ref=e59]: SHOP NOW
+        - strong [ref=e60]: "]"
+      - generic [ref=e65]:
+        - text: free samples in every order
+        - strong [ref=e66]: "["
+        - link "SHOP NOW" [ref=e379] [cursor=pointer]:
+          - /url: /collections/shop-everything
+          - strong [ref=e68]: SHOP NOW
+        - strong [ref=e69]: "]"
+      - generic [ref=e74]:
+        - text: free shipping orders £40+ [
+        - link [ref=e75] [cursor=pointer]:
+          - /url: /collections/shop-everything
+          - strong [ref=e76]: SHOP NOW
+        - text: "]"
+    - button "Previous" [ref=e77] [cursor=pointer]
+    - button "Next" [ref=e78] [cursor=pointer]
+  - main [ref=e79]:
+    - generic [ref=e82]:
+      - generic [ref=e83]:
+        - img "ACOUSTIC ROSE | EAU DE PARFUM" [ref=e84]
+        - button "grab 10% off" [ref=e85] [cursor=pointer]
+      - generic [ref=e88]:
+        - generic [ref=e90]:
+          - figure [ref=e94]:
+            - img "ACOUSTIC ROSE | EAU DE PARFUM" [ref=e95]
+          - figure [ref=e99]:
+            - img "ACOUSTIC ROSE | EAU DE PARFUM" [ref=e100]
+          - figure [ref=e104]:
+            - img "ACOUSTIC ROSE | EAU DE PARFUM" [ref=e105]
+          - figure [ref=e109]:
+            - img "ACOUSTIC ROSE | EAU DE PARFUM" [ref=e110]
+        - generic [ref=e112]:
+          - heading "ACOUSTIC ROSE | EAU DE PARFUM" [level=2] [ref=e115]
+          - heading "FLORAL. JUICY. AMBER." [level=5] [ref=e118]
+          - generic [ref=e119]:
+            - paragraph [ref=e120]: rose centre stage. a timeless, modern, universal rose. it begins bright, floral, moves through notes of juicy apricot and osmanthus before revealing deeper notes that softly hum with spice, earth, and tobacco. it’s rose in all its blooming glory
+            - paragraph [ref=e121]: "wear solo: a warm, juicy, skin-close floral."
+            - paragraph [ref=e122]:
+              - text: "layer:"
+              - generic [ref=e123]: a
+              - text: dds rose-toned refinement and polish.
+          - generic [ref=e125]:
+            - group "Size" [ref=e128]:
+              - generic [ref=e129]: Size
+              - generic [ref=e130]:
+                - generic [ref=e131]:
+                  - radio "30ml" [checked]
+                  - generic [ref=e133]: 30ml
+                - generic [ref=e134]:
+                  - radio "2ml"
+                  - generic [ref=e136]: 2ml
+            - generic [ref=e138]:
+              - button "Add to Cart•£38.00" [ref=e140] [cursor=pointer]:
+                - generic [ref=e141]: Add to Cart•£38.00
+              - link "More payment options" [ref=e146] [cursor=pointer]:
+                - /url: "#"
+          - button "fragrance notes" [ref=e149] [cursor=pointer]:
+            - text: fragrance notes
+            - img [ref=e150]
+            - img [ref=e152]
+          - button "how to wear" [ref=e155] [cursor=pointer]:
+            - text: how to wear
+            - img [ref=e156]
+            - img [ref=e158]
+          - button "full ingredient list" [ref=e161] [cursor=pointer]:
+            - text: full ingredient list
+            - img [ref=e162]
+            - img [ref=e164]
+          - separator [ref=e166]
+    - generic [ref=e167]:
+      - generic [ref=e168]:
+        - generic [ref=e170]:
+          - img "idiom_london_2.png" [ref=e175]
+          - heading "Rose. Right here, right now. Modern rose. Soft spice. Radiant skin warmth. Juicy" [level=1] [ref=e178]:
+            - generic [ref=e181]:
+              - text: Rose. Right here, right now.
+              - text: Modern rose. Soft spice. Radiant skin warmth. Juicy
+        - generic [ref=e183]:
+          - heading "127 unique fragrances. 1 kit." [level=1] [ref=e184]
+          - paragraph [ref=e185]: discover your Flanker fragrance combinations with our 7-piece discovery kit.
+          - link "shop now | £17" [ref=e186] [cursor=pointer]:
+            - /url: "#"
+      - generic [ref=e189]:
+        - generic [ref=e190]: smell like no one else™ find your fragrance freedom layer, or wear solo ·
+        - generic [ref=e191]: smell like no one else™ find your fragrance freedom layer, or wear solo ·
+    - generic [ref=e198]:
+      - generic [ref=e201]:
+        - text: layer, or wear solo
+        - text: find your fragrance freedom
+        - text: smell like no one else™
+      - generic [ref=e207]:
+        - text: layer, or wear solo
+        - text: find your fragrance freedom
+        - text: smell like no one else™
+      - generic [ref=e213]:
+        - text: layer, or wear solo
+        - text: find your fragrance freedom
+        - text: smell like no one else™
+      - generic [ref=e219]:
+        - text: layer, or wear solo
+        - text: find your fragrance freedom
+        - text: smell like no one else™
+      - generic [ref=e225]:
+        - text: layer, or wear solo
+        - text: find your fragrance freedom
+        - text: smell like no one else™
+      - generic [ref=e231]:
+        - text: layer, or wear solo
+        - text: find your fragrance freedom
+        - text: smell like no one else™
+      - generic [ref=e237]:
+        - text: layer, or wear solo
+        - text: find your fragrance freedom
+        - text: smell like no one else™
+      - generic [ref=e243]:
+        - text: layer, or wear solo
+        - text: find your fragrance freedom
+        - text: smell like no one else™
+      - generic [ref=e249]:
+        - text: layer, or wear solo
+        - text: find your fragrance freedom
+        - text: smell like no one else™
+      - generic [ref=e255]:
+        - text: layer, or wear solo
+        - text: find your fragrance freedom
+        - text: smell like no one else™
+      - generic [ref=e261]:
+        - text: layer, or wear solo
+        - text: find your fragrance freedom
+        - text: smell like no one else™
+      - generic [ref=e267]:
+        - text: layer, or wear solo
+        - text: find your fragrance freedom
+        - text: smell like no one else™
+    - paragraph [ref=e275]:
+      - generic [ref=e276]:
+        - text: wear
+        - strong [ref=e277]: ACOUSTIC ROSE | EAU DE PARFUM
+        - text: "solo or layer with:"
+    - generic [ref=e282]:
+      - generic [ref=e283]:
+        - link "BERGAMOT HI-FI | EAU DE PARFUM" [ref=e286] [cursor=pointer]:
+          - /url: /products/bergamot-hi-fi-30ml
+          - generic [ref=e287]:
+            - figure [ref=e288]:
+              - img "52.png" [ref=e289]
+            - generic [ref=e290]: BERGAMOT HI-FI | EAU DE PARFUM
+        - generic [ref=e291]:
+          - link "BERGAMOT HI-FI | EAU DE PARFUM" [ref=e292] [cursor=pointer]:
+            - /url: /products/bergamot-hi-fi-30ml
+          - link "From £6.00" [ref=e293] [cursor=pointer]:
+            - /url: /products/bergamot-hi-fi-30ml
+      - generic [ref=e294]:
+        - link "SAFFRON HAZE | EAU DE PARFUM" [ref=e297] [cursor=pointer]:
+          - /url: /products/saffran-haze-30ml
+          - generic [ref=e298]:
+            - figure [ref=e299]:
+              - img "saffron.png" [ref=e300]
+            - generic [ref=e301]: SAFFRON HAZE | EAU DE PARFUM
+        - generic [ref=e302]:
+          - link "SAFFRON HAZE | EAU DE PARFUM" [ref=e303] [cursor=pointer]:
+            - /url: /products/saffran-haze-30ml
+          - link "From £6.00" [ref=e304] [cursor=pointer]:
+            - /url: /products/saffran-haze-30ml
+      - generic [ref=e305]:
+        - link "VETIVER ACE | EAU DE PARFUM" [ref=e308] [cursor=pointer]:
+          - /url: /products/vetiver-ace-30ml
+          - generic [ref=e309]:
+            - figure [ref=e310]:
+              - img "54_48ecb9fc-c7dd-4935-b4ac-ed11c0cd116f.png" [ref=e311]
+            - generic [ref=e312]: VETIVER ACE | EAU DE PARFUM
+        - generic [ref=e313]:
+          - link "VETIVER ACE | EAU DE PARFUM" [ref=e314] [cursor=pointer]:
+            - /url: /products/vetiver-ace-30ml
+          - link "From £6.00" [ref=e315] [cursor=pointer]:
+            - /url: /products/vetiver-ace-30ml
+    - generic [ref=e317]:
+      - figure [ref=e318]:
+        - img "FDSAFDA.gif" [ref=e319]
+      - generic [ref=e323]:
+        - generic [ref=e324]:
+          - heading "join the world of idiom™" [level=2] [ref=e325]
+          - paragraph [ref=e327]: No spam, we promise... just good vibes, early access, promotions & new releases.
+        - generic [ref=e330]:
+          - textbox "Your email" [ref=e333]
+          - button "Subscribe to Our Newsletter" [ref=e335] [cursor=pointer]:
+            - generic [ref=e336]: Subscribe to Our Newsletter
+            - img [ref=e337]
+  - contentinfo [ref=e340]:
+    - generic [ref=e341]:
+      - generic [ref=e342]:
+        - paragraph [ref=e343]: smell like no one else
+        - paragraph [ref=e344]: Crafted for those who move differently. Scent-first, always.
+      - generic [ref=e348]:
+        - paragraph [ref=e349]: the boring stuff
+        - list [ref=e350]:
+          - listitem [ref=e351]:
+            - link "delivery" [ref=e352] [cursor=pointer]:
+              - /url: /policies/shipping-policy
+          - listitem [ref=e353]:
+            - link "returns" [ref=e354] [cursor=pointer]:
+              - /url: /policies/refund-policy
+          - listitem [ref=e355]:
+            - link "accounts" [ref=e356] [cursor=pointer]:
+              - /url: /account
+          - listitem [ref=e357]:
+            - link "faqs" [ref=e358] [cursor=pointer]:
+              - /url: /pages/faqs
+          - listitem [ref=e359]:
+            - link "contact" [ref=e360] [cursor=pointer]:
+              - /url: /pages/contact
+          - listitem [ref=e361]:
+            - link "terms & conditions" [ref=e362] [cursor=pointer]:
+              - /url: /policies/terms-of-service
+          - listitem [ref=e363]:
+            - link "privacy policy" [ref=e364] [cursor=pointer]:
+              - /url: /policies/privacy-policy
+      - generic [ref=e365]:
+        - paragraph [ref=e366]: shop by type
+        - list [ref=e367]:
+          - listitem [ref=e368]:
+            - link "full size" [ref=e369] [cursor=pointer]:
+              - /url: /collections/full-size
+          - listitem [ref=e370]:
+            - link "mini-oms" [ref=e371] [cursor=pointer]:
+              - /url: /collections/mini-oms
+          - listitem [ref=e372]:
+            - link "kits and gifts" [ref=e373] [cursor=pointer]:
+              - /url: /collections/kits-and-gifts
+    - generic [ref=e374]: idiom®
+  - iframe [ref=e376]:
+    - generic [ref=f14e4]:
+      - button [ref=f14e7] [cursor=pointer]:
+        - img [ref=f14e9]
+        - img [ref=f14e12]
+      - generic [ref=f14e15]:
+        - generic [ref=f14e18]:
+          - link "Logo" [ref=f14e19] [cursor=pointer]:
+            - /url: https://admin.shopify.com/store/idiom-london
+            - img "Logo" [ref=f14e20]
+          - generic [ref=f14e22]:
+            - generic [ref=f14e23]: Development (24ea89-MacBook-Air-17)
+            - generic [ref=f14e24]: Draft
+        - generic [ref=f14e26]:
+          - button "Hide bar" [ref=f14e28] [cursor=pointer]:
+            - generic [ref=f14e29]: Hide bar
+          - button "Exit preview" [ref=f14e31] [cursor=pointer]:
+            - generic [ref=f14e32]: Exit preview
+          - button "Copy link" [ref=f14e35] [cursor=pointer]:
+            - img [ref=f14e39]
+            - generic [ref=f14e41]: Copy link

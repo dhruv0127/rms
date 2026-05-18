@@ -1,0 +1,17 @@
+[     849ms] [LOG] AZ: Google Font & Custom Fonts v1.0.2 @ https://idiomfragrances.com/products/acoustic-rose-30ml:725
+[    1449ms] [INFO] [HotReload] CLI hot reload disabled - No hot reload port specified. @ https://idiomfragrances.com/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:316
+[    6556ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3119
+[    6558ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3119
+[    6560ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :2752
+[   20174ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3119
+[   20176ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3119
+[   20177ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :2752
+[   22282ms] [ERROR] Failed to load resource: net::ERR_TIMED_OUT @ https://shop.app/checkouts/internal/preloads.js?locale=en-GB&shop_id=91491172729:0
+[   24845ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3119
+[   24847ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3119
+[   24848ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :2752
+[   29076ms] [WARNING] The resource https://idiomfragrances.com/cdn/shop/files/idiom_logo_black_150x45.png?v=1746711320 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://idiomfragrances.com/products/acoustic-rose-30ml:0
+[   29076ms] [WARNING] The resource https://idiomfragrances.com/cdn/shop/t/8/assets/loading.svg?v=91665432863842511931779072698 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://idiomfragrances.com/products/acoustic-rose-30ml:0
+[   29297ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3119
+[   29298ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3119
+[   29300ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :2752

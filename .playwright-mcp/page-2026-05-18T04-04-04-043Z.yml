@@ -1,0 +1,211 @@
+- generic [active] [ref=e1]:
+  - alertdialog "Cookie consent" [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - heading "Cookie consent" [level=2] [ref=e5]
+        - paragraph [ref=e6]:
+          - text: We and our partners, including Shopify, use cookies and other technologies to personalize your experience, show you ads, and perform analytics, and we will not use cookies or other technologies for these purposes unless you accept them. Learn more in our
+          - link "Privacy Policy" [ref=e7] [cursor=pointer]:
+            - /url: http://idiomfragrances.com/policies/privacy-policy
+      - generic [ref=e8]:
+        - button "Manage preferences" [ref=e9] [cursor=pointer]
+        - button "Accept" [ref=e10] [cursor=pointer]
+        - button "Decline" [ref=e11] [cursor=pointer]
+  - link "Skip to content" [ref=e12] [cursor=pointer]:
+    - /url: "#MainContent"
+  - banner [ref=e14]:
+    - generic [ref=e15]:
+      - button "Open navigation menu" [ref=e16] [cursor=pointer]:
+        - generic [ref=e17]: Open navigation menu
+        - img
+      - heading "idiom®" [level=1] [ref=e18]:
+        - link "idiom®" [ref=e19] [cursor=pointer]:
+          - /url: /
+          - img [ref=e20]
+      - navigation [ref=e22]:
+        - generic [ref=e23]:
+          - group [ref=e25]:
+            - button "Open search bar" [ref=e26] [cursor=pointer]:
+              - img
+              - generic [ref=e27]: Open search bar
+          - link "Open cart" [ref=e29] [cursor=pointer]:
+            - /url: /cart
+            - generic [ref=e30]: Open cart
+            - img
+  - group [ref=e35]:
+    - generic [ref=e37]:
+      - generic [ref=e42]:
+        - text: free domestic shipping orders £40+
+        - strong [ref=e43]: "["
+        - link "SHOP NOW" [ref=e44] [cursor=pointer]:
+          - /url: /collections/shop-everything
+          - strong [ref=e45]: SHOP NOW
+        - strong [ref=e46]: "]"
+      - generic [ref=e51]:
+        - text: free samples in every order
+        - strong [ref=e52]: "["
+        - link [ref=e53] [cursor=pointer]:
+          - /url: /collections/shop-everything
+          - strong [ref=e54]: SHOP NOW
+        - strong [ref=e55]: "]"
+      - generic [ref=e60]:
+        - text: free shipping orders £40+ [
+        - link [ref=e61] [cursor=pointer]:
+          - /url: /collections/shop-everything
+          - strong [ref=e62]: SHOP NOW
+        - text: "]"
+    - button "Previous" [ref=e63] [cursor=pointer]
+    - button "Next" [ref=e64] [cursor=pointer]
+  - main [ref=e65]:
+    - generic [ref=e68]:
+      - img "3D AMPLIFIER | EAU DE PARFUM" [ref=e70]
+      - generic [ref=e73]:
+        - generic [ref=e74]:
+          - generic [ref=e77]:
+            - figure [ref=e81]:
+              - img "3D AMPLIFIER | EAU DE PARFUM" [ref=e82]
+            - figure [ref=e86]:
+              - img "3D AMPLIFIER | EAU DE PARFUM" [ref=e87]
+            - figure [ref=e91]:
+              - img "3D AMPLIFIER | EAU DE PARFUM" [ref=e92]
+            - figure [ref=e96]:
+              - img "3D AMPLIFIER | EAU DE PARFUM" [ref=e97]
+          - generic [ref=e100]:
+            - link "3D AMPLIFIER | EAU DE PARFUM" [ref=e102] [cursor=pointer]:
+              - /url: //idiomfragrances.com/cdn/shop/files/53_2048x.png?v=1763287976
+              - figure [ref=e103]:
+                - img "3D AMPLIFIER | EAU DE PARFUM" [ref=e104]
+            - link "3D AMPLIFIER | EAU DE PARFUM" [ref=e106] [cursor=pointer]:
+              - /url: //idiomfragrances.com/cdn/shop/files/32_302e1fca-1974-4e7b-8935-1cc313b16cfe_2048x.png?v=1763287996
+              - figure [ref=e107]:
+                - img "3D AMPLIFIER | EAU DE PARFUM" [ref=e108]
+            - link "3D AMPLIFIER | EAU DE PARFUM" [ref=e110] [cursor=pointer]:
+              - /url: //idiomfragrances.com/cdn/shop/files/63_ad7ea255-40ba-4e9c-a9f0-42285ca5ab6e_2048x.png?v=1763288334
+              - figure [ref=e111]:
+                - img "3D AMPLIFIER | EAU DE PARFUM" [ref=e112]
+            - link "3D AMPLIFIER | EAU DE PARFUM" [ref=e114] [cursor=pointer]:
+              - /url: //idiomfragrances.com/cdn/shop/files/61_2048x.png?v=1763288004
+              - figure [ref=e115]:
+                - img "3D AMPLIFIER | EAU DE PARFUM" [ref=e116]
+        - generic [ref=e118]:
+          - heading "3D AMPLIFIER | EAU DE PARFUM" [level=2] [ref=e121]
+          - heading "BRIGHTEN. DEEPEN. EXTEND." [level=5] [ref=e124]
+          - generic [ref=e125]:
+            - paragraph [ref=e126]: a scent enhancer that elevates any fragrance. amplifies radiance, diffusion, depth, and longevity, in a subtle, magical way. worn solo, it’s a soft, enigmatic hum on skin.
+            - paragraph [ref=e127]:
+              - strong [ref=e128]: "wear solo:"
+              - text: a subtle skin aura, genderless and magnetic.
+            - paragraph [ref=e129]:
+              - strong [ref=e130]: "layer:"
+              - text: enhances, brightens, and extends.
+          - generic [ref=e132]:
+            - group "Size" [ref=e135]:
+              - generic [ref=e136]: Size
+              - generic [ref=e137]:
+                - generic [ref=e138]:
+                  - radio "30ml" [checked]
+                  - generic [ref=e140]: 30ml
+                - generic [ref=e141]:
+                  - radio "2ml"
+                  - generic [ref=e143]: 2ml
+            - generic [ref=e145]:
+              - button "Add to Cart•£38.00" [ref=e147] [cursor=pointer]:
+                - generic [ref=e148]: Add to Cart•£38.00
+              - link "More payment options" [ref=e153] [cursor=pointer]:
+                - /url: "#"
+          - button "fragrance notes" [ref=e156] [cursor=pointer]:
+            - text: fragrance notes
+            - img [ref=e157]
+            - img [ref=e159]
+          - button "how to wear" [ref=e162] [cursor=pointer]:
+            - text: how to wear
+            - img [ref=e163]
+            - img [ref=e165]
+          - button "full ingredient list" [ref=e168] [cursor=pointer]:
+            - text: full ingredient list
+            - img [ref=e169]
+            - img [ref=e171]
+    - generic [ref=e174]:
+      - paragraph [ref=e175]: wear solo,
+      - paragraph [ref=e176]: "or layer me with:"
+      - paragraph [ref=e177]: these scents were made to mix.
+      - paragraph [ref=e178]: "* that's your part."
+    - generic [ref=e183]:
+      - paragraph [ref=e184]: cool. meditative. lingering aromatic wood.
+      - paragraph [ref=e185]: subtle gourmand notes on warm skin. quietly radiant.
+  - contentinfo [ref=e187]:
+    - generic [ref=e188]:
+      - generic [ref=e189]:
+        - paragraph [ref=e190]: smell like no one else
+        - paragraph [ref=e191]: Crafted for those who move differently. Scent-first, always.
+      - generic [ref=e195]:
+        - paragraph [ref=e196]: the boring stuff
+        - list [ref=e197]:
+          - listitem [ref=e198]:
+            - link "delivery" [ref=e199] [cursor=pointer]:
+              - /url: /policies/shipping-policy
+          - listitem [ref=e200]:
+            - link "returns" [ref=e201] [cursor=pointer]:
+              - /url: /policies/refund-policy
+          - listitem [ref=e202]:
+            - link "accounts" [ref=e203] [cursor=pointer]:
+              - /url: /account
+          - listitem [ref=e204]:
+            - link "faqs" [ref=e205] [cursor=pointer]:
+              - /url: /pages/faqs
+          - listitem [ref=e206]:
+            - link "contact" [ref=e207] [cursor=pointer]:
+              - /url: /pages/contact
+          - listitem [ref=e208]:
+            - link "terms & conditions" [ref=e209] [cursor=pointer]:
+              - /url: /policies/terms-of-service
+          - listitem [ref=e210]:
+            - link "privacy policy" [ref=e211] [cursor=pointer]:
+              - /url: /policies/privacy-policy
+      - generic [ref=e212]:
+        - paragraph [ref=e213]: shop by type
+        - list [ref=e214]:
+          - listitem [ref=e215]:
+            - link "full size" [ref=e216] [cursor=pointer]:
+              - /url: /collections/full-size
+          - listitem [ref=e217]:
+            - link "mini-oms" [ref=e218] [cursor=pointer]:
+              - /url: /collections/mini-oms
+          - listitem [ref=e219]:
+            - link "kits and gifts" [ref=e220] [cursor=pointer]:
+              - /url: /collections/kits-and-gifts
+    - generic [ref=e221]: idiom®
+  - iframe [ref=e223]:
+    - generic [ref=f71e2]:
+      - generic:
+        - generic:
+          - button "toggle" [ref=f71e3] [cursor=pointer]:
+            - generic [ref=f71e6]:
+              - img "Logo" [ref=f71e7]
+              - generic [ref=f71e9]:
+                - generic [ref=f71e10]: Development (24ea89-MacBook-Air-17)
+                - generic [ref=f71e11]: Draft
+          - generic:
+            - generic:
+              - generic:
+                - dialog:
+                  - generic [ref=f71e12]:
+                    - navigation [ref=f71e14]:
+                      - button "View as" [ref=f71e18] [cursor=pointer]:
+                        - img [ref=f71e20]
+                        - generic [ref=f71e23]:
+                          - img [ref=f71e28]
+                          - heading "View as" [level=2] [ref=f71e31]
+                    - generic [ref=f71e40]:
+                      - generic [ref=f71e42]: Actions
+                      - generic [ref=f71e45]:
+                        - button "Copy link" [ref=f71e46] [cursor=pointer]:
+                          - img [ref=f71e50]
+                          - generic [ref=f71e52]: Copy link
+                        - button "Hide bar" [ref=f71e53] [cursor=pointer]:
+                          - img [ref=f71e57]
+                          - generic [ref=f71e60]: Hide bar
+                        - button "Exit preview" [ref=f71e61] [cursor=pointer]:
+                          - img [ref=f71e65]
+                          - generic [ref=f71e68]: Exit preview
+                  - status

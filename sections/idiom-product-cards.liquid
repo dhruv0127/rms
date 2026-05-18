@@ -1,0 +1,48 @@
+<style>
+.idiom-product-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 40px 24px;
+  background: var(--idiom-cream);
+}
+@media (max-width: 768px) {
+  .idiom-product-cards-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .idiom-product-cards-grid {
+    grid-template-columns: 1fr;
+    padding: 40px 16px;
+  }
+  .idiom-product-cards-grid .idiom-product-card { height: 320px; }
+}
+</style>
+
+{%- if section.settings.heading != blank or section.settings.subtext != blank -%}
+  <div class="idiom-section-heading" style="text-align:center; padding: 40px 24px 0;">
+    {%- if section.settings.heading != blank -%}<h2>{{ section.settings.heading }}</h2>{%- endif -%}
+    {%- if section.settings.subtext != blank -%}<p>{{ section.settings.subtext }}</p>{%- endif -%}
+  </div>
+{%- endif -%}
+
+{%- assign products_collection = collections[section.settings.collection] -%}
+{%- if products_collection != blank -%}
+  <div class="idiom-product-cards-grid">
+    {%- for product in products_collection.products limit: section.settings.max_products -%}
+      {% render 'idiom-product-card', product: product %}
+    {%- endfor -%}
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Product Cards Grid",
+  "settings": [
+    { "type": "collection", "id": "collection", "label": "Product collection" },
+    { "type": "range", "id": "max_products", "label": "Max products", "min": 3, "max": 12, "step": 3, "default": 3 },
+    { "type": "text", "id": "heading", "label": "Section heading" },
+    { "type": "text", "id": "subtext", "label": "Section subtext" }
+  ],
+  "presets": [{ "name": "Product Cards Grid" }]
+}
+{% endschema %}

@@ -27,6 +27,64 @@
       {%- endif -%}
     {%- endif %}
   }
+
+  /* Idiom PDP two-column hero layout */
+  .idiom-pdp {
+    display: flex;
+    align-items: stretch;
+    min-height: 100vh;
+  }
+  .idiom-pdp__left {
+    flex: 0 0 50%;
+    position: relative;
+    overflow: hidden;
+  }
+  .idiom-pdp__left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .idiom-pdp__right {
+    flex: 0 0 50%;
+    background: var(--idiom-cream);
+    padding: 48px 40px;
+    overflow-y: auto;
+  }
+
+  /* "grab 10% off" badge */
+  .idiom-pdp__badge {
+    position: absolute;
+    left: -36px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+    background: var(--idiom-olive);
+    color: #fff;
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 3;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    .idiom-pdp {
+      flex-direction: column;
+    }
+    .idiom-pdp__left {
+      flex: none;
+      height: 60vw;
+    }
+    .idiom-pdp__right {
+      flex: none;
+      padding: 32px 16px;
+    }
+    .idiom-pdp__badge {
+      display: none;
+    }
+  }
 {%- endstyle -%}
 
 <section
@@ -41,8 +99,25 @@
     data-aos-intersection="0.01"
   {% endif %}
 >
-  <div class="{{ section_width }}">
-    {%- render 'product', animation_anchor: animation_anchor -%}
+  <div class="idiom-pdp">
+
+    {%- comment -%} Left column: hero collage image + "grab 10% off" badge {%- endcomment -%}
+    <div class="idiom-pdp__left">
+      {%- if product.metafields.custom.hero_collage_image != blank -%}
+        <img src="{{ product.metafields.custom.hero_collage_image | image_url: width: 900 }}" alt="{{ product.title }}" loading="eager">
+      {%- elsif product.featured_image -%}
+        <img src="{{ product.featured_image | image_url: width: 900 }}" alt="{{ product.title }}" loading="eager">
+      {%- endif -%}
+      <button class="idiom-pdp__badge">grab 10% off</button>
+    </div>
+
+    {%- comment -%} Right column: existing product blocks / content {%- endcomment -%}
+    <div class="idiom-pdp__right">
+      <div class="{{ section_width }}">
+        {%- render 'product', animation_anchor: animation_anchor -%}
+      </div>
+    </div>
+
   </div>
 </section>
 

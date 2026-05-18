@@ -254,6 +254,7 @@
 
 {{ 'cf-font-style.css' | asset_url | stylesheet_tag }}
 {{ content_for_header }}
+{{ 'idiom-theme.css' | asset_url | stylesheet_tag }}
 </head>{%- capture body_classes -%}
 template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}
 {% if customer %} customer-logged-in{% endif %}

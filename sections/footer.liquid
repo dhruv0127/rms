@@ -1,6 +1,86 @@
 <!-- /sections/footer.liquid -->
 
-{%- render 'footer' -%}
+<style>
+  .idiom-footer { background: var(--idiom-olive-dark); position: relative; overflow: hidden; padding: 60px 48px 0; }
+  .idiom-footer__columns { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; position: relative; z-index: 1; }
+  .idiom-footer__col-heading { color: #fff; font-weight: 700; margin-bottom: 12px; }
+  .idiom-footer__col-heading--lg { font-size: 18px; }
+  .idiom-footer__col-heading--sm { font-size: 16px; }
+  .idiom-footer__tagline { color: rgba(255,255,255,0.7); font-size: 13px; line-height: 1.5; }
+  .idiom-footer__dots { display: flex; gap: 6px; margin-top: 12px; }
+  .idiom-footer__dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.4); }
+  .idiom-footer__links { list-style: none; padding: 0; margin: 0; }
+  .idiom-footer__links li { margin-bottom: 8px; }
+  .idiom-footer__links a { color: rgba(255,255,255,0.85); font-size: 13px; text-decoration: none; }
+  .idiom-footer__links a:hover { text-decoration: underline; }
+  .idiom-footer__collage { position: absolute; right: 0; top: 0; height: 100%; width: 45%; object-fit: cover; object-position: left center; z-index: 0; }
+  .idiom-footer__logotype { color: #fff; font-size: 130px; font-weight: 900; line-height: 0.85; margin-top: 40px; position: relative; z-index: 2; }
+  @media (max-width: 480px) {
+    .idiom-footer { padding: 40px 16px 0; }
+    .idiom-footer__columns { grid-template-columns: 1fr; }
+    .idiom-footer__collage { display: none; }
+    .idiom-footer__logotype { font-size: 64px; }
+  }
+</style>
+
+<footer class="idiom-footer">
+
+  {%- if section.settings.collage_image -%}
+    <img
+      class="idiom-footer__collage"
+      src="{{ section.settings.collage_image | image_url: width: 1200 }}"
+      alt="Decorative collage"
+      loading="lazy"
+      width="{{ section.settings.collage_image.width }}"
+      height="{{ section.settings.collage_image.height }}"
+    >
+  {%- endif -%}
+
+  <div class="idiom-footer__columns">
+
+    <!-- Column 1: brand -->
+    <div class="idiom-footer__col">
+      <p class="idiom-footer__col-heading idiom-footer__col-heading--lg">smell like no one else</p>
+      {%- if section.settings.tagline != blank -%}
+        <p class="idiom-footer__tagline">{{ section.settings.tagline }}</p>
+      {%- else -%}
+        <p class="idiom-footer__tagline">Crafted for those who move differently. Scent-first, always.</p>
+      {%- endif -%}
+      <div class="idiom-footer__dots">
+        <span class="idiom-footer__dot"></span>
+        <span class="idiom-footer__dot"></span>
+      </div>
+    </div>
+
+    <!-- Column 2: the boring stuff -->
+    <div class="idiom-footer__col">
+      <p class="idiom-footer__col-heading idiom-footer__col-heading--sm">the boring stuff</p>
+      <ul class="idiom-footer__links">
+        <li><a href="/policies/shipping-policy">delivery</a></li>
+        <li><a href="/policies/refund-policy">returns</a></li>
+        <li><a href="/account">accounts</a></li>
+        <li><a href="/pages/faqs">faqs</a></li>
+        <li><a href="/pages/contact">contact</a></li>
+        <li><a href="/policies/terms-of-service">terms &amp; conditions</a></li>
+        <li><a href="/policies/privacy-policy">privacy policy</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3: shop by type -->
+    <div class="idiom-footer__col">
+      <p class="idiom-footer__col-heading idiom-footer__col-heading--sm">shop by type</p>
+      <ul class="idiom-footer__links">
+        <li><a href="/collections/full-size">full size</a></li>
+        <li><a href="/collections/mini-oms">mini-oms</a></li>
+        <li><a href="/collections/kits-and-gifts">kits and gifts</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="idiom-footer__logotype">idiom&reg;</div>
+
+</footer>
 
 {% schema %}
 {
@@ -8,6 +88,20 @@
   "max_blocks": 6,
   "class": "section-footer",
   "settings": [
+    {
+      "type": "header",
+      "content": "Idiom Design"
+    },
+    {
+      "type": "image_picker",
+      "id": "collage_image",
+      "label": "Right decorative collage"
+    },
+    {
+      "type": "text",
+      "id": "tagline",
+      "label": "Tagline paragraph"
+    },
     {
       "type": "header",
       "content": "Appearance"

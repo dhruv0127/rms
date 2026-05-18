@@ -1,673 +1,197 @@
-{%- comment -%} /sections/banner-image.liquid {%- endcomment -%}
-
-{%- liquid
-  assign section_height = section.settings.height
-  assign section_width = section.settings.width
-  assign enable_mobile_height = section.settings.enable_mobile_height
-  assign mobile_height = section.settings.mobile_height
-  assign image_desktop = section.settings.image
-  assign image_aspect_ratio = image_desktop.aspect_ratio | default: 2.63
-  assign image_mobile = section.settings.image_mobile
-  assign image_mobile_aspect_ratio = image_mobile.aspect_ratio | default: image_aspect_ratio | default: 0.66
-  if image_desktop == blank and image_mobile != blank
-    assign image_aspect_ratio = image_mobile_aspect_ratio
-  endif
-  assign transition = section.settings.transition
-  assign animations_enabled = settings.animations_enabled
-  assign enable_zoom_animation = section.settings.enable_zoom_animation
-  assign enable_card_scrolling = section.settings.enable_card_scrolling
-  assign increase_border_radius = section.settings.increase_border_radius
-  assign animation_anchor = '#SectionBannerImage--' | append: section.id
-  assign overlay_opacity = section.settings.overlay_opacity | times: 0.01
-  assign text_color = section.settings.text_color
-  assign text_position = section.settings.text_position
-  assign text_alignment = section.settings.text_alignment
-  assign content_width = section.settings.content_width
-
-  assign img_in_class = false
-  if image_desktop == null and image_mobile == null
-    assign img_in_class = true
-  endif
-
-  case text_position
-    when 'left'
-      assign text_position = 'item--left'
-    when 'center'
-      assign text_position = 'item--center'
-    when 'right'
-      assign text_position = 'item--right'
-    when 'bottom-left'
-      assign text_position = 'item--bottom-left'
-    when 'bottom-right'
-      assign text_position = 'item--bottom-right'
-    when 'top-left'
-      assign text_position = 'item--top-left'
-    when 'top-right'
-      assign text_position = 'item--top-right'
-  endcase
-
-  assign wrapper_width = '100vw'
-  assign desktop_space = 0
-  assign mobile_space = 0
-
-  if section_width == 'wrapper--full-padded'
-    assign desktop_space = 120
-    assign mobile_space = 40
-  endif
-
-  assign img_width_lg = 'calc(' | append: wrapper_width | append: ' - ' | append: desktop_space | append: 'px' | append: ')'
-  assign img_width_sm = 'calc(100vw - ' | append: mobile_space | append: 'px)'
-  assign sizes = '(min-width: 1024px) ' | append: img_width_lg | append: ', ' | append: img_width_sm
-
-  if section.index < 3
-    assign loading = 'eager'
-    assign fetchpriority = 'high'
-    assign preload = true
-  else
-    assign loading = 'lazy'
-    assign fetchpriority = 'auto'
-    assign preload = false
-  endif
-
-  assign title = 'homepage.onboarding.banner_image.title' | t
-
-  capture section_classes
-    echo 'banner-image'
-    echo ' banner-image--' | append: transition
-    unless animations_enabled
-      echo ' banner--no-animation'
-    endunless
-    if img_in_class
-      echo ' img-in'
-    endif
-    if enable_card_scrolling
-      echo ' card-scrolling-effect'
-    endif
-    if increase_border_radius
-      echo ' card-scrolling-effect--rounded-large'
-    endif
-  endcapture
--%}
+{%- comment -%} /sections/banner-image.liquid — idiom redesign {%- endcomment -%}
 
 {{ 'section-banner-image.css' | asset_url | stylesheet_tag }}
+{{ 'idiom-theme.css' | asset_url | stylesheet_tag }}
 
-{%- style -%}
-  #SectionBannerImage--{{ section.id }} {
-    --PT: {{ section.settings.padding_top }}px;
-    --PB: {{ section.settings.padding_bottom }}px;
-
-    --overlay-opacity: {{ overlay_opacity }};
-
-    --container-padding-top: 0;
-    {%- if section_height == 'original-height' -%}
-      --container-padding-top: {{ 100 | divided_by: image_aspect_ratio | append: '%' }};
-    {%- endif -%}
+<style>
+  /* === idiom Hero — section-banner-image === */
+  #SectionBannerImage--{{ section.id }} .idiom-hero {
+    position: relative;
+    width: 100%;
+    min-height: 70vh;
+    overflow: hidden;
+    background: var(--idiom-olive);
   }
 
-  #SectionBannerImage--{{ section.id }} .banner-image__text-wrapper { --content-width: {{ content_width }}%; }
+  #SectionBannerImage--{{ section.id }} .idiom-hero__bg--placeholder {
+    position: absolute;
+    inset: 0;
+    background: var(--idiom-olive);
+  }
 
-  {%- if enable_mobile_height -%}
-    @media screen and (max-width: 767px) {
-      #SectionBannerImage--{{ section.id }} {
-        --container-padding-top: 0;
-        {%- if mobile_height == 'original-height-mobile' -%}
-          --container-padding-top: {{ 100 | divided_by: image_mobile_aspect_ratio | append: '%' }};
-        {%- endif -%}
-      }
+  #SectionBannerImage--{{ section.id }} .idiom-hero__bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  #SectionBannerImage--{{ section.id }} .idiom-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.15) 50%, transparent 100%);
+    pointer-events: none;
+  }
+
+  #SectionBannerImage--{{ section.id }} .idiom-hero__content {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    z-index: 2;
+    max-width: 560px;
+  }
+
+  #SectionBannerImage--{{ section.id }} .idiom-hero__heading {
+    font-size: 48px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.15;
+    margin: 0 0 12px;
+  }
+
+  #SectionBannerImage--{{ section.id }} .idiom-hero__subtext {
+    font-size: 14px;
+    color: #ffffff;
+    margin: 0 0 20px;
+    line-height: 1.5;
+    opacity: 0.92;
+  }
+
+  /* Override idiom-btn--outline to be white on hero */
+  #SectionBannerImage--{{ section.id }} .idiom-hero__content .idiom-btn--outline {
+    color: #ffffff;
+    border-color: #ffffff;
+  }
+
+  /* === idiom Marquee strip === */
+  #SectionBannerImage--{{ section.id }} + .idiom-marquee-section,
+  .idiom-marquee-section--{{ section.id }} {
+    background: var(--idiom-olive);
+    padding: 14px 0;
+    overflow: hidden;
+  }
+
+  .idiom-marquee-section--{{ section.id }} .idiom-marquee-track {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: lowercase;
+  }
+
+  .idiom-marquee-section--{{ section.id }} .idiom-marquee-item {
+    padding: 0 32px;
+    display: inline-flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .idiom-marquee-section--{{ section.id }} .idiom-marquee-item::after {
+    content: "·";
+    font-size: 18px;
+    opacity: 0.7;
+  }
+
+  /* === Mobile overrides ≤480px === */
+  @media (max-width: 480px) {
+    #SectionBannerImage--{{ section.id }} .idiom-hero {
+      min-height: 56vw;
     }
-  {%- endif -%}
-{%- endstyle -%}
 
-{%- for block in section.blocks -%}
-  {%- liquid
-    if block.type == 'heading'
-      unless block.settings.text == blank
-        assign title = block.settings.text
-      endunless
-    endif
-  -%}
-  {%- if block.type == 'button' -%}
-    {%- liquid
-      comment
-        theme-check-disable VariableName
-      endcomment
-      assign button_1_link = block.settings.button_1_link
-      assign button_1_text = block.settings.button_1_text
-      assign button_2_text = block.settings.button_2_text
-    -%}
+    #SectionBannerImage--{{ section.id }} .idiom-hero__content {
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      max-width: 100%;
+    }
 
-    {%- capture image_link -%}
-      {%- if button_1_link != blank and button_1_text == blank and button_2_text == blank -%}
-        <a class="banner-image__link" href="{{ button_1_link }}">
-          <span class="visually-hidden">{{ title | strip_html | strip }}</span>
-        </a>
-      {%- endif -%}
-    {%- endcapture -%}
-  {%- endif -%}
-{%- endfor -%}
+    #SectionBannerImage--{{ section.id }} .idiom-hero__heading {
+      font-size: 32px;
+    }
+
+    #SectionBannerImage--{{ section.id }} .idiom-hero__subtext {
+      font-size: 13px;
+    }
+
+    #SectionBannerImage--{{ section.id }} .idiom-hero__content .idiom-btn--outline {
+      display: block;
+      width: 100%;
+      min-height: 44px;
+      text-align: center;
+      line-height: 44px;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    .idiom-marquee-section--{{ section.id }} .idiom-marquee-track {
+      font-size: 13px;
+    }
+  }
+</style>
+
 
 <section
   id="SectionBannerImage--{{ section.id }}"
-  class="{{ section_classes }} section-padding"
   data-section-id="{{ section.id }}"
   data-section-type="banner-image"
-  {% if enable_zoom_animation or enable_card_scrolling %}
-    data-parallax="
-      {%- if enable_zoom_animation -%}zoom-on-scroll{%- endif -%}
-      {%- if enable_zoom_animation and enable_card_scrolling -%},{%- endif -%}
-      {%- if enable_card_scrolling -%}card-scrolling{%- endif -%}
-    "
-  {% endif %}
 >
-  <div class="{{ section_width }}">
-    <div class="banner-image__inner {{ section_height }}{% if enable_mobile_height %} {{ mobile_height }}{% endif %} {{ text_position }} {{ text_alignment }} {{ text_color }}">
-      <div class="overlay"></div>
 
-      {{ image_link }}
-
-      <div class="banner-image__image-container">
-        <div class="banner-image__image-inner" data-banner-image>
-          {%- render 'image-fill',
-            is_background: true,
-            image_desktop: image_desktop,
-            image_mobile: image_mobile,
-            sizes: sizes,
-            classes: 'banner-image__image',
-            loading: loading,
-            fetchpriority: fetchpriority,
-            preload: preload,
-            placeholder_svg: 'lifestyle-1'
-          -%}
-        </div>
-      </div>
-
-      <div class="banner-image__text-container">
-        <div class="banner-image__text-wrapper">
-          {%- if section.blocks.size > 0 -%}
-            {%- for block in section.blocks -%}
-              {%- liquid
-                assign block_id = block.id
-                assign text = block.settings.text
-                assign text_size = block.settings.size | times: 0.01
-                assign text_size_mobile = text_size
-
-                if text_size > 1.5
-                  assign text_size_mobile = text_size | times: 0.85
-                endif
-                if text_size > 2
-                  assign text_size_mobile = text_size | times: 0.7
-                endif
-                if text_size > 2.5
-                  assign text_size_mobile = text_size | times: 0.55
-                endif
-              -%}
-              {%- case block.type -%}
-                {%- when 'timer' -%}
-                  {%- liquid
-                    assign layout_style = block.settings.layout_style
-                    assign unit_size = block.settings.unit_size | times: 0.01
-                    assign digit_size = block.settings.digit_size | times: 0.01
-                    assign digit_size_mobile = digit_size | times: 0.7
-                    assign unit_size_mobile = unit_size | times: 0.8
-                  -%}{%- liquid
-  assign end_date = block.settings.end_date
-  assign end_time = block.settings.end_time
-  assign period = block.settings.period
-  assign end_message = block.settings.end_message
-
-  assign end_time_hour = end_time | split: ':' | first | times: 1
-  assign end_time_minute = end_time | split: ':' | last
-
-  capture expiration_date
-    echo end_date
-    echo ' '
-    case period
-      when 'am'
-        case end_time_hour
-          when 0, 12
-            echo '00' | append: ':' | append: end_time_minute
-          else
-            echo end_time
-        endcase
-
-      when 'pm'
-        capture hour
-          case end_time_hour
-            when 0, 12
-              echo '12'
-            else
-              if end_time_hour < 12
-                echo end_time_hour | plus: 12
-              else
-                echo end_time_hour
-              endif
-          endcase
-        endcapture
-
-        echo hour | append: ':' | append: end_time_minute
-    endcase
-  endcapture
--%}{%- style -%}
-                    #BannerTimer--{{ block_id }} .countdown-timer__digit { --adjust-heading: calc(var(--FONT-ADJUST-HEADING) * {{ digit_size_mobile }}); }
-                    #BannerTimer--{{ block_id }} .countdown-timer__unit { --adjust-unit: calc(var(--FONT-ADJUST-SUBHEADING) * {{ unit_size_mobile }}); }
-                    @media screen and (min-width: 768px) {
-                      #BannerTimer--{{ block_id }} .countdown-timer__digit { --adjust-heading: calc(var(--FONT-ADJUST-HEADING) * {{ digit_size }}); }
-                      #BannerTimer--{{ block_id }} .countdown-timer__unit { --adjust-unit: calc(var(--FONT-ADJUST-SUBHEADING) * {{ unit_size }}); }
-                    }
-                  {%- endstyle -%}
-                  <div id="BannerTimer--{{ block_id }}" class="banner-image__timer" {{ block.shopify_attributes }}>
-                    {% render 'countdown-timer',
-                      expiration_date: expiration_date,
-                      end_message: end_message,
-                      leading_zero: true,
-                      layout_style: layout_style,
-                      animation_anchor: animation_anchor,
-                      animation_order: 1
-                    %}
-                  </div>
-
-                {%- when 'video' -%}
-                  {%- liquid
-                    assign video_text = block.settings.video_text
-                    assign video_link = block.settings.video_link
-                    assign unique = block.id
-                  -%}
-                  <div class="banner-image__button-video main-buttons main-buttons--video">{%- liquid
-  assign video_link_downcase = video_link | downcase
-  assign video_type = ''
-  assign video_id = ''
-  assign video_parent_id = 'item-video-' | append: unique
-
-  if video_link contains 'vimeo.com'
-    assign video_type = 'vimeo'
-  elsif video_link contains 'youtube.com'
-    assign video_type = 'youtube'
-  elsif video_link contains 'youtu.be'
-    assign video_type = 'youtube'
-    assign youtube_shortlink = true
-  elsif video_link_downcase contains '.mp4'
-    assign video_type = 'native'
-  endif
-
-  assign link_array = video_link | split: '/'
-  assign id_with_params = link_array | last
-
-  if video_type == 'vimeo' or youtube_shortlink
-    comment
-      https://vimeo.com/[ID]?foo=bar&baz=boo
-      https://youtu.be/[ID]?foo=bar&baz=boo
-    endcomment
-    assign starts_with_id = id_with_params | split: '?'
-    assign video_id = starts_with_id | first
-  elsif video_type == 'youtube'
-    comment
-      https://youtube.com/watch?v=[ID]?foo=bar&baz=boo
-    endcomment
-    assign first_param = id_with_params | split: '&' | first
-    assign watch_then_id = first_param | split: '?'
-    assign equals_id = watch_then_id[1]
-    assign ends_with_id = equals_id | split: '='
-    assign video_id = ends_with_id | last
-  endif
-
-  if video_type == 'youtube'
-    capture video_link
-      echo 'https://www.youtube.com/watch?v=' | append: video_id
-    endcapture
-  elsif video_type == 'vimeo'
-    capture video_link
-      echo 'https://vimeo.com/' | append: video_id
-    endcapture
-  endif
--%}
-<div
-                      class="main-buttons__item"
-                      {% if animations_enabled %}
-                        data-aos="hero"
-                        data-aos-anchor="{{ animation_anchor }}"
-                        data-aos-order="1"
-                      {% endif %}
-                      {{ block.shopify_attributes }}
-                    >
-                      <a
-                        class="banner-image__btn video-text-link"
-                        href="{{ video_link | default: '#!' }}"
-                        {% unless video_link == blank %}
-                          data-video-play="{%- render 'photoswipe-video-html' item_link: video_link , item_link_type: video_type, item_link_id: video_id, item_id: video_parent_id -%}"
-                        {% endunless %}
-                      >
-                        {%- render 'icon-play' -%}
-
-                        {%- if video_text != blank -%}
-                          <span>{{ video_text }}</span>
-                        {%- endif -%}
-                      </a>
-                    </div>
-                  </div>
-                {%- when 'subheading' -%}
-                  {%- style -%}
-                    #BannerSubheading--{{ block_id }}.banner-image__subheading { --adjust-body: calc(var(--FONT-ADJUST-SUBHEADING) * {{ text_size_mobile }}); }
-                    @media screen and (min-width: 1024px) {
-                      #BannerSubheading--{{ block_id }}.banner-image__subheading { --adjust-body: calc(var(--FONT-ADJUST-SUBHEADING) * {{ text_size }}); }
-                    }
-                  {%- endstyle -%}
-
-                  {%- if text != blank -%}
-                    <div
-                      id="BannerSubheading--{{ block_id }}"
-                      class="banner-image__subheading subheading-text"
-                      {% if animations_enabled %}
-                        data-aos="hero"
-                        data-aos-anchor="{{ animation_anchor }}"
-                        data-aos-order="1"
-                      {% endif %}
-                      {{ block.shopify_attributes }}
-                    >
-                      {{ text }}
-                    </div>
-                  {%- endif -%}
-
-                {%- when 'heading' -%}
-                  {%- liquid
-                    assign heading_highlight_type = block.settings.heading_highlight_type
-                    assign highlight_color = block.settings.highlight_color
-                    assign highlight_text_color = block.settings.highlight_text_color
-                  -%}{% comment %}
-  Enhanced text decorations options - Liquid variables
-
-  Dependencies:
-    - Title liquid object from settings: `assign title = section.settings.title`
-    - Highlight type from settings: `assign heading_highlight_type = section.settings.heading_highlight_type`
-    - Highlight color from settings: `assign highlight_color = section.settings.highlight_color or assign highlight_color = block.settings.highlight_color`
-    - SVG icons:
-      - icon-squiggle.svg (assets)
-      - icon-circle.liquid (snippet)
-{% endcomment %}
-
-{%- liquid
-  comment
-   Highlighted words count
-  endcomment
-  assign title_temp = title | split: '<em>'
-  assign em_arr = ''
-  if title_temp.size > 1
-    for text_part in title_temp offset: 1
-      assign em_text = text_part | split: '</em>' | first
-      assign em_arr = em_arr | append: '#separator#' | append: em_text
-    endfor
-  endif
-  assign em_arr = em_arr | split: '#separator#'
-  assign words_count_arr = ''
-  assign letters_count_arr = ''
-  if em_arr.size > 0
-    for words in em_arr offset: 1
-      assign word = words | split: ' '
-      assign words_count_arr = words_count_arr | append: word.size | append: ', '
-      assign letters_count_arr = letters_count_arr | append: words.size | append: ', '
-    endfor
-  endif
-
-  assign words_count_arr = words_count_arr | replace_last: ', ', '' | split: ', '
-  assign letters_count_arr = letters_count_arr | replace_last: ', ', '' | split: ', '
-
-  comment
-   Main highlight types logic
-  endcomment
-  assign icon_url = ''
-  assign icon_color = 'var(--text)'
-
-  if highlight_color != 'rgba(0,0,0,0)' and highlight_color != ''
-    assign icon_color = highlight_color
-  endif
-
-  capture text_highlight_icon
-    assign has_text_highlight = false
-
-    if title contains '<em>'
-      case heading_highlight_type
-        when 'squiggle'
-          assign icon_url = 'icon-squiggle.svg' | asset_url
-        when 'circle' or 'circle-hand-drawn' or 'underline-hand-drawn'
-          echo '<span class="text-highlight__icon" data-highlight-holder>'
-
-            when 'circle'
-              render 'icon-circle'
-            when 'circle-hand-drawn'
-              render 'icon-circle-hand-drawn'
-            when 'underline-hand-drawn'
-              render 'icon-underline-hand-drawn'
-
-          echo '</span>'
-        when 'highlight' or 'squiggle'
-          echo '<span class="text-highlight__icon text-highlight__icon--pseudo" data-highlight-holder></span>'
-        when 'stroke' or 'circle' or 'circle-hand-drawn' or 'squiggle' or 'highlight' or 'highlight-color' or 'underline' or 'underline-hand-drawn' or 'alternate-font'
-          assign has_text_highlight = true
-      endcase
-    endif
-  endcapture
-
-  capture icon_bg
-    if icon_url != ''
-      echo 'url( "' | append: icon_url | append: '" )'
-    else
-      echo 'none'
-    endif
-  endcapture
-  capture icon_styles
-    assign icon_bg = icon_bg | replace: '"', "'"
-    echo 'style="--icon-url: ' | append: icon_bg | append: ';' | append: '--icon-color: ' | append: icon_color | append: ';"'
-  endcapture
-
-  assign text_highlight_wrapper_class = 'text-highlight-wrapper' | append: ' text-highlight-wrapper--' | append: heading_highlight_type
-  capture text_highlight_start
-    echo '<text-highlight class="text-highlight" ' | append: icon_styles | append: ' data-highlight-type="' | append: heading_highlight_type | append: '">'
-    case heading_highlight_type
-      when 'stroke' or 'highlight-color' or 'underline' or 'alternate-font'
-        echo '<span class="text-highlight__string" data-highlight-holder>'
-    endcase
-  endcapture
-  capture text_highlight_end
-    echo text_highlight_icon
-    case heading_highlight_type
-      when 'stroke' or 'highlight-color' or 'underline' or 'alternate-font'
-        echo '</span>'
-    endcase
-    echo '</text-highlight>'
-  endcapture
-
-  if title != blank and title contains '<em>'
-    case heading_highlight_type
-      when 'squiggle' or 'circle' or 'circle-hand-drawn' or 'stroke' or 'highlight' or 'highlight-color' or 'underline' or 'underline-hand-drawn' or 'alternate-font'
-        assign title = title | replace: '<em>', text_highlight_start | replace: '</em>', text_highlight_end
-
-      when 'circle' or 'circle-hand-drawn'
-        comment
-          Update icon's holder class based on the italicised words count
-        endcomment
-        assign title = title | split: 'class="text-highlight"'
-        assign title_mod = ''
-        for title_part in title offset: 1
-          assign current_part = title_part
-
-          if title_part contains 'text-highlight__icon'
-            capture highlight_icon_classes
-              echo 'text-highlight__icon'
-              assign current_count = words_count_arr[forloop.index0] | times: 1
-              assign letters_count = letters_count_arr[forloop.index0] | times: 1
-              if current_count == 1
-                echo ' text-highlight__icon--single-word'
-              endif
-              if letters_count < 6
-                echo ' text-highlight__icon--short'
-                echo ' text-highlight__icon--l' | append: letters_count
-              endif
-              if letters_count > 15
-                echo ' text-highlight__icon--long'
-              endif
-            endcapture
-
-            assign current_part = title_part | replace: 'text-highlight__icon', highlight_icon_classes
-          endif
-
-          unless forloop.last
-            assign title_mod = title_mod | append: current_part | append: 'class="text-highlight"'
-          else
-            assign title_mod = title_mod | append: current_part
-          endunless
-        endfor
-        assign title_first_part = title | first | append: 'class="text-highlight"'
-        assign title_mod = title_mod | prepend: title_first_part
-        assign title = title_mod
-    endcase
-  endif
--%}{%- style -%}
-                    #BannerHeading--{{ block_id }}.banner-image__heading {
-                      --adjust-heading: calc(var(--FONT-ADJUST-HEADING) * {{ text_size_mobile }});
-
-                      {%- if heading_highlight_type != 'highlight' -%}
-                        --highlight-color: var(--text);
-                      {%- endif -%}
-
-                      {%- if highlight_color != 'rgba(0,0,0,0)' and highlight_color != '' -%}
-                        --highlight-color: {{ highlight_color }};
-                      {%- endif -%}
-
-                      {%- if highlight_text_color != 'rgba(0,0,0,0)' and highlight_text_color != '' -%}
-                        --highlight-text-color: {{ highlight_text_color }};
-                      {%- endif -%}
-                    }
-                    @media screen and (min-width: 1024px) {
-                      #BannerHeading--{{ block_id }}.banner-image__heading { --adjust-heading: calc(var(--FONT-ADJUST-HEADING) * {{ text_size }}); }
-                    }
-                  {%- endstyle -%}
-
-                  {%- if text != blank -%}
-                    {%- capture title_attributes -%}
-                      id="BannerHeading--{{ block_id }}"
-                      class="banner-image__heading h1{% if has_text_highlight %} {{ text_highlight_wrapper_class }}{% endif %}"
-                      data-banner-title
-                      {{ block.shopify_attributes }}
-                    {%- endcapture -%}
-
-                    {% render 'title-text-reveal-and-highlights',
-                      title: title,
-                      title_attributes: title_attributes,
-                      text_reveal: true,
-                      has_text_highlight: has_text_highlight,
-                      animation_anchor: animation_anchor,
-                      animation_order: 1
-                    %}
-
-                    {%- if settings.show_spacer_lines and forloop.last == false -%}
-                      <hr
-                        {% if animations_enabled %}
-                          data-aos="hero"
-                          data-aos-anchor="{{ animation_anchor }}"
-                          data-aos-order="1"
-                        {% endif %}
-                      >
-                    {%- endif -%}
-                  {%- endif -%}
-
-                {%- when 'text' -%}
-                  {%- style -%}
-                    #BannerText--{{ block_id }}.banner-image__content { --adjust-body: calc(var(--FONT-ADJUST-BODY) * {{ text_size_mobile }}); }
-                    @media screen and (min-width: 1024px) {
-                      #BannerText--{{ block_id }}.banner-image__content { --adjust-body: calc(var(--FONT-ADJUST-BODY) * {{ text_size }}); }
-                    }
-                  {%- endstyle -%}
-
-                  {%- if text != blank -%}
-                    <div
-                      id="BannerText--{{ block_id }}"
-                      class="banner-image__content"
-                      {% if animations_enabled %}
-                        data-aos="hero"
-                        data-aos-anchor="{{ animation_anchor }}"
-                        data-aos-order="1"
-                      {% endif %}
-                      {{ block.shopify_attributes }}
-                    >
-                      {{ text }}
-                    </div>
-                  {%- endif -%}
-                {%- when 'button' -%}
-                  {%- liquid
-                    assign stacked_button = block.settings.stacked_button
-                    assign button_1_link = block.settings.button_1_link
-                    assign button_1_text = block.settings.button_1_text
-                    assign button_1_style = block.settings.button_1_style
-                    assign button_1_color = block.settings.button_1_color
-                    assign button_1_size = block.settings.button_1_size
-
-                    assign button_2_link = block.settings.button_2_link
-                    assign button_2_text = block.settings.button_2_text
-                    assign button_2_style = block.settings.button_2_style
-                    assign button_2_color = block.settings.button_2_color
-                    assign button_2_size = block.settings.button_2_size
-
-                    assign button_1_advanced_class = 'btn--advanced'
-                    if button_1_style != 'btn--text'
-                      assign button_1_advanced_class = button_1_advanced_class | append: ' btn--advanced-width-height'
-                    endif
-                    assign button_2_advanced_class = 'btn--advanced'
-                    if button_2_style != 'btn--text'
-                      assign button_2_advanced_class = button_2_advanced_class | append: ' btn--advanced-width-height'
-                    endif
-                  -%}
-
-                  {%- if button_1_text != blank or button_2_text != blank -%}
-                    <div class="banner-image__buttons main-buttons{% if stacked_button %} main-buttons--stacked{% endif %}">
-                      {%- if button_1_text != blank -%}
-                        <div
-                          class="main-buttons__item"
-                          {% if animations_enabled %}
-                            data-aos="hero"
-                            data-aos-anchor="{{ animation_anchor }}"
-                            data-aos-order="1"
-                          {% endif %}
-                        >
-                          <a
-                            class="banner-image__btn btn {{ button_1_style }} {{ button_1_size }} {{ button_1_color }} {{ button_1_advanced_class }}"
-                            href="{{ button_1_link }}"
-                          >
-                            <hover-button></hover-button>
-                            {{- button_1_text | escape -}}
-                          </a>
-                        </div>
-                      {%- endif -%}
-
-                      {%- if button_2_text != blank -%}
-                        <div
-                          class="main-buttons__item"
-                          {% if animations_enabled %}
-                            data-aos="hero"
-                            data-aos-anchor="{{ animation_anchor }}"
-                            data-aos-order="1"
-                          {% endif %}
-                        >
-                          <a
-                            class="banner-image__btn btn {{ button_2_style }} {{ button_2_size }} {{ button_2_color }} {{ button_2_advanced_class }}"
-                            href="{{ button_2_link }}"
-                          >
-                            <hover-button></hover-button>
-                            {{- button_2_text | escape -}}
-                          </a>
-                        </div>
-                      {%- endif -%}
-                    </div>
-                  {%- endif -%}
-              {%- endcase -%}
-            {%- endfor -%}
-          {%- else -%}
-            {%- render 'no-blocks' -%}
-          {%- endif -%}
-        </div>
-      </div>
+  <div class="idiom-hero">
+    {%- if section.settings.hero_image != blank -%}
+      <img class="idiom-hero__bg"
+        src="{{ section.settings.hero_image | image_url: width: 2400 }}"
+        alt="{{ section.settings.heading | escape }}"
+        loading="eager" fetchpriority="high">
+    {%- else -%}
+      <div class="idiom-hero__bg idiom-hero__bg--placeholder"></div>
+    {%- endif -%}
+    <div class="idiom-hero__overlay"></div>
+    <div class="idiom-hero__content">
+      {%- if section.settings.heading != blank -%}
+        <h1 class="idiom-hero__heading">{{ section.settings.heading }}</h1>
+      {%- endif -%}
+      {%- if section.settings.subtext != blank -%}
+        <p class="idiom-hero__subtext">{{ section.settings.subtext }}</p>
+      {%- endif -%}
+      {%- if section.settings.cta_label != blank -%}
+        <a class="idiom-btn idiom-btn--outline" href="{{ section.settings.cta_url | default: '#' }}">
+          {{- section.settings.cta_label -}}
+        </a>
+      {%- endif -%}
     </div>
   </div>
 </section>
 
+{%- assign marquee_raw = section.settings.marquee_text -%}
+{%- assign marquee_lines = marquee_raw | strip | split: "\n" -%}
+{%- if marquee_lines.size == 0 or marquee_raw == blank -%}
+  {%- assign marquee_lines = "smell like no one else™,find your fragrance freedom,layer, or wear solo" | split: "," -%}
+{%- endif -%}
+
+<div class="idiom-marquee-section--{{ section.id }}" aria-hidden="true">
+  <div class="idiom-marquee">
+    <div class="idiom-marquee-track">
+      {%- for i in (1..2) -%}
+        {%- for line in marquee_lines -%}
+          {%- assign item_text = line | strip -%}
+          {%- if item_text != blank -%}
+            <span class="idiom-marquee-item">{{ item_text }}</span>
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{%- comment -%}REMOVED OLD THEME BANNER HTML BELOW — DO NOT RESTORE{%- endcomment -%}
+{%- liquid
+  comment
+    Blocks kept in schema for backwards-compat but not rendered.
+  endcomment
+-%}
+              {%- comment -%}OLD BLOCK CASES REMOVED{%- endcomment -%}
 {% schema %}
 {
   "name": "Banner image",
@@ -867,6 +391,44 @@
       "unit": "px",
       "label": "Padding bottom",
       "default": 0
+    },
+    {
+      "type": "header",
+      "content": "idiom Hero"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero image"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "127 unique fragrances. 1 kit."
+    },
+    {
+      "type": "text",
+      "id": "subtext",
+      "label": "Subtext",
+      "default": "discover your Flanker fragrance combinations with our 7-piece discovery kit."
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "CTA label",
+      "default": "shop now | £17"
+    },
+    {
+      "type": "url",
+      "id": "cta_url",
+      "label": "CTA link"
+    },
+    {
+      "type": "textarea",
+      "id": "marquee_text",
+      "label": "Marquee items (one per line)",
+      "default": "smell like no one else™\nfind your fragrance freedom\nlayer, or wear solo"
     }
   ],
   "blocks": [

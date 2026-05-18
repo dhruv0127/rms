@@ -1,0 +1,41 @@
+<style>
+.idiom-product-card-link { text-decoration: none; color: inherit; display: block; }
+.idiom-product-card-wrap { display: flex; flex-direction: column; }
+.idiom-product-card { position: relative; overflow: visible; }
+.idiom-product-card__bottle { position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%); width: auto; max-height: 80%; height: 75%; object-fit: contain; z-index: 2; pointer-events: none; }
+.idiom-product-card__info { padding: 24px 4px 8px; }
+.idiom-product-card__title { font-size: 16px; font-weight: 700; margin: 0 0 4px; }
+.idiom-product-card__scent { font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; opacity: 0.6; margin: 0 0 4px; }
+.idiom-product-card__price { font-size: 14px; margin: 0; }
+</style>
+
+<a href="{{ product.url }}" class="idiom-product-card-link">
+  <div class="idiom-product-card-wrap">
+    <div class="idiom-product-card">
+      {%- if product.metafields.custom.card_background_image != blank -%}
+        <img src="{{ product.metafields.custom.card_background_image | image_url: width: 600 }}"
+             alt="{{ product.title }}" class="idiom-product-card__bg" loading="lazy">
+      {%- elsif product.featured_image -%}
+        <img src="{{ product.featured_image | image_url: width: 600 }}"
+             alt="{{ product.title }}" class="idiom-product-card__bg" loading="lazy">
+      {%- endif -%}
+
+      {%- if product.featured_image -%}
+        <img src="{{ product.featured_image | image_url: width: 400 }}"
+             alt="{{ product.title }}" class="idiom-product-card__bottle" loading="lazy">
+      {%- endif -%}
+
+      {%- if product.metafields.custom.personality_tag != blank -%}
+        <span class="idiom-tag">{{ product.metafields.custom.personality_tag }}</span>
+      {%- endif -%}
+    </div>
+
+    <div class="idiom-product-card__info">
+      <p class="idiom-product-card__title">{{ product.title }}</p>
+      {%- if product.metafields.custom.scent_descriptor != blank -%}
+        <p class="idiom-product-card__scent">{{ product.metafields.custom.scent_descriptor }}</p>
+      {%- endif -%}
+      <p class="idiom-product-card__price">{{ product.price | money }}</p>
+    </div>
+  </div>
+</a>

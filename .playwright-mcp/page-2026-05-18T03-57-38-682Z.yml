@@ -1,0 +1,144 @@
+- generic [active] [ref=e1]:
+  - alertdialog "Cookie consent" [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - heading "Cookie consent" [level=2] [ref=e5]
+        - paragraph [ref=e6]:
+          - text: We and our partners, including Shopify, use cookies and other technologies to personalize your experience, show you ads, and perform analytics, and we will not use cookies or other technologies for these purposes unless you accept them. Learn more in our
+          - link "Privacy Policy" [ref=e7] [cursor=pointer]:
+            - /url: http://idiomfragrances.com/policies/privacy-policy
+      - generic [ref=e8]:
+        - button "Manage preferences" [ref=e9] [cursor=pointer]
+        - button "Accept" [ref=e10] [cursor=pointer]
+        - button "Decline" [ref=e11] [cursor=pointer]
+  - link "Skip to content" [ref=e12] [cursor=pointer]:
+    - /url: "#MainContent"
+  - banner [ref=e14]:
+    - generic [ref=e15]:
+      - heading "idiom®" [level=1] [ref=e16]:
+        - link "idiom®" [ref=e17] [cursor=pointer]:
+          - /url: /
+          - img [ref=e18]
+      - navigation [ref=e20]:
+        - generic [ref=e21]:
+          - link "Home" [ref=e23] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e24]: Home
+          - navigation [ref=e25]:
+            - link "Shop" [ref=e26] [cursor=pointer]:
+              - /url: /collections/shop-everything
+              - generic [ref=e27]: Shop
+          - link "Gallery" [ref=e29] [cursor=pointer]:
+            - /url: /pages/gallery
+            - generic [ref=e30]: Gallery
+          - link "About" [ref=e32] [cursor=pointer]:
+            - /url: /pages/story
+            - generic [ref=e33]: About
+        - generic [ref=e34]:
+          - group [ref=e36]:
+            - button "Open search bar" [ref=e37] [cursor=pointer]:
+              - img
+              - generic [ref=e38]: Open search bar
+          - link "My Account" [ref=e40] [cursor=pointer]:
+            - /url: /account
+            - generic [ref=e41]: My Account
+            - img
+          - link "Open cart" [ref=e43] [cursor=pointer]:
+            - /url: /cart
+            - generic [ref=e44]: Open cart
+            - img
+  - group [ref=e49]:
+    - generic [ref=e51]:
+      - generic [ref=e56]:
+        - text: free domestic shipping orders £40+
+        - strong [ref=e57]: "["
+        - link "SHOP NOW" [ref=e58] [cursor=pointer]:
+          - /url: /collections/shop-everything
+          - strong [ref=e59]: SHOP NOW
+        - strong [ref=e60]: "]"
+      - generic [ref=e65]:
+        - text: free samples in every order
+        - strong [ref=e66]: "["
+        - link [ref=e67] [cursor=pointer]:
+          - /url: /collections/shop-everything
+          - strong [ref=e68]: SHOP NOW
+        - strong [ref=e69]: "]"
+      - generic [ref=e74]:
+        - text: free shipping orders £40+ [
+        - link [ref=e75] [cursor=pointer]:
+          - /url: /collections/shop-everything
+          - strong [ref=e76]: SHOP NOW
+        - text: "]"
+    - button "Previous" [ref=e77] [cursor=pointer]
+    - button "Next" [ref=e78] [cursor=pointer]
+  - main [ref=e79]:
+    - generic [ref=e82]:
+      - heading "404" [level=1] [ref=e83]
+      - separator [ref=e84]
+      - paragraph [ref=e85]: This page does not exist.
+      - link "Return to Home" [ref=e86] [cursor=pointer]:
+        - /url: /
+        - text: Return to Home
+  - contentinfo [ref=e88]:
+    - generic [ref=e89]:
+      - generic [ref=e90]:
+        - paragraph [ref=e91]: smell like no one else
+        - paragraph [ref=e92]: Crafted for those who move differently. Scent-first, always.
+      - generic [ref=e96]:
+        - paragraph [ref=e97]: the boring stuff
+        - list [ref=e98]:
+          - listitem [ref=e99]:
+            - link "delivery" [ref=e100] [cursor=pointer]:
+              - /url: /policies/shipping-policy
+          - listitem [ref=e101]:
+            - link "returns" [ref=e102] [cursor=pointer]:
+              - /url: /policies/refund-policy
+          - listitem [ref=e103]:
+            - link "accounts" [ref=e104] [cursor=pointer]:
+              - /url: /account
+          - listitem [ref=e105]:
+            - link "faqs" [ref=e106] [cursor=pointer]:
+              - /url: /pages/faqs
+          - listitem [ref=e107]:
+            - link "contact" [ref=e108] [cursor=pointer]:
+              - /url: /pages/contact
+          - listitem [ref=e109]:
+            - link "terms & conditions" [ref=e110] [cursor=pointer]:
+              - /url: /policies/terms-of-service
+          - listitem [ref=e111]:
+            - link "privacy policy" [ref=e112] [cursor=pointer]:
+              - /url: /policies/privacy-policy
+      - generic [ref=e113]:
+        - paragraph [ref=e114]: shop by type
+        - list [ref=e115]:
+          - listitem [ref=e116]:
+            - link "full size" [ref=e117] [cursor=pointer]:
+              - /url: /collections/full-size
+          - listitem [ref=e118]:
+            - link "mini-oms" [ref=e119] [cursor=pointer]:
+              - /url: /collections/mini-oms
+          - listitem [ref=e120]:
+            - link "kits and gifts" [ref=e121] [cursor=pointer]:
+              - /url: /collections/kits-and-gifts
+    - generic [ref=e122]: idiom®
+  - iframe [ref=e124]:
+    - generic [ref=f35e4]:
+      - button [ref=f35e7] [cursor=pointer]:
+        - img [ref=f35e9]
+        - img [ref=f35e12]
+      - generic [ref=f35e15]:
+        - generic [ref=f35e18]:
+          - link "Logo" [ref=f35e19] [cursor=pointer]:
+            - /url: https://admin.shopify.com/store/idiom-london
+            - img "Logo" [ref=f35e20]
+          - generic [ref=f35e22]:
+            - generic [ref=f35e23]: Development (24ea89-MacBook-Air-17)
+            - generic [ref=f35e24]: Draft
+        - generic [ref=f35e26]:
+          - button "Hide bar" [ref=f35e28] [cursor=pointer]:
+            - generic [ref=f35e29]: Hide bar
+          - button "Exit preview" [ref=f35e31] [cursor=pointer]:
+            - generic [ref=f35e32]: Exit preview
+          - button "Copy link" [ref=f35e35] [cursor=pointer]:
+            - img [ref=f35e39]
+            - generic [ref=f35e41]: Copy link
