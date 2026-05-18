@@ -105,6 +105,7 @@
         "panel_1": {
           "type": "panel",
           "settings": {
+            "bg_image": "shopify://shop_images/J22222.png",
             "heading": "the perfect saffron",
             "subtext": "warm. rich. quietly addictive.",
             "cta_label": "shop now | £17",
@@ -114,6 +115,7 @@
         "panel_2": {
           "type": "panel",
           "settings": {
+            "bg_image": "shopify://shop_images/j3333.png",
             "heading": "citrusy + fresh af",
             "subtext": "sharp. bright. made to layer.",
             "cta_label": "shop now | £17",
