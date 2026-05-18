@@ -206,6 +206,7 @@
   </div>
 </section>
 
+{%- if section.settings.show_marquee -%}
 {%- assign marquee_raw = section.settings.marquee_text -%}
 {%- assign marquee_lines = marquee_raw | strip | split: "\n" -%}
 {%- if marquee_lines.size == 0 or marquee_raw == blank -%}
@@ -226,6 +227,7 @@
     </div>
   </div>
 </div>
+{%- endif -%}
 
 {%- comment -%}REMOVED OLD THEME BANNER HTML BELOW — DO NOT RESTORE{%- endcomment -%}
 {%- liquid
@@ -465,6 +467,12 @@
       "type": "url",
       "id": "cta_url",
       "label": "CTA link"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_marquee",
+      "label": "Show marquee strip",
+      "default": true
     },
     {
       "type": "textarea",
