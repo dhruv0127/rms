@@ -1,226 +1,233 @@
 {{ 'idiom-theme.css' | asset_url | stylesheet_tag }}
 
-<section class="idiom-brand-story">
-  {%- if section.settings.collage_image != blank -%}
-    <div class="idiom-brand-story__collage" aria-hidden="true">
-      {{
-        section.settings.collage_image
-        | image_url: width: 900
-        | image_tag:
-          loading: 'lazy',
-          class: 'idiom-brand-story__collage-img',
-          widths: '400, 600, 900',
-          sizes: '40vw'
-      }}
-    </div>
-  {%- endif -%}
-
-  <div class="idiom-brand-story__content-wrap">
-    <div class="idiom-brand-story__text-block">
-      {%- if section.settings.heading != blank -%}
-        <h2 class="idiom-brand-story__heading">{{ section.settings.heading }}</h2>
-      {%- endif -%}
-
-      {%- if section.settings.subline != blank -%}
-        <p class="idiom-brand-story__subline">{{ section.settings.subline }}</p>
-      {%- endif -%}
-
-      {%- if section.settings.body != blank -%}
-        <p class="idiom-brand-story__body">{{ section.settings.body }}</p>
-      {%- endif -%}
-
-      {%- if section.settings.cta_label != blank -%}
-        <a
-          class="idiom-btn idiom-brand-story__cta"
-          href="{{ section.settings.cta_url | default: '#' }}"
-        >
-          {{ section.settings.cta_label }}
-        </a>
-      {%- endif -%}
-    </div>
-
-    <div class="idiom-brand-story__grid-transition">
-      {%- if section.settings.grid_heading != blank -%}
-        <h3 class="idiom-brand-story__grid-heading">{{ section.settings.grid_heading }}</h3>
-      {%- endif -%}
-
-      {%- if section.settings.grid_subtext != blank -%}
-        <p class="idiom-brand-story__grid-subtext">{{ section.settings.grid_subtext }}</p>
-      {%- endif -%}
-    </div>
-  </div>
-</section>
-
 <style>
   .idiom-brand-story {
     position: relative;
-    background: var(--idiom-cream);
+    background: var(--idiom-olive);
     width: 100%;
-    padding: 80px 48px 80px 48px;
+    padding: 80px 48px;
     overflow: hidden;
+    text-align: center;
   }
 
-  /* ---- Left decorative collage ---- */
-  .idiom-brand-story__collage {
+  /* Butterfly — left, partially clipped */
+  .idiom-brand-story__butterfly {
     position: absolute;
     top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    width: 40%;
-    max-height: 100%;
+    left: -40px;
+    transform: translateY(-55%);
+    width: 340px;
     pointer-events: none;
-    z-index: 0;
+    z-index: 1;
   }
 
-  .idiom-brand-story__collage-img {
+  .idiom-brand-story__butterfly img {
     width: 100%;
-    height: 100%;
-    object-fit: contain;
+    height: auto;
     display: block;
   }
 
-  /* ---- Content wrap (sits on top of absolute collage) ---- */
-  .idiom-brand-story__content-wrap {
-    position: relative;
+  /* Moon — right, partially clipped */
+  .idiom-brand-story__moon {
+    position: absolute;
+    top: 50%;
+    right: -80px;
+    transform: translateY(-50%);
+    width: 300px;
+    pointer-events: none;
     z-index: 1;
-    margin-left: 42%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
   }
 
-  /* ---- Text block ---- */
-  .idiom-brand-story__text-block {
-    max-width: 520px;
+  .idiom-brand-story__moon img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 50%;
+  }
+
+  /* Main content — centered, on top of decorative elements */
+  .idiom-brand-story__content {
+    position: relative;
+    z-index: 2;
+    max-width: 640px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 16px;
   }
 
   .idiom-brand-story__heading {
-    font-size: 36px;
-    font-weight: 700;
-    color: var(--idiom-black);
-    line-height: 1.2;
+    font-size: 42px;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.15;
     margin: 0;
+    letter-spacing: -0.01em;
   }
 
   .idiom-brand-story__subline {
-    font-size: 20px;
+    font-size: 18px;
     font-style: italic;
-    color: var(--idiom-black);
-    opacity: 0.75;
+    color: rgba(255,255,255,0.85);
     margin: 0;
   }
 
   .idiom-brand-story__body {
     font-size: 15px;
     line-height: 1.7;
-    color: var(--idiom-black);
-    opacity: 0.85;
+    color: rgba(255,255,255,0.8);
     margin: 0;
+    max-width: 520px;
   }
 
   .idiom-brand-story__cta {
+    display: inline-block;
+    background: #1a1a1a;
+    color: #ffffff;
+    border: none;
+    border-radius: 999px;
+    padding: 14px 48px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.01em;
     margin-top: 8px;
-    align-self: flex-start;
+    min-width: 200px;
+    transition: background 0.2s;
   }
 
-  /* ---- Grid transition ---- */
+  .idiom-brand-story__cta:hover {
+    background: #333333;
+  }
+
+  /* Grid transition — cream bg, centered, below the olive block */
   .idiom-brand-story__grid-transition {
-    margin-top: 72px;
-    width: 100%;
+    background: var(--idiom-cream);
     text-align: center;
-    padding-bottom: 8px;
+    padding: 60px 48px 32px;
   }
 
   .idiom-brand-story__grid-heading {
-    font-size: 32px;
-    font-weight: 700;
+    font-size: 36px;
+    font-weight: 800;
     color: var(--idiom-black);
     margin: 0 0 10px;
     line-height: 1.2;
+    letter-spacing: -0.01em;
   }
 
   .idiom-brand-story__grid-subtext {
     font-size: 14px;
-    font-weight: 400;
     color: var(--idiom-black);
-    opacity: 0.65;
+    opacity: 0.55;
     margin: 0;
     letter-spacing: 0.02em;
   }
 
-  /* ---- Tablet ---- */
+  /* Tablet */
   @media (max-width: 768px) {
     .idiom-brand-story {
       padding: 60px 32px;
     }
 
-    .idiom-brand-story__collage {
-      width: 50%;
-      opacity: 0.25;
+    .idiom-brand-story__butterfly {
+      width: 220px;
+      left: -20px;
     }
 
-    .idiom-brand-story__content-wrap {
-      margin-left: 0;
-      align-items: center;
+    .idiom-brand-story__moon {
+      width: 200px;
+      right: -50px;
     }
 
-    .idiom-brand-story__text-block {
-      max-width: 100%;
-      text-align: center;
-    }
-
-    .idiom-brand-story__cta {
-      align-self: center;
+    .idiom-brand-story__heading {
+      font-size: 32px;
     }
   }
 
-  /* ---- Mobile ---- */
+  /* Mobile */
   @media (max-width: 480px) {
     .idiom-brand-story {
-      padding: 40px 16px;
+      padding: 48px 16px;
     }
 
-    /* Hide the absolute collage; show stacked version instead */
-    .idiom-brand-story__collage {
+    .idiom-brand-story__butterfly {
+      width: 160px;
+      left: -30px;
+      top: 40%;
+    }
+
+    .idiom-brand-story__moon {
       display: none;
-    }
-
-    .idiom-brand-story__content-wrap {
-      margin-left: 0;
-      align-items: center;
-    }
-
-    .idiom-brand-story__text-block {
-      max-width: 100%;
-      width: 100%;
-      text-align: center;
-      padding: 0;
     }
 
     .idiom-brand-story__heading {
       font-size: 28px;
     }
 
-    .idiom-brand-story__subline {
-      font-size: 17px;
-    }
-
     .idiom-brand-story__cta {
-      align-self: center;
+      width: 100%;
+      min-height: 44px;
+      line-height: 44px;
+      padding-top: 0;
+      padding-bottom: 0;
     }
 
     .idiom-brand-story__grid-transition {
-      margin-top: 48px;
+      padding: 40px 16px 24px;
     }
 
     .idiom-brand-story__grid-heading {
-      font-size: 24px;
+      font-size: 26px;
     }
   }
 </style>
+
+<div class="idiom-brand-story">
+  {%- if section.settings.butterfly_image != blank -%}
+    <div class="idiom-brand-story__butterfly" aria-hidden="true">
+      <img src="{{ section.settings.butterfly_image | image_url: width: 700 }}" alt="" loading="lazy">
+    </div>
+  {%- endif -%}
+
+  {%- if section.settings.moon_image != blank -%}
+    <div class="idiom-brand-story__moon" aria-hidden="true">
+      <img src="{{ section.settings.moon_image | image_url: width: 600 }}" alt="" loading="lazy">
+    </div>
+  {%- endif -%}
+
+  <div class="idiom-brand-story__content">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="idiom-brand-story__heading">{{ section.settings.heading }}</h2>
+    {%- endif -%}
+
+    {%- if section.settings.subline != blank -%}
+      <p class="idiom-brand-story__subline">{{ section.settings.subline }}</p>
+    {%- endif -%}
+
+    {%- if section.settings.body != blank -%}
+      <p class="idiom-brand-story__body">{{ section.settings.body }}</p>
+    {%- endif -%}
+
+    {%- if section.settings.cta_label != blank -%}
+      <a class="idiom-brand-story__cta" href="{{ section.settings.cta_url | default: '#' }}">
+        {{ section.settings.cta_label }}
+      </a>
+    {%- endif -%}
+  </div>
+</div>
+
+{%- if section.settings.grid_heading != blank or section.settings.grid_subtext != blank -%}
+  <div class="idiom-brand-story__grid-transition">
+    {%- if section.settings.grid_heading != blank -%}
+      <h3 class="idiom-brand-story__grid-heading">{{ section.settings.grid_heading }}</h3>
+    {%- endif -%}
+    {%- if section.settings.grid_subtext != blank -%}
+      <p class="idiom-brand-story__grid-subtext">{{ section.settings.grid_subtext }}</p>
+    {%- endif -%}
+  </div>
+{%- endif -%}
 
 {% schema %}
 {
@@ -230,8 +237,13 @@
   "settings": [
     {
       "type": "image_picker",
-      "id": "collage_image",
-      "label": "Left decorative collage image"
+      "id": "butterfly_image",
+      "label": "Left decorative image (butterfly)"
+    },
+    {
+      "type": "image_picker",
+      "id": "moon_image",
+      "label": "Right decorative image (moon)"
     },
     {
       "type": "text",
