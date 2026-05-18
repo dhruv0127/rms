@@ -7,12 +7,16 @@
 .idiom-product-card__title { font-size: 16px; font-weight: 700; margin: 0 0 4px; }
 .idiom-product-card__scent { font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; opacity: 0.6; margin: 0 0 4px; }
 .idiom-product-card__price { font-size: 14px; margin: 0; }
+.idiom-product-card__bg--composed { object-fit: cover; }
 </style>
 
 <a href="{{ product.url }}" class="idiom-product-card-link">
   <div class="idiom-product-card-wrap">
     <div class="idiom-product-card">
-      {%- if product.metafields.custom.card_background_image != blank -%}
+      {%- if override_image != blank -%}
+        <img src="{{ override_image | image_url: width: 800 }}"
+             alt="{{ product.title }}" class="idiom-product-card__bg idiom-product-card__bg--composed" loading="lazy">
+      {%- elsif product.metafields.custom.card_background_image != blank -%}
         <img src="{{ product.metafields.custom.card_background_image | image_url: width: 600 }}"
              alt="{{ product.title }}" class="idiom-product-card__bg" loading="lazy">
       {%- elsif product.featured_image -%}
@@ -20,7 +24,7 @@
              alt="{{ product.title }}" class="idiom-product-card__bg" loading="lazy">
       {%- endif -%}
 
-      {%- if product.featured_image -%}
+      {%- if override_image == blank and product.metafields.custom.card_background_image != blank and product.featured_image -%}
         <img src="{{ product.featured_image | image_url: width: 400 }}"
              alt="{{ product.title }}" class="idiom-product-card__bottle" loading="lazy">
       {%- endif -%}

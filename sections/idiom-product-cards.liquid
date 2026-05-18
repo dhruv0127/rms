@@ -25,21 +25,60 @@
   </div>
 {%- endif -%}
 
-{%- assign products_collection = collections[section.settings.collection] -%}
-{%- if products_collection != blank -%}
+{%- if section.blocks.size > 0 -%}
   <div class="idiom-product-cards-grid">
-    {%- for product in products_collection.products limit: section.settings.max_products -%}
-      {% render 'idiom-product-card', product: product %}
+    {%- for block in section.blocks -%}
+      {%- assign product = all_products[block.settings.product] -%}
+      {%- if product != blank -%}
+        {%- assign override_image = block.settings.card_image -%}
+        {% render 'idiom-product-card', product: product, override_image: override_image %}
+      {%- endif -%}
     {%- endfor -%}
   </div>
+{%- elsif section.settings.collection != blank -%}
+  {%- assign products_collection = collections[section.settings.collection] -%}
+  {%- if products_collection != blank -%}
+    <div class="idiom-product-cards-grid">
+      {%- for product in products_collection.products limit: section.settings.max_products -%}
+        {% render 'idiom-product-card', product: product %}
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
 {%- endif -%}
 
 {% schema %}
 {
   "name": "Product Cards Grid",
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+          "type": "image_picker",
+          "id": "card_image",
+          "label": "Card image override",
+          "info": "Optional. Replaces the product image on this card."
+        }
+      ]
+    }
+  ],
   "settings": [
+    {
+      "type": "header",
+      "content": "Fallback (used when no blocks are added)"
+    },
     { "type": "collection", "id": "collection", "label": "Product collection" },
     { "type": "range", "id": "max_products", "label": "Max products", "min": 3, "max": 12, "step": 3, "default": 3 },
+    {
+      "type": "header",
+      "content": "Section heading"
+    },
     { "type": "text", "id": "heading", "label": "Section heading" },
     { "type": "text", "id": "subtext", "label": "Section subtext" }
   ],
