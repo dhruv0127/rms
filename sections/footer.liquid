@@ -2,60 +2,86 @@
 
 <style>
   .idiom-footer {
-    background: var(--idiom-olive-dark);
+    background: var(--idiom-cream, #faf6f0);
     position: relative;
     overflow: hidden;
-    padding: 60px 48px 0;
+    padding: 48px 48px 0;
   }
 
-  /* Collage image — right side, bleeds to edges */
-  .idiom-footer__collage {
+  /* Combined logotype + collage image — full width, bleeds edge to edge */
+  .idiom-footer__logotype-img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    height: auto;
     position: absolute;
-    right: 0;
+    z-index: 1;
     top: 0;
-    height: 100%;
-    width: 50%;
-    object-fit: cover;
-    object-position: left center;
-    z-index: 0;
-  }
+}
 
   /* Three text columns */
   .idiom-footer__columns {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0;
     position: relative;
     z-index: 1;
+    padding-bottom: 32px;
+  }
+
+  /* Col 1 spans 2 cols (brand + social), col 2 and 3 are links */
+  .idiom-footer__col--brand {
+    grid-column: span 1;
+    padding-right: 40px;
   }
 
   .idiom-footer__col-heading {
-    color: #fff;
+    color: var(--idiom-black, #1a1a1a);
     font-weight: 700;
     margin: 0 0 12px;
   }
 
-  .idiom-footer__col-heading--lg { font-size: 18px; }
-  .idiom-footer__col-heading--sm { font-size: 16px; }
+  .idiom-footer__col-heading--lg { font-size: 22px; }
+  .idiom-footer__col-heading--sm { font-size: 15px; }
 
   .idiom-footer__tagline {
-    color: rgba(255,255,255,0.7);
+    color: rgba(26,26,26,0.7);
     font-size: 13px;
     line-height: 1.6;
-    margin: 0;
+    margin: 0 0 16px;
+    max-width: 280px;
   }
 
-  .idiom-footer__dots {
+  .idiom-footer__social {
     display: flex;
-    gap: 6px;
-    margin-top: 14px;
+    gap: 8px;
+    margin-top: 4px;
   }
 
-  .idiom-footer__dot {
-    width: 8px;
-    height: 8px;
+  .idiom-footer__social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
-    background: rgba(255,255,255,0.4);
+    border: 1.5px solid rgba(26,26,26,0.25);
+    color: var(--idiom-black, #1a1a1a);
+    text-decoration: none;
+    transition: border-color 0.15s, background 0.15s;
+  }
+
+  .idiom-footer__social-link:hover {
+    border-color: var(--idiom-black, #1a1a1a);
+    background: var(--idiom-black, #1a1a1a);
+    color: #fff;
+  }
+
+  .idiom-footer__social-link svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
   }
 
   .idiom-footer__links {
@@ -64,122 +90,109 @@
     margin: 0;
   }
 
-  .idiom-footer__links li { margin-bottom: 8px; }
+  .idiom-footer__links li { margin-bottom: 9px; }
 
   .idiom-footer__links a {
-    color: rgba(255,255,255,0.8);
+    color: rgba(26,26,26,0.75);
     font-size: 13px;
     text-decoration: none;
     transition: color 0.15s;
   }
 
-  .idiom-footer__links a:hover { color: #fff; text-decoration: underline; }
-
-  /* Large logotype — spans full width, bottom */
-  .idiom-footer__logotype {
-    color: #fff;
-    font-size: 140px;
-    font-weight: 900;
-    line-height: 0.85;
-    margin-top: 48px;
-    position: relative;
-    z-index: 2;
-    letter-spacing: -0.02em;
-    white-space: nowrap;
+  .idiom-footer__links a:hover {
+    color: var(--idiom-black, #1a1a1a);
+    text-decoration: underline;
   }
 
   /* Bottom bar */
   .idiom-footer__bottom {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 16px 0 20px;
-    border-top: 1px solid rgba(255,255,255,0.12);
-    margin-top: 24px;
+    padding: 12px 0 16px;
+    border-top: 1px solid rgba(26,26,26,0.12);
+    margin-top: 0;
   }
 
   .idiom-footer__copyright {
-    color: rgba(255,255,255,0.5);
-    font-size: 12px;
+    color: rgba(26,26,26,0.45);
+    font-size: 11px;
+  }
+
+  /* Tablet */
+  @media (max-width: 768px) {
+    .idiom-footer {
+      padding: 40px 24px 0;
+    }
+
+    .idiom-footer__columns {
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    .idiom-footer__col--brand {
+      grid-column: span 2;
+      padding-right: 0;
+    }
+
+    .idiom-footer__logotype-img {
+      width: 100%;
+      max-width: 100%;
+      margin-left: 0;
+    }
   }
 
   /* Mobile */
-  @media (max-width: 768px) {
-    .idiom-footer {
-      padding: 48px 24px 0;
-    }
-
-    .idiom-footer__collage {
-      width: 60%;
-      opacity: 0.4;
-    }
-
-    .idiom-footer__logotype {
-      font-size: 80px;
-    }
-  }
-
   @media (max-width: 480px) {
     .idiom-footer {
-      padding: 40px 16px 0;
+      padding: 32px 16px 0;
     }
 
     .idiom-footer__columns {
       grid-template-columns: 1fr;
-      gap: 28px;
+      gap: 24px;
     }
 
-    .idiom-footer__collage {
-      display: none;
+    .idiom-footer__col--brand {
+      grid-column: span 1;
     }
 
-    .idiom-footer__logotype {
-      font-size: 56px;
-      margin-top: 32px;
+    .idiom-footer__logotype-img {
+      width: 100%;
+      max-width: 100%;
+      margin-left: 0;
     }
   }
 </style>
 
 <footer class="idiom-footer">
 
-  {%- assign collage_src = section.settings.collage_image -%}
-  {%- if collage_src != blank -%}
-    <img
-      class="idiom-footer__collage"
-      src="{{ collage_src | image_url: width: 1400 }}"
-      alt=""
-      loading="lazy"
-      aria-hidden="true"
-    >
-  {%- else -%}
-    <img
-      class="idiom-footer__collage"
-      src="{{ 'idiom-footer-bg.png' | asset_url }}"
-      alt=""
-      loading="lazy"
-      aria-hidden="true"
-    >
-  {%- endif -%}
-
   <div class="idiom-footer__columns">
 
     <!-- Column 1: brand -->
-    <div class="idiom-footer__col">
+    <div class="idiom-footer__col idiom-footer__col--brand">
       <p class="idiom-footer__col-heading idiom-footer__col-heading--lg">smell like no one else</p>
       <p class="idiom-footer__tagline">
         {%- if section.settings.tagline != blank -%}
           {{ section.settings.tagline }}
         {%- else -%}
-          Crafted for those who move differently. Scent-first, always.
+          Idiom makes rule-breaking, layer-ready fragrances for skin that wants more. Designed to be mixed, and never made to behave.
         {%- endif -%}
       </p>
-      <div class="idiom-footer__dots">
-        <span class="idiom-footer__dot"></span>
-        <span class="idiom-footer__dot"></span>
+      <div class="idiom-footer__social">
+        <a href="https://instagram.com/idiomfragrances" class="idiom-footer__social-link" aria-label="Instagram" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://tiktok.com/@idiomfragrances" class="idiom-footer__social-link" aria-label="TikTok" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+        </a>
       </div>
     </div>
+
+    <!-- Empty spacer column -->
+    <div class="idiom-footer__col" style="grid-column: span 1;"></div>
 
     <!-- Column 2: the boring stuff -->
     <div class="idiom-footer__col">
@@ -207,7 +220,11 @@
 
   </div>
 
-  <div class="idiom-footer__logotype">idiom&reg;</div>
+  {%- if section.settings.logotype_image != blank -%}
+    <img class="idiom-footer__logotype-img" src="{{ section.settings.logotype_image | image_url: width: 2800 }}" alt="idiom" loading="lazy">
+  {%- else -%}
+    <img class="idiom-footer__logotype-img" src="{{ 'idiom-footer-logotype.png' | asset_url }}" alt="idiom" loading="lazy">
+  {%- endif -%}
 
   <div class="idiom-footer__bottom">
     <span class="idiom-footer__copyright">&copy; {{ 'now' | date: '%Y' }} idiom fragrances. all rights reserved.</span>
@@ -227,9 +244,9 @@
     },
     {
       "type": "image_picker",
-      "id": "collage_image",
-      "label": "Right decorative collage",
-      "info": "Positioned on the right side. Leave blank to use the default footer background."
+      "id": "logotype_image",
+      "label": "Logotype + collage image",
+      "info": "Pre-composed image with idiom® text and collage. Spans full footer width. Leave blank to use the default."
     },
     {
       "type": "text",

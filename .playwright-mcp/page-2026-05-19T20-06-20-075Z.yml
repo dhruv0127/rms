@@ -1,0 +1,51 @@
+- contentinfo [ref=e2]:
+  - img [ref=e3]
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - paragraph [ref=e6]: smell like no one else
+      - paragraph [ref=e7]: Idiom makes rule-breaking, layer-ready fragrances for skin that wants more. Designed to be mixed, and never made to behave.
+      - generic [ref=e8]:
+        - link "Instagram" [ref=e9] [cursor=pointer]:
+          - /url: "#"
+          - img [ref=e10]
+        - link "TikTok" [ref=e12] [cursor=pointer]:
+          - /url: "#"
+          - img [ref=e13]
+    - generic [ref=e16]:
+      - paragraph [ref=e17]: the boring stuff
+      - list [ref=e18]:
+        - listitem [ref=e19]:
+          - link "delivery" [ref=e20] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=e21]:
+          - link "returns" [ref=e22] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=e23]:
+          - link "accounts" [ref=e24] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=e25]:
+          - link "faqs" [ref=e26] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=e27]:
+          - link "contact" [ref=e28] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=e29]:
+          - link "terms & conditions" [ref=e30] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=e31]:
+          - link "privacy policy" [ref=e32] [cursor=pointer]:
+            - /url: "#"
+    - generic [ref=e33]:
+      - paragraph [ref=e34]: shop by type
+      - list [ref=e35]:
+        - listitem [ref=e36]:
+          - link "full size" [ref=e37] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=e38]:
+          - link "mini-oms" [ref=e39] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=e40]:
+          - link "kits and gifts" [ref=e41] [cursor=pointer]:
+            - /url: "#"
+  - generic [ref=e42]: idiom®
+  - generic [ref=e44]: © 2026 idiom fragrances. all rights reserved.
