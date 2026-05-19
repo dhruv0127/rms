@@ -1,0 +1,12 @@
+- alertdialog "Cookie consent" [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - heading "Cookie consent" [level=2] [ref=e4]
+      - paragraph [ref=e5]:
+        - text: We and our partners, including Shopify, use cookies and other technologies to personalize your experience, show you ads, and perform analytics, and we will not use cookies or other technologies for these purposes unless you accept them. Learn more in our
+        - link "Privacy Policy" [ref=e6] [cursor=pointer]:
+          - /url: http://idiomfragrances.com/policies/privacy-policy
+    - generic [ref=e7]:
+      - button "Manage preferences" [ref=e8] [cursor=pointer]
+      - button "Accept" [ref=e9] [cursor=pointer]
+      - button "Decline" [ref=e10] [cursor=pointer]

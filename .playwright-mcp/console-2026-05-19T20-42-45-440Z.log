@@ -1,0 +1,18 @@
+[    1837ms] [LOG] AZ: Google Font & Custom Fonts v1.0.2 @ https://idiomfragrances.com/:879
+[    1922ms] [INFO] [HotReload] CLI hot reload disabled - No hot reload port specified. @ https://idiomfragrances.com/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:316
+[    2004ms] [WARNING] Error in section: template--28721600659833__section-banner-image @ https://idiomfragrances.com/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:8
+[    2004ms] [WARNING] T @ https://idiomfragrances.com/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:8
+[    2005ms] [WARNING] TypeError: Cannot read properties of null (reading 'querySelectorAll')
+    at Object.handleImageAnimation (https://idiomfragrances.com/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:9:241921)
+    at Object.init (https://idiomfragrances.com/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:9:241470)
+    at new <anonymous> (https://idiomfragrances.com/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:9:242446)
+    at Object.onLoad (https://idiomfragrances.com/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:9:241445)
+    at https://idiomfragrances.com/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:9:3081
+    at Array.forEach (<anonymous>)
+    at T.callFunctions (https://idiomfragrances.com/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:9:2991)
+    at T.onLoad (https://idiomfragrances.com/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:9:3106)
+    at new T (https://idiomfragrances.com/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:9:3866)
+    at https://idiomfragrances.com/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:9:4620 @ https://idiomfragrances.com/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:8
+[    7028ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3119
+[    7032ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3119
+[    7034ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :2752

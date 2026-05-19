@@ -1,6 +1,6 @@
 <style>
-  .idiom-dual-promo { display: flex; width: 100%; min-height: 50vh; }
-  .idiom-dual-promo__panel { flex: 1 1 50%; position: relative; overflow: hidden; min-height: 50vh; }
+  .idiom-dual-promo { display: flex; width: 100%; }
+  .idiom-dual-promo__panel { flex: 1 1 50%; position: relative; overflow: hidden; height: 480px; }
   .idiom-dual-promo__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
   .idiom-dual-promo__overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.2); z-index: 1; }
   .idiom-dual-promo__content { position: absolute; bottom: 28px; left: 28px; z-index: 2; }
@@ -10,7 +10,7 @@
   .idiom-dual-promo__cta:hover { text-decoration: underline; }
   @media (max-width: 600px) {
     .idiom-dual-promo { flex-direction: column; }
-    .idiom-dual-promo__panel { min-height: 50vw; }
+    .idiom-dual-promo__panel { height: 280px; }
   }
 </style>
 

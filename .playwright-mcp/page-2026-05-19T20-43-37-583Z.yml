@@ -1,0 +1,55 @@
+- contentinfo [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e4]: free samples in every order
+    - generic [ref=e5]: 5 star reviewed layering fragrances
+    - generic [ref=e6]: high-quality, british made eau du parfum
+  - generic [ref=e7]:
+    - generic [ref=e8]:
+      - paragraph [ref=e9]: smell like no one else
+      - paragraph [ref=e10]: Idiom makes rule-breaking, layer-ready fragrances for skin that wants more. Designed to be mixed, and never made to behave.
+      - generic [ref=e11]:
+        - link "Instagram" [ref=e12] [cursor=pointer]:
+          - /url: "#"
+          - img [ref=e13]
+        - link "TikTok" [ref=e15] [cursor=pointer]:
+          - /url: "#"
+          - img [ref=e16]
+    - generic [ref=e18]:
+      - generic [ref=e19]:
+        - paragraph [ref=e20]: the boring stuff
+        - list [ref=e21]:
+          - listitem [ref=e22]:
+            - link "delivery" [ref=e23] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e24]:
+            - link "returns" [ref=e25] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e26]:
+            - link "accounts" [ref=e27] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e28]:
+            - link "faqs" [ref=e29] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e30]:
+            - link "contact" [ref=e31] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e32]:
+            - link "terms & conditions" [ref=e33] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e34]:
+            - link "privacy policy" [ref=e35] [cursor=pointer]:
+              - /url: "#"
+      - generic [ref=e36]:
+        - paragraph [ref=e37]: shop by type
+        - list [ref=e38]:
+          - listitem [ref=e39]:
+            - link "full size" [ref=e40] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e41]:
+            - link "mini-oms" [ref=e42] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e43]:
+            - link "kits and gifts" [ref=e44] [cursor=pointer]:
+              - /url: "#"
+  - img "idiom" [ref=e45]
+  - generic [ref=e47]: © 2026 idiom fragrances. all rights reserved.

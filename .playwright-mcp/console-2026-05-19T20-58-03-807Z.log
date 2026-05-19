@@ -1,0 +1,21 @@
+[    1524ms] [LOG] AZ: Google Font & Custom Fonts v1.0.2 @ https://idiomfragrances.com/:879
+[    1650ms] [INFO] [HotReload] CLI hot reload disabled - No hot reload port specified. @ https://idiomfragrances.com/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:316
+[    1676ms] [WARNING] Error in section: template--28721600659833__section-banner-image @ https://idiomfragrances.com/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:8
+[    1676ms] [WARNING] T @ https://idiomfragrances.com/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:8
+[    1676ms] [WARNING] TypeError: Cannot read properties of null (reading 'querySelectorAll')
+    at Object.handleImageAnimation (https://idiomfragrances.com/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:9:241921)
+    at Object.init (https://idiomfragrances.com/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:9:241470)
+    at new <anonymous> (https://idiomfragrances.com/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:9:242446)
+    at Object.onLoad (https://idiomfragrances.com/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:9:241445)
+    at https://idiomfragrances.com/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:9:3081
+    at Array.forEach (<anonymous>)
+    at T.callFunctions (https://idiomfragrances.com/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:9:2991)
+    at T.onLoad (https://idiomfragrances.com/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:9:3106)
+    at new T (https://idiomfragrances.com/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:9:3866)
+    at https://idiomfragrances.com/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:9:4620 @ https://idiomfragrances.com/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:8
+[    6745ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3119
+[    6748ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3119
+[    6750ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :2752
+[   31577ms] [ERROR] Failed to load resource: net::ERR_TIMED_OUT @ https://shop.app/checkouts/internal/preloads.js?locale=en-GB&shop_id=91491172729:0
+[   36122ms] [WARNING] The resource https://idiomfragrances.com/cdn/shop/files/idiom_logo_black_150x45.png?v=1746711320 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://idiomfragrances.com/:0
+[   36122ms] [WARNING] The resource https://idiomfragrances.com/cdn/shop/t/8/assets/loading.svg?v=91665432863842511931779072698 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://idiomfragrances.com/:0

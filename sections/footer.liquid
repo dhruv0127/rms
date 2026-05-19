@@ -1,10 +1,25 @@
 <!-- /sections/footer.liquid -->
 
 <style>
+  @font-face {
+    font-family: "farro-bold (2)";
+    src: url("https://cdn.shopify.com/s/files/1/0914/9117/2729/files/Farro-Bold_2.woff?v=1779224238") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "farro-regular (1)";
+    src: url("https://cdn.shopify.com/s/files/1/0914/9117/2729/files/Farro-Regular_1.woff?v=1779224238") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
   .idiom-footer {
     background: var(--idiom-cream, #faf6f0);
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
     min-height: 740px;
     display: flex;
     flex-direction: column;
@@ -15,18 +30,22 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     border-bottom: 1px solid rgba(26,26,26,0.15);
+    position: relative;
+    z-index: 2;
   }
 
   .idiom-footer__trust-item {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 16px;
+    padding: 9px 16px;
+    font-family: "farro-bold (2)", sans-serif;
     font-size: 13px;
-    font-weight: 700;
+    font-weight: 400;
     color: var(--idiom-black, #1a1a1a);
     text-align: center;
     border-right: 1px solid rgba(26,26,26,0.15);
+    line-height: 1.1;
   }
 
   .idiom-footer__trust-item:last-child {
@@ -38,32 +57,37 @@
     display: grid;
     grid-template-columns: 1fr auto auto;
     gap: 0;
-    padding: 48px 48px 40px;
+    padding: 32px 48px 40px;
     flex: 1;
+    position: relative;
+    z-index: 2;
   }
 
   /* ── Brand col (left) ── */
   .idiom-footer__col--brand {
-    position: relative;
-    z-index: 1;
-    max-width: 420px;
+    max-width: 460px;
+    min-width: 0;
     padding-right: 40px;
   }
 
   .idiom-footer__col-heading--lg {
-    font-size: clamp(22px, 2.5vw, 32px);
-    font-weight: 700;
-    margin: 0 0 12px;
+    font-family: "farro-bold (2)", sans-serif;
+    font-size: clamp(28px, 2.8vw, 40px);
+    font-weight: 400;
+    margin: 0 0 10px;
     color: var(--idiom-black, #1a1a1a);
-    line-height: 1.1;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
   }
 
   .idiom-footer__tagline {
+    font-family: "farro-regular (1)", sans-serif;
     color: var(--idiom-black, #1a1a1a);
-    font-size: 14px;
-    line-height: 1.6;
-    margin: 0 0 20px;
-    max-width: 320px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0 0 18px;
+    max-width: 300px;
   }
 
   .idiom-footer__social {
@@ -75,8 +99,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 34px;
-    height: 34px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
     border: 1.5px solid rgba(26,26,26,0.3);
     color: var(--idiom-black, #1a1a1a);
@@ -91,27 +115,27 @@
   }
 
   .idiom-footer__social-link svg {
-    width: 15px;
-    height: 15px;
+    width: 14px;
+    height: 14px;
     fill: currentColor;
   }
 
   /* ── Link cols (right) ── */
   .idiom-footer__links-group {
-    position: relative;
-    z-index: 1;
     display: flex;
-    gap: 80px;
+    gap: 40px;
     align-items: flex-start;
+    min-width: 0;
   }
 
   .idiom-footer__col-heading--sm {
-    font-size: clamp(18px, 2vw, 28px);
-    font-weight: 700;
-    margin: 0 0 16px;
+    font-family: "farro-bold (2)", sans-serif;
+    font-size: clamp(28px, 2.8vw, 40px);
+    font-weight: 400;
+    margin: 0 0 12px;
     color: var(--idiom-black, #1a1a1a);
-    line-height: 1.1;
-    white-space: nowrap;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
   }
 
   .idiom-footer__links {
@@ -120,18 +144,21 @@
     margin: 0;
   }
 
-  .idiom-footer__links li { margin-bottom: 8px; }
+  .idiom-footer__links li { margin-bottom: 0; }
 
   .idiom-footer__links a {
+    font-family: "farro-regular (1)", sans-serif;
     color: var(--idiom-black, #1a1a1a);
-    font-size: 13px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.69;
     text-decoration: none;
+    display: block;
     transition: opacity 0.15s;
-    opacity: 0.85;
   }
 
   .idiom-footer__links a:hover {
-    opacity: 1;
+    opacity: 0.6;
     text-decoration: underline;
   }
 
@@ -151,14 +178,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 12px 48px 16px;
+    padding: 10px 48px 12px;
     border-top: 1px solid rgba(26,26,26,0.12);
     background: var(--idiom-cream, #faf6f0);
   }
 
   .idiom-footer__copyright {
+    font-family: "farro-regular (1)", sans-serif;
     color: rgba(26,26,26,0.45);
     font-size: 11px;
+    font-weight: 400;
   }
 
   /* ── Tablet ── */
