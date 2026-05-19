@@ -2,7 +2,13 @@
 .idiom-product-cards-section {
   background: var(--idiom-cream);
   padding: 0 0 60px;
-  overflow: hidden;
+  overflow: visible;
+}
+
+/* Clip horizontally only so bottle tops don't get cut, but horizontal scroll is contained */
+.idiom-product-cards-section-clip {
+  overflow-x: clip;
+  overflow-y: visible;
 }
 
 /* Flickity overrides */
@@ -86,7 +92,7 @@
   </div>
 {%- endif -%}
 
-<div class="idiom-product-cards-section">
+<div class="idiom-product-cards-section idiom-product-cards-section-clip">
   <div class="idiom-product-cards-nav">
     <button class="idiom-product-cards-nav__btn" data-prev="{{ section.id }}" aria-label="Previous">
       <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
@@ -96,7 +102,7 @@
     </button>
   </div>
 
-  <div class="idiom-product-cards-slider" id="idiom-slider-{{ section.id }}" style="padding-left: 24px;"
+  <div class="idiom-product-cards-slider" id="idiom-slider-{{ section.id }}" style="padding-left: 24px; padding-top: 40px;"
     data-flickity='{"cellAlign":"left","contain":true,"pageDots":false,"prevNextButtons":false,"draggable":true,"wrapAround":false,"adaptiveHeight":false}'>
     {%- if section.blocks.size > 0 -%}
       {%- for block in section.blocks -%}
