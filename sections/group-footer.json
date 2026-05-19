@@ -30,21 +30,21 @@
             "column_width": "25"
           }
         },
-        "footer-block-2": {
-          "type": "link",
-          "settings": {
-            "alignment": "text-left",
-            "menu": "information",
-            "title": "Information",
-            "column_width": "25"
-          }
-        },
         "footer-block-3": {
           "type": "link",
           "settings": {
             "alignment": "text-left",
             "menu": "follow-up",
             "title": "@idiomfragrances",
+            "column_width": "25"
+          }
+        },
+        "footer-block-2": {
+          "type": "link",
+          "settings": {
+            "alignment": "text-left",
+            "menu": "information",
+            "title": "Information",
             "column_width": "25"
           }
         },
@@ -61,8 +61,8 @@
       "block_order": [
         "footer-block-0",
         "divider_JeWFhP",
-        "footer-block-2",
         "footer-block-3",
+        "footer-block-2",
         "logo_full_Kj4FbY"
       ],
       "settings": {
