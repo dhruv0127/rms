@@ -37,18 +37,21 @@
   /* Moon — bottom-right, about 45% hanging below the section */
   .idiom-brand-story__moon {
     position: absolute;
-    bottom: -160px;
-    right: -20px;
-    width: 380px;
+    bottom: -90px;
+    right: 0;
     pointer-events: none;
     z-index: 3;
+    display: flex;
+    justify-content: flex-end;
   }
 
   .idiom-brand-story__moon img {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 50%;
+    border-radius: 0;
+    max-width: 260px;
+    right: 0;
   }
 
   /* Main content — centered, on top of decorative elements */
@@ -107,6 +110,28 @@
 
   .idiom-brand-story__cta:hover {
     background: #333333;
+  }
+
+  /* ── Marquee strip (between olive block and grid heading) ── */
+  .idiom-brand-story__marquee-strip {
+    background: var(--idiom-black, #1a1a1a);
+    padding: 12px 0;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .idiom-brand-story__marquee-strip .idiom-marquee-track {
+    font-family: "farro-bold (2)", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--idiom-cream, #faf6f0);
+    letter-spacing: 0.04em;
+    text-transform: lowercase;
+    gap: 0;
+  }
+
+  .idiom-brand-story__marquee-strip .idiom-marquee-track span {
+    padding: 0 24px;
   }
 
   /* Grid transition — cream bg, centered, below the olive block */
@@ -237,6 +262,15 @@
   </div>
 </div>
 
+{%- assign marquee_items = section.settings.marquee_text | default: "smell like no one else™ · find your fragrance freedom · layer, or wear solo · " -%}
+<div class="idiom-brand-story__marquee-strip">
+  <div class="idiom-marquee-track" aria-hidden="true">
+    {%- for i in (1..6) -%}
+      <span>{{ marquee_items }}</span>
+    {%- endfor -%}
+  </div>
+</div>
+
 {%- if section.settings.grid_heading != blank or section.settings.grid_subtext != blank -%}
   <div class="idiom-brand-story__grid-transition">
     {%- if section.settings.grid_heading != blank -%}
@@ -292,6 +326,12 @@
       "type": "url",
       "id": "cta_url",
       "label": "CTA link"
+    },
+    {
+      "type": "text",
+      "id": "marquee_text",
+      "label": "Marquee text",
+      "default": "smell like no one else™ · find your fragrance freedom · layer, or wear solo · "
     },
     {
       "type": "text",

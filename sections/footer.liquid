@@ -25,32 +25,6 @@
     flex-direction: column;
   }
 
-  /* ── Trust badges strip ── */
-  .idiom-footer__trust {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    border-bottom: 1px solid rgba(26,26,26,0.15);
-    position: relative;
-    z-index: 2;
-  }
-
-  .idiom-footer__trust-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 9px 16px;
-    font-family: "farro-bold (2)", sans-serif;
-    font-size: 13px;
-    font-weight: 400;
-    color: var(--idiom-black, #1a1a1a);
-    text-align: center;
-    border-right: 1px solid rgba(26,26,26,0.15);
-    line-height: 1.1;
-  }
-
-  .idiom-footer__trust-item:last-child {
-    border-right: none;
-  }
 
   /* ── Main content area ── */
   .idiom-footer__main {
@@ -213,20 +187,6 @@
 
   /* ── Mobile ── */
   @media (max-width: 480px) {
-    .idiom-footer__trust {
-      grid-template-columns: 1fr;
-    }
-
-    .idiom-footer__trust-item {
-      border-right: none;
-      border-bottom: 1px solid rgba(26,26,26,0.15);
-      padding: 8px 16px;
-    }
-
-    .idiom-footer__trust-item:last-child {
-      border-bottom: none;
-    }
-
     .idiom-footer__main {
       padding: 32px 16px 24px;
     }
@@ -243,13 +203,6 @@
 </style>
 
 <footer class="idiom-footer">
-
-  <!-- Trust badges strip -->
-  <div class="idiom-footer__trust">
-    <div class="idiom-footer__trust-item">free samples in every order</div>
-    <div class="idiom-footer__trust-item">5 star reviewed layering fragrances</div>
-    <div class="idiom-footer__trust-item">high-quality, british made eau du parfum</div>
-  </div>
 
   <!-- Main content: brand col + link cols -->
   <div class="idiom-footer__main">

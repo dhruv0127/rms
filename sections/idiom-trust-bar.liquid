@@ -1,0 +1,63 @@
+<style>
+  .idiom-trust-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-top: 1px solid rgba(26,26,26,0.15);
+    border-bottom: 1px solid rgba(26,26,26,0.15);
+    background: var(--idiom-cream, #faf6f0);
+  }
+
+  .idiom-trust-bar__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 16px;
+    font-family: "farro-bold (2)", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--idiom-black, #1a1a1a);
+    text-align: center;
+    border-right: 1px solid rgba(26,26,26,0.15);
+    line-height: 1.1;
+  }
+
+  .idiom-trust-bar__item:last-child {
+    border-right: none;
+  }
+
+  @media (max-width: 480px) {
+    .idiom-trust-bar {
+      grid-template-columns: 1fr;
+    }
+    .idiom-trust-bar__item {
+      border-right: none;
+      border-bottom: 1px solid rgba(26,26,26,0.15);
+      padding: 8px 16px;
+    }
+    .idiom-trust-bar__item:last-child {
+      border-bottom: none;
+    }
+  }
+</style>
+
+<div class="idiom-trust-bar">
+  {%- for block in section.blocks -%}
+    <div class="idiom-trust-bar__item" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
+  {%- endfor -%}
+</div>
+
+{% schema %}
+{
+  "name": "Trust Bar",
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Trust item",
+      "settings": [
+        { "type": "text", "id": "text", "label": "Text", "default": "free samples in every order" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Trust Bar" }]
+}
+{% endschema %}
