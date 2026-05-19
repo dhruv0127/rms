@@ -12,8 +12,8 @@
     position: relative;
     background: #8b8b2a;
     width: 100%;
-    padding: 72px 48px;
-    overflow: visible;
+    padding: 0 0 72px;
+    overflow: hidden;
     text-align: center;
     border-radius: 28px;
   }
@@ -60,6 +60,7 @@
     z-index: 2;
     max-width: 640px;
     margin: 0 auto;
+    padding: 0 48px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -112,26 +113,27 @@
     background: #333333;
   }
 
-  /* ── Marquee strip (between olive block and grid heading) ── */
+  /* ── Marquee strip — top of olive block ── */
   .idiom-brand-story__marquee-strip {
-    background: var(--idiom-black, #1a1a1a);
-    padding: 12px 0;
+    background: #6e6e22;
+    padding: 10px 0;
     overflow: hidden;
     white-space: nowrap;
+    margin-bottom: 56px;
   }
 
   .idiom-brand-story__marquee-strip .idiom-marquee-track {
     font-family: "farro-bold (2)", sans-serif;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 400;
-    color: var(--idiom-cream, #faf6f0);
-    letter-spacing: 0.04em;
+    color: rgba(255,255,255,0.75);
+    letter-spacing: 0.06em;
     text-transform: lowercase;
     gap: 0;
   }
 
   .idiom-brand-story__marquee-strip .idiom-marquee-track span {
-    padding: 0 24px;
+    padding: 0 20px;
   }
 
   /* Grid transition — cream bg, centered, below the olive block */
@@ -165,7 +167,7 @@
     }
 
     .idiom-brand-story {
-      padding: 60px 32px;
+      padding: 0 0 60px;
     }
 
     .idiom-brand-story__butterfly {
@@ -192,8 +194,12 @@
     }
 
     .idiom-brand-story {
-      padding: 48px 16px;
+      padding: 0 0 48px;
       border-radius: 16px;
+    }
+
+    .idiom-brand-story__marquee-strip {
+      margin-bottom: 40px;
     }
 
     .idiom-brand-story__butterfly {
@@ -229,6 +235,15 @@
 </style>
 
 <div class="idiom-brand-story">
+  {%- assign marquee_items = section.settings.marquee_text | default: "smell like no one else™ · find your fragrance freedom · layer, or wear solo · " -%}
+  <div class="idiom-brand-story__marquee-strip">
+    <div class="idiom-marquee-track" aria-hidden="true">
+      {%- for i in (1..6) -%}
+        <span>{{ marquee_items }}</span>
+      {%- endfor -%}
+    </div>
+  </div>
+
   {%- if section.settings.butterfly_image != blank -%}
     <div class="idiom-brand-story__butterfly" aria-hidden="true">
       <img src="{{ section.settings.butterfly_image | image_url: width: 700 }}" alt="" loading="lazy">
@@ -259,15 +274,6 @@
         {{ section.settings.cta_label }}
       </a>
     {%- endif -%}
-  </div>
-</div>
-
-{%- assign marquee_items = section.settings.marquee_text | default: "smell like no one else™ · find your fragrance freedom · layer, or wear solo · " -%}
-<div class="idiom-brand-story__marquee-strip">
-  <div class="idiom-marquee-track" aria-hidden="true">
-    {%- for i in (1..6) -%}
-      <span>{{ marquee_items }}</span>
-    {%- endfor -%}
   </div>
 </div>
 
