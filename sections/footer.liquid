@@ -5,68 +5,80 @@
     background: var(--idiom-cream, #faf6f0);
     position: relative;
     overflow: hidden;
-    padding: 48px 48px 0;
+    min-height: 740px;
+    display: flex;
+    flex-direction: column;
   }
 
-  /* Combined logotype + collage image — full width, bleeds edge to edge */
-  .idiom-footer__logotype-img {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    margin-left: 0;
-    height: auto;
-    position: absolute;
-    z-index: 1;
-    top: 0;
-}
-
-  /* Three text columns */
-  .idiom-footer__columns {
+  /* ── Trust badges strip ── */
+  .idiom-footer__trust {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-bottom: 1px solid rgba(26,26,26,0.15);
+  }
+
+  .idiom-footer__trust-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--idiom-black, #1a1a1a);
+    text-align: center;
+    border-right: 1px solid rgba(26,26,26,0.15);
+  }
+
+  .idiom-footer__trust-item:last-child {
+    border-right: none;
+  }
+
+  /* ── Main content area ── */
+  .idiom-footer__main {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
     gap: 0;
+    padding: 48px 48px 40px;
+    flex: 1;
+  }
+
+  /* ── Brand col (left) ── */
+  .idiom-footer__col--brand {
     position: relative;
     z-index: 1;
-    padding-bottom: 32px;
-  }
-
-  /* Col 1 spans 2 cols (brand + social), col 2 and 3 are links */
-  .idiom-footer__col--brand {
-    grid-column: span 1;
+    max-width: 420px;
     padding-right: 40px;
   }
 
-  .idiom-footer__col-heading {
-    color: var(--idiom-black, #1a1a1a);
+  .idiom-footer__col-heading--lg {
+    font-size: clamp(22px, 2.5vw, 32px);
     font-weight: 700;
     margin: 0 0 12px;
+    color: var(--idiom-black, #1a1a1a);
+    line-height: 1.1;
   }
 
-  .idiom-footer__col-heading--lg { font-size: 22px; }
-  .idiom-footer__col-heading--sm { font-size: 15px; }
-
   .idiom-footer__tagline {
-    color: rgba(26,26,26,0.7);
-    font-size: 13px;
+    color: var(--idiom-black, #1a1a1a);
+    font-size: 14px;
     line-height: 1.6;
-    margin: 0 0 16px;
-    max-width: 280px;
+    margin: 0 0 20px;
+    max-width: 320px;
   }
 
   .idiom-footer__social {
     display: flex;
     gap: 8px;
-    margin-top: 4px;
   }
 
   .idiom-footer__social-link {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 36px;
-    height: 36px;
+    width: 34px;
+    height: 34px;
     border-radius: 50%;
-    border: 1.5px solid rgba(26,26,26,0.25);
+    border: 1.5px solid rgba(26,26,26,0.3);
     color: var(--idiom-black, #1a1a1a);
     text-decoration: none;
     transition: border-color 0.15s, background 0.15s;
@@ -79,9 +91,27 @@
   }
 
   .idiom-footer__social-link svg {
-    width: 16px;
-    height: 16px;
+    width: 15px;
+    height: 15px;
     fill: currentColor;
+  }
+
+  /* ── Link cols (right) ── */
+  .idiom-footer__links-group {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    gap: 80px;
+    align-items: flex-start;
+  }
+
+  .idiom-footer__col-heading--sm {
+    font-size: clamp(18px, 2vw, 28px);
+    font-weight: 700;
+    margin: 0 0 16px;
+    color: var(--idiom-black, #1a1a1a);
+    line-height: 1.1;
+    white-space: nowrap;
   }
 
   .idiom-footer__links {
@@ -90,30 +120,40 @@
     margin: 0;
   }
 
-  .idiom-footer__links li { margin-bottom: 9px; }
+  .idiom-footer__links li { margin-bottom: 8px; }
 
   .idiom-footer__links a {
-    color: rgba(26,26,26,0.75);
+    color: var(--idiom-black, #1a1a1a);
     font-size: 13px;
     text-decoration: none;
-    transition: color 0.15s;
+    transition: opacity 0.15s;
+    opacity: 0.85;
   }
 
   .idiom-footer__links a:hover {
-    color: var(--idiom-black, #1a1a1a);
+    opacity: 1;
     text-decoration: underline;
   }
 
-  /* Bottom bar */
+  /* ── Bottom baked image (collage + idiom® logotype) ── */
+  .idiom-footer__baked-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+  }
+
+  /* ── Copyright bottom ── */
   .idiom-footer__bottom {
     position: relative;
     z-index: 2;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 12px 0 16px;
+    justify-content: center;
+    padding: 12px 48px 16px;
     border-top: 1px solid rgba(26,26,26,0.12);
-    margin-top: 0;
+    background: var(--idiom-cream, #faf6f0);
   }
 
   .idiom-footer__copyright {
@@ -121,59 +161,73 @@
     font-size: 11px;
   }
 
-  /* Tablet */
+  /* ── Tablet ── */
   @media (max-width: 768px) {
-    .idiom-footer {
-      padding: 40px 24px 0;
-    }
-
-    .idiom-footer__columns {
-      grid-template-columns: 1fr 1fr;
-      gap: 32px;
+    .idiom-footer__main {
+      grid-template-columns: 1fr;
+      padding: 40px 24px 32px;
     }
 
     .idiom-footer__col--brand {
-      grid-column: span 2;
       padding-right: 0;
+      max-width: 100%;
     }
 
-    .idiom-footer__logotype-img {
-      width: 100%;
-      max-width: 100%;
-      margin-left: 0;
+    .idiom-footer__links-group {
+      gap: 40px;
+    }
+
+    .idiom-footer__bottom {
+      padding: 12px 24px 16px;
     }
   }
 
-  /* Mobile */
+  /* ── Mobile ── */
   @media (max-width: 480px) {
-    .idiom-footer {
-      padding: 32px 16px 0;
-    }
-
-    .idiom-footer__columns {
+    .idiom-footer__trust {
       grid-template-columns: 1fr;
-      gap: 24px;
     }
 
-    .idiom-footer__col--brand {
-      grid-column: span 1;
+    .idiom-footer__trust-item {
+      border-right: none;
+      border-bottom: 1px solid rgba(26,26,26,0.15);
+      padding: 8px 16px;
     }
 
-    .idiom-footer__logotype-img {
-      width: 100%;
-      max-width: 100%;
-      margin-left: 0;
+    .idiom-footer__trust-item:last-child {
+      border-bottom: none;
+    }
+
+    .idiom-footer__main {
+      padding: 32px 16px 24px;
+    }
+
+    .idiom-footer__links-group {
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .idiom-footer__bottom {
+      padding: 12px 16px 16px;
     }
   }
 </style>
 
 <footer class="idiom-footer">
 
-  <div class="idiom-footer__columns">
+  <!-- Trust badges strip -->
+  <div class="idiom-footer__trust">
+    <div class="idiom-footer__trust-item">free samples in every order</div>
+    <div class="idiom-footer__trust-item">5 star reviewed layering fragrances</div>
+    <div class="idiom-footer__trust-item">high-quality, british made eau du parfum</div>
+  </div>
+
+  <!-- Main content: brand col + link cols -->
+  <div class="idiom-footer__main">
 
     <!-- Column 1: brand -->
-    <div class="idiom-footer__col idiom-footer__col--brand">
-      <p class="idiom-footer__col-heading idiom-footer__col-heading--lg">smell like no one else</p>
+    <div class="idiom-footer__col--brand">
+      <p class="idiom-footer__col-heading--lg">smell like no one else</p>
       <p class="idiom-footer__tagline">
         {%- if section.settings.tagline != blank -%}
           {{ section.settings.tagline }}
@@ -191,39 +245,37 @@
       </div>
     </div>
 
-    <!-- Empty spacer column -->
-    <div class="idiom-footer__col" style="grid-column: span 1;"></div>
-
-    <!-- Column 2: the boring stuff -->
-    <div class="idiom-footer__col">
-      <p class="idiom-footer__col-heading idiom-footer__col-heading--sm">the boring stuff</p>
-      <ul class="idiom-footer__links">
-        <li><a href="/policies/shipping-policy">delivery</a></li>
-        <li><a href="/policies/refund-policy">returns</a></li>
-        <li><a href="/account">accounts</a></li>
-        <li><a href="/pages/faqs">faqs</a></li>
-        <li><a href="/pages/contact">contact</a></li>
-        <li><a href="/policies/terms-of-service">terms &amp; conditions</a></li>
-        <li><a href="/policies/privacy-policy">privacy policy</a></li>
-      </ul>
-    </div>
-
-    <!-- Column 3: shop by type -->
-    <div class="idiom-footer__col">
-      <p class="idiom-footer__col-heading idiom-footer__col-heading--sm">shop by type</p>
-      <ul class="idiom-footer__links">
-        <li><a href="/collections/full-size">full size</a></li>
-        <li><a href="/collections/mini-oms">mini-oms</a></li>
-        <li><a href="/collections/kits-and-gifts">kits and gifts</a></li>
-      </ul>
+    <!-- Link columns: boring stuff + shop by type -->
+    <div class="idiom-footer__links-group">
+      <div class="idiom-footer__col--links">
+        <p class="idiom-footer__col-heading--sm">the boring stuff</p>
+        <ul class="idiom-footer__links">
+          <li><a href="/policies/shipping-policy">delivery</a></li>
+          <li><a href="/policies/refund-policy">returns</a></li>
+          <li><a href="/account">accounts</a></li>
+          <li><a href="/pages/faqs">faqs</a></li>
+          <li><a href="/pages/contact">contact</a></li>
+          <li><a href="/policies/terms-of-service">terms &amp; conditions</a></li>
+          <li><a href="/policies/privacy-policy">privacy policy</a></li>
+        </ul>
+      </div>
+      <div class="idiom-footer__col--links">
+        <p class="idiom-footer__col-heading--sm">shop by type</p>
+        <ul class="idiom-footer__links">
+          <li><a href="/collections/full-size">full size</a></li>
+          <li><a href="/collections/mini-oms">mini-oms</a></li>
+          <li><a href="/collections/kits-and-gifts">kits and gifts</a></li>
+        </ul>
+      </div>
     </div>
 
   </div>
 
-  {%- if section.settings.logotype_image != blank -%}
-    <img class="idiom-footer__logotype-img" src="{{ section.settings.logotype_image | image_url: width: 2800 }}" alt="idiom" loading="lazy">
+  <!-- Baked image: collage + idiom® logotype combined -->
+  {%- if section.settings.collage_image != blank -%}
+    <img class="idiom-footer__baked-img" src="{{ section.settings.collage_image | image_url: width: 2800 }}" alt="idiom" loading="lazy">
   {%- else -%}
-    <img class="idiom-footer__logotype-img" src="{{ 'idiom-footer-logotype.png' | asset_url }}" alt="idiom" loading="lazy">
+    <img class="idiom-footer__baked-img" src="{{ 'idiom-footer-logotype.png' | asset_url }}" alt="idiom" loading="lazy">
   {%- endif -%}
 
   <div class="idiom-footer__bottom">
@@ -244,9 +296,9 @@
     },
     {
       "type": "image_picker",
-      "id": "logotype_image",
-      "label": "Logotype + collage image",
-      "info": "Pre-composed image with idiom® text and collage. Spans full footer width. Leave blank to use the default."
+      "id": "collage_image",
+      "label": "Bottom baked image (collage + idiom® logotype)",
+      "info": "Pre-composed image with idiom® text and collage baked together. Spans full footer width."
     },
     {
       "type": "text",
