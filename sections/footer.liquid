@@ -1,38 +1,165 @@
 <!-- /sections/footer.liquid -->
 
 <style>
-  .idiom-footer { background: var(--idiom-olive-dark); position: relative; overflow: hidden; padding: 60px 48px 0; }
-  .idiom-footer__columns { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; position: relative; z-index: 1; }
-  .idiom-footer__col-heading { color: #fff; font-weight: 700; margin-bottom: 12px; }
+  .idiom-footer {
+    background: var(--idiom-olive-dark);
+    position: relative;
+    overflow: hidden;
+    padding: 60px 48px 0;
+  }
+
+  /* Collage image — right side, bleeds to edges */
+  .idiom-footer__collage {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    object-fit: cover;
+    object-position: left center;
+    z-index: 0;
+  }
+
+  /* Three text columns */
+  .idiom-footer__columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .idiom-footer__col-heading {
+    color: #fff;
+    font-weight: 700;
+    margin: 0 0 12px;
+  }
+
   .idiom-footer__col-heading--lg { font-size: 18px; }
   .idiom-footer__col-heading--sm { font-size: 16px; }
-  .idiom-footer__tagline { color: rgba(255,255,255,0.7); font-size: 13px; line-height: 1.5; }
-  .idiom-footer__dots { display: flex; gap: 6px; margin-top: 12px; }
-  .idiom-footer__dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.4); }
-  .idiom-footer__links { list-style: none; padding: 0; margin: 0; }
+
+  .idiom-footer__tagline {
+    color: rgba(255,255,255,0.7);
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .idiom-footer__dots {
+    display: flex;
+    gap: 6px;
+    margin-top: 14px;
+  }
+
+  .idiom-footer__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.4);
+  }
+
+  .idiom-footer__links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
   .idiom-footer__links li { margin-bottom: 8px; }
-  .idiom-footer__links a { color: rgba(255,255,255,0.85); font-size: 13px; text-decoration: none; }
-  .idiom-footer__links a:hover { text-decoration: underline; }
-  .idiom-footer__collage { position: absolute; right: 0; top: 0; height: 100%; width: 45%; object-fit: cover; object-position: left center; z-index: 0; }
-  .idiom-footer__logotype { color: #fff; font-size: 130px; font-weight: 900; line-height: 0.85; margin-top: 40px; position: relative; z-index: 2; }
+
+  .idiom-footer__links a {
+    color: rgba(255,255,255,0.8);
+    font-size: 13px;
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+
+  .idiom-footer__links a:hover { color: #fff; text-decoration: underline; }
+
+  /* Large logotype — spans full width, bottom */
+  .idiom-footer__logotype {
+    color: #fff;
+    font-size: 140px;
+    font-weight: 900;
+    line-height: 0.85;
+    margin-top: 48px;
+    position: relative;
+    z-index: 2;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+  }
+
+  /* Bottom bar */
+  .idiom-footer__bottom {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0 20px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    margin-top: 24px;
+  }
+
+  .idiom-footer__copyright {
+    color: rgba(255,255,255,0.5);
+    font-size: 12px;
+  }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    .idiom-footer {
+      padding: 48px 24px 0;
+    }
+
+    .idiom-footer__collage {
+      width: 60%;
+      opacity: 0.4;
+    }
+
+    .idiom-footer__logotype {
+      font-size: 80px;
+    }
+  }
+
   @media (max-width: 480px) {
-    .idiom-footer { padding: 40px 16px 0; }
-    .idiom-footer__columns { grid-template-columns: 1fr; }
-    .idiom-footer__collage { display: none; }
-    .idiom-footer__logotype { font-size: 64px; }
+    .idiom-footer {
+      padding: 40px 16px 0;
+    }
+
+    .idiom-footer__columns {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+
+    .idiom-footer__collage {
+      display: none;
+    }
+
+    .idiom-footer__logotype {
+      font-size: 56px;
+      margin-top: 32px;
+    }
   }
 </style>
 
 <footer class="idiom-footer">
 
-  {%- if section.settings.collage_image -%}
+  {%- assign collage_src = section.settings.collage_image -%}
+  {%- if collage_src != blank -%}
     <img
       class="idiom-footer__collage"
-      src="{{ section.settings.collage_image | image_url: width: 1200 }}"
-      alt="Decorative collage"
+      src="{{ collage_src | image_url: width: 1400 }}"
+      alt=""
       loading="lazy"
-      width="{{ section.settings.collage_image.width }}"
-      height="{{ section.settings.collage_image.height }}"
+      aria-hidden="true"
+    >
+  {%- else -%}
+    <img
+      class="idiom-footer__collage"
+      src="{{ 'idiom-footer-bg.png' | asset_url }}"
+      alt=""
+      loading="lazy"
+      aria-hidden="true"
     >
   {%- endif -%}
 
@@ -41,11 +168,13 @@
     <!-- Column 1: brand -->
     <div class="idiom-footer__col">
       <p class="idiom-footer__col-heading idiom-footer__col-heading--lg">smell like no one else</p>
-      {%- if section.settings.tagline != blank -%}
-        <p class="idiom-footer__tagline">{{ section.settings.tagline }}</p>
-      {%- else -%}
-        <p class="idiom-footer__tagline">Crafted for those who move differently. Scent-first, always.</p>
-      {%- endif -%}
+      <p class="idiom-footer__tagline">
+        {%- if section.settings.tagline != blank -%}
+          {{ section.settings.tagline }}
+        {%- else -%}
+          Crafted for those who move differently. Scent-first, always.
+        {%- endif -%}
+      </p>
       <div class="idiom-footer__dots">
         <span class="idiom-footer__dot"></span>
         <span class="idiom-footer__dot"></span>
@@ -80,6 +209,10 @@
 
   <div class="idiom-footer__logotype">idiom&reg;</div>
 
+  <div class="idiom-footer__bottom">
+    <span class="idiom-footer__copyright">&copy; {{ 'now' | date: '%Y' }} idiom fragrances. all rights reserved.</span>
+  </div>
+
 </footer>
 
 {% schema %}
@@ -95,7 +228,8 @@
     {
       "type": "image_picker",
       "id": "collage_image",
-      "label": "Right decorative collage"
+      "label": "Right decorative collage",
+      "info": "Positioned on the right side. Leave blank to use the default footer background."
     },
     {
       "type": "text",
@@ -451,7 +585,6 @@
             { "value": "50", "label": "50%"},
             { "value": "66.66", "label": "66%"},
             { "value": "75", "label": "75%"},
-            { "value": "80", "label": "80%"},
             { "value": "100", "label": "100%"}
           ],
           "info": "Desktop only"
@@ -506,7 +639,6 @@
             { "value": "50", "label": "50%"},
             { "value": "66.66", "label": "66%"},
             { "value": "75", "label": "75%"},
-            { "value": "80", "label": "80%"},
             { "value": "100", "label": "100%"}
           ],
           "info": "Desktop only"
@@ -602,7 +734,6 @@
             { "value": "50", "label": "50%"},
             { "value": "66.66", "label": "66%"},
             { "value": "75", "label": "75%"},
-            { "value": "80", "label": "80%"},
             { "value": "100", "label": "100%"}
           ],
           "info": "Desktop only"

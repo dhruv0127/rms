@@ -1,0 +1,197 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#MainContent"
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - heading "idiom®" [level=1] [ref=e6]:
+        - link "idiom®" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - img [ref=e8]
+      - navigation [ref=e10]:
+        - generic [ref=e11]:
+          - link "Home" [ref=e13] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e14]: Home
+          - navigation [ref=e15]:
+            - link "Shop" [ref=e16] [cursor=pointer]:
+              - /url: /collections/shop-everything
+              - generic [ref=e17]: Shop
+          - link "Gallery" [ref=e19] [cursor=pointer]:
+            - /url: /pages/gallery
+            - generic [ref=e20]: Gallery
+          - link "About" [ref=e22] [cursor=pointer]:
+            - /url: /pages/story
+            - generic [ref=e23]: About
+        - generic [ref=e24]:
+          - group [ref=e26]:
+            - button "Open search bar" [ref=e27] [cursor=pointer]:
+              - img
+              - generic [ref=e28]: Open search bar
+          - link "My Account" [ref=e30] [cursor=pointer]:
+            - /url: /account
+            - generic [ref=e31]: My Account
+            - img
+          - link "Open cart" [ref=e33] [cursor=pointer]:
+            - /url: /cart
+            - generic [ref=e34]: Open cart
+            - img
+  - group [ref=e39]:
+    - generic [ref=e41]:
+      - generic [ref=e46]:
+        - text: free domestic shipping orders £40+
+        - strong [ref=e47]: "["
+        - link "SHOP NOW" [ref=e48] [cursor=pointer]:
+          - /url: /collections/shop-everything
+          - strong [ref=e49]: SHOP NOW
+        - strong [ref=e50]: "]"
+      - generic [ref=e55]:
+        - text: free samples in every order
+        - strong [ref=e56]: "["
+        - link [ref=e57] [cursor=pointer]:
+          - /url: /collections/shop-everything
+          - strong [ref=e58]: SHOP NOW
+        - strong [ref=e59]: "]"
+      - generic [ref=e64]:
+        - text: free shipping orders £40+ [
+        - link [ref=e65] [cursor=pointer]:
+          - /url: /collections/shop-everything
+          - strong [ref=e66]: SHOP NOW
+        - text: "]"
+    - button "Previous" [ref=e67] [cursor=pointer]
+    - button "Next" [ref=e68] [cursor=pointer]
+  - main [ref=e69]:
+    - generic [ref=e70]:
+      - generic [ref=e72]:
+        - img "127 unique fragrances. 1 kit." [ref=e73]
+        - generic: smell like no one else™
+        - generic [ref=e74]:
+          - heading "127 unique fragrances. 1 kit." [level=1] [ref=e75]
+          - paragraph [ref=e76]: discover your Flanker fragrance combinations with our 7-piece discovery kit.
+          - link "shop now | £17" [ref=e77] [cursor=pointer]:
+            - /url: /collections/all
+      - generic [ref=e80]:
+        - generic [ref=e81]: smell like no one else™ find your fragrance freedom layer, or wear solo smell like no one else™ find your fragrance freedom layer, or wear solo ·
+        - generic [ref=e82]: smell like no one else™ find your fragrance freedom layer, or wear solo smell like no one else™ find your fragrance freedom layer, or wear solo ·
+    - generic [ref=e83]:
+      - generic [ref=e85]:
+        - heading "sick of smelling like everyone else?" [level=2] [ref=e86]
+        - paragraph [ref=e87]: yeah, us too.
+        - paragraph [ref=e88]: idiom was born by 3 good friends who shared a passion for fragrance with the belief that individuality is everything and fragrance could be done better, high-quality, long lasting capsule eau du parfums ready to layer and always priced to be affordable.
+        - link "learn more" [ref=e89] [cursor=pointer]:
+          - /url: /pages/about
+      - generic [ref=e90]:
+        - heading "holy s#*%, what are you wearing?" [level=3] [ref=e91]
+        - paragraph [ref=e92]: get to know our crowd-pleasers...
+    - generic [ref=e94]:
+      - generic [ref=e95]:
+        - button "Previous" [ref=e96] [cursor=pointer]:
+          - img [ref=e97]
+        - button "Next" [ref=e99] [cursor=pointer]:
+          - img [ref=e100]
+      - generic [ref=e104]:
+        - link "3D AMPLIFIER | EAU DE PARFUM 3D AMPLIFIER | EAU DE PARFUM £6.00" [ref=e106] [cursor=pointer]:
+          - /url: /products/3d-amp-100ml-copy
+          - generic [ref=e107]:
+            - img "3D AMPLIFIER | EAU DE PARFUM" [ref=e109]
+            - generic [ref=e110]:
+              - paragraph [ref=e111]: 3D AMPLIFIER | EAU DE PARFUM
+              - paragraph [ref=e112]: £6.00
+        - link [ref=e114] [cursor=pointer]:
+          - /url: /products/3d-amp-100ml-copy
+          - generic [ref=e115]:
+            - img [ref=e117]
+            - generic [ref=e118]:
+              - paragraph [ref=e119]: 3D AMPLIFIER | EAU DE PARFUM
+              - paragraph [ref=e120]: £6.00
+        - link [ref=e122] [cursor=pointer]:
+          - /url: /products/3d-amp-100ml-copy
+          - generic [ref=e123]:
+            - img [ref=e125]
+            - generic [ref=e126]:
+              - paragraph [ref=e127]: 3D AMPLIFIER | EAU DE PARFUM
+              - paragraph [ref=e128]: £6.00
+        - link [ref=e130] [cursor=pointer]:
+          - /url: /products/3d-amp-100ml-copy
+          - generic [ref=e131]:
+            - img [ref=e133]
+            - generic [ref=e134]:
+              - paragraph [ref=e135]: 3D AMPLIFIER | EAU DE PARFUM
+              - paragraph [ref=e136]: £6.00
+    - generic [ref=e138]:
+      - generic [ref=e139]:
+        - img "the perfect saffron" [ref=e140]
+        - generic [ref=e142]:
+          - heading "the perfect saffron" [level=3] [ref=e143]
+          - paragraph [ref=e144]: warm. rich. quietly addictive.
+          - link "shop now | £17" [ref=e145] [cursor=pointer]:
+            - /url: /collections/all
+      - generic [ref=e146]:
+        - img "citrusy + fresh af" [ref=e147]
+        - generic [ref=e149]:
+          - heading "citrusy + fresh af" [level=3] [ref=e150]
+          - paragraph [ref=e151]: sharp. bright. made to layer.
+          - link "shop now | £17" [ref=e152] [cursor=pointer]:
+            - /url: /collections/all
+  - contentinfo [ref=e154]:
+    - generic [ref=e155]:
+      - generic [ref=e156]:
+        - paragraph [ref=e157]: smell like no one else
+        - paragraph [ref=e158]: Crafted for those who move differently. Scent-first, always.
+      - generic [ref=e162]:
+        - paragraph [ref=e163]: the boring stuff
+        - list [ref=e164]:
+          - listitem [ref=e165]:
+            - link "delivery" [ref=e166] [cursor=pointer]:
+              - /url: /policies/shipping-policy
+          - listitem [ref=e167]:
+            - link "returns" [ref=e168] [cursor=pointer]:
+              - /url: /policies/refund-policy
+          - listitem [ref=e169]:
+            - link "accounts" [ref=e170] [cursor=pointer]:
+              - /url: /account
+          - listitem [ref=e171]:
+            - link "faqs" [ref=e172] [cursor=pointer]:
+              - /url: /pages/faqs
+          - listitem [ref=e173]:
+            - link "contact" [ref=e174] [cursor=pointer]:
+              - /url: /pages/contact
+          - listitem [ref=e175]:
+            - link "terms & conditions" [ref=e176] [cursor=pointer]:
+              - /url: /policies/terms-of-service
+          - listitem [ref=e177]:
+            - link "privacy policy" [ref=e178] [cursor=pointer]:
+              - /url: /policies/privacy-policy
+      - generic [ref=e179]:
+        - paragraph [ref=e180]: shop by type
+        - list [ref=e181]:
+          - listitem [ref=e182]:
+            - link "full size" [ref=e183] [cursor=pointer]:
+              - /url: /collections/full-size
+          - listitem [ref=e184]:
+            - link "mini-oms" [ref=e185] [cursor=pointer]:
+              - /url: /collections/mini-oms
+          - listitem [ref=e186]:
+            - link "kits and gifts" [ref=e187] [cursor=pointer]:
+              - /url: /collections/kits-and-gifts
+    - generic [ref=e188]: idiom®
+  - iframe [ref=e190]:
+    - generic [ref=f41e4]:
+      - button [ref=f41e7] [cursor=pointer]:
+        - img [ref=f41e9]
+        - img [ref=f41e12]
+      - generic [ref=f41e15]:
+        - generic [ref=f41e18]:
+          - link "Logo" [ref=f41e19] [cursor=pointer]:
+            - /url: https://admin.shopify.com/store/idiom-london
+            - img "Logo" [ref=f41e20]
+          - generic [ref=f41e22]:
+            - generic [ref=f41e23]: Development (24ea89-MacBook-Air-17)
+            - generic [ref=f41e24]: Draft
+        - generic [ref=f41e26]:
+          - button "Hide bar" [ref=f41e28] [cursor=pointer]:
+            - generic [ref=f41e29]: Hide bar
+          - button "Exit preview" [ref=f41e31] [cursor=pointer]:
+            - generic [ref=f41e32]: Exit preview
+          - button "Copy link" [ref=f41e35] [cursor=pointer]:
+            - img [ref=f41e39]
+            - generic [ref=f41e41]: Copy link

@@ -1,50 +1,138 @@
 <style>
-.idiom-product-cards-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  padding: 40px 24px;
+.idiom-product-cards-section {
   background: var(--idiom-cream);
+  padding: 0 0 60px;
 }
+
+/* Flickity overrides */
+.idiom-product-cards-slider {
+  outline: none;
+}
+
+.idiom-product-cards-slider .flickity-viewport {
+  overflow: visible;
+}
+
+.idiom-product-cards-slider .flickity-slider {
+  display: flex;
+  align-items: flex-start;
+}
+
+.idiom-product-cards-slider .idiom-slide {
+  width: calc(33.333% - 16px);
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+/* Nav arrows */
+.idiom-product-cards-nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 0 24px 20px;
+}
+
+.idiom-product-cards-nav__btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid var(--idiom-black);
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, color 0.15s;
+}
+
+.idiom-product-cards-nav__btn:hover {
+  background: var(--idiom-black);
+  color: #fff;
+}
+
+.idiom-product-cards-nav__btn svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 @media (max-width: 768px) {
-  .idiom-product-cards-grid { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 480px) {
-  .idiom-product-cards-grid {
-    grid-template-columns: 1fr;
-    padding: 40px 16px;
+  .idiom-product-cards-slider .idiom-slide {
+    width: 60%;
   }
-  .idiom-product-cards-grid .idiom-product-card { height: 320px; }
+}
+
+@media (max-width: 480px) {
+  .idiom-product-cards-slider .idiom-slide {
+    width: 80%;
+  }
+
+  .idiom-product-cards-section {
+    padding: 0 0 40px;
+  }
 }
 </style>
 
 {%- if section.settings.heading != blank or section.settings.subtext != blank -%}
-  <div class="idiom-section-heading" style="text-align:center; padding: 40px 24px 0;">
+  <div class="idiom-section-heading" style="text-align:center; padding: 40px 24px 20px;">
     {%- if section.settings.heading != blank -%}<h2>{{ section.settings.heading }}</h2>{%- endif -%}
     {%- if section.settings.subtext != blank -%}<p>{{ section.settings.subtext }}</p>{%- endif -%}
   </div>
 {%- endif -%}
 
-{%- if section.blocks.size > 0 -%}
-  <div class="idiom-product-cards-grid">
-    {%- for block in section.blocks -%}
-      {%- assign product = all_products[block.settings.product] -%}
-      {%- if product != blank -%}
-        {%- assign override_image = block.settings.card_image -%}
-        {% render 'idiom-product-card', product: product, override_image: override_image %}
-      {%- endif -%}
-    {%- endfor -%}
+<div class="idiom-product-cards-section">
+  <div class="idiom-product-cards-nav">
+    <button class="idiom-product-cards-nav__btn" data-prev="{{ section.id }}" aria-label="Previous">
+      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <button class="idiom-product-cards-nav__btn" data-next="{{ section.id }}" aria-label="Next">
+      <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg>
+    </button>
   </div>
-{%- elsif section.settings.collection != blank -%}
-  {%- assign products_collection = collections[section.settings.collection] -%}
-  {%- if products_collection != blank -%}
-    <div class="idiom-product-cards-grid">
-      {%- for product in products_collection.products limit: section.settings.max_products -%}
-        {% render 'idiom-product-card', product: product %}
+
+  <div class="idiom-product-cards-slider" id="idiom-slider-{{ section.id }}" style="padding-left: 24px;"
+    data-flickity='{"cellAlign":"left","contain":false,"pageDots":false,"prevNextButtons":false,"draggable":true,"wrapAround":false,"adaptiveHeight":false}'>
+    {%- if section.blocks.size > 0 -%}
+      {%- for block in section.blocks -%}
+        {%- assign product = all_products[block.settings.product] -%}
+        {%- if product != blank -%}
+          {%- assign override_image = block.settings.card_image -%}
+          <div class="idiom-slide">
+            {% render 'idiom-product-card', product: product, override_image: override_image %}
+          </div>
+        {%- endif -%}
       {%- endfor -%}
-    </div>
-  {%- endif -%}
-{%- endif -%}
+    {%- elsif section.settings.collection != blank -%}
+      {%- assign products_collection = collections[section.settings.collection] -%}
+      {%- for product in products_collection.products limit: section.settings.max_products -%}
+        <div class="idiom-slide">
+          {% render 'idiom-product-card', product: product %}
+        </div>
+      {%- endfor -%}
+    {%- endif -%}
+  </div>
+</div>
+
+<script>
+(function() {
+  var sectionId = '{{ section.id }}';
+  function wireButtons() {
+    var slider = document.getElementById('idiom-slider-' + sectionId);
+    if (!slider || !slider.flickity) return;
+    var prevBtn = document.querySelector('[data-prev="' + sectionId + '"]');
+    var nextBtn = document.querySelector('[data-next="' + sectionId + '"]');
+    if (prevBtn) prevBtn.addEventListener('click', function() { slider.flickity.previous(); });
+    if (nextBtn) nextBtn.addEventListener('click', function() { slider.flickity.next(); });
+  }
+  window.addEventListener('load', function() {
+    setTimeout(wireButtons, 300);
+  });
+})();
+</script>
 
 {% schema %}
 {
@@ -74,7 +162,7 @@
       "content": "Fallback (used when no blocks are added)"
     },
     { "type": "collection", "id": "collection", "label": "Product collection" },
-    { "type": "range", "id": "max_products", "label": "Max products", "min": 3, "max": 12, "step": 3, "default": 3 },
+    { "type": "range", "id": "max_products", "label": "Max products", "min": 3, "max": 12, "step": 3, "default": 6 },
     {
       "type": "header",
       "content": "Section heading"
