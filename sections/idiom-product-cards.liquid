@@ -2,6 +2,7 @@
 .idiom-product-cards-section {
   background: var(--idiom-cream);
   padding: 0 0 60px;
+  overflow: hidden;
 }
 
 /* Flickity overrides */
@@ -95,7 +96,7 @@
   </div>
 
   <div class="idiom-product-cards-slider" id="idiom-slider-{{ section.id }}" style="padding-left: 24px;"
-    data-flickity='{"cellAlign":"left","contain":false,"pageDots":false,"prevNextButtons":false,"draggable":true,"wrapAround":false,"adaptiveHeight":false}'>
+    data-flickity='{"cellAlign":"left","contain":true,"pageDots":false,"prevNextButtons":false,"draggable":true,"wrapAround":false,"adaptiveHeight":false}'>
     {%- if section.blocks.size > 0 -%}
       {%- for block in section.blocks -%}
         {%- assign product = all_products[block.settings.product] -%}
