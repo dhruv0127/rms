@@ -72,7 +72,7 @@
         "subtext": "discover your Flanker fragrance combinations with our 7-piece discovery kit.",
         "cta_label": "shop now | £17",
         "cta_url": "shopify://collections/all",
-        "show_marquee": true,
+        "show_marquee": false,
         "marquee_text": "smell like no one else™\nfind your fragrance freedom\nlayer, or wear solo\nsmell like no one else™\nfind your fragrance freedom\nlayer, or wear solo"
       }
     },

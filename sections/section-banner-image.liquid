@@ -100,34 +100,6 @@
     transform: rotate(180deg);
   }
 
-  /* === idiom Marquee strip === */
-  #SectionBannerImage--{{ section.id }} + .idiom-marquee-section,
-  .idiom-marquee-section--{{ section.id }} {
-    background: #8b8b2a;
-    padding: 14px 0;
-    overflow: hidden;
-  }
-
-  .idiom-marquee-section--{{ section.id }} .idiom-marquee-track {
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 0.04em;
-    text-transform: lowercase;
-  }
-
-  .idiom-marquee-section--{{ section.id }} .idiom-marquee-item {
-    padding: 0 32px;
-    display: inline-flex;
-    align-items: center;
-    gap: 32px;
-  }
-
-  .idiom-marquee-section--{{ section.id }} .idiom-marquee-item::after {
-    content: "·";
-    font-size: 18px;
-    opacity: 0.7;
-  }
 
   /* === Mobile overrides ≤480px === */
   @media (max-width: 480px) {
@@ -206,28 +178,6 @@
   </div>
 </section>
 
-{%- if section.settings.show_marquee -%}
-{%- assign marquee_raw = section.settings.marquee_text -%}
-{%- assign marquee_lines = marquee_raw | strip | split: "\n" -%}
-{%- if marquee_lines.size == 0 or marquee_raw == blank -%}
-  {%- assign marquee_lines = "smell like no one else™,find your fragrance freedom,layer, or wear solo" | split: "," -%}
-{%- endif -%}
-
-<div class="idiom-marquee-section--{{ section.id }}" aria-hidden="true">
-  <div class="idiom-marquee">
-    <div class="idiom-marquee-track">
-      {%- for i in (1..2) -%}
-        {%- for line in marquee_lines -%}
-          {%- assign item_text = line | strip -%}
-          {%- if item_text != blank -%}
-            <span class="idiom-marquee-item">{{ item_text }}</span>
-          {%- endif -%}
-        {%- endfor -%}
-      {%- endfor -%}
-    </div>
-  </div>
-</div>
-{%- endif -%}
 
 {%- comment -%}REMOVED OLD THEME BANNER HTML BELOW — DO NOT RESTORE{%- endcomment -%}
 {%- liquid

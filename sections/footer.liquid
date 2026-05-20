@@ -25,6 +25,12 @@
     flex-direction: column;
   }
 
+  @media (max-width: 768px) {
+    .idiom-footer {
+      min-height: unset;
+    }
+  }
+
 
   /* ── Main content area ── */
   .idiom-footer__main {
@@ -142,7 +148,16 @@
     width: 100%;
     height: auto;
     position: absolute;
-    top: 0;
+    bottom: 40px;
+    left: 0;
+    pointer-events: none;
+  }
+
+  @media (max-width: 768px) {
+    .idiom-footer__baked-img {
+      position: static;
+      margin-top: 24px;
+    }
   }
 
   /* ── Copyright bottom ── */
