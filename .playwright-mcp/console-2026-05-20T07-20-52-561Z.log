@@ -1,0 +1,2 @@
+[   15769ms] [ERROR] Access to XMLHttpRequest at 'https://www.google.com/_/og/promos/z?opi=67911908' from origin 'chrome-untrusted://new-tab-page' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ chrome-untrusted://new-tab-page/one-google-bar?paramsencoded=:0
+[   15769ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://www.google.com/_/og/promos/z?opi=67911908:0

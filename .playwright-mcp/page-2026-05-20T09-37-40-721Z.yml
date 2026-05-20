@@ -1,0 +1,177 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#MainContent"
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - button "Open navigation menu" [ref=e6] [cursor=pointer]:
+        - generic [ref=e7]: Open navigation menu
+        - img
+      - heading "idiom®" [level=1] [ref=e8]:
+        - link "idiom®" [ref=e9] [cursor=pointer]:
+          - /url: /
+          - img [ref=e10]
+      - navigation [ref=e12]:
+        - generic [ref=e13]:
+          - group [ref=e15]:
+            - button "Open search bar" [ref=e16] [cursor=pointer]:
+              - img
+              - generic [ref=e17]: Open search bar
+          - link "Open cart" [ref=e19] [cursor=pointer]:
+            - /url: /cart
+            - generic [ref=e20]: Open cart
+            - img
+  - main [ref=e21]:
+    - generic [ref=e24]:
+      - img "127 unique fragrances. 1 kit." [ref=e25]
+      - generic [ref=e26]:
+        - heading "127 unique fragrances. 1 kit." [level=1] [ref=e27]
+        - paragraph [ref=e28]: discover your Flanker fragrance combinations with our 7-piece discovery kit.
+        - link "shop now | £17" [ref=e29] [cursor=pointer]:
+          - /url: /collections/all
+    - generic [ref=e30]:
+      - generic [ref=e31]:
+        - generic [ref=e33]:
+          - generic [ref=e34]: smell like no one else™ · find your fragrance freedom · layer, or wear solo ·
+          - generic [ref=e35]: smell like no one else™ · find your fragrance freedom · layer, or wear solo ·
+          - generic [ref=e36]: smell like no one else™ · find your fragrance freedom · layer, or wear solo ·
+          - generic [ref=e37]: smell like no one else™ · find your fragrance freedom · layer, or wear solo ·
+          - generic [ref=e38]: smell like no one else™ · find your fragrance freedom · layer, or wear solo ·
+          - generic [ref=e39]: smell like no one else™ · find your fragrance freedom · layer, or wear solo ·
+        - generic [ref=e40]:
+          - heading "sick of smelling like everyone else?" [level=2] [ref=e41]
+          - paragraph [ref=e42]: yeah, us too.
+          - paragraph [ref=e43]: idiom was born by 3 good friends who shared a passion for fragrance with the belief that individuality is everything and fragrance could be done better, high-quality, long lasting capsule eau du parfums ready to layer and always priced to be affordable.
+          - link "learn more" [ref=e44] [cursor=pointer]:
+            - /url: /pages/about
+      - generic [ref=e45]:
+        - heading "holy s#*%, what are you wearing?" [level=3] [ref=e46]
+        - paragraph [ref=e47]: get to know our crowd-pleasers...
+    - generic [ref=e52]:
+      - link "3D AMPLIFIER | EAU DE PARFUM 3D AMPLIFIER | EAU DE PARFUM £6.00" [ref=e54] [cursor=pointer]:
+        - /url: /products/3d-amp-100ml-copy
+        - generic [ref=e55]:
+          - img "3D AMPLIFIER | EAU DE PARFUM" [ref=e58]
+          - generic [ref=e59]:
+            - paragraph [ref=e60]: 3D AMPLIFIER | EAU DE PARFUM
+            - paragraph [ref=e61]: £6.00
+      - link [ref=e63] [cursor=pointer]:
+        - /url: /products/3d-amp-100ml-copy
+        - generic [ref=e64]:
+          - img [ref=e67]
+          - generic [ref=e68]:
+            - paragraph [ref=e69]: 3D AMPLIFIER | EAU DE PARFUM
+            - paragraph [ref=e70]: £6.00
+      - link [ref=e72] [cursor=pointer]:
+        - /url: /products/3d-amp-100ml-copy
+        - generic [ref=e73]:
+          - img [ref=e76]
+          - generic [ref=e77]:
+            - paragraph [ref=e78]: 3D AMPLIFIER | EAU DE PARFUM
+            - paragraph [ref=e79]: £6.00
+      - link [ref=e81] [cursor=pointer]:
+        - /url: /products/3d-amp-100ml-copy
+        - generic [ref=e82]:
+          - img [ref=e85]
+          - generic [ref=e86]:
+            - paragraph [ref=e87]: 3D AMPLIFIER | EAU DE PARFUM
+            - paragraph [ref=e88]: £6.00
+    - generic [ref=e90]:
+      - generic [ref=e91]:
+        - img "the perfect saffron" [ref=e92]
+        - generic [ref=e94]:
+          - heading "the perfect saffron" [level=3] [ref=e95]
+          - paragraph [ref=e96]: warm. rich. quietly addictive.
+          - link "shop now | £17" [ref=e97] [cursor=pointer]:
+            - /url: /collections/all
+      - generic [ref=e98]:
+        - img "citrusy + fresh af" [ref=e99]
+        - generic [ref=e101]:
+          - heading "citrusy + fresh af" [level=3] [ref=e102]
+          - paragraph [ref=e103]: sharp. bright. made to layer.
+          - link "shop now | £17" [ref=e104] [cursor=pointer]:
+            - /url: /collections/all
+  - contentinfo [ref=e106]:
+    - generic [ref=e107]:
+      - generic [ref=e108]:
+        - paragraph [ref=e109]: smell like no one else
+        - paragraph [ref=e110]: Idiom makes rule-breaking, layer-ready fragrances for skin that wants more. Designed to be mixed, and never made to behave.
+        - generic [ref=e111]:
+          - link "Instagram" [ref=e112] [cursor=pointer]:
+            - /url: https://instagram.com/idiomfragrances
+            - img [ref=e113]
+          - link "TikTok" [ref=e115] [cursor=pointer]:
+            - /url: https://tiktok.com/@idiomfragrances
+            - img [ref=e116]
+      - generic [ref=e118]:
+        - generic [ref=e119]:
+          - paragraph [ref=e120]: the boring stuff
+          - list [ref=e121]:
+            - listitem [ref=e122]:
+              - link "delivery" [ref=e123] [cursor=pointer]:
+                - /url: /policies/shipping-policy
+            - listitem [ref=e124]:
+              - link "returns" [ref=e125] [cursor=pointer]:
+                - /url: /policies/refund-policy
+            - listitem [ref=e126]:
+              - link "accounts" [ref=e127] [cursor=pointer]:
+                - /url: /account
+            - listitem [ref=e128]:
+              - link "faqs" [ref=e129] [cursor=pointer]:
+                - /url: /pages/faqs
+            - listitem [ref=e130]:
+              - link "contact" [ref=e131] [cursor=pointer]:
+                - /url: /pages/contact
+            - listitem [ref=e132]:
+              - link "terms & conditions" [ref=e133] [cursor=pointer]:
+                - /url: /policies/terms-of-service
+            - listitem [ref=e134]:
+              - link "privacy policy" [ref=e135] [cursor=pointer]:
+                - /url: /policies/privacy-policy
+        - generic [ref=e136]:
+          - paragraph [ref=e137]: shop by type
+          - list [ref=e138]:
+            - listitem [ref=e139]:
+              - link "full size" [ref=e140] [cursor=pointer]:
+                - /url: /collections/full-size
+            - listitem [ref=e141]:
+              - link "mini-oms" [ref=e142] [cursor=pointer]:
+                - /url: /collections/mini-oms
+            - listitem [ref=e143]:
+              - link "kits and gifts" [ref=e144] [cursor=pointer]:
+                - /url: /collections/kits-and-gifts
+    - img "idiom"
+    - generic [ref=e146]: © 2026 idiom fragrances. all rights reserved.
+  - iframe [ref=e148]:
+    - generic [ref=f5e2]:
+      - generic:
+        - generic:
+          - button "toggle" [ref=f5e3] [cursor=pointer]:
+            - generic [ref=f5e6]:
+              - img "Logo" [ref=f5e7]
+              - generic [ref=f5e9]:
+                - generic [ref=f5e10]: Development (24ea89-MacBook-Air-17)
+                - generic [ref=f5e11]: Draft
+          - generic:
+            - generic:
+              - generic:
+                - dialog:
+                  - generic [ref=f5e12]:
+                    - navigation [ref=f5e14]:
+                      - button "View as" [ref=f5e18] [cursor=pointer]:
+                        - img [ref=f5e20]
+                        - generic [ref=f5e23]:
+                          - img [ref=f5e28]
+                          - heading "View as" [level=2] [ref=f5e31]
+                    - generic [ref=f5e40]:
+                      - generic [ref=f5e42]: Actions
+                      - generic [ref=f5e45]:
+                        - button "Copy link" [ref=f5e46] [cursor=pointer]:
+                          - img [ref=f5e50]
+                          - generic [ref=f5e52]: Copy link
+                        - button "Hide bar" [ref=f5e53] [cursor=pointer]:
+                          - img [ref=f5e57]
+                          - generic [ref=f5e60]: Hide bar
+                        - button "Exit preview" [ref=f5e61] [cursor=pointer]:
+                          - img [ref=f5e65]
+                          - generic [ref=f5e68]: Exit preview
+                  - status
