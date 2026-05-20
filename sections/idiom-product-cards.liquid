@@ -68,6 +68,29 @@
   stroke-linejoin: round;
 }
 
+.idiom-brand-story__grid-transition {
+  background: var(--idiom-cream);
+  text-align: center;
+  padding: 60px 48px 32px;
+}
+
+.idiom-brand-story__grid-heading {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--idiom-black);
+  margin: 0 0 10px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.idiom-brand-story__grid-subtext {
+  font-size: 14px;
+  color: var(--idiom-black);
+  opacity: 0.55;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
 @media (max-width: 768px) {
   .idiom-product-cards-slider .idiom-slide {
     width: 60%;
@@ -86,13 +109,30 @@
   .idiom-product-cards-slider {
     padding-top: 0 !important;
   }
+
+  .idiom-brand-story__grid-transition {
+    padding: 20px 16px 8px;
+  }
+
+  .idiom-brand-story__grid-heading {
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+
+  .idiom-brand-story__grid-subtext {
+    font-size: 12px;
+  }
 }
 </style>
 
 {%- if section.settings.heading != blank or section.settings.subtext != blank -%}
-  <div class="idiom-section-heading" style="text-align:center; padding: 40px 24px 20px;">
-    {%- if section.settings.heading != blank -%}<h2>{{ section.settings.heading }}</h2>{%- endif -%}
-    {%- if section.settings.subtext != blank -%}<p>{{ section.settings.subtext }}</p>{%- endif -%}
+  <div class="idiom-brand-story__grid-transition">
+    {%- if section.settings.heading != blank -%}
+      <h3 class="idiom-brand-story__grid-heading">{{ section.settings.heading }}</h3>
+    {%- endif -%}
+    {%- if section.settings.subtext != blank -%}
+      <p class="idiom-brand-story__grid-subtext">{{ section.settings.subtext }}</p>
+    {%- endif -%}
   </div>
 {%- endif -%}
 

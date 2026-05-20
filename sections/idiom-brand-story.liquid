@@ -136,29 +136,6 @@
     padding: 0 20px;
   }
 
-  /* Grid transition — cream bg, centered, below the olive block */
-  .idiom-brand-story__grid-transition {
-    background: var(--idiom-cream);
-    text-align: center;
-    padding: 60px 48px 32px;
-  }
-
-  .idiom-brand-story__grid-heading {
-    font-size: 36px;
-    font-weight: 800;
-    color: var(--idiom-black);
-    margin: 0 0 10px;
-    line-height: 1.2;
-    letter-spacing: -0.01em;
-  }
-
-  .idiom-brand-story__grid-subtext {
-    font-size: 14px;
-    color: var(--idiom-black);
-    opacity: 0.55;
-    margin: 0;
-    letter-spacing: 0.02em;
-  }
 
   /* Tablet */
   @media (max-width: 768px) {
@@ -234,18 +211,8 @@
       font-size: 12px;
     }
 
-    .idiom-brand-story__grid-transition {
-      padding: 20px 16px 8px;
-    }
-
-    .idiom-brand-story__grid-heading {
-      font-size: 16px;
-      margin-bottom: 4px;
-    }
-
     .idiom-brand-story__subline,
     .idiom-brand-story__body,
-    .idiom-brand-story__grid-subtext,
     .idiom-brand-story__marquee-strip .idiom-marquee-track {
       font-size: 12px;
     }
@@ -295,16 +262,6 @@
   </div>
 </div>
 
-{%- if section.settings.grid_heading != blank or section.settings.grid_subtext != blank -%}
-  <div class="idiom-brand-story__grid-transition">
-    {%- if section.settings.grid_heading != blank -%}
-      <h3 class="idiom-brand-story__grid-heading">{{ section.settings.grid_heading }}</h3>
-    {%- endif -%}
-    {%- if section.settings.grid_subtext != blank -%}
-      <p class="idiom-brand-story__grid-subtext">{{ section.settings.grid_subtext }}</p>
-    {%- endif -%}
-  </div>
-{%- endif -%}
 
 {% schema %}
 {
