@@ -40,15 +40,13 @@
   pointer-events: none;
 }
 
-.idiom-product-card__info { padding: 10px 4px 8px; }
-.idiom-product-card__title { font-size: 16px; font-weight: 700; margin: 0 0 4px; text-transform: uppercase; letter-spacing: 0.04em; }
-.idiom-product-card__scent { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; opacity: 0.6; margin: 0 0 4px; }
-.idiom-product-card__price { font-size: 14px; margin: 0; }
+.idiom-product-card__info { padding: 12px 4px 8px; }
+.idiom-product-card__title { font-size: 18px; font-weight: 800; margin: 0 0 4px; text-transform: uppercase; letter-spacing: 0.03em; line-height: 1.1; color: var(--idiom-black); }
+.idiom-product-card__meta { font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--idiom-black); opacity: 0.65; margin: 0; }
 
 @media (max-width: 480px) {
-  .idiom-product-card__title { font-size: 16px; }
-  .idiom-product-card__scent,
-  .idiom-product-card__price { font-size: 12px; }
+  .idiom-product-card__title { font-size: 14px; }
+  .idiom-product-card__meta { font-size: 11px; }
 }
 </style>
 {%- endunless -%}
@@ -81,10 +79,12 @@
 
     <div class="idiom-product-card__info">
       <p class="idiom-product-card__title">{{ product.title }}</p>
-      {%- if product.metafields.custom.scent_descriptor != blank -%}
-        <p class="idiom-product-card__scent">{{ product.metafields.custom.scent_descriptor }}</p>
-      {%- endif -%}
-      <p class="idiom-product-card__price">{{ product.price | money }}</p>
+      <p class="idiom-product-card__meta">
+        {%- if product.metafields.custom.scent_descriptor != blank -%}
+          {{ product.metafields.custom.scent_descriptor }} &nbsp;|&nbsp;
+        {%- endif -%}
+        {{ product.price | money }}
+      </p>
     </div>
   </div>
 </a>
