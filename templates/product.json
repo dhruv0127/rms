@@ -21,10 +21,16 @@
           }
         },
         "text_tKXqFk": {
-          "type": "text",
+          "type": "custom_code",
           "settings": {
-            "title": "<h5>{{ product.metafields.custom.product_trio_description.value }}</h5>",
-            "text_alignment": "left",
+            "custom_code": "<p style=\"font-size:11px;letter-spacing:0.12em;text-transform:uppercase;font-weight:500;margin:0 0 12px;padding-bottom:12px;border-bottom:1px solid rgba(0,0,0,0.15);\">WOODY. FRESH. CREAMY.</p>",
+            "padding_bottom": 0
+          }
+        },
+        "star_rating": {
+          "type": "custom_code",
+          "settings": {
+            "custom_code": "<div class=\"idiom-pdp-stars\"><span class=\"idiom-pdp-stars__icons\">★★★★★</span><span class=\"idiom-pdp-stars__count\">35 reviews</span></div>",
             "padding_bottom": 8
           }
         },
@@ -40,8 +46,15 @@
           "settings": {
             "show_labels": false,
             "show_quantity": false,
-            "show_payment_button": true,
+            "show_payment_button": false,
             "enable_subscriptions_selectors": false,
+            "padding_bottom": 20
+          }
+        },
+        "first_impressions": {
+          "type": "custom_code",
+          "settings": {
+            "custom_code": "<div class=\"idiom-first-impressions\"><p class=\"idiom-first-impressions__label\">FIRST IMPRESSIONS:</p><div class=\"idiom-first-impressions__images\"><div class=\"idiom-first-impressions__img-wrap\"><img src=\"{{ 'pdp-first-impression.png' | asset_url }}\" alt=\"First impression\" loading=\"lazy\"></div><div class=\"idiom-first-impressions__img-wrap\"><img src=\"{{ 'pdp-first-impression.png' | asset_url }}\" alt=\"First impression\" loading=\"lazy\"></div><div class=\"idiom-first-impressions__img-wrap\"><img src=\"{{ 'pdp-first-impression.png' | asset_url }}\" alt=\"First impression\" loading=\"lazy\"></div><div class=\"idiom-first-impressions__img-wrap\"><img src=\"{{ 'pdp-first-impression.png' | asset_url }}\" alt=\"First impression\" loading=\"lazy\"></div></div></div>",
             "padding_bottom": 20
           }
         },
@@ -55,7 +68,7 @@
             "text_color": "text-dark",
             "show_accordion_divider": true,
             "line_thickness": "normal",
-            "accordion_heading": "fragrance notes",
+            "accordion_heading": "key notes",
             "heading_style": "font-body",
             "accordion_text": "<p>{{ product.metafields.custom.fragrance_nerd_notes | metafield_tag }}</p>",
             "accordion_page": "",
@@ -102,6 +115,7 @@
         "text_tKXqFk",
         "description",
         "form",
+        "first_impressions",
         "product_accordion_notes",
         "product_accordion_wear",
         "product_accordion_ingredients"
@@ -113,7 +127,7 @@
         "product_image_aspect_ratio": true,
         "enable_zoom": false,
         "enable_video_looping": false,
-        "bg_color": "",
+        "bg_color": "#fffbf3",
         "gradient": "",
         "width": "wrapper",
         "padding_top": 0,

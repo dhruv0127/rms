@@ -15763,12 +15763,12 @@ body:not(.no-outline) .product__accordion__title.focus-visible {
   }
 }
 
-.flickity-viewport,
+.template-product .flickity-viewport,
 .product-gallery__media .lazy-image {
   max-height: 60vh;
 }
 
-.product-gallery__media-slider {
+.template-product .product-gallery__media-slider {
   margin: 0 auto;
   max-height: 60vh;
 }

@@ -1,0 +1,62 @@
+[     935ms] [LOG] AZ: Google Font & Custom Fonts v1.0.2 @ https://idiomfragrances.com/products/3d-amp-100ml-copy?variant=55611347698041:719
+[    1468ms] [INFO] [HotReload] CLI hot reload disabled - No hot reload port specified. @ https://idiomfragrances.com/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:316
+[    6552ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3119
+[    6555ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3119
+[    6556ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :2752
+[   10774ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3119
+[   10776ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3119
+[   10777ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :2752
+[   26959ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3119
+[   26960ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3119
+[   26961ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :2752
+[   31010ms] [ERROR] Failed to load resource: net::ERR_TIMED_OUT @ https://shop.app/checkouts/internal/preloads.js?locale=en-GB&shop_id=91491172729:0
+[   36472ms] [WARNING] The resource https://idiomfragrances.com/cdn/shop/files/idiom_logo_black_150x45.png?v=1746711320 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://idiomfragrances.com/products/3d-amp-100ml-copy?variant=55611347698041:0
+[   36472ms] [WARNING] The resource https://idiomfragrances.com/cdn/shop/t/8/assets/loading.svg?v=91665432863842511931779072698 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://idiomfragrances.com/products/3d-amp-100ml-copy?variant=55611347698041:0
+[  106703ms] [LOG] AZ: Google Font & Custom Fonts v1.0.2 @ https://idiomfragrances.com/products/3d-amp-100ml-copy?variant=55611347698041:882
+[  106785ms] [INFO] [HotReload] CLI hot reload disabled - No hot reload port specified. @ https://idiomfragrances.com/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:316
+[  136678ms] [ERROR] Failed to load resource: net::ERR_TIMED_OUT @ https://shop.app/checkouts/internal/preloads.js?locale=en-GB&shop_id=91491172729:0
+[  142474ms] [WARNING] The resource https://idiomfragrances.com/cdn/shop/files/idiom_logo_black_150x45.png?v=1746711320 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://idiomfragrances.com/products/3d-amp-100ml-copy?variant=55611347698041:0
+[  142474ms] [WARNING] The resource https://idiomfragrances.com/cdn/shop/t/8/assets/loading.svg?v=91665432863842511931779072698 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://idiomfragrances.com/products/3d-amp-100ml-copy?variant=55611347698041:0
+[  246499ms] [ERROR] Unsafe attempt to load URL https://shop.app/pay/hop?analytics_trace_id=577f8f78-26c6-4945-8683-e07536cf471b&target_origin=https%3A%2F%2Fidiomfragrances.com&client_handle=idiom-london.myshopify.com from frame with URL chrome-error://chromewebdata/. Domains, protocols and ports must match.
+ @ chrome-error://chromewebdata/:0
+[  250105ms] [WARNING] The resource https://idiomfragrances.com/cdn/shop/files/idiom_logo_black_150x45.png?v=1746711320 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://idiomfragrances.com/products/3d-amp-100ml-copy?variant=55611347698041:0
+[  250105ms] [WARNING] The resource https://idiomfragrances.com/cdn/shop/t/8/assets/loading.svg?v=91665432863842511931779072698 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://idiomfragrances.com/products/3d-amp-100ml-copy?variant=55611347698041:0
+[  270077ms] [LOG] AZ: Google Font & Custom Fonts v1.0.2 @ https://idiomfragrances.com/products/3d-amp-100ml-copy?variant=55611347698041:719
+[  270162ms] [INFO] [HotReload] CLI hot reload disabled - No hot reload port specified. @ https://idiomfragrances.com/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:316
+[  273460ms] [LOG] AZ: Google Font & Custom Fonts v1.0.2 @ https://idiomfragrances.com/:717
+[  273629ms] [INFO] [HotReload] CLI hot reload disabled - No hot reload port specified. @ https://idiomfragrances.com/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:316
+[  273927ms] [WARNING] Error in section: template--28721600659833__section-banner-image @ https://idiomfragrances.com/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:8
+[  273927ms] [WARNING] T @ https://idiomfragrances.com/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:8
+[  273927ms] [WARNING] TypeError: Cannot read properties of null (reading 'querySelectorAll')
+    at Object.handleImageAnimation (https://idiomfragrances.com/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:9:241921)
+    at Object.init (https://idiomfragrances.com/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:9:241470)
+    at new <anonymous> (https://idiomfragrances.com/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:9:242446)
+    at Object.onLoad (https://idiomfragrances.com/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:9:241445)
+    at https://idiomfragrances.com/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:9:3081
+    at Array.forEach (<anonymous>)
+    at T.callFunctions (https://idiomfragrances.com/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:9:2991)
+    at T.onLoad (https://idiomfragrances.com/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:9:3106)
+    at new T (https://idiomfragrances.com/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:9:3866)
+    at https://idiomfragrances.com/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:9:4620 @ https://idiomfragrances.com/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:8
+[  282077ms] [LOG] AZ: Google Font & Custom Fonts v1.0.2 @ https://idiomfragrances.com/:717
+[  283647ms] [INFO] [HotReload] CLI hot reload disabled - No hot reload port specified. @ https://idiomfragrances.com/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:316
+[  283675ms] [WARNING] Error in section: template--28721600659833__section-banner-image @ https://idiomfragrances.com/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:8
+[  283675ms] [WARNING] T @ https://idiomfragrances.com/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:8
+[  283676ms] [WARNING] TypeError: Cannot read properties of null (reading 'querySelectorAll')
+    at Object.handleImageAnimation (https://idiomfragrances.com/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:9:241921)
+    at Object.init (https://idiomfragrances.com/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:9:241470)
+    at new <anonymous> (https://idiomfragrances.com/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:9:242446)
+    at Object.onLoad (https://idiomfragrances.com/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:9:241445)
+    at https://idiomfragrances.com/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:9:3081
+    at Array.forEach (<anonymous>)
+    at T.callFunctions (https://idiomfragrances.com/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:9:2991)
+    at T.onLoad (https://idiomfragrances.com/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:9:3106)
+    at new T (https://idiomfragrances.com/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:9:3866)
+    at https://idiomfragrances.com/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:9:4620 @ https://idiomfragrances.com/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:8
+[  299579ms] [ERROR] Failed to load resource: net::ERR_TIMED_OUT @ https://shop.app/checkouts/internal/preloads.js?locale=en-GB&shop_id=91491172729:0
+[  306443ms] [WARNING] The resource https://idiomfragrances.com/cdn/shop/files/idiom_logo_black_150x45.png?v=1746711320 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://idiomfragrances.com/:0
+[  306443ms] [WARNING] The resource https://idiomfragrances.com/cdn/shop/t/8/assets/loading.svg?v=91665432863842511931779072698 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://idiomfragrances.com/:0
+[  312491ms] [ERROR] Unsafe attempt to load URL https://shop.app/pay/hop?analytics_trace_id=55de81eb-fbd8-4a8a-999c-d9d9e657a91a&target_origin=https%3A%2F%2Fidiomfragrances.com&client_handle=idiom-london.myshopify.com from frame with URL chrome-error://chromewebdata/. Domains, protocols and ports must match.
+ @ chrome-error://chromewebdata/:0
+[  315619ms] [WARNING] The resource https://idiomfragrances.com/cdn/shop/files/idiom_logo_black_150x45.png?v=1746711320 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://idiomfragrances.com/:0
+[  315619ms] [WARNING] The resource https://idiomfragrances.com/cdn/shop/t/8/assets/loading.svg?v=91665432863842511931779072698 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://idiomfragrances.com/:0
