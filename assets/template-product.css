@@ -154,13 +154,18 @@
 
 @media only screen and (min-width: 768px) {
   .product-single__wrapper--large {
-    grid-template-columns: calc(60% - var(--gutter) / 2) calc(40% - var(--gutter) / 2);
+    grid-template-columns: calc(60% - var(--gutter) / 2) calc(
+        40% - var(--gutter) / 2
+      );
+    margin-top: var(--gutter);
   }
 }
 
 @media only screen and (min-width: 768px) {
   .product-single__wrapper--standard {
-    grid-template-columns: calc(50% - var(--gutter) / 2) calc(50% - var(--gutter) / 2);
+    grid-template-columns: calc(50% - var(--gutter) / 2) calc(
+        50% - var(--gutter) / 2
+      );
   }
 }
 
@@ -178,7 +183,9 @@
   }
 }
 
-.featured-product--onboarding .product-single__wrapper--grid .product-gallery__media-slider {
+.featured-product--onboarding
+  .product-single__wrapper--grid
+  .product-gallery__media-slider {
   grid-template-columns: minmax(0, 1fr);
 }
 
@@ -206,7 +213,10 @@
   padding-top: var(--media-padding-top, 0);
 }
 
-.js .product-single__wrapper--carousel .product-gallery__media-slider:not(.flickity-enabled) .product-gallery__media-slide:not(:first-child) {
+.js
+  .product-single__wrapper--carousel
+  .product-gallery__media-slider:not(.flickity-enabled)
+  .product-gallery__media-slide:not(:first-child) {
   display: none;
   position: absolute;
   top: 0;
@@ -214,11 +224,21 @@
   visibility: hidden;
 }
 
-.product-single__wrapper--carousel .product-gallery__media-slide.media--hidden:not(.is-selected) button,
-.product-single__wrapper--carousel .product-gallery__media-slide.media--hidden:not(.is-selected) input,
-.product-single__wrapper--carousel .product-gallery__media-slide.media--hidden:not(.is-selected) iframe,
-.product-single__wrapper--carousel .product-gallery__media-slide.media--hidden:not(.is-selected) .shopify-model-viewer-ui__button,
-.product-single__wrapper--carousel .product-gallery__media-slide.media--hidden:not(.is-selected) .shopify-model-viewer-ui__controls-area {
+.product-single__wrapper--carousel
+  .product-gallery__media-slide.media--hidden:not(.is-selected)
+  button,
+.product-single__wrapper--carousel
+  .product-gallery__media-slide.media--hidden:not(.is-selected)
+  input,
+.product-single__wrapper--carousel
+  .product-gallery__media-slide.media--hidden:not(.is-selected)
+  iframe,
+.product-single__wrapper--carousel
+  .product-gallery__media-slide.media--hidden:not(.is-selected)
+  .shopify-model-viewer-ui__button,
+.product-single__wrapper--carousel
+  .product-gallery__media-slide.media--hidden:not(.is-selected)
+  .shopify-model-viewer-ui__controls-area {
   visibility: hidden;
   transition: visibility 0s linear 0.75s;
 }

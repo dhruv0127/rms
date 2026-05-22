@@ -108,8 +108,7 @@
         "header_text_color": "white",
         "header_gradient": true
       }
-    }
-  },
+    },
     "idiom-trust-bar": {
       "type": "idiom-trust-bar",
       "blocks": {
