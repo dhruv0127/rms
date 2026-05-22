@@ -108,7 +108,7 @@
       ],
       "settings": {
         "product_sticky_enable": true,
-        "image_layout": "grid",
+        "image_layout": "carousel",
         "image_width": "large",
         "product_image_aspect_ratio": true,
         "enable_zoom": false,
@@ -123,17 +123,16 @@
     "idiom-layering-row": {
       "type": "idiom-layering-row",
       "settings": {
-        "subtext": "these scents were made to mix."
+        "heading_solo": "wear solo,",
+        "heading_layer": "or layer me with:",
+        "subtext": "these scents were made to mix.",
+        "fine_print": "* that's your part.",
+        "layering_collection": "3d-wear-with"
       }
-    },
-    "idiom-video-grid": {
-      "type": "idiom-video-grid",
-      "settings": {}
     }
   },
   "order": [
     "main",
-    "idiom-layering-row",
-    "idiom-video-grid"
+    "idiom-layering-row"
   ]
 }
