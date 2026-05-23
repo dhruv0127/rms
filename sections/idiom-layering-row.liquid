@@ -1,57 +1,96 @@
 <style>
-.idiom-layering { background: #9a9a35; display: flex; align-items: center; padding: 20px 48px; gap: 48px; }
+.idiom-layering-wrap {
+  background: #9a9a35;
+  border-radius: 24px;
+  overflow: hidden;
+  margin: 0 16px;
+}
+
+/* Marquee strip */
+.idiom-layering__marquee {
+  padding: 10px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+.idiom-layering__marquee .idiom-marquee-track {
+  font-family: "farro-bold (2)", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.75);
+  letter-spacing: 0.06em;
+  text-transform: lowercase;
+  gap: 0;
+}
+.idiom-layering__marquee .idiom-marquee-track span { padding: 0 20px; }
+
+/* Main row */
+.idiom-layering { display: flex; align-items: center; padding: 40px 48px; gap: 48px; }
 .idiom-layering__text { flex: 0 0 28%; min-width: 220px; }
 .idiom-layering__heading { color: #fff; font-size: 42px; font-weight: 800; line-height: 1.05; margin: 0; }
 .idiom-layering__divider { border: none; border-top: 1px solid rgba(255,255,255,0.4); margin: 18px 0 14px; }
 .idiom-layering__subtext { color: rgba(255,255,255,0.85); font-size: 13px; margin: 0 0 6px; }
 .idiom-layering__fine { color: rgba(255,255,255,0.55); font-size: 12px; margin: 0; }
-/* outer: no overflow clipping so bottle images can paint above */
 .idiom-layering__products { flex: 1 1 0; overflow: visible; }
-/* inner: the actual scroll container */
 .idiom-layering__scroll { display: flex; gap: 20px; overflow-x: auto; overflow-y: visible; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
 .idiom-layering__scroll::-webkit-scrollbar { display: none; }
 .idiom-layering__scroll .idiom-product-card-link { flex: 0 0 280px; width: 280px; }
+
 @media (max-width: 768px) {
-  .idiom-layering { flex-direction: column; padding: 40px 16px; gap: 24px; }
+  .idiom-layering-wrap { margin: 0 12px; border-radius: 16px; }
+  .idiom-layering { flex-direction: column; padding: 32px 20px; gap: 24px; }
   .idiom-layering__text { flex: none; width: 100%; }
   .idiom-layering__products { width: 100%; }
   .idiom-layering__scroll .idiom-product-card-link { flex: 0 0 160px; width: 160px; }
 }
 </style>
 
-<section class="idiom-layering">
-  <div class="idiom-layering__text">
-    <p class="idiom-layering__heading">{{ section.settings.heading_solo }}</p>
-    <p class="idiom-layering__heading">{{ section.settings.heading_layer }}</p>
-    <hr class="idiom-layering__divider">
-    <p class="idiom-layering__subtext">{{ section.settings.subtext }}</p>
-    <p class="idiom-layering__fine">{{ section.settings.fine_print }}</p>
-  </div>
+{%- assign marquee_text = section.settings.marquee_text | default: "smell like no one else™ · find your fragrance freedom · layer, or wear solo · " -%}
 
-  <div class="idiom-layering__products">
-    <div class="idiom-layering__scroll">
-      {%- assign layer_products = product.metafields.custom.layer_with_products.value -%}
-      {%- if layer_products != blank -%}
-        {%- for lp in layer_products -%}
-          {% render 'idiom-product-card', product: lp %}
-        {%- endfor -%}
-      {%- elsif section.settings.layering_collection != blank -%}
-        {%- assign layer_col = collections[section.settings.layering_collection] -%}
-        {%- for lp in layer_col.products limit: 6 -%}
-          {% render 'idiom-product-card', product: lp %}
-        {%- endfor -%}
-      {%- endif -%}
+<div class="idiom-layering-wrap">
+  <div class="idiom-layering__marquee">
+    <div class="idiom-marquee-track" aria-hidden="true">
+      {%- for i in (1..6) -%}
+        <span>{{ marquee_text }}</span>
+      {%- endfor -%}
     </div>
   </div>
-</section>
+
+  <section class="idiom-layering">
+    <div class="idiom-layering__text">
+      <p class="idiom-layering__heading">{{ section.settings.heading_solo }}</p>
+      <p class="idiom-layering__heading">{{ section.settings.heading_layer }}</p>
+      <hr class="idiom-layering__divider">
+      <p class="idiom-layering__subtext">{{ section.settings.subtext }}</p>
+      <p class="idiom-layering__fine">{{ section.settings.fine_print }}</p>
+    </div>
+
+    <div class="idiom-layering__products">
+      <div class="idiom-layering__scroll">
+        {%- assign layer_products = product.metafields.custom.layer_with_products.value -%}
+        {%- if layer_products != blank -%}
+          {%- for lp in layer_products -%}
+            {% render 'idiom-product-card', product: lp %}
+          {%- endfor -%}
+        {%- elsif section.settings.layering_collection != blank -%}
+          {%- assign layer_col = collections[section.settings.layering_collection] -%}
+          {%- for lp in layer_col.products limit: 6 -%}
+            {% render 'idiom-product-card', product: lp %}
+          {%- endfor -%}
+        {%- endif -%}
+      </div>
+    </div>
+  </section>
+</div>
 
 {% schema %}
 {
   "name": "Layering Row",
   "settings": [
+    { "type": "text", "id": "marquee_text", "label": "Marquee text", "default": "smell like no one else™ · find your fragrance freedom · layer, or wear solo · " },
     { "type": "text", "id": "heading_solo", "label": "Line 1", "default": "wear solo," },
     { "type": "text", "id": "heading_layer", "label": "Line 2", "default": "or layer me with:" },
-    { "type": "text", "id": "subtext", "label": "Subtext", "default": "we don't do signature scents..." },
+    { "type": "text", "id": "subtext", "label": "Subtext", "default": "these scents were made to mix." },
     { "type": "text", "id": "fine_print", "label": "Fine print", "default": "* that's your part." },
     { "type": "collection", "id": "layering_collection", "label": "Fallback collection" }
   ],
