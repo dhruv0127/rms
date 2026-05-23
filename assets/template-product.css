@@ -120,6 +120,10 @@
   animation-delay: 1448.5ms;
 }
 
+.shopify-section.shopify-section--product {
+  padding-bottom: 12px;
+}
+
 .product-single {
   background: var(--bg);
 }
@@ -128,6 +132,9 @@
   .product-single .form__wrapper.is-sticky {
     position: sticky;
     top: var(--sticky-top, 0);
+  }
+  .shopify-section.shopify-section--product {
+    padding-bottom: 34px;
   }
 }
 
