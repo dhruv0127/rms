@@ -20586,9 +20586,7 @@ body:not(.no-outline) .selector-wrapper--swatches .radio__fieldset:focus-within,
   display: inline-flex;
 }
 .selector-wrapper--grid .radio__button {
-  flex: 0 0 calc(16.6666666667% - 12px);
   min-width: 60px;
-  max-width: 75px;
 }
 @media only screen and (max-width: 767px) {
   .selector-wrapper--grid .radio__button {

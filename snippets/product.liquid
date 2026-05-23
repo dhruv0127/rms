@@ -1580,9 +1580,9 @@
                   if current_variant.price == 0
                     echo 'products.product.free' | t
                   elsif currency_code_enable
-                    echo current_variant.price | money_with_currency
+                    echo current_variant.price | money_with_currency | remove: '.00'
                   else
-                    echo current_variant.price | money
+                    echo current_variant.price | money_without_trailing_zeros
                   endif
                 -%}
               </span>

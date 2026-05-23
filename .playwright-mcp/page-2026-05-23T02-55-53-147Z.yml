@@ -1,0 +1,214 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#MainContent"
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - heading "idiom®" [level=1] [ref=e6]:
+        - link "idiom®" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - img [ref=e8]
+      - navigation [ref=e10]:
+        - generic [ref=e11]:
+          - link "Home" [ref=e13] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e14]: Home
+          - navigation [ref=e15]:
+            - link "Shop" [ref=e16] [cursor=pointer]:
+              - /url: /collections/shop-everything
+              - generic [ref=e17]: Shop
+          - link "Gallery" [ref=e19] [cursor=pointer]:
+            - /url: /pages/gallery
+            - generic [ref=e20]: Gallery
+          - link "About" [ref=e22] [cursor=pointer]:
+            - /url: /pages/story
+            - generic [ref=e23]: About
+        - generic [ref=e24]:
+          - group [ref=e26]:
+            - button "Open search bar" [ref=e27] [cursor=pointer]:
+              - img
+              - generic [ref=e28]: Open search bar
+          - link "My Account" [ref=e30] [cursor=pointer]:
+            - /url: /account
+            - generic [ref=e31]: My Account
+            - img
+          - link "Open cart" [ref=e33] [cursor=pointer]:
+            - /url: /cart
+            - generic [ref=e34]: Open cart
+            - img
+  - generic [ref=e36]:
+    - generic [ref=e37]: free samples in every order
+    - generic [ref=e38]: 5 star reviewed layering fragrances
+    - generic [ref=e39]: high-quality, british made eau du parfum
+  - main [ref=e40]:
+    - generic [ref=e44]:
+      - generic [ref=e45]:
+        - generic [ref=e48]:
+          - figure [ref=e52]:
+            - img "3D AMPLIFIER | EAU DE PARFUM" [ref=e53]
+          - figure [ref=e57]:
+            - img "3D AMPLIFIER | EAU DE PARFUM" [ref=e58]
+          - figure [ref=e62]:
+            - img "3D AMPLIFIER | EAU DE PARFUM" [ref=e63]
+          - figure [ref=e67]:
+            - img "3D AMPLIFIER | EAU DE PARFUM" [ref=e68]
+        - generic [ref=e71]:
+          - link "3D AMPLIFIER | EAU DE PARFUM" [ref=e73] [cursor=pointer]:
+            - /url: //idiomfragrances.com/cdn/shop/files/53_2048x.png?v=1763287976
+            - figure [ref=e74]:
+              - img "3D AMPLIFIER | EAU DE PARFUM" [ref=e75]
+          - link "3D AMPLIFIER | EAU DE PARFUM" [ref=e77] [cursor=pointer]:
+            - /url: //idiomfragrances.com/cdn/shop/files/32_302e1fca-1974-4e7b-8935-1cc313b16cfe_2048x.png?v=1763287996
+            - figure [ref=e78]:
+              - img "3D AMPLIFIER | EAU DE PARFUM" [ref=e79]
+          - link "3D AMPLIFIER | EAU DE PARFUM" [ref=e81] [cursor=pointer]:
+            - /url: //idiomfragrances.com/cdn/shop/files/63_ad7ea255-40ba-4e9c-a9f0-42285ca5ab6e_2048x.png?v=1763288334
+            - figure [ref=e82]:
+              - img "3D AMPLIFIER | EAU DE PARFUM" [ref=e83]
+          - link "3D AMPLIFIER | EAU DE PARFUM" [ref=e85] [cursor=pointer]:
+            - /url: //idiomfragrances.com/cdn/shop/files/61_2048x.png?v=1763288004
+            - figure [ref=e86]:
+              - img "3D AMPLIFIER | EAU DE PARFUM" [ref=e87]
+      - generic [ref=e89]:
+        - heading "3D AMPLIFIER | EAU DE PARFUM" [level=2] [ref=e92]
+        - paragraph [ref=e94]: WOODY. FRESH. CREAMY.
+        - generic [ref=e96]:
+          - generic [ref=e97]: ★★★★★
+          - generic [ref=e98]: 35 reviews
+        - generic [ref=e99]:
+          - paragraph [ref=e100]: a scent enhancer that elevates any fragrance. amplifies radiance, diffusion, depth, and longevity, in a subtle, magical way. worn solo, it’s a soft, enigmatic hum on skin.
+          - paragraph [ref=e101]:
+            - strong [ref=e102]: "wear solo:"
+            - text: a subtle skin aura, genderless and magnetic.
+          - paragraph [ref=e103]:
+            - strong [ref=e104]: "layer:"
+            - text: enhances, brightens, and extends.
+        - generic [ref=e106]:
+          - group "Size" [ref=e109]:
+            - generic [ref=e110]:
+              - generic [ref=e111]:
+                - radio "30ml" [checked]
+                - generic [ref=e113]: 30ml
+              - generic [ref=e114]:
+                - radio "2ml"
+                - generic [ref=e116]: 2ml
+          - button "add to bag | £38" [ref=e120] [cursor=pointer]:
+            - generic [ref=e121]: add to bag | £38
+        - generic [ref=e123]:
+          - paragraph [ref=e124]: "FIRST IMPRESSIONS:"
+          - generic [ref=e125]:
+            - img "First impression" [ref=e127]
+            - img "First impression" [ref=e129]
+            - img "First impression" [ref=e131]
+            - img "First impression" [ref=e133]
+        - button "key notes" [ref=e136] [cursor=pointer]:
+          - text: key notes
+          - img [ref=e137]
+          - img [ref=e139]
+        - button "how to wear" [ref=e142] [cursor=pointer]:
+          - text: how to wear
+          - img [ref=e143]
+          - img [ref=e145]
+        - button "full ingredient list" [ref=e148] [cursor=pointer]:
+          - text: full ingredient list
+          - img [ref=e149]
+          - img [ref=e151]
+    - generic [ref=e153]:
+      - generic [ref=e154]:
+        - paragraph [ref=e155]: wear solo,
+        - paragraph [ref=e156]: "or layer me with:"
+        - paragraph [ref=e157]: these scents were made to mix.
+        - paragraph [ref=e158]: "* that's your part."
+      - generic [ref=e159]:
+        - link "ACOUSTIC ROSE | EAU DE PARFUM ACOUSTIC ROSE | EAU DE PARFUM £6.00" [ref=e160] [cursor=pointer]:
+          - /url: /products/acoustic-rose-30ml
+          - generic [ref=e161]:
+            - img "ACOUSTIC ROSE | EAU DE PARFUM" [ref=e164]
+            - generic [ref=e165]:
+              - paragraph [ref=e166]: ACOUSTIC ROSE | EAU DE PARFUM
+              - paragraph [ref=e167]: £6.00
+        - link "PALO SANTAL | EAU DE PARFUM PALO SANTAL | EAU DE PARFUM £6.00" [ref=e168] [cursor=pointer]:
+          - /url: /products/palo-santal-30ml
+          - generic [ref=e169]:
+            - img "PALO SANTAL | EAU DE PARFUM" [ref=e172]
+            - generic [ref=e173]:
+              - paragraph [ref=e174]: PALO SANTAL | EAU DE PARFUM
+              - paragraph [ref=e175]: £6.00
+        - link "BERGAMOT HI-FI | EAU DE PARFUM BERGAMOT HI-FI | EAU DE PARFUM £6.00" [ref=e176] [cursor=pointer]:
+          - /url: /products/bergamot-hi-fi-30ml
+          - generic [ref=e177]:
+            - img "BERGAMOT HI-FI | EAU DE PARFUM" [ref=e180]
+            - generic [ref=e181]:
+              - paragraph [ref=e182]: BERGAMOT HI-FI | EAU DE PARFUM
+              - paragraph [ref=e183]: £6.00
+  - contentinfo [ref=e185]:
+    - generic [ref=e186]:
+      - generic [ref=e187]:
+        - paragraph [ref=e188]: smell like no one else
+        - paragraph [ref=e189]: Idiom makes rule-breaking, layer-ready fragrances for skin that wants more. Designed to be mixed, and never made to behave.
+        - generic [ref=e190]:
+          - link "Instagram" [ref=e191] [cursor=pointer]:
+            - /url: https://instagram.com/idiomfragrances
+            - img [ref=e192]
+          - link "TikTok" [ref=e194] [cursor=pointer]:
+            - /url: https://tiktok.com/@idiomfragrances
+            - img [ref=e195]
+      - generic [ref=e197]:
+        - generic [ref=e198]:
+          - paragraph [ref=e199]: the boring stuff
+          - list [ref=e200]:
+            - listitem [ref=e201]:
+              - link "delivery" [ref=e202] [cursor=pointer]:
+                - /url: /policies/shipping-policy
+            - listitem [ref=e203]:
+              - link "returns" [ref=e204] [cursor=pointer]:
+                - /url: /policies/refund-policy
+            - listitem [ref=e205]:
+              - link "accounts" [ref=e206] [cursor=pointer]:
+                - /url: /account
+            - listitem [ref=e207]:
+              - link "faqs" [ref=e208] [cursor=pointer]:
+                - /url: /pages/faqs
+            - listitem [ref=e209]:
+              - link "contact" [ref=e210] [cursor=pointer]:
+                - /url: /pages/contact
+            - listitem [ref=e211]:
+              - link "terms & conditions" [ref=e212] [cursor=pointer]:
+                - /url: /policies/terms-of-service
+            - listitem [ref=e213]:
+              - link "privacy policy" [ref=e214] [cursor=pointer]:
+                - /url: /policies/privacy-policy
+        - generic [ref=e215]:
+          - paragraph [ref=e216]: shop by type
+          - list [ref=e217]:
+            - listitem [ref=e218]:
+              - link "full size" [ref=e219] [cursor=pointer]:
+                - /url: /collections/full-size
+            - listitem [ref=e220]:
+              - link "mini-oms" [ref=e221] [cursor=pointer]:
+                - /url: /collections/mini-oms
+            - listitem [ref=e222]:
+              - link "kits and gifts" [ref=e223] [cursor=pointer]:
+                - /url: /collections/kits-and-gifts
+    - img "idiom"
+    - generic [ref=e225]: © 2026 idiom fragrances. all rights reserved.
+  - iframe [ref=e227]:
+    - generic [ref=f58e4]:
+      - button [ref=f58e7] [cursor=pointer]:
+        - img [ref=f58e9]
+        - img [ref=f58e12]
+      - generic [ref=f58e15]:
+        - generic [ref=f58e18]:
+          - link "Logo" [ref=f58e19] [cursor=pointer]:
+            - /url: https://admin.shopify.com/store/idiom-london
+            - img "Logo" [ref=f58e20]
+          - generic [ref=f58e22]:
+            - generic [ref=f58e23]: Development (24ea89-MacBook-Air-17)
+            - generic [ref=f58e24]: Draft
+        - generic [ref=f58e26]:
+          - button "Hide bar" [ref=f58e28] [cursor=pointer]:
+            - generic [ref=f58e29]: Hide bar
+          - button "Exit preview" [ref=f58e31] [cursor=pointer]:
+            - generic [ref=f58e32]: Exit preview
+          - button "Copy link" [ref=f58e35] [cursor=pointer]:
+            - img [ref=f58e39]
+            - generic [ref=f58e41]: Copy link

@@ -368,7 +368,84 @@ body.template-product .product-single__details h2 {
   color: var(--text);
   margin: 0 0 12px;
   padding-bottom: 12px;
-  border-bottom: 1px solid rgba(0,0,0,0.15);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+/* idiom PDP form — variant buttons + ATC on same row */
+@media only screen and (min-width: 768px) {
+  body.template-product .product__form {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 28px;
+  }
+
+  body.template-product .product__form .product__selectors {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  body.template-product .product__form .product__submit__holder {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  body.template-product .product__submit__buttons {
+    width: 100%;
+  }
+
+  body.template-product .product__submit__item {
+    width: 100%;
+  }
+
+  body.template-product .product__submit__add {
+    flex: 1;
+    min-height: 38px;
+    font-size: 14px;
+  }
+
+  body.template-product .product__form .shop-pay-terms {
+    display: none;
+  }
+}
+
+/* hide SIZE legend and fix bottom margin on variant buttons for inline row */
+body.template-product .radio__legend {
+  display: none;
+}
+body.template-product .radio__buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+}
+body.template-product .radio__button {
+  margin: 0 !important;
+}
+
+/* variant button min-width */
+body.template-product .radio__label {
+  min-width: 92px;
+  text-align: center;
+  padding: 8px 16px;
+}
+
+/* idiom variant buttons — rainbow border on selected */
+body.template-product .radio__input:checked + .radio__label {
+  background:
+    linear-gradient(#fffbf3, #fffbf3) padding-box,
+    linear-gradient(135deg, #f6c90e, #e94057, #a855f7, #3b82f6, #10b981)
+      border-box;
+  border: 2px solid transparent;
+}
+
+/* idiom ATC button — separator and price format */
+body.template-product .product__submit__add .product__price--regular::before {
+  content: "  |  ";
+  letter-spacing: 0;
 }
 
 /* idiom PDP star rating */
@@ -377,7 +454,7 @@ body.template-product .product-single__details h2 {
   align-items: center;
   gap: 8px;
   padding-bottom: 12px;
-  border-bottom: 1px solid rgba(0,0,0,0.15);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 .idiom-pdp-stars__icons {
   color: #f5a623;
@@ -413,7 +490,7 @@ body.template-product .product-single__details h2 {
   border-radius: 50%;
   overflow: hidden;
   flex-shrink: 0;
-  border: 2px solid rgba(0,0,0,0.08);
+  border: 2px solid rgba(0, 0, 0, 0.08);
 }
 .idiom-first-impressions__img-wrap img {
   width: 100%;

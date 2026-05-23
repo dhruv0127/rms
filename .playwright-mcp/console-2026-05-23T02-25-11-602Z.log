@@ -1,0 +1,6 @@
+[     873ms] [LOG] AZ: Google Font & Custom Fonts v1.0.2 @ https://idiomfragrances.com/products/3d-amp-100ml-copy?variant=55611347698041:719
+[    1040ms] [INFO] [HotReload] CLI hot reload disabled - No hot reload port specified. @ https://idiomfragrances.com/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:316
+[    6100ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3119
+[    6103ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3119
+[    6105ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :2752
+[   19035ms] [ERROR] Failed to load resource: net::ERR_TIMED_OUT @ https://shop.app/checkouts/internal/preloads.js?locale=en-GB&shop_id=91491172729:0
