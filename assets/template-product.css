@@ -343,6 +343,22 @@ body.template-product {
   --bg: #fffbf3;
 }
 
+/* idiom PDP right panel layout */
+@media only screen and (min-width: 768px) {
+  body.template-product .product-single__details .form__wrapper {
+    max-width: none;
+    margin: 0;
+    padding-top: 16px;
+  }
+}
+
+body.template-product .product-single__details h2 {
+  font-size: clamp(36px, 4vw, 56px);
+  line-height: 1.05;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
 /* idiom PDP tagline */
 .idiom-pdp-tagline {
   font-size: 11px;
@@ -353,6 +369,25 @@ body.template-product {
   margin: 0 0 12px;
   padding-bottom: 12px;
   border-bottom: 1px solid rgba(0,0,0,0.15);
+}
+
+/* idiom PDP star rating */
+.idiom-pdp-stars {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+}
+.idiom-pdp-stars__icons {
+  color: #f5a623;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+.idiom-pdp-stars__count {
+  font-size: 12px;
+  color: var(--text);
+  opacity: 0.7;
 }
 
 /* idiom First Impressions */
