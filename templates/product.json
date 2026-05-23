@@ -38,7 +38,7 @@
           "type": "description",
           "settings": {
             "enable_full_width": false,
-            "padding_bottom": 6
+            "padding_bottom": 20
           }
         },
         "form": {
@@ -146,8 +146,5 @@
       }
     }
   },
-  "order": [
-    "main",
-    "idiom-layering-row"
-  ]
+  "order": ["main", "idiom-layering-row"]
 }

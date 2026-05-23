@@ -15779,6 +15779,12 @@ body:not(.no-outline) .product__accordion__title.focus-visible {
   top: 0;
 }
 
+@media screen and (max-width: 768px) {
+  .product-gallery.aos-animate {
+    position: relative;
+  }
+}
+
 @media only screen and (max-width: 479px) {
   .product-gallery__media-slider {
     max-width: 100%;

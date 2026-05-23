@@ -1,14 +1,15 @@
 {%- unless idiom_product_card_styles_rendered -%}
   {%- assign idiom_product_card_styles_rendered = true -%}
 <style>
-.idiom-product-card-link { text-decoration: none; color: inherit; display: block; }
-.idiom-product-card-wrap { display: flex; flex-direction: column; }
+.idiom-product-card-link { text-decoration: none; color: inherit; display: block; width: 100%; }
+.idiom-product-card-wrap { display: flex; flex-direction: column; width: 100%; }
 
 /* Outer card: overflow visible so bottle can spill out the top */
 .idiom-product-card {
   position: relative;
   overflow: visible;
   border-radius: 16px;
+  width: 100%;
   aspect-ratio: 3 / 4;
 }
 

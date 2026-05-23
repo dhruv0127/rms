@@ -1,14 +1,17 @@
 <style>
-.idiom-layering { background: var(--idiom-olive); display: flex; align-items: center; min-height: 320px; padding: 40px 48px; gap: 40px; }
+.idiom-layering { background: var(--idiom-olive); display: flex; align-items: center; padding: 40px 48px; gap: 40px; }
 .idiom-layering__text { flex: 0 0 30%; }
 .idiom-layering__heading { color: #fff; font-size: 40px; font-weight: 700; line-height: 1; margin: 0; }
 .idiom-layering__subtext { color: #fff; font-style: italic; font-size: 14px; margin-top: 12px; }
 .idiom-layering__fine { color: rgba(255,255,255,0.7); font-style: italic; font-size: 11px; margin-top: 4px; }
-.idiom-layering__products { flex: 1 1 0; display: flex; gap: 16px; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; padding-bottom: 4px; }
-.idiom-layering__products::-webkit-scrollbar { display: none; }
-.idiom-layering__products .idiom-product-card-link { flex: 0 0 200px; }
+/* outer: flex child, no overflow clipping so bottle images can paint */
+.idiom-layering__products { flex: 1 1 0; overflow: visible; padding-bottom: 60px; }
+/* inner: the actual scroll container */
+.idiom-layering__scroll { display: flex; gap: 16px; overflow-x: auto; overflow-y: visible; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+.idiom-layering__scroll::-webkit-scrollbar { display: none; }
+.idiom-layering__scroll .idiom-product-card-link { flex: 0 0 180px; width: 180px; }
 @media (max-width: 768px) {
-  .idiom-layering { flex-direction: column; padding: 40px 16px; min-height: auto; }
+  .idiom-layering { flex-direction: column; padding: 40px 16px; }
   .idiom-layering__text { flex: none; width: 100%; }
   .idiom-layering__products { width: 100%; }
 }
@@ -23,17 +26,19 @@
   </div>
 
   <div class="idiom-layering__products">
-    {%- assign layer_products = product.metafields.custom.layer_with_products.value -%}
-    {%- if layer_products != blank -%}
-      {%- for lp in layer_products -%}
-        {% render 'idiom-product-card', product: lp %}
-      {%- endfor -%}
-    {%- elsif section.settings.layering_collection != blank -%}
-      {%- assign layer_col = collections[section.settings.layering_collection] -%}
-      {%- for lp in layer_col.products limit: 6 -%}
-        {% render 'idiom-product-card', product: lp %}
-      {%- endfor -%}
-    {%- endif -%}
+    <div class="idiom-layering__scroll">
+      {%- assign layer_products = product.metafields.custom.layer_with_products.value -%}
+      {%- if layer_products != blank -%}
+        {%- for lp in layer_products -%}
+          {% render 'idiom-product-card', product: lp %}
+        {%- endfor -%}
+      {%- elsif section.settings.layering_collection != blank -%}
+        {%- assign layer_col = collections[section.settings.layering_collection] -%}
+        {%- for lp in layer_col.products limit: 6 -%}
+          {% render 'idiom-product-card', product: lp %}
+        {%- endfor -%}
+      {%- endif -%}
+    </div>
   </div>
 </section>
 

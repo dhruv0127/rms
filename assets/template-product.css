@@ -353,7 +353,7 @@ body.template-product {
 }
 
 body.template-product .product-single__details h2 {
-  font-size: clamp(36px, 4vw, 56px);
+  font-size: clamp(26px, 6vw, 56px);
   line-height: 1.05;
   margin-bottom: 8px;
   text-transform: uppercase;
@@ -412,6 +412,26 @@ body.template-product .product-single__details h2 {
   }
 }
 
+/* mobile: fix gallery sticky overlap with details content */
+@media only screen and (max-width: 767px) {
+  body.template-product .product-gallery {
+    position: relative !important;
+  }
+}
+
+/* mobile: ATC full width below variant buttons */
+@media only screen and (max-width: 767px) {
+  body.template-product .product__submit__buttons,
+  body.template-product .product__submit__item,
+  body.template-product .product__submit__add {
+    width: 100%;
+  }
+  body.template-product .product__submit__add {
+    min-height: 48px;
+    font-size: 15px;
+  }
+}
+
 /* hide SIZE legend and fix bottom margin on variant buttons for inline row */
 body.template-product .radio__legend {
   display: none;
@@ -431,12 +451,13 @@ body.template-product .radio__label {
   min-width: 92px;
   text-align: center;
   padding: 8px 16px;
+  background-color: #fbf1d8;
 }
 
 /* idiom variant buttons — rainbow border on selected */
 body.template-product .radio__input:checked + .radio__label {
   background:
-    linear-gradient(#fffbf3, #fffbf3) padding-box,
+    linear-gradient(#fbf1d8, #fbf1d8) padding-box,
     linear-gradient(135deg, #f6c90e, #e94057, #a855f7, #3b82f6, #10b981)
       border-box;
   border: 2px solid transparent;
@@ -483,6 +504,13 @@ body.template-product .product__submit__add .product__price--regular::before {
   display: flex;
   gap: 10px;
   flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-bottom: 4px;
+}
+.idiom-first-impressions__images::-webkit-scrollbar {
+  display: none;
 }
 .idiom-first-impressions__img-wrap {
   width: 85px;

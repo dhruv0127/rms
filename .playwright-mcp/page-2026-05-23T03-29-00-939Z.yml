@@ -1,0 +1,291 @@
+- generic [active] [ref=e1]:
+  - alertdialog "Cookie consent" [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - heading "Cookie consent" [level=2] [ref=e5]
+        - paragraph [ref=e6]:
+          - text: We and our partners, including Shopify, use cookies and other technologies to personalize your experience, show you ads, and perform analytics, and we will not use cookies or other technologies for these purposes unless you accept them. Learn more in our
+          - link "Privacy Policy" [ref=e7] [cursor=pointer]:
+            - /url: http://idiomfragrances.com/policies/privacy-policy
+      - generic [ref=e8]:
+        - button "Manage preferences" [ref=e9] [cursor=pointer]
+        - button "Accept" [ref=e10] [cursor=pointer]
+        - button "Decline" [ref=e11] [cursor=pointer]
+  - link "Skip to content" [ref=e12] [cursor=pointer]:
+    - /url: "#MainContent"
+  - banner [ref=e14]:
+    - generic [ref=e15]:
+      - button "Open navigation menu" [ref=e16] [cursor=pointer]:
+        - generic [ref=e17]: Open navigation menu
+        - img
+      - heading "idiom®" [level=1] [ref=e18]:
+        - link "idiom®" [ref=e19] [cursor=pointer]:
+          - /url: /
+          - img [ref=e20]
+      - navigation [ref=e22]:
+        - generic [ref=e23]:
+          - group [ref=e25]:
+            - button "Open search bar" [ref=e26] [cursor=pointer]:
+              - img
+              - generic [ref=e27]: Open search bar
+          - link "Open cart" [ref=e29] [cursor=pointer]:
+            - /url: /cart
+            - generic [ref=e30]: Open cart
+            - img
+  - generic [ref=e32]:
+    - generic [ref=e33]: free samples in every order
+    - generic [ref=e34]: 5 star reviewed layering fragrances
+    - generic [ref=e35]: high-quality, british made eau du parfum
+  - main [ref=e36]:
+    - generic [ref=e39]:
+      - heading "Collections" [level=2] [ref=e41]
+      - generic [ref=e43]:
+        - link "30 and 100 full size" [ref=e45] [cursor=pointer]:
+          - /url: /collections/30-and-100-full-size
+          - generic [ref=e46]:
+            - figure:
+              - img "49.png"
+          - generic [ref=e48]: 30 and 100 full size
+        - link "3d wear with" [ref=e50] [cursor=pointer]:
+          - /url: /collections/3d-wear-with
+          - generic [ref=e51]:
+            - figure:
+              - img "49.png"
+          - generic [ref=e53]: 3d wear with
+        - link "Amber" [ref=e55] [cursor=pointer]:
+          - /url: /collections/amber
+          - generic [ref=e56]:
+            - figure:
+              - img "50.png"
+          - generic [ref=e58]: Amber
+        - link "Aromatic" [ref=e60] [cursor=pointer]:
+          - /url: /collections/aromatic
+          - generic [ref=e61]:
+            - figure:
+              - img "52.png"
+          - generic [ref=e63]: Aromatic
+        - link "berga wear with" [ref=e65] [cursor=pointer]:
+          - /url: /collections/berga-wear-with
+          - generic [ref=e66]:
+            - figure:
+              - img "49.png"
+          - generic [ref=e68]: berga wear with
+        - link "Cool" [ref=e70] [cursor=pointer]:
+          - /url: /collections/warm
+          - generic [ref=e71]:
+            - figure:
+              - img "51.png"
+          - generic [ref=e73]: Cool
+        - link "disco wear with" [ref=e75] [cursor=pointer]:
+          - /url: /collections/disco-wear-with
+          - generic [ref=e76]:
+            - figure:
+              - img "49.png"
+          - generic [ref=e78]: disco wear with
+        - link "Discovery Testers" [ref=e80] [cursor=pointer]:
+          - /url: /collections/discovery-testers
+          - generic [ref=e81]:
+            - figure:
+              - img "55.png"
+          - generic [ref=e83]: Discovery Testers
+        - link "Earthy" [ref=e85] [cursor=pointer]:
+          - /url: /collections/earthy
+          - generic [ref=e86]:
+            - figure:
+              - img "54_48ecb9fc-c7dd-4935-b4ac-ed11c0cd116f.png"
+          - generic [ref=e88]: Earthy
+        - link "Floral" [ref=e90] [cursor=pointer]:
+          - /url: /collections/floral
+          - generic [ref=e91]:
+            - figure:
+              - img "50.png"
+          - generic [ref=e93]: Floral
+        - link "blank.svg?v=137076462089144180021779072698 Free Sample" [ref=e95] [cursor=pointer]:
+          - /url: /collections/free-sample
+          - generic [ref=e96]:
+            - img "blank.svg?v=137076462089144180021779072698":
+              - img
+          - generic [ref=e98]: Free Sample
+        - link "Fresh" [ref=e100] [cursor=pointer]:
+          - /url: /collections/fresh
+          - generic [ref=e101]:
+            - figure:
+              - img "52.png"
+          - generic [ref=e103]: Fresh
+        - link "blank.svg?v=137076462089144180021779072698 Full Size" [ref=e105] [cursor=pointer]:
+          - /url: /collections/full-size
+          - generic [ref=e106]:
+            - img "blank.svg?v=137076462089144180021779072698":
+              - img
+          - generic [ref=e108]: Full Size
+        - link "Gourmand" [ref=e110] [cursor=pointer]:
+          - /url: /collections/gourmand
+          - generic [ref=e111]:
+            - figure:
+              - img "50.png"
+          - generic [ref=e113]: Gourmand
+        - link "Green" [ref=e115] [cursor=pointer]:
+          - /url: /collections/green
+          - generic [ref=e116]:
+            - figure:
+              - img "52.png"
+          - generic [ref=e118]: Green
+        - link "Grounding" [ref=e120] [cursor=pointer]:
+          - /url: /collections/grounding
+          - generic [ref=e121]:
+            - figure:
+              - img "54_48ecb9fc-c7dd-4935-b4ac-ed11c0cd116f.png"
+          - generic [ref=e123]: Grounding
+        - link "Juicy" [ref=e125] [cursor=pointer]:
+          - /url: /collections/juicy
+          - generic [ref=e126]:
+            - figure:
+              - img "50.png"
+          - generic [ref=e128]: Juicy
+        - link "layer saffran with" [ref=e130] [cursor=pointer]:
+          - /url: /collections/layer-saffran-with
+          - generic [ref=e131]:
+            - figure:
+              - img "49.png"
+          - generic [ref=e133]: layer saffran with
+        - link "Minimalist" [ref=e135] [cursor=pointer]:
+          - /url: /collections/minimalist
+          - generic [ref=e136]:
+            - figure:
+              - img "54_48ecb9fc-c7dd-4935-b4ac-ed11c0cd116f.png"
+          - generic [ref=e138]: Minimalist
+        - link "Moody" [ref=e140] [cursor=pointer]:
+          - /url: /collections/moody
+          - generic [ref=e141]:
+            - figure:
+              - img "54_48ecb9fc-c7dd-4935-b4ac-ed11c0cd116f.png"
+          - generic [ref=e143]: Moody
+        - link "palo wear with" [ref=e145] [cursor=pointer]:
+          - /url: /collections/palo-wear-with
+          - generic [ref=e146]:
+            - figure:
+              - img "50.png"
+          - generic [ref=e148]: palo wear with
+        - link "pepp wear with" [ref=e150] [cursor=pointer]:
+          - /url: /collections/pepp-wear-with
+          - generic [ref=e151]:
+            - figure:
+              - img "52.png"
+          - generic [ref=e153]: pepp wear with
+        - link "rose wear with" [ref=e155] [cursor=pointer]:
+          - /url: /collections/rose-wear-with
+          - generic [ref=e156]:
+            - figure:
+              - img "52.png"
+          - generic [ref=e158]: rose wear with
+        - link "saff wear with" [ref=e160] [cursor=pointer]:
+          - /url: /collections/saff-wear-with
+          - generic [ref=e161]:
+            - figure:
+              - img "49.png"
+          - generic [ref=e163]: saff wear with
+        - link "Sensual" [ref=e165] [cursor=pointer]:
+          - /url: /collections/sensual
+          - generic [ref=e166]:
+            - figure:
+              - img "50.png"
+          - generic [ref=e168]: Sensual
+        - link "shop everything" [ref=e170] [cursor=pointer]:
+          - /url: /collections/shop-everything
+          - generic [ref=e171]:
+            - figure:
+              - img "shop everything"
+          - generic [ref=e173]: shop everything
+        - link "Skin-Close" [ref=e175] [cursor=pointer]:
+          - /url: /collections/skin-close
+          - generic [ref=e176]:
+            - figure:
+              - img "54_48ecb9fc-c7dd-4935-b4ac-ed11c0cd116f.png"
+          - generic [ref=e178]: Skin-Close
+        - link "Spicy" [ref=e180] [cursor=pointer]:
+          - /url: /collections/spicy
+          - generic [ref=e181]:
+            - figure:
+              - img "50.png"
+          - generic [ref=e183]: Spicy
+        - link "Travel Size" [ref=e185] [cursor=pointer]:
+          - /url: /collections/30ml
+          - generic [ref=e186]:
+            - figure:
+              - img "49.png"
+          - generic [ref=e188]: Travel Size
+        - link "Uplifting" [ref=e190] [cursor=pointer]:
+          - /url: /collections/uplifting
+          - generic [ref=e191]:
+            - figure:
+              - img "52.png"
+          - generic [ref=e193]: Uplifting
+        - link "vetiver wear with" [ref=e195] [cursor=pointer]:
+          - /url: /collections/vetiver
+          - generic [ref=e196]:
+            - figure:
+              - img "49.png"
+          - generic [ref=e198]: vetiver wear with
+        - link "Warm" [ref=e200] [cursor=pointer]:
+          - /url: /collections/warm-1
+          - generic [ref=e201]:
+            - figure:
+              - img "50.png"
+          - generic [ref=e203]: Warm
+        - link "Woody" [ref=e205] [cursor=pointer]:
+          - /url: /collections/woody
+          - generic [ref=e206]:
+            - figure:
+              - img "54_48ecb9fc-c7dd-4935-b4ac-ed11c0cd116f.png"
+          - generic [ref=e208]: Woody
+  - contentinfo [ref=e210]:
+    - generic [ref=e211]:
+      - generic [ref=e212]:
+        - paragraph [ref=e213]: smell like no one else
+        - paragraph [ref=e214]: Idiom makes rule-breaking, layer-ready fragrances for skin that wants more. Designed to be mixed, and never made to behave.
+        - generic [ref=e215]:
+          - link "Instagram" [ref=e216] [cursor=pointer]:
+            - /url: https://instagram.com/idiomfragrances
+            - img [ref=e217]
+          - link "TikTok" [ref=e219] [cursor=pointer]:
+            - /url: https://tiktok.com/@idiomfragrances
+            - img [ref=e220]
+      - generic [ref=e222]:
+        - generic [ref=e223]:
+          - paragraph [ref=e224]: the boring stuff
+          - list [ref=e225]:
+            - listitem [ref=e226]:
+              - link "delivery" [ref=e227] [cursor=pointer]:
+                - /url: /policies/shipping-policy
+            - listitem [ref=e228]:
+              - link "returns" [ref=e229] [cursor=pointer]:
+                - /url: /policies/refund-policy
+            - listitem [ref=e230]:
+              - link "accounts" [ref=e231] [cursor=pointer]:
+                - /url: /account
+            - listitem [ref=e232]:
+              - link "faqs" [ref=e233] [cursor=pointer]:
+                - /url: /pages/faqs
+            - listitem [ref=e234]:
+              - link "contact" [ref=e235] [cursor=pointer]:
+                - /url: /pages/contact
+            - listitem [ref=e236]:
+              - link "terms & conditions" [ref=e237] [cursor=pointer]:
+                - /url: /policies/terms-of-service
+            - listitem [ref=e238]:
+              - link "privacy policy" [ref=e239] [cursor=pointer]:
+                - /url: /policies/privacy-policy
+        - generic [ref=e240]:
+          - paragraph [ref=e241]: shop by type
+          - list [ref=e242]:
+            - listitem [ref=e243]:
+              - link "full size" [ref=e244] [cursor=pointer]:
+                - /url: /collections/full-size
+            - listitem [ref=e245]:
+              - link "mini-oms" [ref=e246] [cursor=pointer]:
+                - /url: /collections/mini-oms
+            - listitem [ref=e247]:
+              - link "kits and gifts" [ref=e248] [cursor=pointer]:
+                - /url: /collections/kits-and-gifts
+    - img "idiom"
+    - generic [ref=e250]: © 2026 idiom fragrances. all rights reserved.

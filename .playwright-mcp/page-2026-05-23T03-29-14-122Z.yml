@@ -1,0 +1,151 @@
+- generic [active] [ref=e1]:
+  - alertdialog "Cookie consent" [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - heading "Cookie consent" [level=2] [ref=e5]
+        - paragraph [ref=e6]:
+          - text: We and our partners, including Shopify, use cookies and other technologies to personalize your experience, show you ads, and perform analytics, and we will not use cookies or other technologies for these purposes unless you accept them. Learn more in our
+          - link "Privacy Policy" [ref=e7] [cursor=pointer]:
+            - /url: http://idiomfragrances.com/policies/privacy-policy
+      - generic [ref=e8]:
+        - button "Manage preferences" [ref=e9] [cursor=pointer]
+        - button "Accept" [ref=e10] [cursor=pointer]
+        - button "Decline" [ref=e11] [cursor=pointer]
+  - link "Skip to content" [ref=e12] [cursor=pointer]:
+    - /url: "#MainContent"
+  - banner [ref=e14]:
+    - generic [ref=e15]:
+      - button "Open navigation menu" [ref=e16] [cursor=pointer]:
+        - generic [ref=e17]: Open navigation menu
+        - img
+      - heading "idiom®" [level=1] [ref=e18]:
+        - link "idiom®" [ref=e19] [cursor=pointer]:
+          - /url: /
+          - img [ref=e20]
+      - navigation [ref=e22]:
+        - generic [ref=e23]:
+          - group [ref=e25]:
+            - button "Open search bar" [ref=e26] [cursor=pointer]:
+              - img
+              - generic [ref=e27]: Open search bar
+          - link "Open cart" [ref=e29] [cursor=pointer]:
+            - /url: /cart
+            - generic [ref=e30]: Open cart
+            - img
+  - generic [ref=e32]:
+    - generic [ref=e33]: free samples in every order
+    - generic [ref=e34]: 5 star reviewed layering fragrances
+    - generic [ref=e35]: high-quality, british made eau du parfum
+  - main [ref=e36]:
+    - generic [ref=e38]:
+      - generic [ref=e39]:
+        - heading "shop everything" [level=1] [ref=e40]
+        - paragraph [ref=e41]: get to know our crowd-pleasers...
+      - generic [ref=e42]:
+        - link "BERGAMOT HI-FI | EAU DE PARFUM BERGAMOT HI-FI | EAU DE PARFUM £6.00" [ref=e43] [cursor=pointer]:
+          - /url: /products/bergamot-hi-fi-30ml
+          - generic [ref=e44]:
+            - img "BERGAMOT HI-FI | EAU DE PARFUM" [ref=e47]
+            - generic [ref=e48]:
+              - paragraph [ref=e49]: BERGAMOT HI-FI | EAU DE PARFUM
+              - paragraph [ref=e50]: £6.00
+        - link "SAFFRON HAZE | EAU DE PARFUM SAFFRON HAZE | EAU DE PARFUM £6.00" [ref=e51] [cursor=pointer]:
+          - /url: /products/saffran-haze-30ml
+          - generic [ref=e52]:
+            - img "SAFFRON HAZE | EAU DE PARFUM" [ref=e55]
+            - generic [ref=e56]:
+              - paragraph [ref=e57]: SAFFRON HAZE | EAU DE PARFUM
+              - paragraph [ref=e58]: £6.00
+        - link "PALO SANTAL | EAU DE PARFUM PALO SANTAL | EAU DE PARFUM £6.00" [ref=e59] [cursor=pointer]:
+          - /url: /products/palo-santal-30ml
+          - generic [ref=e60]:
+            - img "PALO SANTAL | EAU DE PARFUM" [ref=e63]
+            - generic [ref=e64]:
+              - paragraph [ref=e65]: PALO SANTAL | EAU DE PARFUM
+              - paragraph [ref=e66]: £6.00
+        - link "ACOUSTIC ROSE | EAU DE PARFUM ACOUSTIC ROSE | EAU DE PARFUM £6.00" [ref=e67] [cursor=pointer]:
+          - /url: /products/acoustic-rose-30ml
+          - generic [ref=e68]:
+            - img "ACOUSTIC ROSE | EAU DE PARFUM" [ref=e71]
+            - generic [ref=e72]:
+              - paragraph [ref=e73]: ACOUSTIC ROSE | EAU DE PARFUM
+              - paragraph [ref=e74]: £6.00
+        - link "3D AMPLIFIER | EAU DE PARFUM 3D AMPLIFIER | EAU DE PARFUM £6.00" [ref=e75] [cursor=pointer]:
+          - /url: /products/3d-amp-100ml-copy
+          - generic [ref=e76]:
+            - img "3D AMPLIFIER | EAU DE PARFUM" [ref=e79]
+            - generic [ref=e80]:
+              - paragraph [ref=e81]: 3D AMPLIFIER | EAU DE PARFUM
+              - paragraph [ref=e82]: £6.00
+        - link "PEPPER SOLSTICE | EAU DE PARFUM PEPPER SOLSTICE | EAU DE PARFUM £6.00" [ref=e83] [cursor=pointer]:
+          - /url: /products/pepper-x-30ml
+          - generic [ref=e84]:
+            - img "PEPPER SOLSTICE | EAU DE PARFUM" [ref=e87]
+            - generic [ref=e88]:
+              - paragraph [ref=e89]: PEPPER SOLSTICE | EAU DE PARFUM
+              - paragraph [ref=e90]: £6.00
+        - link "VETIVER ACE | EAU DE PARFUM VETIVER ACE | EAU DE PARFUM £6.00" [ref=e91] [cursor=pointer]:
+          - /url: /products/vetiver-ace-30ml
+          - generic [ref=e92]:
+            - img "VETIVER ACE | EAU DE PARFUM" [ref=e95]
+            - generic [ref=e96]:
+              - paragraph [ref=e97]: VETIVER ACE | EAU DE PARFUM
+              - paragraph [ref=e98]: £6.00
+        - link "DISCOVERY KIT | 7x EAU DE PARFUM DISCOVERY KIT | 7x EAU DE PARFUM £35.00" [ref=e99] [cursor=pointer]:
+          - /url: /products/discovery-kit
+          - generic [ref=e100]:
+            - img "DISCOVERY KIT | 7x EAU DE PARFUM" [ref=e103]
+            - generic [ref=e104]:
+              - paragraph [ref=e105]: DISCOVERY KIT | 7x EAU DE PARFUM
+              - paragraph [ref=e106]: £35.00
+  - contentinfo [ref=e108]:
+    - generic [ref=e109]:
+      - generic [ref=e110]:
+        - paragraph [ref=e111]: smell like no one else
+        - paragraph [ref=e112]: Idiom makes rule-breaking, layer-ready fragrances for skin that wants more. Designed to be mixed, and never made to behave.
+        - generic [ref=e113]:
+          - link "Instagram" [ref=e114] [cursor=pointer]:
+            - /url: https://instagram.com/idiomfragrances
+            - img [ref=e115]
+          - link "TikTok" [ref=e117] [cursor=pointer]:
+            - /url: https://tiktok.com/@idiomfragrances
+            - img [ref=e118]
+      - generic [ref=e120]:
+        - generic [ref=e121]:
+          - paragraph [ref=e122]: the boring stuff
+          - list [ref=e123]:
+            - listitem [ref=e124]:
+              - link "delivery" [ref=e125] [cursor=pointer]:
+                - /url: /policies/shipping-policy
+            - listitem [ref=e126]:
+              - link "returns" [ref=e127] [cursor=pointer]:
+                - /url: /policies/refund-policy
+            - listitem [ref=e128]:
+              - link "accounts" [ref=e129] [cursor=pointer]:
+                - /url: /account
+            - listitem [ref=e130]:
+              - link "faqs" [ref=e131] [cursor=pointer]:
+                - /url: /pages/faqs
+            - listitem [ref=e132]:
+              - link "contact" [ref=e133] [cursor=pointer]:
+                - /url: /pages/contact
+            - listitem [ref=e134]:
+              - link "terms & conditions" [ref=e135] [cursor=pointer]:
+                - /url: /policies/terms-of-service
+            - listitem [ref=e136]:
+              - link "privacy policy" [ref=e137] [cursor=pointer]:
+                - /url: /policies/privacy-policy
+        - generic [ref=e138]:
+          - paragraph [ref=e139]: shop by type
+          - list [ref=e140]:
+            - listitem [ref=e141]:
+              - link "full size" [ref=e142] [cursor=pointer]:
+                - /url: /collections/full-size
+            - listitem [ref=e143]:
+              - link "mini-oms" [ref=e144] [cursor=pointer]:
+                - /url: /collections/mini-oms
+            - listitem [ref=e145]:
+              - link "kits and gifts" [ref=e146] [cursor=pointer]:
+                - /url: /collections/kits-and-gifts
+    - img "idiom"
+    - generic [ref=e148]: © 2026 idiom fragrances. all rights reserved.

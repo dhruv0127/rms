@@ -1,0 +1,178 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#MainContent"
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - button "Open navigation menu" [ref=e6] [cursor=pointer]:
+        - generic [ref=e7]: Open navigation menu
+        - img
+      - heading "idiom®" [level=1] [ref=e8]:
+        - link "idiom®" [ref=e9] [cursor=pointer]:
+          - /url: /
+          - img [ref=e10]
+      - navigation [ref=e12]:
+        - generic [ref=e13]:
+          - group [ref=e15]:
+            - button "Open search bar" [ref=e16] [cursor=pointer]:
+              - img
+              - generic [ref=e17]: Open search bar
+          - link "Open cart" [ref=e19] [cursor=pointer]:
+            - /url: /cart
+            - generic [ref=e20]: Open cart
+            - img
+  - generic [ref=e22]:
+    - generic [ref=e23]: free samples in every order
+    - generic [ref=e24]: 5 star reviewed layering fragrances
+    - generic [ref=e25]: high-quality, british made eau du parfum
+  - main [ref=e26]:
+    - generic [ref=e30]:
+      - generic [ref=e31]:
+        - generic [ref=e34]:
+          - figure [ref=e38]:
+            - img "BERGAMOT HI-FI | EAU DE PARFUM" [ref=e39]
+          - figure [ref=e43]:
+            - img "BERGAMOT HI-FI | EAU DE PARFUM" [ref=e44]
+          - figure [ref=e48]:
+            - img "BERGAMOT HI-FI | EAU DE PARFUM" [ref=e49]
+          - figure [ref=e53]:
+            - img "BERGAMOT HI-FI | EAU DE PARFUM" [ref=e54]
+        - generic [ref=e57]:
+          - link "BERGAMOT HI-FI | EAU DE PARFUM" [ref=e59] [cursor=pointer]:
+            - /url: /cdn/shop/files/52_2048x.png?v=1763288623
+            - figure [ref=e60]:
+              - img "BERGAMOT HI-FI | EAU DE PARFUM" [ref=e61]
+          - link "BERGAMOT HI-FI | EAU DE PARFUM" [ref=e63] [cursor=pointer]:
+            - /url: /cdn/shop/files/31_7ff9859b-c870-4aea-b511-c6cd5caa024b_2048x.png?v=1763288623
+            - figure [ref=e64]:
+              - img "BERGAMOT HI-FI | EAU DE PARFUM" [ref=e65]
+          - link "BERGAMOT HI-FI | EAU DE PARFUM" [ref=e67] [cursor=pointer]:
+            - /url: /cdn/shop/files/63_8a46f52a-179b-46c3-82f8-6d4ecee91e69_2048x.png?v=1763288617
+            - figure [ref=e68]:
+              - img "BERGAMOT HI-FI | EAU DE PARFUM" [ref=e69]
+          - link "BERGAMOT HI-FI | EAU DE PARFUM" [ref=e71] [cursor=pointer]:
+            - /url: /cdn/shop/files/56_2048x.png?v=1763288618
+            - figure [ref=e72]:
+              - img "BERGAMOT HI-FI | EAU DE PARFUM" [ref=e73]
+      - generic [ref=e75]:
+        - heading "BERGAMOT HI-FI | EAU DE PARFUM" [level=2] [ref=e78]
+        - paragraph [ref=e80]: WOODY. FRESH. CREAMY.
+        - generic [ref=e82]:
+          - generic [ref=e83]: ★★★★★
+          - generic [ref=e84]: 35 reviews
+        - generic [ref=e85]:
+          - paragraph [ref=e86]: a zesty burst of authentic calabrian bergamot with a petitgrain and mandarin twist. it hums with silver lime, warmed cypress, and a whisper of sea air. sun on skin, easy optimism, the scent of a good time on its way. wide open. half-memory, half-mirage.
+          - paragraph [ref=e87]:
+            - strong [ref=e88]: "wear solo:"
+            - text: a fresh citrus note of optimism on skin.
+          - paragraph [ref=e89]:
+            - strong [ref=e90]: "layer:"
+            - text: adds brightness, citrus lift, and clarity to anything it touches.
+        - generic [ref=e92]:
+          - group "Size" [ref=e95]:
+            - generic [ref=e96]:
+              - generic [ref=e97]:
+                - radio "30ml" [checked]
+                - generic [ref=e99]: 30ml
+              - generic [ref=e100]:
+                - radio "2ml"
+                - generic [ref=e102]: 2ml
+          - button "add to bag | £38" [ref=e106] [cursor=pointer]:
+            - generic [ref=e107]: add to bag | £38
+        - generic [ref=e109]:
+          - paragraph [ref=e110]: "FIRST IMPRESSIONS:"
+          - generic [ref=e111]:
+            - img "First impression" [ref=e113]
+            - img "First impression" [ref=e115]
+            - img "First impression" [ref=e117]
+            - img "First impression" [ref=e119]
+        - button "key notes" [ref=e122] [cursor=pointer]:
+          - text: key notes
+          - img [ref=e123]
+          - img [ref=e125]
+        - button "how to wear" [ref=e128] [cursor=pointer]:
+          - text: how to wear
+          - img [ref=e129]
+          - img [ref=e131]
+        - button "full ingredient list" [ref=e134] [cursor=pointer]:
+          - text: full ingredient list
+          - img [ref=e135]
+          - img [ref=e137]
+    - generic [ref=e139]:
+      - generic [ref=e140]:
+        - paragraph [ref=e141]: wear solo,
+        - paragraph [ref=e142]: "or layer me with:"
+        - paragraph [ref=e143]: these scents were made to mix.
+        - paragraph [ref=e144]: "* that's your part."
+      - generic [ref=e146]:
+        - link "ACOUSTIC ROSE | EAU DE PARFUM ACOUSTIC ROSE | EAU DE PARFUM £6.00" [ref=e147] [cursor=pointer]:
+          - /url: /products/acoustic-rose-30ml
+          - generic [ref=e148]:
+            - img "ACOUSTIC ROSE | EAU DE PARFUM" [ref=e151]
+            - generic [ref=e152]:
+              - paragraph [ref=e153]: ACOUSTIC ROSE | EAU DE PARFUM
+              - paragraph [ref=e154]: £6.00
+        - link "PALO SANTAL | EAU DE PARFUM PALO SANTAL | EAU DE PARFUM £6.00" [ref=e155] [cursor=pointer]:
+          - /url: /products/palo-santal-30ml
+          - generic [ref=e156]:
+            - img "PALO SANTAL | EAU DE PARFUM" [ref=e159]
+            - generic [ref=e160]:
+              - paragraph [ref=e161]: PALO SANTAL | EAU DE PARFUM
+              - paragraph [ref=e162]: £6.00
+        - link "BERGAMOT HI-FI | EAU DE PARFUM BERGAMOT HI-FI | EAU DE PARFUM £6.00" [ref=e163] [cursor=pointer]:
+          - /url: /products/bergamot-hi-fi-30ml
+          - generic [ref=e164]:
+            - img "BERGAMOT HI-FI | EAU DE PARFUM" [ref=e167]
+            - generic [ref=e168]:
+              - paragraph [ref=e169]: BERGAMOT HI-FI | EAU DE PARFUM
+              - paragraph [ref=e170]: £6.00
+  - contentinfo [ref=e172]:
+    - generic [ref=e173]:
+      - generic [ref=e174]:
+        - paragraph [ref=e175]: smell like no one else
+        - paragraph [ref=e176]: Idiom makes rule-breaking, layer-ready fragrances for skin that wants more. Designed to be mixed, and never made to behave.
+        - generic [ref=e177]:
+          - link "Instagram" [ref=e178] [cursor=pointer]:
+            - /url: https://instagram.com/idiomfragrances
+            - img [ref=e179]
+          - link "TikTok" [ref=e181] [cursor=pointer]:
+            - /url: https://tiktok.com/@idiomfragrances
+            - img [ref=e182]
+      - generic [ref=e184]:
+        - generic [ref=e185]:
+          - paragraph [ref=e186]: the boring stuff
+          - list [ref=e187]:
+            - listitem [ref=e188]:
+              - link "delivery" [ref=e189] [cursor=pointer]:
+                - /url: /policies/shipping-policy
+            - listitem [ref=e190]:
+              - link "returns" [ref=e191] [cursor=pointer]:
+                - /url: /policies/refund-policy
+            - listitem [ref=e192]:
+              - link "accounts" [ref=e193] [cursor=pointer]:
+                - /url: /account
+            - listitem [ref=e194]:
+              - link "faqs" [ref=e195] [cursor=pointer]:
+                - /url: /pages/faqs
+            - listitem [ref=e196]:
+              - link "contact" [ref=e197] [cursor=pointer]:
+                - /url: /pages/contact
+            - listitem [ref=e198]:
+              - link "terms & conditions" [ref=e199] [cursor=pointer]:
+                - /url: /policies/terms-of-service
+            - listitem [ref=e200]:
+              - link "privacy policy" [ref=e201] [cursor=pointer]:
+                - /url: /policies/privacy-policy
+        - generic [ref=e202]:
+          - paragraph [ref=e203]: shop by type
+          - list [ref=e204]:
+            - listitem [ref=e205]:
+              - link "full size" [ref=e206] [cursor=pointer]:
+                - /url: /collections/full-size
+            - listitem [ref=e207]:
+              - link "mini-oms" [ref=e208] [cursor=pointer]:
+                - /url: /collections/mini-oms
+            - listitem [ref=e209]:
+              - link "kits and gifts" [ref=e210] [cursor=pointer]:
+                - /url: /collections/kits-and-gifts
+    - img "idiom"
+    - generic [ref=e212]: © 2026 idiom fragrances. all rights reserved.
