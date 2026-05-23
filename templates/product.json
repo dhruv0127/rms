@@ -135,6 +135,12 @@
         "padding_bottom": 0
       }
     },
+    "idiom-marquee": {
+      "type": "idiom-marquee",
+      "settings": {
+        "marquee_text": "smell like no one else™ · find your fragrance freedom · layer, or wear solo · "
+      }
+    },
     "idiom-layering-row": {
       "type": "idiom-layering-row",
       "settings": {
@@ -146,5 +152,5 @@
       }
     }
   },
-  "order": ["main", "idiom-layering-row"]
+  "order": ["main", "idiom-marquee", "idiom-layering-row"]
 }

@@ -1,0 +1,44 @@
+<style>
+.idiom-marquee-strip {
+  background: #9a9a35;
+  padding: 10px 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.idiom-marquee-strip .idiom-marquee-track {
+  font-family: "farro-bold (2)", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.75);
+  letter-spacing: 0.06em;
+  text-transform: lowercase;
+  gap: 0;
+}
+.idiom-marquee-strip .idiom-marquee-track span {
+  padding: 0 20px;
+}
+</style>
+
+{%- assign marquee_items = section.settings.marquee_text | default: "smell like no one else™ · find your fragrance freedom · layer, or wear solo · " -%}
+<div class="idiom-marquee-strip">
+  <div class="idiom-marquee-track" aria-hidden="true">
+    {%- for i in (1..6) -%}
+      <span>{{ marquee_items }}</span>
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Marquee Strip",
+  "settings": [
+    {
+      "type": "text",
+      "id": "marquee_text",
+      "label": "Marquee text",
+      "default": "smell like no one else™ · find your fragrance freedom · layer, or wear solo · "
+    }
+  ],
+  "presets": [{ "name": "Marquee Strip" }]
+}
+{% endschema %}

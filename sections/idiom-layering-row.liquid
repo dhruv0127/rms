@@ -1,23 +1,21 @@
 <style>
-.idiom-layering { background: var(--idiom-olive); display: flex; align-items: center; padding: 40px 48px; gap: 40px; }
-.idiom-layering__text { flex: 0 0 30%; }
-.idiom-layering__heading { color: #fff; font-size: 40px; font-weight: 700; line-height: 1; margin: 0; }
-.idiom-layering__subtext { color: #fff; font-style: italic; font-size: 14px; margin-top: 12px; }
-.idiom-layering__fine { color: rgba(255,255,255,0.7); font-style: italic; font-size: 11px; margin-top: 4px; }
-/* outer: flex child, no overflow clipping so bottle images can paint */
-.idiom-layering__products { flex: 1 1 0; overflow: visible; padding-bottom: 60px; }
+.idiom-layering { background: #9a9a35; display: flex; align-items: center; padding: 20px 48px; gap: 48px; }
+.idiom-layering__text { flex: 0 0 28%; min-width: 220px; }
+.idiom-layering__heading { color: #fff; font-size: 42px; font-weight: 800; line-height: 1.05; margin: 0; }
+.idiom-layering__divider { border: none; border-top: 1px solid rgba(255,255,255,0.4); margin: 18px 0 14px; }
+.idiom-layering__subtext { color: rgba(255,255,255,0.85); font-size: 13px; margin: 0 0 6px; }
+.idiom-layering__fine { color: rgba(255,255,255,0.55); font-size: 12px; margin: 0; }
+/* outer: no overflow clipping so bottle images can paint above */
+.idiom-layering__products { flex: 1 1 0; overflow: visible; }
 /* inner: the actual scroll container */
-.idiom-layering__scroll { display: flex; gap: 16px; overflow-x: auto; overflow-y: visible; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+.idiom-layering__scroll { display: flex; gap: 20px; overflow-x: auto; overflow-y: visible; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
 .idiom-layering__scroll::-webkit-scrollbar { display: none; }
-.idiom-layering__scroll .idiom-product-card-link { flex: 0 0 180px; width: 180px; }
+.idiom-layering__scroll .idiom-product-card-link { flex: 0 0 280px; width: 280px; }
 @media (max-width: 768px) {
-  .idiom-layering { flex-direction: column; padding: 40px 16px; }
+  .idiom-layering { flex-direction: column; padding: 40px 16px; gap: 24px; }
   .idiom-layering__text { flex: none; width: 100%; }
   .idiom-layering__products { width: 100%; }
-}
-
-.template-product .idiom-layering__products {
-  padding-bottom: 0;
+  .idiom-layering__scroll .idiom-product-card-link { flex: 0 0 160px; width: 160px; }
 }
 </style>
 
@@ -25,6 +23,7 @@
   <div class="idiom-layering__text">
     <p class="idiom-layering__heading">{{ section.settings.heading_solo }}</p>
     <p class="idiom-layering__heading">{{ section.settings.heading_layer }}</p>
+    <hr class="idiom-layering__divider">
     <p class="idiom-layering__subtext">{{ section.settings.subtext }}</p>
     <p class="idiom-layering__fine">{{ section.settings.fine_print }}</p>
   </div>

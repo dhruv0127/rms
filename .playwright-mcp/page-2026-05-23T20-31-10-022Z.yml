@@ -1,0 +1,112 @@
+- generic [active] [ref=e1]:
+  - alertdialog "Cookie consent" [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - heading "Cookie consent" [level=2] [ref=e5]
+        - paragraph [ref=e6]:
+          - text: We and our partners, including Shopify, use cookies and other technologies to personalize your experience, show you ads, and perform analytics, and we will not use cookies or other technologies for these purposes unless you accept them. Learn more in our
+          - link "Privacy Policy" [ref=e7] [cursor=pointer]:
+            - /url: http://idiomfragrances.com/policies/privacy-policy
+      - generic [ref=e8]:
+        - button "Manage preferences" [ref=e9] [cursor=pointer]
+        - button "Accept" [ref=e10] [cursor=pointer]
+        - button "Decline" [ref=e11] [cursor=pointer]
+  - link "Skip to content" [ref=e12] [cursor=pointer]:
+    - /url: "#MainContent"
+  - banner [ref=e14]:
+    - generic [ref=e15]:
+      - heading "idiom®" [level=1] [ref=e16]:
+        - link "idiom®" [ref=e17] [cursor=pointer]:
+          - /url: /
+          - img [ref=e18]
+      - navigation [ref=e20]:
+        - generic [ref=e21]:
+          - link "Home" [ref=e23] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e24]: Home
+          - navigation [ref=e25]:
+            - link "Shop" [ref=e26] [cursor=pointer]:
+              - /url: /collections/shop-everything
+              - generic [ref=e27]: Shop
+          - link "Gallery" [ref=e29] [cursor=pointer]:
+            - /url: /pages/gallery
+            - generic [ref=e30]: Gallery
+          - link "About" [ref=e32] [cursor=pointer]:
+            - /url: /pages/story
+            - generic [ref=e33]: About
+        - generic [ref=e34]:
+          - group [ref=e36]:
+            - button "Open search bar" [ref=e37] [cursor=pointer]:
+              - img
+              - generic [ref=e38]: Open search bar
+          - link "My Account" [ref=e40] [cursor=pointer]:
+            - /url: /account
+            - generic [ref=e41]: My Account
+            - img
+          - link "Open cart" [ref=e43] [cursor=pointer]:
+            - /url: /cart
+            - generic [ref=e44]: Open cart
+            - img
+  - generic [ref=e46]:
+    - generic [ref=e47]: free samples in every order
+    - generic [ref=e48]: 5 star reviewed layering fragrances
+    - generic [ref=e49]: high-quality, british made eau du parfum
+  - main [ref=e50]:
+    - generic [ref=e53]:
+      - heading "404" [level=1] [ref=e54]
+      - separator [ref=e55]
+      - paragraph [ref=e56]: This page does not exist.
+      - link "Return to Home" [ref=e57] [cursor=pointer]:
+        - /url: /
+        - text: Return to Home
+  - contentinfo [ref=e59]:
+    - generic [ref=e60]:
+      - generic [ref=e61]:
+        - paragraph [ref=e62]: smell like no one else
+        - paragraph [ref=e63]: Idiom makes rule-breaking, layer-ready fragrances for skin that wants more. Designed to be mixed, and never made to behave.
+        - generic [ref=e64]:
+          - link "Instagram" [ref=e65] [cursor=pointer]:
+            - /url: https://instagram.com/idiomfragrances
+            - img [ref=e66]
+          - link "TikTok" [ref=e68] [cursor=pointer]:
+            - /url: https://tiktok.com/@idiomfragrances
+            - img [ref=e69]
+      - generic [ref=e71]:
+        - generic [ref=e72]:
+          - paragraph [ref=e73]: the boring stuff
+          - list [ref=e74]:
+            - listitem [ref=e75]:
+              - link "delivery" [ref=e76] [cursor=pointer]:
+                - /url: /policies/shipping-policy
+            - listitem [ref=e77]:
+              - link "returns" [ref=e78] [cursor=pointer]:
+                - /url: /policies/refund-policy
+            - listitem [ref=e79]:
+              - link "accounts" [ref=e80] [cursor=pointer]:
+                - /url: /account
+            - listitem [ref=e81]:
+              - link "faqs" [ref=e82] [cursor=pointer]:
+                - /url: /pages/faqs
+            - listitem [ref=e83]:
+              - link "contact" [ref=e84] [cursor=pointer]:
+                - /url: /pages/contact
+            - listitem [ref=e85]:
+              - link "terms & conditions" [ref=e86] [cursor=pointer]:
+                - /url: /policies/terms-of-service
+            - listitem [ref=e87]:
+              - link "privacy policy" [ref=e88] [cursor=pointer]:
+                - /url: /policies/privacy-policy
+        - generic [ref=e89]:
+          - paragraph [ref=e90]: shop by type
+          - list [ref=e91]:
+            - listitem [ref=e92]:
+              - link "full size" [ref=e93] [cursor=pointer]:
+                - /url: /collections/full-size
+            - listitem [ref=e94]:
+              - link "mini-oms" [ref=e95] [cursor=pointer]:
+                - /url: /collections/mini-oms
+            - listitem [ref=e96]:
+              - link "kits and gifts" [ref=e97] [cursor=pointer]:
+                - /url: /collections/kits-and-gifts
+    - img "idiom"
+    - generic [ref=e99]: © 2026 idiom fragrances. all rights reserved.
