@@ -137,15 +137,73 @@
     },
     "idiom-reel-video-section": {
       "type": "idiom-reel-video-section",
-      "blocks": {},
-      "block_order": [],
+      "blocks": {
+        "video_8xAqJm": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/f8f0402a0f234aa187b9341e4e1efa89.mp4",
+            "buy_now_text": "Shop Now",
+            "buy_now_url": "shopify://collections/amber"
+          }
+        },
+        "video_t4rW47": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/f8f0402a0f234aa187b9341e4e1efa89.mp4",
+            "buy_now_text": "Shop Now",
+            "buy_now_url": "shopify://collections/amber"
+          }
+        },
+        "video_qJNCR9": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/f8f0402a0f234aa187b9341e4e1efa89.mp4",
+            "buy_now_text": "Shop Now",
+            "buy_now_url": "shopify://collections/amber"
+          }
+        },
+        "video_REMjFk": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/f8f0402a0f234aa187b9341e4e1efa89.mp4",
+            "buy_now_text": "Shop Now",
+            "buy_now_url": "shopify://collections/amber"
+          }
+        },
+        "video_xB3fMb": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/f8f0402a0f234aa187b9341e4e1efa89.mp4",
+            "buy_now_text": "Shop Now",
+            "buy_now_url": "shopify://collections/amber"
+          }
+        },
+        "video_77CAtF": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/f8f0402a0f234aa187b9341e4e1efa89.mp4",
+            "buy_now_text": "Shop Now",
+            "buy_now_url": "shopify://collections/amber"
+          }
+        }
+      },
+      "block_order": [
+        "video_8xAqJm",
+        "video_t4rW47",
+        "video_qJNCR9",
+        "video_REMjFk",
+        "video_xB3fMb",
+        "video_77CAtF"
+      ],
       "settings": {
-        "section_title": "See it in action"
+        "section_title": "See it in action",
+        "section_subtitle": ""
       }
     },
     "idiom-layering-row": {
       "type": "idiom-layering-row",
       "settings": {
+        "marquee_text": "smell like no one else™ · find your fragrance freedom · layer, or wear solo ·",
         "heading_solo": "wear solo,",
         "heading_layer": "or layer me with:",
         "subtext": "these scents were made to mix.",
@@ -154,5 +212,9 @@
       }
     }
   },
-  "order": ["main", "idiom-reel-video-section", "idiom-layering-row"]
+  "order": [
+    "main",
+    "idiom-reel-video-section",
+    "idiom-layering-row"
+  ]
 }
