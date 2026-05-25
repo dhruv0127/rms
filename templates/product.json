@@ -138,14 +138,6 @@
     "idiom-reel-video-section": {
       "type": "idiom-reel-video-section",
       "blocks": {
-        "video_8xAqJm": {
-          "type": "video",
-          "settings": {
-            "video_url": "https://cdn.shopify.com/videos/c/o/v/f8f0402a0f234aa187b9341e4e1efa89.mp4",
-            "buy_now_text": "Shop Now",
-            "buy_now_url": "shopify://collections/amber"
-          }
-        },
         "video_t4rW47": {
           "type": "video",
           "settings": {
@@ -188,7 +180,6 @@
         }
       },
       "block_order": [
-        "video_8xAqJm",
         "video_t4rW47",
         "video_qJNCR9",
         "video_REMjFk",
