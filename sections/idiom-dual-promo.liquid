@@ -47,23 +47,10 @@
     margin: 0 0 14px;
     opacity: 0.9;
   }
-  .idiom-dual-promo__cta {
-    display: inline-block;
-    background: #1a1a1a;
-    color: #fff;
-    font-size: 13px;
-    font-weight: 600;
-    text-decoration: none;
-    padding: 10px 32px;
-    border-radius: 4px;
-    white-space: nowrap;
-  }
-  .idiom-dual-promo__cta:hover { background: #333; }
   @media (max-width: 600px) {
     .idiom-dual-promo { flex-direction: column; padding: 8px 16px 16px; }
     .idiom-dual-promo__heading { white-space: normal; font-size: 16px; }
     .idiom-dual-promo__subtext { font-size: 12px; }
-    .idiom-dual-promo__cta { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; font-size: 12px; }
     .idiom-dual-promo__content { bottom: 24px; }
   }
 </style>
@@ -84,7 +71,7 @@
           <p class="idiom-dual-promo__subtext">{{ block.settings.subtext }}</p>
         {%- endif -%}
         {%- if block.settings.cta_label != blank -%}
-          <a href="{{ block.settings.cta_url }}" class="idiom-dual-promo__cta">{{ block.settings.cta_label }}</a>
+          {%- render 'idiom-cta-button', label: block.settings.cta_label, url: block.settings.cta_url -%}
         {%- endif -%}
       </div>
     </div>

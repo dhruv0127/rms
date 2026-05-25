@@ -108,6 +108,40 @@ img { max-width: 100%; }
   color: var(--idiom-olive);
 }
 
+/* --- idiom CTA Button (shared across hero, brand-story, dual-promo) --- */
+.idiom-cta-button {
+  display: inline-block;
+  background: #1a1a1a;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 0;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  width: 360px;
+  max-width: 100%;
+  text-align: center;
+  transition: background 0.2s;
+}
+
+.idiom-cta-button:hover {
+  background: #333333;
+}
+
+@media (max-width: 480px) {
+  .idiom-cta-button {
+    display: block;
+    width: 100%;
+    min-height: 44px;
+    line-height: 44px;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 12px;
+  }
+}
+
 /* --- Section heading pair --- */
 .idiom-section-heading h2 {
   font-size: 36px;

@@ -91,25 +91,7 @@
   }
 
   .idiom-brand-story__cta {
-    display: inline-block;
-    background: #1a1a1a;
-    color: #ffffff;
-    border: none;
-    border-radius: 8px;
-    padding: 8px 0;
-    font-size: 15px;
-    font-weight: 600;
-    text-decoration: none;
-    letter-spacing: 0.01em;
     margin-top: 8px;
-    width: 360px;
-    max-width: 100%;
-    text-align: center;
-    transition: background 0.2s;
-  }
-
-  .idiom-brand-story__cta:hover {
-    background: #333333;
   }
 
   /* ── Marquee strip — top of olive block ── */
@@ -202,15 +184,6 @@
       padding: 0 20px;
     }
 
-    .idiom-brand-story__cta {
-      width: 100%;
-      min-height: 44px;
-      line-height: 44px;
-      padding-top: 0;
-      padding-bottom: 0;
-      font-size: 12px;
-    }
-
     .idiom-brand-story__subline,
     .idiom-brand-story__body,
     .idiom-brand-story__marquee-strip .idiom-marquee-track {
@@ -255,9 +228,9 @@
     {%- endif -%}
 
     {%- if section.settings.cta_label != blank -%}
-      <a class="idiom-brand-story__cta" href="{{ section.settings.cta_url | default: '#' }}">
-        {{ section.settings.cta_label }}
-      </a>
+      <div class="idiom-brand-story__cta">
+        {%- render 'idiom-cta-button', label: section.settings.cta_label, url: section.settings.cta_url -%}
+      </div>
     {%- endif -%}
   </div>
 </div>
