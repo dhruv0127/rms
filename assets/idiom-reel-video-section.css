@@ -3,7 +3,10 @@
 .idiom-reel-section {
   text-align: center;
   padding: 40px 16px 48px;
-  background-color: var(--idiom-black);
+  background-image: url('https://cdn.shopify.com/s/files/1/0914/9117/2729/files/I.png?v=1779735855');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .idiom-reel-section__title {
