@@ -135,6 +135,15 @@
         "padding_bottom": 0
       }
     },
+    "idiom-reel-video-section": {
+      "type": "idiom-reel-video-section",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "section_title": "See it in action",
+        "section_subtitle": ""
+      }
+    },
     "idiom-layering-row": {
       "type": "idiom-layering-row",
       "settings": {
@@ -146,5 +155,5 @@
       }
     }
   },
-  "order": ["main", "idiom-layering-row"]
+  "order": ["main", "idiom-reel-video-section", "idiom-layering-row"]
 }
