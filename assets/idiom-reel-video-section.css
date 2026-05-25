@@ -3,7 +3,7 @@
 .idiom-reel-section {
   text-align: center;
   padding: 40px 16px 48px;
-  background-image: url('https://cdn.shopify.com/s/files/1/0914/9117/2729/files/I.png?v=1779735855');
+  background-image: url("https://cdn.shopify.com/s/files/1/0914/9117/2729/files/I.png?v=1779735855");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -40,7 +40,9 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-.idiom-reel-slider::-webkit-scrollbar { display: none; }
+.idiom-reel-slider::-webkit-scrollbar {
+  display: none;
+}
 
 .idiom-reel-card {
   width: 250px;
@@ -172,7 +174,9 @@
   justify-content: center;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.25s ease, visibility 0.25s ease;
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease;
   padding: 0;
 }
 .idiom-reel-box .idiom-reel-playpause-btn img {
@@ -205,10 +209,15 @@
 
 @media (max-width: 768px) {
   .idiom-reel-section__title {
-    font-size: clamp(2.8rem, 6vw, 3.6rem);
-    max-width: 240px;
-    margin: 0 auto 8px;
-    letter-spacing: -0.5px;
+    font-size: 22px;
+    max-width: 320px;
+    margin: 0 auto 6px;
+    letter-spacing: -0.3px;
+  }
+
+  .idiom-reel-section__subtitle {
+    font-size: 13px;
+    line-height: normal;
   }
 
   .idiom-reel-card {
