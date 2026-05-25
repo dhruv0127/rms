@@ -8,7 +8,7 @@
   #SectionBannerImage--{{ section.id }} .idiom-hero {
     position: relative;
     width: 100%;
-    min-height: 70vh;
+    min-height: 80vh;
     overflow: hidden;
     background: var(--idiom-olive);
   }
@@ -31,18 +31,18 @@
   #SectionBannerImage--{{ section.id }} .idiom-hero__overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.38);
+    background: linear-gradient(180deg, transparent 50%, #202020 100%);
     pointer-events: none;
   }
 
   #SectionBannerImage--{{ section.id }} .idiom-hero__content {
     position: absolute;
-    bottom: 60px;
+    bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;
     width: 100%;
-    max-width: 700px;
+    max-width: 780px;
     text-align: center;
     padding: 0 24px;
   }
@@ -59,7 +59,7 @@
   #SectionBannerImage--{{ section.id }} .idiom-hero__subtext {
     font-size: 15px;
     color: #ffffff;
-    margin: 0 0 24px;
+    margin: 0 0 12px;
     line-height: 1.5;
     opacity: 0.9;
   }
@@ -71,7 +71,8 @@
     color: #ffffff;
     border: none;
     border-radius: 999px;
-    padding: 14px 36px;
+    padding: 8px;
+    min-width: 380px;
     font-size: 15px;
     font-weight: 600;
     text-decoration: none;
@@ -401,7 +402,7 @@
       "type": "text",
       "id": "heading",
       "label": "Heading",
-      "default": "127 unique fragrances. 1 kit."
+      "default": "127 unique fragrances, 1 kit."
     },
     {
       "type": "text",

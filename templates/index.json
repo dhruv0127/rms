@@ -15,7 +15,7 @@
         "heading_idiom": {
           "type": "heading",
           "settings": {
-            "text": "<h1>127 unique fragrances. 1 kit.</h1>",
+            "text": "<h1>127 unique fragrances, 1 kit.</h1>",
             "size": 130,
             "heading_highlight_type": "none",
             "highlight_color": "#000000",
@@ -68,7 +68,7 @@
         "width": "wrapper--full",
         "padding_top": 0,
         "padding_bottom": 0,
-        "heading": "127 unique fragrances. 1 kit.",
+        "heading": "127 unique fragrances, 1 kit.",
         "subtext": "discover your Flanker fragrance combinations with our 7-piece discovery kit.",
         "cta_label": "shop now | £17",
         "cta_url": "shopify://collections/all",
