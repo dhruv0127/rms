@@ -8,6 +8,8 @@
   background-position: center;
   background-repeat: no-repeat;
   margin: 16px;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .idiom-reel-section__title {
@@ -230,7 +232,7 @@
 
   .idiom-reel-section {
     padding: 32px 0 40px;
-    margin: 12px
+    margin: 12px;
   }
 
   .idiom-reel-slider {
