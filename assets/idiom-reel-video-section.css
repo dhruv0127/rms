@@ -7,6 +7,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  margin: 16px;
 }
 
 .idiom-reel-section__title {
@@ -230,6 +231,7 @@
 
   .idiom-reel-section {
     padding: 32px 0 40px;
+    margin: 12px
   }
 
   .idiom-reel-slider {
