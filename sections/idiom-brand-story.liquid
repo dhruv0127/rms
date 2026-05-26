@@ -92,6 +92,7 @@
 
   .idiom-brand-story__cta {
     margin-top: 8px;
+    width: 100%;
   }
 
   /* ── Marquee strip — top of olive block ── */
@@ -229,7 +230,7 @@
 
     {%- if section.settings.cta_label != blank -%}
       <div class="idiom-brand-story__cta">
-        {%- render 'idiom-cta-button', label: section.settings.cta_label, url: section.settings.cta_url -%}
+        {%- render 'idiom-cta-button', label: section.settings.cta_label, href: section.settings.cta_url -%}
       </div>
     {%- endif -%}
   </div>

@@ -71,7 +71,7 @@
           <p class="idiom-dual-promo__subtext">{{ block.settings.subtext }}</p>
         {%- endif -%}
         {%- if block.settings.cta_label != blank -%}
-          {%- render 'idiom-cta-button', label: block.settings.cta_label, url: block.settings.cta_url -%}
+          {%- render 'idiom-cta-button', label: block.settings.cta_label, href: block.settings.cta_url -%}
         {%- endif -%}
       </div>
     </div>
