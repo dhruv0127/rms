@@ -1,6 +1,15 @@
 {{ 'idiom-reel-video-section.css' | asset_url | stylesheet_tag }}
 
-<section class="idiom-reel-section">
+<section
+  class="idiom-reel-section"
+  style="
+    {%- if section.settings.bg_image_desktop != blank -%}
+      --reel-bg-desktop: url('{{ section.settings.bg_image_desktop | image_url: width: 2000 }}');
+    {%- endif -%}
+    {%- if section.settings.bg_image_mobile != blank -%}
+      --reel-bg-mobile: url('{{ section.settings.bg_image_mobile | image_url: width: 800 }}');
+    {%- endif -%}
+  ">
   <h2 class="idiom-reel-section__title">{{ section.settings.section_title }}</h2>
   {% if section.settings.section_subtitle != blank %}
     <p class="idiom-reel-section__subtitle">{{ section.settings.section_subtitle }}</p>
@@ -49,6 +58,16 @@
       "type": "text",
       "id": "section_subtitle",
       "label": "Section Subtitle"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_image_desktop",
+      "label": "Background Image (Desktop)"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_image_mobile",
+      "label": "Background Image (Mobile)"
     }
   ],
   "blocks": [
