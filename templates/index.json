@@ -55,7 +55,7 @@
         "height": "six-fifty-height",
         "enable_mobile_height": true,
         "mobile_height": "five-fifty-height-mobile",
-        "image": "shopify://shop_images/Control-V_49.png",
+        "image": "shopify://shop_images/idiom_website_update_2_1.jpg",
         "overlay_opacity": 20,
         "transition": "zoom-out",
         "enable_zoom_animation": false,
@@ -86,6 +86,7 @@
         "body": "idiom was born by 3 good friends who shared a passion for fragrance with the belief that individuality is everything and fragrance could be done better, high-quality, long lasting capsule eau du parfums ready to layer and always priced to be affordable.",
         "cta_label": "learn more",
         "cta_url": "/pages/about",
+        "marquee_text": "smell like no one else™ · find your fragrance freedom · layer, or wear solo ·",
         "grid_heading": "holy s#*%, what are you wearing?",
         "grid_subtext": "get to know our crowd-pleasers..."
       }
