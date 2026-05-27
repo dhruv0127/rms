@@ -77,7 +77,7 @@
         "show_payment_icons": true,
         "enable_greyscale": false,
         "bottom_menu": "",
-        "color_text": "#f6f1d8",
+        "color_text": "#fffbf3",
         "color_bg": "#202020",
         "color_border": "rgba(0,0,0,0)",
         "show_locale_selector": false,
@@ -89,7 +89,5 @@
       }
     }
   },
-  "order": [
-    "footer"
-  ]
+  "order": ["footer"]
 }

@@ -10,44 +10,45 @@
     width: 100%;
     min-height: 80vh;
     overflow: hidden;
-    background: white;
-    padding: 16px;
-    border-radius: 12px;
+    background: #fffbf3;
+    padding: 0 16px;
+    border-radius: 43px;
     overflow: hidden;
   }
 
   #SectionBannerImage--{{ section.id }} .idiom-hero__bg--placeholder {
     position: absolute;
     inset: 0;
-    background: white;
+    background: #fffbf3;
   }
 
   #SectionBannerImage--{{ section.id }} .idiom-hero__bg {
     position: absolute;
     inset: 0;
     width: calc(100% - 32px);
-    height: calc(100% - 32px);
+    height: 100%;
     object-fit: cover;
     object-position: center;
-    margin: 16px;
-    border-radius: 12px;
+    margin: 0 16px;
+    border-radius: 43px;
     overflow: hidden;
   }
 
   #SectionBannerImage--{{ section.id }} .idiom-hero__overlay {
+    display: none;
     position: absolute;
     inset: 0;
     background: linear-gradient(180deg, transparent 50%, #202020 100%);
     pointer-events: none;
     width: calc(100% - 32px);
-    height: calc(100% - 32px);
-    margin: 16px;
-    border-radius: 12px;
+    height: 100%;
+    margin: 0 16px;
+    border-radius: 43px;
   }
 
   #SectionBannerImage--{{ section.id }} .idiom-hero__content {
     position: absolute;
-    bottom: 90px;
+    bottom: 48px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;

@@ -8,7 +8,7 @@ img { max-width: 100%; }
 
 /* --- Brand tokens --- */
 :root {
-  --idiom-cream: #faf6f0;
+  --idiom-cream: #fffbf3;
   --idiom-olive: #5a5a1e;
   --idiom-olive-dark: #3d3d1a;
   --idiom-black: #1a1a1a;
@@ -22,6 +22,11 @@ img { max-width: 100%; }
   --FONT-STACK-SUBHEADING: "farro-regular (1)", sans-serif;
   --FONT-STACK-LABEL: "farro-regular (1)", sans-serif;
   --FONT-STACK-HIGHLIGHT: "farro-bold (2)", sans-serif;
+}
+
+/* --- Header background override --- */
+.site-header {
+  background-color: #fffbf3 !important;
 }
 
 /* --- Marquee / ticker strip --- */
