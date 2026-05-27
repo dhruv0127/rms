@@ -135,6 +135,17 @@
         "padding_bottom": 0
       }
     },
+    "idiom-layering-row": {
+      "type": "idiom-layering-row",
+      "settings": {
+        "marquee_text": "smell like no one else™ · find your fragrance freedom · layer, or wear solo ·",
+        "heading_solo": "wear solo,",
+        "heading_layer": "or layer me with:",
+        "subtext": "these scents were made to mix.",
+        "fine_print": "* that's your part.",
+        "layering_collection": "3d-wear-with"
+      }
+    },
     "idiom-reel-video-section": {
       "type": "idiom-reel-video-section",
       "blocks": {
@@ -192,18 +203,7 @@
         "bg_image_desktop": "shopify://shop_images/I.png",
         "bg_image_mobile": "shopify://shop_images/I.png"
       }
-    },
-    "idiom-layering-row": {
-      "type": "idiom-layering-row",
-      "settings": {
-        "marquee_text": "smell like no one else™ · find your fragrance freedom · layer, or wear solo ·",
-        "heading_solo": "wear solo,",
-        "heading_layer": "or layer me with:",
-        "subtext": "these scents were made to mix.",
-        "fine_print": "* that's your part.",
-        "layering_collection": "3d-wear-with"
-      }
     }
   },
-  "order": ["main", "idiom-reel-video-section", "idiom-layering-row"]
+  "order": ["main", "idiom-layering-row", "idiom-reel-video-section"]
 }
