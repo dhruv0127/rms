@@ -21147,3 +21147,10 @@ body:not(.no-outline) .radio__input.focus-visible + .radio__label {
     justify-content: flex-start;
   }
 }
+
+@media (max-width: 768px) {
+  .idiom-trust-bar,
+  .has-scrolled.trust-bar-scrolled .idiom-trust-bar {
+    display: none !important;
+  }
+}

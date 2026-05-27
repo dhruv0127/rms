@@ -165,7 +165,6 @@
     grid-template-columns: calc(60% - var(--gutter) / 2) calc(
         40% - var(--gutter) / 2
       );
-    margin-top: var(--gutter);
   }
 }
 
