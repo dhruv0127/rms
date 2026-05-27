@@ -3,7 +3,10 @@
 .idiom-reel-section {
   text-align: center;
   padding: 40px 16px 48px;
-  background-image: var(--reel-bg-desktop, url("https://cdn.shopify.com/s/files/1/0914/9117/2729/files/I.png?v=1779735855"));
+  background-image: var(
+    --reel-bg-desktop,
+    url("https://cdn.shopify.com/s/files/1/0914/9117/2729/files/I.png?v=1779735855")
+  );
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -232,8 +235,15 @@
 
   .idiom-reel-section {
     padding: 32px 0 40px;
-    margin: 12px;
-    background-image: var(--reel-bg-mobile, var(--reel-bg-desktop, url("https://cdn.shopify.com/s/files/1/0914/9117/2729/files/I.png?v=1779735855")));
+    margin: 12px 0;
+    border-radius: 0;
+    background-image: var(
+      --reel-bg-mobile,
+      var(
+        --reel-bg-desktop,
+        url("https://cdn.shopify.com/s/files/1/0914/9117/2729/files/I.png?v=1779735855")
+      )
+    );
   }
 
   .idiom-reel-slider {
