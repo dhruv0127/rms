@@ -101,8 +101,13 @@
 
   /* === Mobile overrides ≤480px === */
   @media (max-width: 480px) {
+    #SectionBannerImage--{{ section.id }} .idiom-hero__bg { 
+      border-radius: 12px;
+    }
     #SectionBannerImage--{{ section.id }} .idiom-hero {
       min-height: 90vw;
+      border-radius: 12px;
+      margin-top: 12px;
     }
 
     #SectionBannerImage--{{ section.id }} .idiom-hero__content {
