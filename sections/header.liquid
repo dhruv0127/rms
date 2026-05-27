@@ -59,10 +59,131 @@
 
 {{ 'section-header-navigation.css' | asset_url | stylesheet_tag }}
 
+<style>
+  .idiom-trust-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background: var(--idiom-cream, #faf6f0);
+    position: relative;
+  }
+
+  .idiom-trust-bar::before {
+    content: '';
+    position: absolute;
+    left: 24px;
+    right: 24px;
+    height: 1px;
+    background: rgba(26,26,26,0.2);
+  }
+
+  .idiom-trust-bar::before { top: 0; }
+
+  .idiom-trust-bar__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 16px;
+    font-family: "farro-bold (2)", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--idiom-black, #1a1a1a);
+    text-align: center;
+    line-height: 1.1;
+    position: relative;
+  }
+
+  .idiom-trust-bar__item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 16px;
+    width: 1px;
+    background: rgba(26,26,26,0.25);
+  }
+
+  /* Hidden in sticky state until trust bar scrolls out of view */
+  .has-scrolled .idiom-trust-bar,
+  .has-scrolled .idiom-trust-bar--marquee {
+    display: none;
+  }
+
+  .has-scrolled.trust-bar-scrolled .idiom-trust-bar {
+    display: grid;
+  }
+
+  @media (max-width: 480px) {
+    .has-scrolled.trust-bar-scrolled .idiom-trust-bar--marquee {
+      display: block;
+    }
+  }
+
+  .idiom-trust-bar--marquee {
+    display: none;
+  }
+
+  @media (max-width: 480px) {
+    .idiom-trust-bar {
+      display: none;
+    }
+
+    .idiom-trust-bar--marquee {
+      display: block;
+      overflow: hidden;
+      white-space: nowrap;
+      background: var(--idiom-cream, #faf6f0);
+      position: relative;
+    }
+
+    .idiom-trust-bar--marquee::before,
+    .idiom-trust-bar--marquee::after {
+      content: '';
+      position: absolute;
+      left: 16px;
+      right: 16px;
+      height: 1px;
+      background: rgba(26,26,26,0.2);
+      z-index: 1;
+    }
+
+    .idiom-trust-bar--marquee::before { top: 0; }
+    .idiom-trust-bar--marquee::after  { bottom: 0; }
+
+    .idiom-trust-bar--marquee__track {
+      display: inline-flex;
+      animation: trust-bar-marquee 18s linear infinite;
+    }
+
+    .idiom-trust-bar--marquee__item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 24px;
+      font-family: "farro-bold (2)", sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--idiom-black, #1a1a1a);
+      white-space: nowrap;
+    }
+
+    .idiom-trust-bar--marquee__item::after {
+      content: '·';
+      opacity: 0.4;
+    }
+
+    @keyframes trust-bar-marquee {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+  }
+</style>
+
 {%- comment -%} Prevent CLS on Collection & List Collections pages {%- endcomment -%}
 {%- style -%}
   :root {
-    --header-height: {{ header_height | round }}px;
+    --idiom-trust-bar-height: 37px;
+    --header-height: calc({{ header_height | round }}px + var(--idiom-trust-bar-height));
     --header-sticky-height: {{ header_height_sticky }}px;
     --header-background-height: {{ header_height | round }}px;
   }
@@ -414,7 +535,39 @@
 </div>
 
   <div class="drawer__overlay"></div>
+
+  <div class="idiom-trust-bar">
+    <div class="idiom-trust-bar__item">free samples in every order</div>
+    <div class="idiom-trust-bar__item">5 star reviewed layering fragrances</div>
+    <div class="idiom-trust-bar__item">high-quality, british made eau du parfum</div>
+  </div>
+
+  <div class="idiom-trust-bar--marquee" aria-hidden="true">
+    <div class="idiom-trust-bar--marquee__track">
+      <span class="idiom-trust-bar--marquee__item">free samples in every order</span>
+      <span class="idiom-trust-bar--marquee__item">5 star reviewed layering fragrances</span>
+      <span class="idiom-trust-bar--marquee__item">high-quality, british made eau du parfum</span>
+      <span class="idiom-trust-bar--marquee__item">free samples in every order</span>
+      <span class="idiom-trust-bar--marquee__item">5 star reviewed layering fragrances</span>
+      <span class="idiom-trust-bar--marquee__item">high-quality, british made eau du parfum</span>
+    </div>
+  </div>
 </header>
+
+<div id="trust-bar-sentinel" aria-hidden="true" style="height:0;pointer-events:none;"></div>
+
+<script>
+  (function() {
+    var sentinel = document.getElementById('trust-bar-sentinel');
+    if (!sentinel || !window.IntersectionObserver) return;
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        document.body.classList.toggle('trust-bar-scrolled', !entry.isIntersecting);
+      });
+    }, { threshold: 0 });
+    observer.observe(sentinel);
+  })();
+</script>
 
 <script type="application/ld+json">
   {

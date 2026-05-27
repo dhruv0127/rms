@@ -154,25 +154,6 @@
         "header_gradient": true
       }
     },
-    "idiom-trust-bar": {
-      "type": "idiom-trust-bar",
-      "blocks": {
-        "trust-0": {
-          "type": "item",
-          "settings": { "text": "free samples in every order" }
-        },
-        "trust-1": {
-          "type": "item",
-          "settings": { "text": "5 star reviewed layering fragrances" }
-        },
-        "trust-2": {
-          "type": "item",
-          "settings": { "text": "high-quality, british made eau du parfum" }
-        }
-      },
-      "block_order": ["trust-0", "trust-1", "trust-2"],
-      "settings": {}
-    }
   },
-  "order": ["announcement-bar", "mobile-menu", "header", "idiom-trust-bar"]
+  "order": ["announcement-bar", "mobile-menu", "header"]
 }
