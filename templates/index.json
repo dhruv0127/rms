@@ -46,11 +46,7 @@
           }
         }
       },
-      "block_order": [
-        "heading_idiom",
-        "text_idiom",
-        "button_idiom"
-      ],
+      "block_order": ["heading_idiom", "text_idiom", "button_idiom"],
       "settings": {
         "height": "six-fifty-height",
         "enable_mobile_height": true,
@@ -82,8 +78,8 @@
         "butterfly_image": "shopify://shop_images/Group_5.png",
         "moon_image": "shopify://shop_images/group6.png",
         "heading": "sick of smelling like everyone else?",
-        "subline": "yeah, us too.",
-        "body": "idiom was born by 3 good friends who shared a passion for fragrance with the belief that individuality is everything and fragrance could be done better, high-quality, long lasting capsule eau du parfums ready to layer and always priced to be affordable.",
+        "subline": "",
+        "body": "yeah, us too. <br /> idiom was born by 3 good friends who shared a passion for fragrance with the belief that individuality is everything and fragrance could be done better, high-quality, long lasting capsule eau du parfums ready to layer and always priced to be affordable.",
         "cta_label": "learn more",
         "cta_url": "/pages/about",
         "marquee_text": "smell like no one else™ · find your fragrance freedom · layer, or wear solo ·",
@@ -160,10 +156,7 @@
           }
         }
       },
-      "block_order": [
-        "panel_1",
-        "panel_2"
-      ],
+      "block_order": ["panel_1", "panel_2"],
       "settings": {}
     }
   },

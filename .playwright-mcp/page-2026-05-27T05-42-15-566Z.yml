@@ -1,0 +1,176 @@
+- generic [active] [ref=e1]:
+  - alertdialog "Cookie consent" [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - heading "Cookie consent" [level=2] [ref=e5]
+        - paragraph [ref=e6]:
+          - text: We and our partners, including Shopify, use cookies and other technologies to personalize your experience, show you ads, and perform analytics, and we will not use cookies or other technologies for these purposes unless you accept them. Learn more in our
+          - link "Privacy Policy" [ref=e7] [cursor=pointer]:
+            - /url: http://idiomfragrances.com/policies/privacy-policy
+      - generic [ref=e8]:
+        - button "Manage preferences" [ref=e9] [cursor=pointer]
+        - button "Accept" [ref=e10] [cursor=pointer]
+        - button "Decline" [ref=e11] [cursor=pointer]
+  - link "Skip to content" [ref=e12] [cursor=pointer]:
+    - /url: "#MainContent"
+  - group [ref=e17]:
+    - generic [ref=e24]: FREE SHIPPING ORDERS £35+
+  - banner [ref=e26]:
+    - generic [ref=e27]:
+      - heading "idiom®" [level=1] [ref=e28]:
+        - link "idiom®" [ref=e29] [cursor=pointer]:
+          - /url: /
+          - img [ref=e30]
+      - navigation [ref=e32]:
+        - generic [ref=e33]:
+          - link "Home" [ref=e35] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e36]: Home
+          - navigation [ref=e37]:
+            - link "Shop" [ref=e38] [cursor=pointer]:
+              - /url: /collections/shop-everything
+              - generic [ref=e39]: Shop
+          - link "Gallery" [ref=e41] [cursor=pointer]:
+            - /url: /pages/gallery
+            - generic [ref=e42]: Gallery
+          - link "About" [ref=e44] [cursor=pointer]:
+            - /url: /pages/story
+            - generic [ref=e45]: About
+        - generic [ref=e46]:
+          - group [ref=e48]:
+            - button "Open search bar" [ref=e49] [cursor=pointer]:
+              - img
+              - generic [ref=e50]: Open search bar
+          - link "My Account" [ref=e52] [cursor=pointer]:
+            - /url: /account
+            - generic [ref=e53]: My Account
+            - img
+          - link "Open cart" [ref=e55] [cursor=pointer]:
+            - /url: /cart
+            - generic [ref=e56]: Open cart
+            - img
+  - generic [ref=e58]:
+    - generic [ref=e59]: free samples in every order
+    - generic [ref=e60]: 5 star reviewed layering fragrances
+    - generic [ref=e61]: high-quality, british made eau du parfum
+  - main [ref=e62]:
+    - generic [ref=e65]:
+      - img "127 unique fragrances, 1 kit." [ref=e66]
+      - generic [ref=e67]:
+        - heading "127 unique fragrances, 1 kit." [level=1] [ref=e68]
+        - paragraph [ref=e69]: discover your Flanker fragrance combinations with our 7-piece discovery kit.
+        - link "shop now | £17" [ref=e71] [cursor=pointer]:
+          - /url: /collections/all
+    - generic [ref=e73]:
+      - generic [ref=e75]:
+        - generic [ref=e76]: smell like no one else™ · find your fragrance freedom · layer, or wear solo ·
+        - generic [ref=e77]: smell like no one else™ · find your fragrance freedom · layer, or wear solo ·
+        - generic [ref=e78]: smell like no one else™ · find your fragrance freedom · layer, or wear solo ·
+        - generic [ref=e79]: smell like no one else™ · find your fragrance freedom · layer, or wear solo ·
+        - generic [ref=e80]: smell like no one else™ · find your fragrance freedom · layer, or wear solo ·
+        - generic [ref=e81]: smell like no one else™ · find your fragrance freedom · layer, or wear solo ·
+      - generic [ref=e82]:
+        - heading "sick of smelling like everyone else?" [level=2] [ref=e83]
+        - paragraph [ref=e84]: yeah, us too.
+        - paragraph [ref=e85]: idiom was born by 3 good friends who shared a passion for fragrance with the belief that individuality is everything and fragrance could be done better, high-quality, long lasting capsule eau du parfums ready to layer and always priced to be affordable.
+        - link "learn more" [ref=e87] [cursor=pointer]:
+          - /url: /pages/about
+    - generic [ref=e88]:
+      - generic [ref=e89]:
+        - heading "holy s#*%, what are you wearing?" [level=3] [ref=e90]
+        - paragraph [ref=e91]: get to know our crowd-pleasers...
+      - generic [ref=e95]:
+        - link "3D AMPLIFIER | EAU DE PARFUM 3D AMPLIFIER | EAU DE PARFUM £6.00" [ref=e97] [cursor=pointer]:
+          - /url: /products/3d-amp-100ml-copy
+          - generic [ref=e98]:
+            - img "3D AMPLIFIER | EAU DE PARFUM" [ref=e101]
+            - generic [ref=e102]:
+              - paragraph [ref=e103]: 3D AMPLIFIER | EAU DE PARFUM
+              - paragraph [ref=e104]: £6.00
+        - link [ref=e106] [cursor=pointer]:
+          - /url: /products/3d-amp-100ml-copy
+          - generic [ref=e107]:
+            - img [ref=e110]
+            - generic [ref=e111]:
+              - paragraph [ref=e112]: 3D AMPLIFIER | EAU DE PARFUM
+              - paragraph [ref=e113]: £6.00
+        - link [ref=e115] [cursor=pointer]:
+          - /url: /products/3d-amp-100ml-copy
+          - generic [ref=e116]:
+            - img [ref=e119]
+            - generic [ref=e120]:
+              - paragraph [ref=e121]: 3D AMPLIFIER | EAU DE PARFUM
+              - paragraph [ref=e122]: £6.00
+        - link [ref=e124] [cursor=pointer]:
+          - /url: /products/3d-amp-100ml-copy
+          - generic [ref=e125]:
+            - img [ref=e128]
+            - generic [ref=e129]:
+              - paragraph [ref=e130]: 3D AMPLIFIER | EAU DE PARFUM
+              - paragraph [ref=e131]: £6.00
+    - generic [ref=e133]:
+      - generic [ref=e134]:
+        - img "the perfect saffron" [ref=e135]
+        - generic [ref=e137]:
+          - heading "the perfect saffron" [level=3] [ref=e138]
+          - paragraph [ref=e139]: warm. rich. quietly addictive.
+          - link "shop now | £17" [ref=e140] [cursor=pointer]:
+            - /url: /collections/all
+      - generic [ref=e141]:
+        - img "citrusy + fresh af" [ref=e142]
+        - generic [ref=e144]:
+          - heading "citrusy + fresh af" [level=3] [ref=e145]
+          - paragraph [ref=e146]: sharp. bright. made to layer.
+          - link "shop now | £17" [ref=e147] [cursor=pointer]:
+            - /url: /collections/all
+  - contentinfo [ref=e149]:
+    - generic [ref=e150]:
+      - generic [ref=e151]:
+        - paragraph [ref=e152]: smell like no one else
+        - paragraph [ref=e153]: Idiom makes rule-breaking, layer-ready fragrances for skin that wants more. Designed to be mixed, and never made to behave.
+        - generic [ref=e154]:
+          - link "Instagram" [ref=e155] [cursor=pointer]:
+            - /url: https://instagram.com/idiomfragrances
+            - img [ref=e156]
+          - link "TikTok" [ref=e158] [cursor=pointer]:
+            - /url: https://tiktok.com/@idiomfragrances
+            - img [ref=e159]
+      - generic [ref=e161]:
+        - generic [ref=e162]:
+          - paragraph [ref=e163]: the boring stuff
+          - list [ref=e164]:
+            - listitem [ref=e165]:
+              - link "delivery" [ref=e166] [cursor=pointer]:
+                - /url: /policies/shipping-policy
+            - listitem [ref=e167]:
+              - link "returns" [ref=e168] [cursor=pointer]:
+                - /url: /policies/refund-policy
+            - listitem [ref=e169]:
+              - link "accounts" [ref=e170] [cursor=pointer]:
+                - /url: /account
+            - listitem [ref=e171]:
+              - link "faqs" [ref=e172] [cursor=pointer]:
+                - /url: /pages/faqs
+            - listitem [ref=e173]:
+              - link "contact" [ref=e174] [cursor=pointer]:
+                - /url: /pages/contact
+            - listitem [ref=e175]:
+              - link "terms & conditions" [ref=e176] [cursor=pointer]:
+                - /url: /policies/terms-of-service
+            - listitem [ref=e177]:
+              - link "privacy policy" [ref=e178] [cursor=pointer]:
+                - /url: /policies/privacy-policy
+        - generic [ref=e179]:
+          - paragraph [ref=e180]: shop by type
+          - list [ref=e181]:
+            - listitem [ref=e182]:
+              - link "full size" [ref=e183] [cursor=pointer]:
+                - /url: /collections/full-size
+            - listitem [ref=e184]:
+              - link "mini-oms" [ref=e185] [cursor=pointer]:
+                - /url: /collections/mini-oms
+            - listitem [ref=e186]:
+              - link "kits and gifts" [ref=e187] [cursor=pointer]:
+                - /url: /collections/kits-and-gifts
+    - img "idiom"
+    - generic [ref=e189]: © 2026 idiom fragrances. all rights reserved.
