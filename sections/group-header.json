@@ -2,6 +2,51 @@
   "type": "header",
   "name": "Header",
   "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement-text-0": {
+          "type": "text",
+          "settings": {
+            "text": "<p>FREE SHIPPING ORDERS £35+</p>",
+            "text_color": "#ffffff",
+            "heading_highlight_type": "italics",
+            "highlight_color": "#ffffff",
+            "highlight_text_color": "#ffffff",
+            "icon_name": "none",
+            "icon_color": "",
+            "icon_width": 20,
+            "target_url_enabled": false,
+            "target_url": "",
+            "target_referrer_enabled": false,
+            "target_referrer": "",
+            "target_device_enabled": false,
+            "target_device": "mobile"
+          }
+        }
+      },
+      "block_order": ["announcement-text-0"],
+      "settings": {
+        "width": "wrapper--full",
+        "layout": "slider",
+        "show_top_border": false,
+        "show_bottom_border": false,
+        "padding": 5,
+        "slider_speed": 7,
+        "show_arrows": false,
+        "marquee_speed": 100,
+        "direction": "ticker-ltr",
+        "text_caps": true,
+        "type_font": "space_mono_n4",
+        "text_size": 85,
+        "letter_spacing": 100,
+        "message_spacing": 25,
+        "bg_color": "#202020",
+        "gradient": "",
+        "color": "#ffffff",
+        "border_color": "#202020"
+      }
+    },
     "mobile-menu": {
       "type": "mobile-menu",
       "blocks": {
@@ -129,5 +174,5 @@
       "settings": {}
     }
   },
-  "order": ["mobile-menu", "header", "idiom-trust-bar"]
+  "order": ["announcement-bar", "mobile-menu", "header", "idiom-trust-bar"]
 }

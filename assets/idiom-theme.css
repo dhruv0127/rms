@@ -142,6 +142,25 @@ img { max-width: 100%; }
   }
 }
 
+/* --- Announcement bar (design spec: thin olive strip, white uppercase text) --- */
+.announcement-bar-static {
+  --bg: #202020 !important;
+}
+
+.announcement-bar-static .announcement {
+  --text: #ffffff !important;
+  --padding: 7px !important;
+  background: #202020;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 11px;
+}
+
+.announcement-bar-static .announcement.announcement--bottom-border,
+.announcement-bar-static .announcement.announcement--top-border {
+  border-color: #202020 !important;
+}
+
 /* --- Section heading pair --- */
 .idiom-section-heading h2 {
   font-size: 36px;
