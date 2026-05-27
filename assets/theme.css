@@ -14764,13 +14764,26 @@ body:not(.no-outline) .product-grid-item__image:focus-within {
   text-align: left;
   overflow: hidden;
   position: relative;
-  padding: 10px var(--padding-sides);
+  padding: 6px var(--padding-sides);
 }
 
 .product__accordion::after {
   content: "";
   position: absolute;
   bottom: 0;
+  left: 0;
+  width: 100%;
+  height: var(--border-width);
+  background: var(--text);
+  opacity: var(--border-opacity);
+  pointer-events: none;
+}
+
+.product__accordions:not(.product__accordions ~ .product__accordions)
+  .product__accordion::before {
+  content: "";
+  position: absolute;
+  top: 0;
   left: 0;
   width: 100%;
   height: var(--border-width);

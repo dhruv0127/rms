@@ -68,6 +68,18 @@
   pointer-events: none;
 }
 
+.accordion__item:first-child::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--border-width);
+  background: var(--border);
+  opacity: var(--border-opacity);
+  pointer-events: none;
+}
+
 .accordion__item [data-collapsible-container].is-expanded {
   overflow: hidden;
 }
