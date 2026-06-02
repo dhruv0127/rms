@@ -3,7 +3,7 @@
   background: #9a9a35;
   border-radius: 43px;
   overflow: hidden;
-  margin: 24px 16px 0 16px;
+  margin: 24px 0 0 0;
 }
 
 .idiom-layering hr{
@@ -11,11 +11,14 @@
 }
 
 /* Marquee strip */
+.idiom-layering__marquee-slot {
+  position: relative;
+}
 .idiom-layering__marquee {
+  background: #9a9a35;
   padding: 10px 0;
   overflow: hidden;
   white-space: nowrap;
-  border-bottom: 1px solid rgba(255,255,255,0.15);
 }
 .idiom-layering__marquee .idiom-marquee-track {
   font-family: "farro-bold (2)", sans-serif;
@@ -28,12 +31,29 @@
 }
 .idiom-layering__marquee .idiom-marquee-track span { padding: 0 20px; }
 
+/* Floating state — sticks to the bottom of the viewport until the
+   layering section scrolls up and the marquee docks into its home slot. */
+.idiom-layering__marquee.is-floating {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 60;
+  border-top-left-radius: 43px;
+  border-top-right-radius: 43px;
+  box-shadow: 0 -6px 24px rgba(0,0,0,0.12);
+}
+/* Placeholder reserves the marquee's height in flow while it is floating,
+   so the section content below does not jump. */
+.idiom-layering__marquee-placeholder { display: none; }
+.idiom-layering__marquee-slot.is-reserved .idiom-layering__marquee-placeholder { display: block; }
+
 /* Main row */
 .idiom-layering { display: flex; align-items: center; padding: 40px 48px; gap: 48px; }
 .idiom-layering__text { flex: 0 0 28%; min-width: 220px; }
-.idiom-layering__heading { color: #fff; font-size: 42px; font-weight: 800; line-height: 1.05; margin: 0; }
-.idiom-layering__divider { border: none; border-top: 1px solid rgba(255,255,255,0.4); margin: 18px 0 14px; }
-.idiom-layering__subtext { color: rgba(255,255,255,0.85); font-size: 13px; margin: 0 0 6px; }
+.idiom-layering__heading { color: #fff; font-size: 34px; font-weight: 800; line-height: 1.1; margin: 0; }
+.idiom-layering__divider { border: none; border-top: 1px solid rgba(255,255,255,0.4); margin: 14px 0 12px; }
+.idiom-layering__subtext { color: rgba(255,255,255,0.85); font-size: 12px; margin: 0 0 24px; }
 .idiom-layering__fine { color: rgba(255,255,255); font-size: 12px; margin: 0; }
 .idiom-layering__products { flex: 1 1 0; overflow: visible; }
 .idiom-layering__scroll { display: flex; gap: 20px; overflow-x: auto; overflow-y: visible; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
@@ -41,7 +61,13 @@
 .idiom-layering__scroll .idiom-product-card-link { flex: 0 0 280px; width: 280px; }
 
 @media (max-width: 768px) {
-  .idiom-layering-wrap { margin: 12px; border-radius: 16px; }
+  .idiom-layering-wrap { margin: 12px 0 0 0; border-radius: 16px; }
+  .idiom-layering__marquee.is-floating {
+    left: 0;
+    right: 0;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+  }
   .idiom-layering { flex-direction: column; padding: 32px 20px; gap: 24px; }
   .idiom-layering__text { flex: none; width: 100%; }
   .idiom-layering__products { width: 100%; }
@@ -54,13 +80,16 @@
 
 {%- assign marquee_text = section.settings.marquee_text | default: "smell like no one else™ · find your fragrance freedom · layer, or wear solo · " -%}
 
-<div class="idiom-layering-wrap">
-  <div class="idiom-layering__marquee">
-    <div class="idiom-marquee-track" aria-hidden="true">
-      {%- for i in (1..6) -%}
-        <span>{{ marquee_text }}</span>
-      {%- endfor -%}
+<div class="idiom-layering-wrap" id="idiom-layering-wrap-{{ section.id }}">
+  <div class="idiom-layering__marquee-slot" data-marquee-slot>
+    <div class="idiom-layering__marquee" data-marquee>
+      <div class="idiom-marquee-track" aria-hidden="true">
+        {%- for i in (1..6) -%}
+          <span>{{ marquee_text }}</span>
+        {%- endfor -%}
+      </div>
     </div>
+    <div class="idiom-layering__marquee-placeholder" data-marquee-placeholder aria-hidden="true"></div>
   </div>
 
   <section class="idiom-layering">
@@ -69,9 +98,6 @@
       <p class="idiom-layering__heading">{{ section.settings.heading_layer }}</p>
       <hr class="idiom-layering__divider">
       <p class="idiom-layering__subtext">{{ section.settings.subtext }}</p>
-      <br />
-      <br />
-      <br />
       <p class="idiom-layering__fine">{{ section.settings.fine_print }}</p>
     </div>
 
@@ -92,6 +118,56 @@
     </div>
   </section>
 </div>
+
+<script>
+(function () {
+  var root = document.getElementById('idiom-layering-wrap-{{ section.id }}');
+  if (!root) return;
+  var slot = root.querySelector('[data-marquee-slot]');
+  var marquee = root.querySelector('[data-marquee]');
+  var placeholder = root.querySelector('[data-marquee-placeholder]');
+  if (!slot || !marquee || !placeholder) return;
+
+  var floating = false;
+  var ticking = false;
+
+  function setFloating(on) {
+    if (on === floating) return;
+    floating = on;
+    if (on) {
+      // reserve the marquee's height so the section below doesn't jump
+      placeholder.style.height = marquee.offsetHeight + 'px';
+      slot.classList.add('is-reserved');
+      marquee.classList.add('is-floating');
+    } else {
+      marquee.classList.remove('is-floating');
+      slot.classList.remove('is-reserved');
+      placeholder.style.height = '';
+    }
+  }
+
+  function update() {
+    ticking = false;
+    var slotTop = slot.getBoundingClientRect().top;
+    var marqueeH = (floating ? placeholder.offsetHeight : marquee.offsetHeight);
+    var vh = window.innerHeight || document.documentElement.clientHeight;
+    // Dock once the marquee's home slot has scrolled up enough that the bar
+    // would naturally rest at (or above) the bottom of the viewport.
+    setFloating(slotTop + marqueeH > vh);
+  }
+
+  function onScroll() {
+    if (!ticking) {
+      ticking = true;
+      window.requestAnimationFrame(update);
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
+  update();
+})();
+</script>
 
 {% schema %}
 {

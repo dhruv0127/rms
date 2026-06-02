@@ -107,6 +107,15 @@
       echo ' product-gallery__media--model'
     endif
   endcapture
+
+  comment
+    Only the featured (first) image gets the metafield background scene.
+  endcomment
+  assign has_featured_bg = false
+  if featured_background != blank and media == featured_media and media.media_type == 'image'
+    assign has_featured_bg = true
+    assign featured_bg_url = featured_background | image_url: width: 1600
+  endif
 -%}
 
 {%- capture interaction_markup -%}
@@ -128,7 +137,8 @@
 {%- endcapture -%}
 
 <div id="{{ media_wrapper_id }}"
-  class="product-gallery__media-slide{% unless featured_media == media %} media--hidden{% endunless %}"
+  class="product-gallery__media-slide{% unless featured_media == media %} media--hidden{% endunless %}{% if has_featured_bg %} product-gallery__media-slide--bg-scene{% endif %}"
+  {% if has_featured_bg %}style="background-image: url('{{ featured_bg_url }}');"{% endif %}
   data-product-slide
   data-id="{{ media.id }}"
   data-aspectratio="{{ media_aspect_ratio }}"
@@ -149,7 +159,7 @@
   data-product-single-media-wrapper
 >
   {%- if media.media_type == 'image' -%}
-    <div class="product-gallery__media product-gallery__media--image">
+    <div class="product-gallery__media product-gallery__media--image{% if has_featured_bg %} product-gallery__media--bg-scene{% endif %}">
       <div class="product-gallery__media-space" style="--media-padding-top: {{ media_padding_top }}%;"></div>
 
       {{ image }}

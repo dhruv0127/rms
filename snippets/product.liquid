@@ -256,8 +256,9 @@
     >
       <div class="product-gallery__media-slider{% if product.media.size == 1 %} product-gallery__media-slider--single{% endif %}" data-product-single-media-slider>
         {%- if product.media.size > 0 -%}
-          {%- comment -%} Show Featured media first {%- endcomment -%}
-          {%- render 'media', unique: unique, current_variant: current_variant, media: featured_media, featured_media: featured_media, image_width: image_size_desktop, enable_video_looping: enable_video_looping, enable_zoom: enable_zoom, section_type: section_type -%}
+          {%- comment -%} Show Featured media first — with metafield background scene behind it {%- endcomment -%}
+          {%- assign pdp_bg_image = product.metafields.custom.pdp_background_image.value | default: product.metafields.custom.pdp_background_image -%}
+          {%- render 'media', unique: unique, current_variant: current_variant, media: featured_media, featured_media: featured_media, image_width: image_size_desktop, enable_video_looping: enable_video_looping, enable_zoom: enable_zoom, section_type: section_type, featured_background: pdp_bg_image -%}
 
           {%- comment -%} Loop product media skipping the featured {%- endcomment -%}
           {%- for media in product.media -%}
