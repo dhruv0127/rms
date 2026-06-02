@@ -360,9 +360,9 @@ body.template-product {
 }
 
 body.template-product .product-single__details h2 {
-  font-size: clamp(26px, 6vw, 56px);
+  font-size: 43px;
   line-height: 1.05;
-  margin-bottom: 8px;
+  margin-bottom: 0;
   text-transform: uppercase;
 }
 
