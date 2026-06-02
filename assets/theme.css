@@ -14811,6 +14811,7 @@ body:not(.no-outline) .product-grid-item__image:focus-within {
   color: var(--text);
   background: transparent;
   border: 0;
+  padding-left: 22px;
 }
 .product__accordion__title .icon {
   top: 0;

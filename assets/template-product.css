@@ -576,3 +576,16 @@ body.template-product .product__submit__add .product__price--regular::before {
     max-width: 72%;
   }
 }
+
+/* idiom PDP — roomier accordion rows (full description / key notes /
+   how to wear / full ingredient list) to match the design spacing. */
+body.template-product .accordion__title {
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+@media only screen and (min-width: 768px) {
+  body.template-product .accordion__title {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+}
