@@ -109,10 +109,11 @@
   endcapture
 
   comment
-    Only the featured (first) image gets the metafield background scene.
+    Every image media gets the same background scene (per-product metafield
+    when set, otherwise the theme default), not just the featured image.
   endcomment
   assign has_featured_bg = false
-  if media == featured_media and media.media_type == 'image'
+  if media.media_type == 'image'
     if featured_background != blank
       assign has_featured_bg = true
       assign featured_bg_url = featured_background | image_url: width: 1600

@@ -254,14 +254,24 @@
         {%- assign animation_order = animation_order | plus: 1 -%}
       {% endif %}
     >
+      {%- comment -%} idiom PDP — single static background scene that stays put
+          while the product images slide on top of it. Uses the per-product
+          metafield image when set, otherwise the theme's default PDP asset. {%- endcomment -%}
+      {%- assign pdp_bg_image = product.metafields.custom.pdp_background_image.value | default: product.metafields.custom.pdp_background_image -%}
+      {%- if pdp_bg_image != blank -%}
+        {%- assign pdp_bg_url = pdp_bg_image | image_url: width: 1600 -%}
+      {%- else -%}
+        {%- assign pdp_bg_url = 'pdp-background.png' | asset_url -%}
+      {%- endif -%}
+      {%- if product.media.size > 0 and section_type != 'quickview' -%}
+        <div class="product-gallery__bg-scene" style="background-image: url('{{ pdp_bg_url }}');" aria-hidden="true"></div>
+      {%- endif -%}
+
       <div class="product-gallery__media-slider{% if product.media.size == 1 %} product-gallery__media-slider--single{% endif %}" data-product-single-media-slider>
         {%- if product.media.size > 0 -%}
-          {%- comment -%} Show Featured media first — with background scene behind it.
-              Uses the per-product metafield image when set, otherwise the theme's
-              default PDP background asset. {%- endcomment -%}
-          {%- assign pdp_bg_image = product.metafields.custom.pdp_background_image.value | default: product.metafields.custom.pdp_background_image -%}
-          {%- assign pdp_bg_fallback = 'pdp-background.png' | asset_url -%}
-          {%- render 'media', unique: unique, current_variant: current_variant, media: featured_media, featured_media: featured_media, image_width: image_size_desktop, enable_video_looping: enable_video_looping, enable_zoom: enable_zoom, section_type: section_type, featured_background: pdp_bg_image, featured_background_fallback: pdp_bg_fallback -%}
+          {%- comment -%} Featured media first; the slides are transparent so the
+              single static scene above shows through behind each. {%- endcomment -%}
+          {%- render 'media', unique: unique, current_variant: current_variant, media: featured_media, featured_media: featured_media, image_width: image_size_desktop, enable_video_looping: enable_video_looping, enable_zoom: enable_zoom, section_type: section_type -%}
 
           {%- comment -%} Loop product media skipping the featured {%- endcomment -%}
           {%- for media in product.media -%}
