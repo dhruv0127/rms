@@ -168,6 +168,21 @@
   }
 }
 
+/* idiom PDP — vertically center the gallery against the details column and
+   widen the gap between the image and the product info. */
+@media only screen and (min-width: 768px) {
+  body.template-product .product-single__wrapper {
+    --pdp-col-gap: 96px;
+    align-items: center;
+    column-gap: var(--pdp-col-gap);
+  }
+  body.template-product .product-single__wrapper--large {
+    grid-template-columns: calc(60% - var(--pdp-col-gap) / 2) calc(
+        40% - var(--pdp-col-gap) / 2
+      );
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .product-single__wrapper--standard {
     grid-template-columns: calc(50% - var(--gutter) / 2) calc(
@@ -634,10 +649,15 @@ body.template-product
     .product-gallery__media-space {
     padding-top: 0 !important;
   }
+  /* center the bottle in the PAGE, not in the (left-bleeding) scene column.
+     The media wrapper fills the slide (which starts at the viewport's left
+     edge on desktop), so shifting its center from 50% to 50vw lands the
+     bottle on the page's horizontal center. */
   body.template-product .product-gallery__media--image {
     position: absolute;
     inset: 0;
     height: 100%;
+    transform: translateX(calc(50vw - 50%));
   }
 }
 @media only screen and (max-width: 767px) {
