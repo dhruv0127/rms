@@ -15857,7 +15857,7 @@ body:not(.no-outline) .product__accordion__title.focus-visible {
 .product-gallery__media-slide {
   width: 100%;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .product-gallery__media-slider--single
