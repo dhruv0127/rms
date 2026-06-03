@@ -659,12 +659,31 @@ body.template-product
     height: 100%;
     transform: translateX(calc(50vw - 50%));
   }
+  /* the page-centered image extends past the right edge of the scene column;
+     let the slider/viewport overflow so it's never clipped. The background
+     scene stays inside its column (it's inset:0, unaffected by this). */
+  body.template-product .product-gallery,
+  body.template-product .product-gallery .product-gallery__media-slider,
+  body.template-product .product-gallery .flickity-viewport {
+    overflow: visible !important;
+  }
+  /* with the viewport no longer clipping, hide the off-screen (non-selected)
+     slides so they don't bleed into the overflow area. */
+  body.template-product
+    .product-gallery__media-slide.media--hidden:not(.is-selected) {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
 }
 @media only screen and (max-width: 767px) {
   body.template-product .product-gallery__media--image .lazy-image,
   body.template-product .product-gallery__media--image img {
     width: 80%;
     max-width: 80%;
+  }
+  .product-gallery__bg-scene {
+    background-image: none !important;
   }
 }
 
