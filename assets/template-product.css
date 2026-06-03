@@ -126,7 +126,7 @@
 }
 
 .product-single {
-  background: var(--bg);
+  background: transparent;
   max-width: 100vw;
   overflow: hidden;
 }
