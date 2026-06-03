@@ -112,9 +112,14 @@
     Only the featured (first) image gets the metafield background scene.
   endcomment
   assign has_featured_bg = false
-  if featured_background != blank and media == featured_media and media.media_type == 'image'
-    assign has_featured_bg = true
-    assign featured_bg_url = featured_background | image_url: width: 1600
+  if media == featured_media and media.media_type == 'image'
+    if featured_background != blank
+      assign has_featured_bg = true
+      assign featured_bg_url = featured_background | image_url: width: 1600
+    elsif featured_background_fallback != blank
+      assign has_featured_bg = true
+      assign featured_bg_url = featured_background_fallback
+    endif
   endif
 -%}
 

@@ -538,23 +538,44 @@ body.template-product .product__submit__add .product__price--regular::before {
 /* idiom PDP — first slide background scene from metafield.
    The metafield image fills the slide; the bottle (featured product image)
    sits centered on top, contained and scaled down. */
+/* idiom PDP — bleed the gallery column to the left viewport edge so the
+   background scene runs full-bleed like the design. Only on the product
+   template, desktop only; the right edge stays aligned to the grid column. */
+@media only screen and (min-width: 768px) {
+  body.template-product .product-single__wrapper .product-gallery {
+    --pdp-gallery-bleed: max(
+      var(--gutter, 60px),
+      (100vw - 1440px) / 2 + var(--gutter, 60px)
+    );
+    margin-left: calc(-1 * var(--pdp-gallery-bleed));
+    width: calc(100% + var(--pdp-gallery-bleed));
+  }
+}
+
 .product-gallery__media-slide--bg-scene {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 12px;
+  /* full-bleed panel — square corners, edge to edge (matches design) */
+  border-radius: 0;
   overflow: hidden;
 }
-/* Lock the scene slide to a roughly square frame regardless of the
-   bottle image's own aspect ratio (which would otherwise drive height). */
+/* Tall portrait frame so the scene fills the panel like the design,
+   regardless of the bottle image's own aspect ratio. */
 .product-gallery__media-slide--bg-scene .product-gallery__media-space {
-  padding-top: 100% !important;
+  padding-top: 125% !important;
+}
+/* the media wrapper sits on top of the slide's background scene — keep it
+   transparent so the scene shows through around the bottle. */
+.product-gallery__media--bg-scene {
+  background: transparent !important;
 }
 .product-gallery__media--bg-scene .lazy-image,
 .product-gallery__media--bg-scene img {
-  /* override the gallery's full-bleed absolute fill so the bottle centers */
-  width: 60%;
-  max-width: 60%;
+  /* override the gallery's full-bleed absolute fill so the bottle centers
+     large over the scene (matches design proportions) */
+  width: 72%;
+  max-width: 72%;
   min-width: 0;
   height: 100%;
   left: 50%;
@@ -572,9 +593,17 @@ body.template-product .product__submit__add .product__price--regular::before {
 @media only screen and (max-width: 767px) {
   .product-gallery__media--bg-scene .lazy-image,
   .product-gallery__media--bg-scene img {
-    width: 72%;
-    max-width: 72%;
+    width: 80%;
+    max-width: 80%;
   }
+}
+
+/* idiom PDP — remove the gallery slider arrows; navigation is via the
+   thumbnails only. Scoped to the product media slider so other carousels
+   keep their controls. */
+.product-gallery .flickity-prev-next-button,
+[data-product-single-media-slider] .flickity-prev-next-button {
+  display: none !important;
 }
 
 /* idiom PDP — roomier accordion rows (full description / key notes /
