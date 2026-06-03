@@ -127,6 +127,8 @@
 
 .product-single {
   background: var(--bg);
+  max-width: 100vw;
+  overflow: hidden;
 }
 
 @media only screen and (min-width: 768px) {
