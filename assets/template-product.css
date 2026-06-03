@@ -606,6 +606,105 @@ body.template-product .product__submit__add .product__price--regular::before {
   display: none !important;
 }
 
+/* idiom PDP — overlay the thumbnails as a vertical column on the left edge
+   of the background scene (desktop only). On mobile they stay a bottom row. */
+@media only screen and (min-width: 768px) {
+  body.template-product .product-gallery {
+    /* the scene bleeds to the viewport's left edge; offset thumbs from it */
+    --pdp-thumb-inset-left: 24px;
+  }
+  body.template-product .product-single__thumbnails {
+    position: absolute;
+    top: 180px;
+    left: var(--pdp-thumb-inset-left);
+    transform: translateY(-50%);
+    z-index: 6;
+    margin: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 10px;
+    width: auto;
+    max-height: 88%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  body.template-product .product-single__thumbnails::-webkit-scrollbar {
+    display: none;
+  }
+  /* neutralise the base horizontal-row sizing/padding */
+  body.template-product .product-single__thumbnails:not(.flickity-enabled) {
+    flex-flow: column nowrap;
+  }
+  body.template-product
+    .product-single__thumbnails:not(.flickity-enabled)
+    .product-single__thumbnail {
+    min-width: 0;
+  }
+  /* if flickity initialised the thumbs into a horizontal carousel, undo its
+     viewport/slider/cell layout so they stack vertically instead. */
+  body.template-product .product-single__thumbnails.flickity-enabled {
+    flex-flow: column nowrap;
+  }
+  body.template-product
+    .product-single__thumbnails.flickity-enabled
+    .flickity-viewport {
+    height: auto !important;
+    width: 100%;
+    overflow: visible;
+  }
+  body.template-product
+    .product-single__thumbnails.flickity-enabled
+    .flickity-slider {
+    position: static !important;
+    transform: none !important;
+    left: 0 !important;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 10px;
+  }
+  body.template-product
+    .product-single__thumbnails.flickity-enabled
+    .product-single__thumbnail {
+    position: relative !important;
+    left: 0 !important;
+    transform: none !important;
+    min-width: 0;
+  }
+  body.template-product .product-single__thumbnail {
+    padding: 0;
+    width: 64px;
+    height: 64px;
+    flex: 0 0 auto;
+  }
+  body.template-product .product-single__thumbnail:first-child,
+  body.template-product .product-single__thumbnail:last-child {
+    padding: 0;
+  }
+  /* rounded-square thumbs that read clearly over the photo */
+  body.template-product .product-single__thumbnail-link {
+    width: 64px !important;
+    height: 64px !important;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.85);
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transition:
+      border-color 0.2s ease,
+      transform 0.2s ease;
+  }
+  body.template-product .product-single__thumbnail-link:hover {
+    transform: scale(1.04);
+  }
+  body.template-product .is-nav-selected .product-single__thumbnail-link {
+    border-color: var(--idiom-olive, #5a5a1e);
+  }
+}
+
 /* idiom PDP — roomier accordion rows (full description / key notes /
    how to wear / full ingredient list) to match the design spacing. */
 body.template-product .accordion__title {

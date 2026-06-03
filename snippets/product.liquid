@@ -304,7 +304,7 @@
 
       {%- comment -%} Product Thumbnails {%- endcomment -%}
       {%- if product.media.size > 1 and hide_product_thumbnails == false -%}
-        <div class="product-single__thumbnails" id="ProductThumbs" data-product-single-media-thumbs>
+        <div class="product-single__thumbnails" id="ProductThumbs" data-product-single-media-thumbs data-idiom-vertical-thumbs>
           {%- comment -%} Show Featured media thumbnail first {%- endcomment -%}
           {%- render 'media-thumb', media: featured_media, featured_media: featured_media, has_link: true, product_title: product.title -%}
 
@@ -365,6 +365,51 @@
   <div class="{{ product_wrapper_class }}{{ product_wrapper_modifiers }}" data-section-id="{{ unique }}" data-product>
     {%- comment -%} Product media {%- endcomment -%}
     {{ product_gallery }}
+
+    {%- comment -%}
+      idiom PDP — drive the main image when the (vertically-stacked, overlaid)
+      thumbnails are clicked. The theme's stock thumb nav relies on Flickity's
+      geometry-based hit-testing, which our vertical CSS layout breaks, so we
+      select the matching slide on the main Flickity slider by index instead.
+    {%- endcomment -%}
+    <script>
+      (function () {
+        var group = document.querySelector('[data-section-id="{{ unique }}"]');
+        if (!group) return;
+        var thumbsEl = group.querySelector('[data-idiom-vertical-thumbs]');
+        var sliderEl = group.querySelector('[data-product-single-media-slider]');
+        if (!thumbsEl || !sliderEl) return;
+
+        function bind() {
+          var thumbs = Array.prototype.slice.call(
+            thumbsEl.querySelectorAll('.product-single__thumbnail')
+          );
+          thumbs.forEach(function (thumb, index) {
+            if (thumb.__idiomBound) return;
+            thumb.__idiomBound = true;
+            thumb.addEventListener('click', function (e) {
+              e.preventDefault();
+              var flkty = window.Flickity && window.Flickity.data(sliderEl);
+              if (flkty && typeof flkty.select === 'function') {
+                flkty.select(index);
+              }
+            });
+          });
+        }
+
+        // Flickity initialises asynchronously; retry briefly until it's ready.
+        var tries = 0;
+        var timer = setInterval(function () {
+          tries++;
+          if ((window.Flickity && window.Flickity.data(sliderEl)) || tries > 40) {
+            bind();
+            if (window.Flickity && window.Flickity.data(sliderEl)) clearInterval(timer);
+            if (tries > 40) clearInterval(timer);
+          }
+        }, 100);
+        bind();
+      })();
+    </script>
 
     {%- comment -%} Product details {%- endcomment -%}
     <div class="product-single__details" data-collapsible-single>
