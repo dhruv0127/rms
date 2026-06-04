@@ -590,6 +590,12 @@ body.template-product .product-gallery .product-gallery__media-slider {
   z-index: 2;
 }
 
+/* idiom PDP — the single desktop image is hidden by default (mobile uses the
+   Flickity slider, unchanged). It is shown only on desktop below. */
+.product-gallery__desktop-image {
+  display: none;
+}
+
 /* slides/images are transparent so the single scene shows through behind the
    bottle, which sits large and centered (matches design proportions). */
 body.template-product .product-gallery__media-slide {
@@ -636,46 +642,42 @@ body.template-product
     max-height: none !important;
   }
 
-  body.template-product .product-gallery,
-  body.template-product .product-gallery .product-gallery__media-slider,
-  body.template-product .product-gallery .flickity-viewport,
-  body.template-product .product-gallery__media-slide {
+  body.template-product .product-gallery {
     height: calc(
       100vh - var(--header-height, 109px) - var(--announcement-height, 31px) -
         24px
     ) !important;
     min-height: 560px;
-  }
-  body.template-product
-    .product-gallery__media-slide
-    .product-gallery__media-space {
-    padding-top: 0 !important;
-  }
-  /* center the bottle in the PAGE, not in the (left-bleeding) scene column.
-     The media wrapper fills the slide (which starts at the viewport's left
-     edge on desktop), so shifting its center from 50% to 50vw lands the
-     bottle on the page's horizontal center. */
-  body.template-product .product-gallery__media--image {
-    position: absolute;
-    inset: 0;
-    height: 100%;
-    transform: translateX(calc(50vw - 50%));
-  }
-  /* the page-centered image extends past the right edge of the scene column;
-     let the slider/viewport overflow so it's never clipped. The background
-     scene stays inside its column (it's inset:0, unaffected by this). */
-  body.template-product .product-gallery,
-  body.template-product .product-gallery .product-gallery__media-slider,
-  body.template-product .product-gallery .flickity-viewport {
     overflow: visible !important;
   }
-  /* with the viewport no longer clipping, hide the off-screen (non-selected)
-     slides so they don't bleed into the overflow area. */
-  body.template-product
-    .product-gallery__media-slide.media--hidden:not(.is-selected) {
-    opacity: 0;
-    visibility: hidden;
+
+  /* DESKTOP: drop the Flickity slider entirely — we show a single image that
+     is swapped on thumbnail click instead. */
+  body.template-product .product-gallery .product-gallery__media-slider {
+    display: none !important;
+  }
+
+  /* the single desktop image: centered on the PAGE (50vw), full height of the
+     scene, contained so it is never cropped or cut by the scene column. */
+  body.template-product .product-gallery__desktop-image {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50vw;
+    transform: translateX(-50%);
+    height: 100%;
+    width: auto;
+    max-width: none;
+    z-index: 3;
     pointer-events: none;
+  }
+  body.template-product .product-gallery__desktop-image img {
+    display: block;
+    height: 100%;
+    width: auto;
+    max-width: none;
+    object-fit: contain;
+    filter: drop-shadow(0 18px 40px rgba(0, 0, 0, 0.35));
   }
 }
 @media only screen and (max-width: 767px) {

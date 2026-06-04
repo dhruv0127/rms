@@ -35,6 +35,14 @@
   capture thumbnail_id
     echo unique | append: '-' | append: media_id
   endcapture
+
+  comment
+    Full-size image URL for the idiom desktop single-image swap (only images).
+  endcomment
+  assign thumb_full_src = ''
+  if media.media_type == 'image'
+    assign thumb_full_src = thumbnail | image_url: width: 1600
+  endif
 -%}
 
 {%- capture additional_icons -%}
@@ -45,7 +53,7 @@
   {%- endif -%}
 {%- endcapture -%}
 
-<div class="product-single__thumbnail" data-id="{{ media_id }}" data-thumbnail-id="{{ thumbnail_id }}">
+<div class="product-single__thumbnail" data-id="{{ media_id }}" data-thumbnail-id="{{ thumbnail_id }}" data-full-src="{{ thumb_full_src }}">
   {%- if has_link -%}
     <a
       href="{{ thumbnail | img_url: '2048x' }}"

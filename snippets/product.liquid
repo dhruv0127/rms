@@ -265,6 +265,14 @@
       {%- endif -%}
       {%- if product.media.size > 0 and section_type != 'quickview' -%}
         <div class="product-gallery__bg-scene" style="background-image: url('{{ pdp_bg_url }}');" aria-hidden="true"></div>
+
+        {%- comment -%} idiom PDP (desktop only) — a single image centered over the
+            scene. Clicking a thumbnail swaps this image's src. The Flickity
+            slider below is hidden on desktop and used only on mobile. {%- endcomment -%}
+        {%- assign pdp_featured_src = featured_media.preview_image | image_url: width: 1600 -%}
+        <div class="product-gallery__desktop-image" data-pdp-desktop-image aria-hidden="true">
+          <img src="{{ pdp_featured_src }}" alt="{{ product.title | strip_html | escape }}" loading="eager" data-pdp-desktop-img>
+        </div>
       {%- endif -%}
 
       <div class="product-gallery__media-slider{% if product.media.size == 1 %} product-gallery__media-slider--single{% endif %}" data-product-single-media-slider>
@@ -377,47 +385,35 @@
     {{ product_gallery }}
 
     {%- comment -%}
-      idiom PDP — drive the main image when the (vertically-stacked, overlaid)
-      thumbnails are clicked. The theme's stock thumb nav relies on Flickity's
-      geometry-based hit-testing, which our vertical CSS layout breaks, so we
-      select the matching slide on the main Flickity slider by index instead.
+      idiom PDP (desktop only) — clicking a thumbnail swaps the single centered
+      desktop image's src. Mobile is untouched: the Flickity slider (hidden on
+      desktop) keeps its native behaviour below 768px.
     {%- endcomment -%}
     <script>
       (function () {
         var group = document.querySelector('[data-section-id="{{ unique }}"]');
         if (!group) return;
         var thumbsEl = group.querySelector('[data-idiom-vertical-thumbs]');
-        var sliderEl = group.querySelector('[data-product-single-media-slider]');
-        if (!thumbsEl || !sliderEl) return;
+        var imgEl = group.querySelector('[data-pdp-desktop-img]');
+        if (!thumbsEl || !imgEl) return;
 
-        function bind() {
-          var thumbs = Array.prototype.slice.call(
-            thumbsEl.querySelectorAll('.product-single__thumbnail')
-          );
-          thumbs.forEach(function (thumb, index) {
-            if (thumb.__idiomBound) return;
-            thumb.__idiomBound = true;
-            thumb.addEventListener('click', function (e) {
-              e.preventDefault();
-              var flkty = window.Flickity && window.Flickity.data(sliderEl);
-              if (flkty && typeof flkty.select === 'function') {
-                flkty.select(index);
-              }
-            });
-          });
-        }
+        var DESKTOP = '(min-width: 768px)';
 
-        // Flickity initialises asynchronously; retry briefly until it's ready.
-        var tries = 0;
-        var timer = setInterval(function () {
-          tries++;
-          if ((window.Flickity && window.Flickity.data(sliderEl)) || tries > 40) {
-            bind();
-            if (window.Flickity && window.Flickity.data(sliderEl)) clearInterval(timer);
-            if (tries > 40) clearInterval(timer);
-          }
-        }, 100);
-        bind();
+        thumbsEl.addEventListener('click', function (e) {
+          // only intercept on desktop, where the single image is shown
+          if (!window.matchMedia(DESKTOP).matches) return;
+          var thumb = e.target.closest('.product-single__thumbnail');
+          if (!thumb || !thumbsEl.contains(thumb)) return;
+          var src = thumb.getAttribute('data-full-src');
+          if (!src) return; // non-image media (video/model) — let it be
+          e.preventDefault();
+          imgEl.setAttribute('src', src);
+          // reflect selection state on the thumbnails
+          thumbsEl
+            .querySelectorAll('.product-single__thumbnail.is-nav-selected')
+            .forEach(function (t) { t.classList.remove('is-nav-selected'); });
+          thumb.classList.add('is-nav-selected');
+        });
       })();
     </script>
 
