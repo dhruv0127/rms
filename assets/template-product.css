@@ -683,8 +683,8 @@ body.template-product
 @media only screen and (max-width: 767px) {
   body.template-product .product-gallery__media--image .lazy-image,
   body.template-product .product-gallery__media--image img {
-    width: 80%;
-    max-width: 80%;
+    width: 100%;
+    max-width: 100%;
   }
   .product-gallery__bg-scene {
     background-image: none !important;
