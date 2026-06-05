@@ -38,7 +38,7 @@
     "product_grid_hover": "image",
     "product_grid_hover_animation": "fade-in",
     "cutline_color": "body",
-    "show_product_gray_bg": true,
+    "show_product_gray_bg": false,
     "variants_style": "boxes",
     "show_variant_image": false,
     "variant_image_style": "stacked",
