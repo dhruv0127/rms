@@ -622,7 +622,7 @@ body.template-product .product-gallery__media--image img {
   object-fit: contain;
 }
 body.template-product .product-gallery__media--image img {
-  filter: drop-shadow(0 18px 40px rgba(0, 0, 0, 0.35));
+  filter: none;
 }
 
 /* Tall portrait frame for each slide so the bottle centers over the scene. */
@@ -680,7 +680,7 @@ body.template-product
     width: auto;
     max-width: none;
     object-fit: contain;
-    filter: drop-shadow(0 18px 40px rgba(0, 0, 0, 0.35));
+    filter: none;
   }
 }
 @media only screen and (max-width: 767px) {
