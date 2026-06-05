@@ -377,7 +377,7 @@ body.template-product {
 }
 
 body.template-product .product-single__details h2 {
-  font-size: 43px;
+  font-size: 28px;
   line-height: 1.05;
   margin-bottom: 0;
   text-transform: uppercase;
@@ -397,6 +397,9 @@ body.template-product .product-single__details h2 {
 
 /* idiom PDP form — variant buttons + ATC on same row */
 @media only screen and (min-width: 768px) {
+  body.template-product .product-single__details h2 {
+    font-size: 43px;
+  }
   body.template-product .product__form {
     display: flex;
     flex-wrap: nowrap;
