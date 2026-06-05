@@ -131,6 +131,16 @@
   overflow: hidden;
 }
 
+/* idiom PDP — an `overflow: hidden` ancestor disables `position: sticky` on the
+   gallery. Allow horizontal clipping (full-bleed scene) but not vertical, so
+   the gallery can stick on desktop. */
+@media only screen and (min-width: 768px) {
+  body.template-product .product-single {
+    overflow-x: clip;
+    overflow-y: visible;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .product-single .form__wrapper.is-sticky {
     position: sticky;
@@ -170,18 +180,26 @@
   }
 }
 
-/* idiom PDP — vertically center the gallery against the details column and
-   widen the gap between the image and the product info. */
+/* idiom PDP — top-align the columns and widen the gap between the image and
+   the product info. Top alignment lets the left gallery stick while the
+   right details column scrolls (sticky needs a taller grid track to travel). */
 @media only screen and (min-width: 768px) {
   body.template-product .product-single__wrapper {
-    --pdp-col-gap: 96px;
-    align-items: center;
+    --pdp-col-gap: 146px;
+    align-items: start;
     column-gap: var(--pdp-col-gap);
   }
   body.template-product .product-single__wrapper--large {
-    grid-template-columns: calc(60% - var(--pdp-col-gap) / 2) calc(
-        40% - var(--pdp-col-gap) / 2
+    grid-template-columns: calc(55% - var(--pdp-col-gap) / 2) calc(
+        45% - var(--pdp-col-gap) / 2
       );
+  }
+
+  /* idiom PDP — pin the gallery column while the details scroll. */
+  body.template-product .product-gallery {
+    position: sticky;
+    align-self: start;
+    top: calc(var(--header-height, 109px) + 12px);
   }
 }
 
