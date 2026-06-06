@@ -55,10 +55,14 @@
 .idiom-layering__divider { border: none; border-top: 1px solid rgba(255,255,255,0.4); margin: 14px 0 12px; }
 .idiom-layering__subtext { color: rgba(255,255,255,0.85); font-size: 12px; margin: 0 0 24px; }
 .idiom-layering__fine { color: rgba(255,255,255); font-size: 12px; margin: 0; }
-.idiom-layering__products { flex: 1 1 0; overflow: visible; }
+/* Bleed the slider past the section's right padding so cards scroll off the
+   edge seamlessly (no right gutter). */
+.idiom-layering__products { flex: 1 1 0; overflow: visible; margin-right: -48px; }
 .idiom-layering__scroll { display: flex; gap: 20px; overflow-x: auto; overflow-y: visible; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
 .idiom-layering__scroll::-webkit-scrollbar { display: none; }
-.idiom-layering__scroll .idiom-product-card-link { flex: 0 0 280px; width: 280px; }
+/* Show 2.5 cards in the scroll area (2 full + a peek of the 3rd). The 20px gap
+   appears 2× across 2.5 visible cards, so subtract 2 gaps then divide by 2.5. */
+.idiom-layering__scroll .idiom-product-card-link { flex: 0 0 calc((100% - 40px) / 2.5); width: calc((100% - 40px) / 2.5); }
 
 @media (max-width: 768px) {
   .idiom-layering-wrap { margin: 12px 0 0 0; border-radius: 16px; }
@@ -70,7 +74,7 @@
   }
   .idiom-layering { flex-direction: column; padding: 32px 20px; gap: 24px; }
   .idiom-layering__text { flex: none; width: 100%; }
-  .idiom-layering__products { width: 100%; }
+  .idiom-layering__products { width: 100%; margin-right: -20px; }
   .idiom-layering__scroll .idiom-product-card-link { flex: 0 0 58%; width: 58%; }
   .idiom-layering__text br {
     display: none;
