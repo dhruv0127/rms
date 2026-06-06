@@ -67,6 +67,15 @@
     position: relative;
   }
 
+  /* While the mega menu is open, let the cursor pass through the trust bar to
+     the dropdown beneath it. Otherwise moving from "Shop" down into the menu
+     crosses this bar — which is not part of the nav item — and the hover
+     disclosure closes the menu. */
+  .megamenu-opened .idiom-trust-bar,
+  .megamenu-opened .idiom-trust-bar--marquee {
+    pointer-events: none;
+  }
+
   .idiom-trust-bar::before {
     content: '';
     position: absolute;
