@@ -520,7 +520,6 @@ body.template-product .product__submit__add .product__price--regular::before {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding-bottom: 8px;
 }
 .idiom-pdp-stars__icons {
   color: #f5a623;
@@ -733,6 +732,9 @@ body.template-product
 /* idiom PDP — overlay the thumbnails as a vertical column on the left edge
    of the background scene (desktop only). On mobile they stay a bottom row. */
 @media only screen and (min-width: 768px) {
+  .idiom-pdp-stars {
+    padding-bottom: 8px;
+  }
   body.template-product .product-gallery {
     /* the scene bleeds to the viewport's left edge; offset thumbs from it */
     --pdp-thumb-inset-left: 24px;
