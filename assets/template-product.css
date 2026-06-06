@@ -417,6 +417,15 @@ body.template-product .product-single__details h2 {
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
+/* idiom PDP — mobile: remove the bottom margin under the "WOODY. FRESH.
+   CREAMY." tagline (inline-styled custom_code paragraph). Overrides the inline
+   margin, so !important is required. */
+@media only screen and (max-width: 767px) {
+  body.template-product .product-single__details p[style*="border-bottom"] {
+    margin-bottom: 0 !important;
+  }
+}
+
 /* idiom PDP form — variant buttons + ATC on same row */
 @media only screen and (min-width: 768px) {
   body.template-product .product-single__details h2 {

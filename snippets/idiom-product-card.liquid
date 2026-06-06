@@ -64,22 +64,15 @@
   <div class="idiom-product-card-wrap">
     <div class="idiom-product-card">
       <div class="idiom-product-card__inner">
-        {%- if override_image != blank -%}
-          <img src="{{ override_image | image_url: width: 800 }}"
-               alt="{{ product.title }}" class="idiom-product-card__bg" loading="lazy">
-        {%- elsif product.metafields.custom.card_background_image != blank -%}
-          <img src="{{ product.metafields.custom.card_background_image | image_url: width: 600 }}"
-               alt="{{ product.title }}" class="idiom-product-card__bg" loading="lazy">
-        {%- elsif product.featured_image -%}
-          <img src="{{ product.featured_image | image_url: width: 600 }}"
+        {%- comment -%} The card image is a single all-in-one image. Use the
+          custom.card_background_image metafield if set, otherwise the product's
+          first image. (override_image lets a section pin a specific image.) {%- endcomment -%}
+        {%- assign card_image = override_image | default: product.metafields.custom.card_background_image | default: product.featured_image -%}
+        {%- if card_image != blank -%}
+          <img src="{{ card_image | image_url: width: 800 }}"
                alt="{{ product.title }}" class="idiom-product-card__bg" loading="lazy">
         {%- endif -%}
       </div>
-
-      {%- if override_image == blank and product.metafields.custom.card_background_image != blank and product.featured_image -%}
-        <img src="{{ product.featured_image | image_url: width: 400 }}"
-             alt="{{ product.title }}" class="idiom-product-card__bottle" loading="lazy">
-      {%- endif -%}
 
       {%- if product.metafields.custom.personality_tag != blank -%}
         <span class="idiom-tag">{{ product.metafields.custom.personality_tag }}</span>
