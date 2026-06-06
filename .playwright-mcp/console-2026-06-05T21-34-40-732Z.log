@@ -1,0 +1,163 @@
+[     516ms] [ERROR] Access to fetch at 'https://idiom-london.myshopify.com/api/collect' from origin 'http://127.0.0.1:9292' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:9292/:0
+[     516ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://idiom-london.myshopify.com/api/collect:0
+[    1005ms] [ERROR] [HotReload] Connection closed by the server, attempting to reconnect... @ http://127.0.0.1:9292/:1836
+[    1016ms] [LOG] AZ: Google Font & Custom Fonts v1.0.3 @ http://127.0.0.1:9292/:812
+[    1041ms] [WARNING] Error in section: template--28721600659833__section-banner-image @ http://127.0.0.1:9292/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:8
+[    1041ms] [WARNING] T @ http://127.0.0.1:9292/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:8
+[    1041ms] [WARNING] TypeError: Cannot read properties of null (reading 'querySelectorAll')
+    at Object.handleImageAnimation (http://127.0.0.1:9292/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:9:241921)
+    at Object.init (http://127.0.0.1:9292/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:9:241470)
+    at new <anonymous> (http://127.0.0.1:9292/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:9:242446)
+    at Object.onLoad (http://127.0.0.1:9292/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:9:241445)
+    at http://127.0.0.1:9292/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:9:3081
+    at Array.forEach (<anonymous>)
+    at T.callFunctions (http://127.0.0.1:9292/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:9:2991)
+    at T.onLoad (http://127.0.0.1:9292/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:9:3106)
+    at new T (http://127.0.0.1:9292/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:9:3866)
+    at http://127.0.0.1:9292/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:9:4620 @ http://127.0.0.1:9292/cdn/shop/t/8/assets/theme.js?v=34326308044882033111779072700:8
+[    1048ms] [INFO] [HotReload] Connected @ http://127.0.0.1:9292/:1835
+[    1048ms] [INFO] [HotReload] Event data: {type: open, pid: 24186} @ http://127.0.0.1:9292/:1841
+[    1308ms] [ERROR] Access to fetch at 'https://idiom-london.myshopify.com/api/collect' from origin 'http://127.0.0.1:9292' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:9292/:0
+[    1308ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://idiom-london.myshopify.com/api/collect:0
+[    1423ms] [ERROR] Access to resource at 'http://127.0.0.1:9292/__hot-reload/subscribe' from origin 'null' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:9292/web-pixels@a9664f44w6a62cec8p04af10e4mb91e3447/custom/web-pixel-shopify-custom-pixel@0460/sandbox/modern/:0
+[    1423ms] [ERROR] [HotReload] Connection closed by the server, attempting to reconnect... @ http://127.0.0.1:9292/web-pixels@a9664f44w6a62cec8p04af10e4mb91e3447/custom/web-pixel-shopify-custom-pixel@0460/sandbox/modern/:74
+[    1423ms] [ERROR] Failed to load resource: net::ERR_FAILED @ http://127.0.0.1:9292/__hot-reload/subscribe:0
+[    1524ms] [INFO] [HotReload] Connected @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:299
+[    1842ms] [ERROR] [HotReload] Connection closed by the server, attempting to reconnect... @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:304
+[    2588ms] [ERROR] Access to fetch at 'https://idiom-london.myshopify.com/api/collect' from origin 'http://127.0.0.1:9292' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:9292/:0
+[    2588ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://idiom-london.myshopify.com/api/collect:0
+[    4862ms] [ERROR] Access to fetch at 'https://idiom-london.myshopify.com/api/collect' from origin 'http://127.0.0.1:9292' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:9292/:0
+[    4863ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://idiom-london.myshopify.com/api/collect:0
+[    5195ms] [INFO] [HotReload] Connected @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:299
+[    5355ms] [ERROR] [HotReload] Connection closed by the server, attempting to reconnect... @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:304
+[    6051ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3119
+[    6052ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3119
+[    6053ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :2752
+[    6652ms] [ERROR] Access to fetch at 'https://idiom-london.myshopify.com/api/collect' from origin 'http://127.0.0.1:9292' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:9292/:0
+[    6652ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://idiom-london.myshopify.com/api/collect:0
+[    8773ms] [INFO] [HotReload] Connected @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:299
+[    9020ms] [ERROR] [HotReload] Connection closed by the server, attempting to reconnect... @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:304
+[    9146ms] [ERROR] Access to fetch at 'https://idiom-london.myshopify.com/api/collect' from origin 'http://127.0.0.1:9292' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:9292/:0
+[    9146ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://idiom-london.myshopify.com/api/collect:0
+[   11948ms] [ERROR] Access to fetch at 'https://idiom-london.myshopify.com/api/collect' from origin 'http://127.0.0.1:9292' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:9292/:0
+[   11948ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://idiom-london.myshopify.com/api/collect:0
+[   12422ms] [INFO] [HotReload] Connected @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:299
+[   12682ms] [ERROR] [HotReload] Connection closed by the server, attempting to reconnect... @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:304
+[   16104ms] [INFO] [HotReload] Connected @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:299
+[   16335ms] [ERROR] [HotReload] Connection closed by the server, attempting to reconnect... @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:304
+[   17111ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3119
+[   17113ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3119
+[   17230ms] [ERROR] Access to fetch at 'https://idiom-london.myshopify.com/api/collect' from origin 'http://127.0.0.1:9292' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:9292/:0
+[   17230ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://idiom-london.myshopify.com/api/collect:0
+[   19779ms] [INFO] [HotReload] Connected @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:299
+[   19780ms] [ERROR] [HotReload] Connection closed by the server, attempting to reconnect... @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:304
+[   22523ms] [ERROR] Access to fetch at 'https://idiom-london.myshopify.com/api/collect' from origin 'http://127.0.0.1:9292' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:9292/:0
+[   22523ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://idiom-london.myshopify.com/api/collect:0
+[   23104ms] [INFO] [HotReload] Connected @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:299
+[   23267ms] [ERROR] [HotReload] Connection closed by the server, attempting to reconnect... @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:304
+[   26614ms] [INFO] [HotReload] Connected @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:299
+[   26770ms] [ERROR] [HotReload] Connection closed by the server, attempting to reconnect... @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:304
+[   27803ms] [ERROR] Access to fetch at 'https://idiom-london.myshopify.com/api/collect' from origin 'http://127.0.0.1:9292' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:9292/:0
+[   27804ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://idiom-london.myshopify.com/api/collect:0
+[   30111ms] [INFO] [HotReload] Connected @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:299
+[   30120ms] [ERROR] [HotReload] Connection closed by the server, attempting to reconnect... @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:304
+[   31108ms] [ERROR] Failed to load resource: net::ERR_TIMED_OUT @ https://shop.app/checkouts/internal/preloads.js?locale=en-GB&shop_id=91491172729:0
+[   33143ms] [ERROR] Access to fetch at 'https://idiom-london.myshopify.com/api/collect' from origin 'http://127.0.0.1:9292' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:9292/:0
+[   33143ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://idiom-london.myshopify.com/api/collect:0
+[   33445ms] [INFO] [HotReload] Connected @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:299
+[   33769ms] [ERROR] [HotReload] Connection closed by the server, attempting to reconnect... @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:304
+[   36771ms] [WARNING] The resource http://127.0.0.1:9292/cdn/shop/t/8/assets/loading.svg?v=91665432863842511931779072698 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://127.0.0.1:9292/:0
+[   36771ms] [WARNING] The resource http://127.0.0.1:9292/cdn/shop/files/idiom_logo_black_150x45.png?v=1746711320 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://127.0.0.1:9292/:0
+[   37110ms] [INFO] [HotReload] Connected @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:299
+[   37444ms] [ERROR] [HotReload] Connection closed by the server, attempting to reconnect... @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:304
+[   38418ms] [ERROR] Access to fetch at 'https://idiom-london.myshopify.com/api/collect' from origin 'http://127.0.0.1:9292' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:9292/:0
+[   38418ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://idiom-london.myshopify.com/api/collect:0
+[   39424ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3119
+[   39426ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3119
+[   40766ms] [INFO] [HotReload] Connected @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:299
+[   40772ms] [ERROR] [HotReload] Connection closed by the server, attempting to reconnect... @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:304
+[   43695ms] [ERROR] Access to fetch at 'https://idiom-london.myshopify.com/api/collect' from origin 'http://127.0.0.1:9292' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:9292/:0
+[   43695ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://idiom-london.myshopify.com/api/collect:0
+[   44106ms] [INFO] [HotReload] Connected @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:299
+[   44113ms] [ERROR] [HotReload] Connection closed by the server, attempting to reconnect... @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:304
+[   47114ms] [WARNING] The resource http://127.0.0.1:9292/cdn/shop/t/8/assets/loading.svg?v=91665432863842511931779072698 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://127.0.0.1:9292/:0
+[   47114ms] [WARNING] The resource http://127.0.0.1:9292/cdn/shop/files/idiom_logo_black_150x45.png?v=1746711320 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://127.0.0.1:9292/:0
+[   47444ms] [INFO] [HotReload] Connected @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:299
+[   47759ms] [ERROR] [HotReload] Connection closed by the server, attempting to reconnect... @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:304
+[   48980ms] [ERROR] Access to fetch at 'https://idiom-london.myshopify.com/api/collect' from origin 'http://127.0.0.1:9292' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:9292/:0
+[   48980ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://idiom-london.myshopify.com/api/collect:0
+[   51085ms] [INFO] [HotReload] Connected @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:299
+[   51246ms] [ERROR] [HotReload] Connection closed by the server, attempting to reconnect... @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:304
+[   54247ms] [WARNING] The resource http://127.0.0.1:9292/cdn/shop/t/8/assets/loading.svg?v=91665432863842511931779072698 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://127.0.0.1:9292/:0
+[   54247ms] [WARNING] The resource http://127.0.0.1:9292/cdn/shop/files/idiom_logo_black_150x45.png?v=1746711320 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://127.0.0.1:9292/:0
+[   54270ms] [ERROR] Access to fetch at 'https://idiom-london.myshopify.com/api/collect' from origin 'http://127.0.0.1:9292' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:9292/:0
+[   54270ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://idiom-london.myshopify.com/api/collect:0
+[   54582ms] [INFO] [HotReload] Connected @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:299
+[   54914ms] [ERROR] [HotReload] Connection closed by the server, attempting to reconnect... @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:304
+[   57916ms] [WARNING] The resource http://127.0.0.1:9292/cdn/shop/t/8/assets/loading.svg?v=91665432863842511931779072698 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://127.0.0.1:9292/:0
+[   57916ms] [WARNING] The resource http://127.0.0.1:9292/cdn/shop/files/idiom_logo_black_150x45.png?v=1746711320 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://127.0.0.1:9292/:0
+[   58252ms] [INFO] [HotReload] Connected @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:299
+[   58578ms] [ERROR] [HotReload] Connection closed by the server, attempting to reconnect... @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:304
+[   59607ms] [ERROR] Access to fetch at 'https://idiom-london.myshopify.com/api/collect' from origin 'http://127.0.0.1:9292' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:9292/:0
+[   59607ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://idiom-london.myshopify.com/api/collect:0
+[   61897ms] [INFO] [HotReload] Connected @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:299
+[   61903ms] [ERROR] [HotReload] Connection closed by the server, attempting to reconnect... @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:304
+[   62794ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3119
+[   62795ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3119
+[   62796ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :2752
+[   64885ms] [ERROR] Access to fetch at 'https://idiom-london.myshopify.com/api/collect' from origin 'http://127.0.0.1:9292' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:9292/:0
+[   64885ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://idiom-london.myshopify.com/api/collect:0
+[   65221ms] [INFO] [HotReload] Connected @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:299
+[   65227ms] [ERROR] [HotReload] Connection closed by the server, attempting to reconnect... @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:304
+[   68229ms] [WARNING] The resource http://127.0.0.1:9292/cdn/shop/t/8/assets/loading.svg?v=91665432863842511931779072698 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://127.0.0.1:9292/:0
+[   68229ms] [WARNING] The resource http://127.0.0.1:9292/cdn/shop/files/idiom_logo_black_150x45.png?v=1746711320 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://127.0.0.1:9292/:0
+[   68563ms] [INFO] [HotReload] Connected @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:299
+[   68568ms] [ERROR] [HotReload] Connection closed by the server, attempting to reconnect... @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:304
+[   70164ms] [ERROR] Access to fetch at 'https://idiom-london.myshopify.com/api/collect' from origin 'http://127.0.0.1:9292' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:9292/:0
+[   70165ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://idiom-london.myshopify.com/api/collect:0
+[   71914ms] [INFO] [HotReload] Connected @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:299
+[   72236ms] [ERROR] [HotReload] Connection closed by the server, attempting to reconnect... @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:304
+[   72922ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3119
+[   72925ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3119
+[   72928ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :2752
+[   75237ms] [WARNING] The resource http://127.0.0.1:9292/cdn/shop/t/8/assets/loading.svg?v=91665432863842511931779072698 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://127.0.0.1:9292/:0
+[   75237ms] [WARNING] The resource http://127.0.0.1:9292/cdn/shop/files/idiom_logo_black_150x45.png?v=1746711320 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://127.0.0.1:9292/:0
+[   75449ms] [ERROR] Access to fetch at 'https://idiom-london.myshopify.com/api/collect' from origin 'http://127.0.0.1:9292' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:9292/:0
+[   75449ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://idiom-london.myshopify.com/api/collect:0
+[   75565ms] [INFO] [HotReload] Connected @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:299
+[   75883ms] [ERROR] [HotReload] Connection closed by the server, attempting to reconnect... @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:304
+[   78883ms] [WARNING] The resource http://127.0.0.1:9292/cdn/shop/t/8/assets/loading.svg?v=91665432863842511931779072698 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://127.0.0.1:9292/:0
+[   78883ms] [WARNING] The resource http://127.0.0.1:9292/cdn/shop/files/idiom_logo_black_150x45.png?v=1746711320 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://127.0.0.1:9292/:0
+[   79206ms] [INFO] [HotReload] Connected @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:299
+[   79370ms] [ERROR] [HotReload] Connection closed by the server, attempting to reconnect... @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:304
+[   80759ms] [ERROR] Access to fetch at 'https://idiom-london.myshopify.com/api/collect' from origin 'http://127.0.0.1:9292' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:9292/:0
+[   80760ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://idiom-london.myshopify.com/api/collect:0
+[   82709ms] [INFO] [HotReload] Connected @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:299
+[   83039ms] [ERROR] [HotReload] Connection closed by the server, attempting to reconnect... @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:304
+[   86040ms] [WARNING] The resource http://127.0.0.1:9292/cdn/shop/t/8/assets/loading.svg?v=91665432863842511931779072698 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://127.0.0.1:9292/:0
+[   86040ms] [WARNING] The resource http://127.0.0.1:9292/cdn/shop/files/idiom_logo_black_150x45.png?v=1746711320 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://127.0.0.1:9292/:0
+[   86095ms] [ERROR] Access to fetch at 'https://idiom-london.myshopify.com/api/collect' from origin 'http://127.0.0.1:9292' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:9292/:0
+[   86095ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://idiom-london.myshopify.com/api/collect:0
+[   86358ms] [INFO] [HotReload] Connected @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:299
+[   86365ms] [ERROR] [HotReload] Connection closed by the server, attempting to reconnect... @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:304
+[   88923ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3119
+[   88925ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3119
+[   88926ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :2752
+[   89691ms] [INFO] [HotReload] Connected @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:299
+[   89698ms] [ERROR] [HotReload] Connection closed by the server, attempting to reconnect... @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:304
+[   91383ms] [ERROR] Access to fetch at 'https://idiom-london.myshopify.com/api/collect' from origin 'http://127.0.0.1:9292' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:9292/:0
+[   91383ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://idiom-london.myshopify.com/api/collect:0
+[   93015ms] [INFO] [HotReload] Connected @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:299
+[   93165ms] [ERROR] [HotReload] Connection closed by the server, attempting to reconnect... @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:304
+[   96166ms] [WARNING] The resource http://127.0.0.1:9292/cdn/shop/t/8/assets/loading.svg?v=91665432863842511931779072698 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://127.0.0.1:9292/:0
+[   96166ms] [WARNING] The resource http://127.0.0.1:9292/cdn/shop/files/idiom_logo_black_150x45.png?v=1746711320 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://127.0.0.1:9292/:0
+[   96504ms] [INFO] [HotReload] Connected @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:299
+[   96660ms] [ERROR] Access to fetch at 'https://idiom-london.myshopify.com/api/collect' from origin 'http://127.0.0.1:9292' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:9292/:0
+[   96660ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://idiom-london.myshopify.com/api/collect:0
+[   96834ms] [ERROR] [HotReload] Connection closed by the server, attempting to reconnect... @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:304
+[   99836ms] [WARNING] The resource http://127.0.0.1:9292/cdn/shop/t/8/assets/loading.svg?v=91665432863842511931779072698 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://127.0.0.1:9292/:0
+[   99836ms] [WARNING] The resource http://127.0.0.1:9292/cdn/shop/files/idiom_logo_black_150x45.png?v=1746711320 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://127.0.0.1:9292/:0
+[  100218ms] [INFO] [HotReload] Connected @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:299
+[  100525ms] [ERROR] [HotReload] Connection closed by the server, attempting to reconnect... @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:304
+[  101944ms] [ERROR] Access to fetch at 'https://idiom-london.myshopify.com/api/collect' from origin 'http://127.0.0.1:9292' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:9292/:0
+[  101944ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://idiom-london.myshopify.com/api/collect:0

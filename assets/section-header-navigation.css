@@ -586,6 +586,19 @@
   left: 0;
   z-index: -1;
 }
+/* idiom — when the mega menu is open, lift it above the page content (e.g. the
+   homepage three-section banner) so the cursor can travel from "Shop" into the
+   dropdown without the section below stealing the hover and closing it. */
+.grandparent.is-visible .header__dropdown {
+  z-index: 13;
+}
+/* The invisible hover bridge between the trigger and the dropdown must also sit
+   above page content, or the cursor crossing the gap lands on the banner and
+   the menu collapses. */
+.grandparent.is-visible .header__dropdown::after {
+  z-index: 13;
+  pointer-events: auto;
+}
 .site-header--has-border .grandparent .header__dropdown::before {
   content: "";
   position: absolute;

@@ -8,7 +8,11 @@
   #SectionBannerImage--{{ section.id }} .idiom-hero {
     position: relative;
     width: 100%;
-    min-height: 80vh;
+    /* Fill the screen below the header, leaving ~64px so the green section's
+       top scroller line peeks above the fold. */
+    min-height: calc(
+      100vh - var(--header-height, 109px) - var(--announcement-height, 31px) - 64px
+    );
     overflow: hidden;
     background: #fffbf3;
     padding: 0 16px;
@@ -105,7 +109,11 @@
       border-radius: 12px;
     }
     #SectionBannerImage--{{ section.id }} .idiom-hero {
-      min-height: 90vw;
+      /* Fill the screen below the header, leaving ~52px so the green section's
+         top scroller line peeks above the fold. */
+      min-height: calc(
+        100vh - var(--header-height, 64px) - var(--announcement-height, 0px) - 52px
+      );
       border-radius: 12px;
       margin-top: 12px;
     }
@@ -116,7 +124,7 @@
     }
 
     #SectionBannerImage--{{ section.id }} .idiom-hero__heading {
-      font-size: 16px;
+      font-size: 28px;
     }
 
     #SectionBannerImage--{{ section.id }} .idiom-hero__subtext {

@@ -71,7 +71,7 @@
 .idiom-brand-story__grid-transition {
   background: var(--idiom-cream);
   text-align: center;
-  padding: 96px 48px 0;
+  padding: 96px 24px 0;
 }
 
 .idiom-brand-story__grid-heading {
@@ -115,7 +115,7 @@
   }
 
   .idiom-brand-story__grid-heading {
-    font-size: 16px;
+    font-size: 22px;
     margin-bottom: 4px;
   }
 
@@ -146,7 +146,7 @@
     </button>
   </div>
 
-  <div class="idiom-product-cards-slider" id="idiom-slider-{{ section.id }}" style="padding-left: 24px; padding-top: 16px;"
+  <div class="idiom-product-cards-slider" id="idiom-slider-{{ section.id }}" style="padding-left: 24px; padding-right: 24px; padding-top: 16px;"
     data-flickity='{"cellAlign":"left","contain":true,"pageDots":false,"prevNextButtons":false,"draggable":true,"wrapAround":false,"adaptiveHeight":false}'>
     {%- if section.blocks.size > 0 -%}
       {%- for block in section.blocks -%}

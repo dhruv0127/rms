@@ -148,6 +148,8 @@
   }
   .shopify-section.shopify-section--product {
     padding-bottom: 34px;
+    /* idiom PDP — no gap above the gallery; image is flush to the page top */
+    padding-top: 0;
   }
 }
 
@@ -195,11 +197,13 @@
       );
   }
 
-  /* idiom PDP — pin the gallery column while the details scroll. */
+  /* idiom PDP — pin the gallery column while the details scroll. Flush to
+     just below the sticky header (no extra gap) so the image reads as
+     top-aligned to the page. */
   body.template-product .product-gallery {
     position: sticky;
     align-self: start;
-    top: calc(var(--header-height, 109px) + 12px);
+    top: var(--header-height, 109px);
   }
 }
 
@@ -395,7 +399,7 @@ body.template-product {
 }
 
 body.template-product .product-single__details h2 {
-  font-size: 28px;
+  font-size: 22px;
   line-height: 1.05;
   margin-bottom: 0;
   text-transform: uppercase;
@@ -416,7 +420,7 @@ body.template-product .product-single__details h2 {
 /* idiom PDP form — variant buttons + ATC on same row */
 @media only screen and (min-width: 768px) {
   body.template-product .product-single__details h2 {
-    font-size: 43px;
+    font-size: 34px;
   }
   body.template-product .product__form {
     display: flex;
@@ -554,16 +558,16 @@ body.template-product .product__submit__add .product__price--regular::before {
   display: none;
 }
 .idiom-first-impressions__img-wrap {
-  width: 130px;
-  height: 130px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   overflow: hidden;
   flex-shrink: 0;
 }
 @media (max-width: 480px) {
   .idiom-first-impressions__img-wrap {
-    width: 90px;
-    height: 90px;
+    width: 76px;
+    height: 76px;
   }
 }
 .idiom-first-impressions__img-wrap img {
@@ -665,8 +669,7 @@ body.template-product
 
   body.template-product .product-gallery {
     height: calc(
-      100vh - var(--header-height, 109px) - var(--announcement-height, 31px) -
-        24px
+      100vh - var(--header-height, 109px) - var(--announcement-height, 31px)
     ) !important;
     min-height: 560px;
     overflow: visible !important;
@@ -709,6 +712,13 @@ body.template-product
   }
   .product-gallery__bg-scene {
     background-image: none !important;
+  }
+  /* idiom PDP mobile — shrink the image slider; the tall 125% portrait frame
+     made it dominate the screen. A shorter frame keeps the bottle compact. */
+  body.template-product
+    .product-gallery__media-slide
+    .product-gallery__media-space {
+    padding-top: 78% !important;
   }
 }
 
@@ -791,8 +801,8 @@ body.template-product
   }
   body.template-product .product-single__thumbnail {
     padding: 0;
-    width: 64px;
-    height: 64px;
+    width: 48px;
+    height: 48px;
     flex: 0 0 auto;
   }
   body.template-product .product-single__thumbnail:first-child,
@@ -801,9 +811,9 @@ body.template-product
   }
   /* rounded-square thumbs that read clearly over the photo */
   body.template-product .product-single__thumbnail-link {
-    width: 64px !important;
-    height: 64px !important;
-    border-radius: 10px;
+    width: 48px !important;
+    height: 48px !important;
+    border-radius: 8px;
     overflow: hidden;
     border: 2px solid rgba(255, 255, 255, 0.85);
     background-color: rgba(255, 255, 255, 0.6);
@@ -823,12 +833,12 @@ body.template-product
 /* idiom PDP — roomier accordion rows (full description / key notes /
    how to wear / full ingredient list) to match the design spacing. */
 body.template-product .accordion__title {
-  padding-top: 22px;
-  padding-bottom: 22px;
+  padding-top: 14px;
+  padding-bottom: 14px;
 }
 @media only screen and (min-width: 768px) {
   body.template-product .accordion__title {
-    padding-top: 26px;
-    padding-bottom: 26px;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 }

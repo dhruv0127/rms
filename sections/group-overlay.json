@@ -29,7 +29,7 @@
         }
       },
       "block_order": ["popup-0"],
-      "disabled": true,
+      "disabled": false,
       "settings": {}
     }
   },

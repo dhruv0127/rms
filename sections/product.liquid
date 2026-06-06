@@ -46,6 +46,121 @@
   </div>
 </section>
 
+{%- comment -%} idiom PDP — mobile sticky add-to-bag bar. Proxies a click to the
+  real in-page ATC button so variant selection / cart logic is reused. {%- endcomment -%}
+<style>
+  .idiom-sticky-atc { display: none; }
+  @media only screen and (max-width: 767px) {
+    .idiom-sticky-atc {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 70;
+      padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+      background: #fffbf3;
+      box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.12);
+      transform: translateY(110%);
+      transition: transform 0.25s ease;
+    }
+    .idiom-sticky-atc.is-visible {
+      transform: translateY(0);
+    }
+    .idiom-sticky-atc__info {
+      flex: 0 0 auto;
+      min-width: 0;
+      line-height: 1.1;
+    }
+    .idiom-sticky-atc__title {
+      display: block;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 38vw;
+    }
+    .idiom-sticky-atc__price {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .idiom-sticky-atc__btn {
+      flex: 1 1 auto;
+      min-height: 48px;
+      border: none;
+      border-radius: 26px;
+      background: var(--idiom-olive, #5a5a1e);
+      color: #fff;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: lowercase;
+      cursor: pointer;
+    }
+    .idiom-sticky-atc__btn[disabled] {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+</style>
+
+<div class="idiom-sticky-atc" data-sticky-atc aria-hidden="true">
+  <span class="idiom-sticky-atc__info">
+    <span class="idiom-sticky-atc__title">{{ product.title }}</span>
+    <span class="idiom-sticky-atc__price" data-sticky-atc-price>{{ product.selected_or_first_available_variant.price | money }}</span>
+  </span>
+  <button type="button" class="idiom-sticky-atc__btn" data-sticky-atc-btn>add to bag</button>
+</div>
+
+<script>
+(function () {
+  var section = document.getElementById('{{ section_id }}');
+  var bar = document.querySelector('[data-sticky-atc]');
+  if (!section || !bar) return;
+
+  var realForm = section.querySelector('[data-product-form]');
+  var btn = bar.querySelector('[data-sticky-atc-btn]');
+  var priceEl = bar.querySelector('[data-sticky-atc-price]');
+
+  // Tapping the sticky bar fires the real ATC button (keeps cart/variant logic).
+  btn.addEventListener('click', function () {
+    if (!realForm) return;
+    var realBtn = realForm.querySelector('[data-add-to-cart]');
+    if (realBtn) realBtn.click();
+  });
+
+  // Mirror sold-out / disabled state and current price from the real button.
+  function syncState() {
+    if (!realForm) return;
+    var realBtn = realForm.querySelector('[data-add-to-cart]');
+    if (realBtn) btn.disabled = realBtn.disabled;
+    var realPrice = section.querySelector('.product__price--regular, [data-product-price]');
+    if (realPrice && priceEl) priceEl.textContent = realPrice.textContent.trim();
+  }
+
+  // Show the bar once the in-page form has scrolled out of view.
+  var anchor = realForm || section;
+  function onScroll() {
+    var rect = anchor.getBoundingClientRect();
+    var show = rect.bottom < 80;
+    bar.classList.toggle('is-visible', show);
+    bar.setAttribute('aria-hidden', show ? 'false' : 'true');
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
+  document.addEventListener('variant:change', syncState);
+  section.addEventListener('change', syncState);
+  syncState();
+  onScroll();
+})();
+</script>
+
 {%- assign current_variant = product.selected_or_first_available_variant -%}
 <script type="application/ld+json">
   {

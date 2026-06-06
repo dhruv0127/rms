@@ -154,27 +154,35 @@
   /* Mobile */
   @media (max-width: 480px) {
     .idiom-brand-story-section {
-      padding: 0;
+      padding: 0 12px;
     }
 
     .idiom-brand-story {
-      padding: 0 0 24px;
-      border-radius: 0;
+      padding: 0 0 40px;
+      border-radius: 24px;
     }
 
     .idiom-brand-story__marquee-strip {
       margin-bottom: 16px;
+      border-radius: 24px 24px 0 0;
     }
 
     .idiom-brand-story__butterfly {
-      width: 180px;
-      top: -30px;
+      width: 140px;
+      top: -20px;
       left: -10px;
-      display: none;
+      display: block;
     }
 
     .idiom-brand-story__moon {
-      display: none;
+      display: flex;
+      width: 130px;
+      bottom: -50px;
+      right: -6px;
+    }
+
+    .idiom-brand-story__moon img {
+      max-width: 130px;
     }
 
     .idiom-brand-story__heading {

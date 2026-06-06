@@ -1,0 +1,36 @@
+[    1747ms] [LOG] AZ: Google Font & Custom Fonts v1.0.3 @ http://127.0.0.1:9292/products/3d-amp-100ml-copy:814
+[    1791ms] [INFO] [HotReload] Connected @ http://127.0.0.1:9292/products/3d-amp-100ml-copy:1838
+[    1791ms] [INFO] [HotReload] Event data: {type: open, pid: 24186} @ http://127.0.0.1:9292/products/3d-amp-100ml-copy:1844
+[    2659ms] [ERROR] Access to resource at 'http://127.0.0.1:9292/__hot-reload/subscribe' from origin 'null' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:9292/web-pixels@a9664f44w6a62cec8p04af10e4mb91e3447/custom/web-pixel-shopify-custom-pixel@0460/sandbox/modern/products/3d-amp-100ml-copy:0
+[    2659ms] [ERROR] [HotReload] Connection closed by the server, attempting to reconnect... @ http://127.0.0.1:9292/web-pixels@a9664f44w6a62cec8p04af10e4mb91e3447/custom/web-pixel-shopify-custom-pixel@0460/sandbox/modern/products/3d-amp-100ml-copy:74
+[    2659ms] [ERROR] Failed to load resource: net::ERR_FAILED @ http://127.0.0.1:9292/__hot-reload/subscribe:0
+[    2684ms] [ERROR] Access to fetch at 'https://idiom-london.myshopify.com/api/collect' from origin 'http://127.0.0.1:9292' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:9292/products/3d-amp-100ml-copy:0
+[    2684ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://idiom-london.myshopify.com/api/collect:0
+[    3101ms] [INFO] [HotReload] Connected @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:299
+[    3426ms] [ERROR] [HotReload] Connection closed by the server, attempting to reconnect... @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:304
+[    3967ms] [ERROR] Access to fetch at 'https://idiom-london.myshopify.com/api/collect' from origin 'http://127.0.0.1:9292' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:9292/products/3d-amp-100ml-copy:0
+[    3967ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://idiom-london.myshopify.com/api/collect:0
+[    6274ms] [ERROR] Access to fetch at 'https://idiom-london.myshopify.com/api/collect' from origin 'http://127.0.0.1:9292' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:9292/products/3d-amp-100ml-copy:0
+[    6274ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://idiom-london.myshopify.com/api/collect:0
+[    7076ms] [INFO] [HotReload] Connected @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:299
+[    7180ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3119
+[    7182ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3119
+[    7184ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :2752
+[    7399ms] [ERROR] [HotReload] Connection closed by the server, attempting to reconnect... @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:304
+[    8044ms] [ERROR] Access to fetch at 'https://idiom-london.myshopify.com/api/collect' from origin 'http://127.0.0.1:9292' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:9292/products/3d-amp-100ml-copy:0
+[    8044ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://idiom-london.myshopify.com/api/collect:0
+[   10555ms] [ERROR] Access to fetch at 'https://idiom-london.myshopify.com/api/collect' from origin 'http://127.0.0.1:9292' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:9292/products/3d-amp-100ml-copy:0
+[   10556ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://idiom-london.myshopify.com/api/collect:0
+[   10921ms] [INFO] [HotReload] Connected @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:299
+[   11254ms] [ERROR] [HotReload] Connection closed by the server, attempting to reconnect... @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:304
+[   12534ms] [LOG] recaptchacompat disabled @ https://js.hcaptcha.com/1/api.js?render=explicit&recaptchacompat=off&onload=__shopify_hcap_load_xhng96tn:3
+[   13874ms] [ERROR] Access to fetch at 'https://idiom-london.myshopify.com/api/collect' from origin 'http://127.0.0.1:9292' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:9292/products/3d-amp-100ml-copy:0
+[   13874ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://idiom-london.myshopify.com/api/collect:0
+[   14598ms] [INFO] [HotReload] Connected @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:299
+[   14900ms] [ERROR] [HotReload] Connection closed by the server, attempting to reconnect... @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:304
+[   18265ms] [INFO] [HotReload] Connected @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:299
+[   18267ms] [ERROR] [HotReload] Connection closed by the server, attempting to reconnect... @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:304
+[   19152ms] [ERROR] Access to fetch at 'https://idiom-london.myshopify.com/api/collect' from origin 'http://127.0.0.1:9292' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:9292/products/3d-amp-100ml-copy:0
+[   19152ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://idiom-london.myshopify.com/api/collect:0
+[   21598ms] [INFO] [HotReload] Connected @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:299
+[   21933ms] [ERROR] [HotReload] Connection closed by the server, attempting to reconnect... @ http://127.0.0.1:9292/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:304
