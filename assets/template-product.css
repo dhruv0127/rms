@@ -315,6 +315,23 @@
   min-width: 110px;
 }
 
+/* idiom PDP — smaller gallery thumbnails on mobile only. The theme's JS sets an
+   inline width/height on the link, so !important is needed to override it. */
+@media only screen and (max-width: 767px) {
+  body.template-product
+    .product-single__thumbnails:not(.flickity-enabled)
+    .product-single__thumbnail {
+    min-width: 0;
+  }
+  body.template-product .product-single__thumbnail {
+    padding: 3px;
+  }
+  body.template-product .product-single__thumbnail-link {
+    width: 58px !important;
+    height: 58px !important;
+  }
+}
+
 .product-single__thumbnails.flickity-enabled.is-draggable .flickity-viewport {
   cursor: default;
 }
