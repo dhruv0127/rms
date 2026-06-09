@@ -4179,7 +4179,7 @@ label.error {
 .input-group__btn {
   width: 100%;
   height: var(--input-height);
-  min-width: 54px;
+  /* min-width: 54px; */
 }
 
 .input-group__error {
