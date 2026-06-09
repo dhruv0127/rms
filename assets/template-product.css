@@ -738,12 +738,13 @@ body.template-product
   .product-gallery__bg-scene {
     background-image: none !important;
   }
-  /* idiom PDP mobile — shrink the image slider; the tall 125% portrait frame
-     made it dominate the screen. A shorter frame keeps the bottle compact. */
+  /* idiom PDP mobile — tall portrait frame so the contained bottle scales up to
+     fill the full container width (the bottle PNG is ~0.8 ratio, so a ~125%
+     frame makes it width-limited rather than height-limited / letterboxed). */
   body.template-product
     .product-gallery__media-slide
     .product-gallery__media-space {
-    padding-top: 78% !important;
+    padding-top: 125% !important;
   }
 }
 
@@ -829,8 +830,8 @@ body.template-product
   }
   body.template-product .product-single__thumbnail {
     padding: 0;
-    width: 48px;
-    height: 48px;
+    width: 38px;
+    height: 38px;
     flex: 0 0 auto;
   }
   body.template-product .product-single__thumbnail:first-child,
@@ -839,8 +840,8 @@ body.template-product
   }
   /* rounded-square thumbs that read clearly over the photo */
   body.template-product .product-single__thumbnail-link {
-    width: 48px !important;
-    height: 48px !important;
+    width: 38px !important;
+    height: 38px !important;
     border-radius: 8px;
     overflow: hidden;
     border: 2px solid rgba(255, 255, 255, 0.85);
@@ -858,15 +859,21 @@ body.template-product
   }
 }
 
-/* idiom PDP — roomier accordion rows (full description / key notes /
-   how to wear / full ingredient list) to match the design spacing. */
-body.template-product .accordion__title {
-  padding-top: 14px;
-  padding-bottom: 14px;
+/* idiom PDP — accordion rows (key notes / how to wear / full ingredient list).
+   `body--rounded-corners` zeroes `.product__accordion` padding, so the row
+   spacing has to live on the title button and the expanded content. Targets the
+   real PDP accordion classes (.product__accordion__title), not the standalone
+   Accordions section (.accordion__title). */
+body.template-product .product__accordion__title {
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
-@media only screen and (min-width: 768px) {
-  body.template-product .accordion__title {
-    padding-top: 16px;
-    padding-bottom: 16px;
-  }
+
+/* When open, give the content breathing room below it so it doesn't butt up
+   against the next row's divider. Padding sits on the inner content (which the
+   collapsible JS measures for its open height), keeping the divider lines and
+   the spacing between every row uniform. */
+body.template-product .product__accordion__inner {
+  padding-top: 4px;
+  padding-bottom: 20px;
 }
