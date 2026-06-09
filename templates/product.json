@@ -203,7 +203,35 @@
         "bg_image_desktop": "shopify://shop_images/I.png",
         "bg_image_mobile": "shopify://shop_images/I.png"
       }
+    },
+    "17809446994adad41a": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_g86iRP": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_g86iRP"
+      ],
+      "settings": {
+        "bg_color": "",
+        "width": "wrapper",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
     }
   },
-  "order": ["main", "idiom-layering-row", "idiom-reel-video-section"]
+  "order": [
+    "main",
+    "idiom-layering-row",
+    "idiom-reel-video-section",
+    "17809446994adad41a"
+  ]
 }
