@@ -2,8 +2,9 @@
   idiom — site-wide "grab 10% off" offer tab.
 
   A fixed, rotated cream tab pinned to the bottom-left of the viewport on every
-  page. Clicking it opens a centered discount popup with the newsletter signup
-  form. All copy is editable via Theme settings → "Offer tab".
+  page. Clicking it opens the theme's existing "Popup with image" promo
+  (the "start layering…" popup configured in the Theme Editor under
+  Overlay → Popups). The tab text is editable via Theme settings → "Offer tab".
 
   Rendered once from layout/theme.liquid.
 {%- endcomment -%}
@@ -81,66 +82,6 @@
       background: var(--idiom-olive-dark, #3d3d1a);
     }
 
-    /* Popup */
-    .idiom-offer-popup {
-      position: fixed;
-      inset: 0;
-      z-index: 9999;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
-    .idiom-offer-popup.is-open {
-      display: flex;
-    }
-    .idiom-offer-popup__overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(26, 26, 26, 0.55);
-    }
-    .idiom-offer-popup__panel {
-      position: relative;
-      z-index: 1;
-      width: 100%;
-      max-width: 440px;
-      background: var(--idiom-cream, #fffbf3);
-      border-radius: 14px;
-      padding: 40px 36px;
-      text-align: center;
-      box-shadow: 0 20px 60px rgba(26, 26, 26, 0.3);
-    }
-    .idiom-offer-popup__close {
-      position: absolute;
-      top: 14px;
-      right: 16px;
-      width: 32px;
-      height: 32px;
-      border: 0;
-      background: transparent;
-      font-size: 24px;
-      line-height: 1;
-      cursor: pointer;
-      color: var(--idiom-black, #1a1a1a);
-    }
-    .idiom-offer-popup__heading {
-      margin: 0 0 10px;
-      font-size: 28px;
-      color: var(--idiom-black, #1a1a1a);
-    }
-    .idiom-offer-popup__text {
-      margin: 0 0 20px;
-      font-size: 15px;
-      color: var(--idiom-black, #1a1a1a);
-    }
-    .idiom-offer-popup__text p { margin: 0; }
-    .idiom-offer-popup__footer {
-      margin: 16px 0 0;
-      font-size: 12px;
-      opacity: 0.7;
-    }
-    .idiom-offer-popup__footer p { margin: 0; }
-
     @media only screen and (max-width: 767px) {
       .idiom-offer-tab {
         padding: 24px 0 24px;
@@ -153,44 +94,20 @@
         font-size: 19px;
         margin-top: 16px;
       }
-      .idiom-offer-popup__panel { padding: 36px 24px; }
-      .idiom-offer-popup__heading { font-size: 24px; }
     }
   {%- endstyle -%}
 
   <div class="idiom-offer-tab" data-offer-tab>
-    <button type="button" class="idiom-offer-tab__open" data-offer-open aria-haspopup="dialog" aria-controls="idiom-offer-popup">
+    <button type="button" class="idiom-offer-tab__open" data-offer-open aria-haspopup="dialog">
       <span class="idiom-offer-tab__text">{{ settings.offer_tab_text }}</span>
     </button>
     <button type="button" class="idiom-offer-tab__close" data-offer-dismiss aria-label="Dismiss offer">&times;</button>
   </div>
 
-  <div class="idiom-offer-popup" id="idiom-offer-popup" data-offer-popup role="dialog" aria-modal="true" aria-label="{{ settings.offer_tab_popup_heading | default: settings.offer_tab_text | escape }}">
-    <div class="idiom-offer-popup__overlay" data-offer-close></div>
-    <div class="idiom-offer-popup__panel">
-      <button type="button" class="idiom-offer-popup__close" data-offer-close aria-label="Close">&times;</button>
-
-      {%- if settings.offer_tab_popup_heading != blank -%}
-        <h2 class="idiom-offer-popup__heading">{{ settings.offer_tab_popup_heading }}</h2>
-      {%- endif -%}
-
-      {%- if settings.offer_tab_popup_text != blank -%}
-        <div class="idiom-offer-popup__text">{{ settings.offer_tab_popup_text }}</div>
-      {%- endif -%}
-
-      {%- render 'newsletter-form', unique: 'offer-tab', extra_fields: 'none', button_text: settings.offer_tab_button_text -%}
-
-      {%- if settings.offer_tab_footer_text != blank -%}
-        <div class="idiom-offer-popup__footer">{{ settings.offer_tab_footer_text }}</div>
-      {%- endif -%}
-    </div>
-  </div>
-
   <script>
     (function () {
       var tab = document.querySelector('[data-offer-tab]');
-      var popup = document.querySelector('[data-offer-popup]');
-      if (!tab || !popup) return;
+      if (!tab) return;
 
       var DISMISS_KEY = 'idiomOfferDismissed';
       try {
@@ -199,31 +116,33 @@
         }
       } catch (e) {}
 
-      function open() {
-        popup.classList.add('is-open');
-        document.documentElement.style.overflow = 'hidden';
-        var input = popup.querySelector('input[type="email"]');
-        if (input) { try { input.focus(); } catch (e) {} }
+      // Open the theme's existing "Popup with image" large-promo block. The
+      // theme JS reveals it by adding `popup--visible` to the inner element
+      // (id="popup--<block-id>", marked with [data-large-promo-inner]) and
+      // locking scroll via the `theme:scroll:lock` custom event. We reuse the
+      // exact same mechanism so the popup's own close button keeps working.
+      function openPromo() {
+        var promo = document.querySelector('[data-large-promo-inner]');
+        if (!promo) return false;
+        if (!promo.classList.contains('popup--visible')) {
+          promo.classList.add('popup--visible');
+          var body = promo.querySelector('[data-popup-body]') || promo;
+          document.dispatchEvent(new CustomEvent('theme:scroll:lock', { bubbles: true, detail: body }));
+          var input = promo.querySelector('input[type="text"], input[type="email"]');
+          if (input) { try { input.focus(); } catch (e) {} }
+        }
+        return true;
       }
-      function close() {
-        popup.classList.remove('is-open');
-        document.documentElement.style.overflow = '';
-      }
+
       function dismiss() {
         tab.classList.add('is-dismissed');
         try { sessionStorage.setItem(DISMISS_KEY, '1'); } catch (e) {}
       }
 
-      tab.querySelector('[data-offer-open]').addEventListener('click', open);
+      tab.querySelector('[data-offer-open]').addEventListener('click', openPromo);
       tab.querySelector('[data-offer-dismiss]').addEventListener('click', function (e) {
         e.stopPropagation();
         dismiss();
-      });
-      popup.querySelectorAll('[data-offer-close]').forEach(function (el) {
-        el.addEventListener('click', close);
-      });
-      document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape' && popup.classList.contains('is-open')) close();
       });
     })();
   </script>
