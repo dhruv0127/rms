@@ -729,6 +729,30 @@ body.template-product
     filter: none;
   }
 }
+
+/* idiom PDP — tablet/small-desktop (768–1024px). The 50vw-centered, full-height
+   bottle is sized for wide screens; in this band the gallery column is narrow,
+   so the bottle balloons and spills into the details column while the scene
+   reads as clipped. Re-center the bottle WITHIN the gallery column and size it
+   by width (capped to the column) so it scales down to fit instead of
+   overflowing. */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  body.template-product .product-gallery__desktop-image {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+    max-height: 100%;
+    width: 100%;
+    max-width: 100%;
+  }
+  body.template-product .product-gallery__desktop-image img {
+    height: auto;
+    max-height: 100%;
+    width: 100%;
+    max-width: 100%;
+  }
+}
 @media only screen and (max-width: 767px) {
   body.template-product .product-gallery__media--image .lazy-image,
   body.template-product .product-gallery__media--image img {
@@ -876,4 +900,9 @@ body.template-product .product__accordion__title {
 body.template-product .product__accordion__inner {
   padding-top: 4px;
   padding-bottom: 20px;
+}
+
+.product__block.product__accordions {
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
