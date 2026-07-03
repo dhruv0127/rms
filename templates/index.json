@@ -142,21 +142,21 @@
         "panel_1": {
           "type": "panel",
           "settings": {
-            "bg_image": "shopify://shop_images/J22222.png",
+            "bg_image": "shopify://shop_images/1_6ce2f3ce-0b19-4d21-9d5e-586c49104259.png",
             "heading": "the perfect saffron",
-            "subtext": "the ultimate discovery kit, 127 combinations, 1 kit.",
-            "cta_label": "shop now | £17",
-            "cta_url": "shopify://collections/all"
+            "subtext": "golden, grounded saffron radiating dry amber, soft leather and sun-warmed earth.",
+            "cta_label": "shop now | from £6",
+            "cta_url": "shopify://products/saffran-haze-30ml"
           }
         },
         "panel_2": {
           "type": "panel",
           "settings": {
-            "bg_image": "shopify://shop_images/j3333.png",
+            "bg_image": "shopify://shop_images/2_e292b42a-7bb7-4ef5-9d4f-f95ab093b485.png",
             "heading": "citrusy + fresh af",
-            "subtext": "sharp. bright. made to layer.",
-            "cta_label": "shop now | £17",
-            "cta_url": "shopify://collections/all"
+            "subtext": "a zesty burst of authentic calabrian bergamot with a petitgrain and mandarin twist.",
+            "cta_label": "shop now  |  from £6",
+            "cta_url": "shopify://products/bergamot-hi-fi-30ml"
           }
         }
       },
