@@ -32,7 +32,7 @@
             "target_referrer": "",
             "target_device_enabled": false,
             "target_device": "mobile",
-            "bg_color": "#fffbf3",
+            "bg_color": "#FFFBF3",
             "text_color": "text-dark"
           }
         }
