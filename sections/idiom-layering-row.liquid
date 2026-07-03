@@ -105,9 +105,9 @@
 
     <div class="idiom-layering__products">
       <div class="idiom-layering__scroll">
-        {%- assign layer_products = product.metafields.custom.layer_with_products.value -%}
-        {%- if layer_products != blank -%}
-          {%- for lp in layer_products -%}
+        {%- assign layer_collection = product.metafields.custom.pdp_layer_with_collection.value -%}
+        {%- if layer_collection != blank -%}
+          {%- for lp in layer_collection.products limit: 6 -%}
             {% render 'idiom-product-card', product: lp %}
           {%- endfor -%}
         {%- elsif section.settings.layering_collection != blank -%}

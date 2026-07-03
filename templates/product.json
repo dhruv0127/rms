@@ -23,14 +23,14 @@
         "text_tKXqFk": {
           "type": "custom_code",
           "settings": {
-            "custom_code": "<p style=\"font-size:11px;letter-spacing:0.12em;text-transform:uppercase;font-weight:500;margin:0 0 12px;padding-bottom:12px;border-bottom:1px solid #000;\">WOODY. FRESH. CREAMY.</p>",
+            "custom_code": "{% render 'pdp-scent-tagline', product: product %}",
             "padding_bottom": 0
           }
         },
         "star_rating": {
           "type": "custom_code",
           "settings": {
-            "custom_code": "<div class=\"idiom-pdp-stars\"><span class=\"idiom-pdp-stars__icons\">★★★★★</span><span class=\"idiom-pdp-stars__count\">35 reviews</span></div>",
+            "custom_code": "{% render 'pdp-star-rating', product: product %}",
             "padding_bottom": 8
           }
         },
@@ -54,7 +54,7 @@
         "first_impressions": {
           "type": "custom_code",
           "settings": {
-            "custom_code": "<div class=\"idiom-first-impressions\"><p class=\"idiom-first-impressions__label\">FIRST IMPRESSIONS:</p><div class=\"idiom-first-impressions__images\"><div class=\"idiom-first-impressions__img-wrap\"><img src=\"{{ 'pdp-first-impression.png' | asset_url }}\" alt=\"First impression\" loading=\"lazy\"></div><div class=\"idiom-first-impressions__img-wrap\"><img src=\"{{ 'pdp-first-impression.png' | asset_url }}\" alt=\"First impression\" loading=\"lazy\"></div><div class=\"idiom-first-impressions__img-wrap\"><img src=\"{{ 'pdp-first-impression.png' | asset_url }}\" alt=\"First impression\" loading=\"lazy\"></div><div class=\"idiom-first-impressions__img-wrap\"><img src=\"{{ 'pdp-first-impression.png' | asset_url }}\" alt=\"First impression\" loading=\"lazy\"></div></div></div>",
+            "custom_code": "{% render 'pdp-first-impressions', product: product %}",
             "padding_bottom": 20
           }
         },
