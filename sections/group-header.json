@@ -151,9 +151,12 @@
         "highlight_item_color": "#c6878f",
         "header_transparent": false,
         "header_text_color": "white",
-        "header_gradient": true
+        "header_gradient": true,
+        "trust_bar_text_1": "free samples in every order",
+        "trust_bar_text_2": "5 star reviewed layering fragrances",
+        "trust_bar_text_3": "high-quality, british made eau du parfum"
       }
-    },
+    }
   },
   "order": ["announcement-bar", "mobile-menu", "header"]
 }

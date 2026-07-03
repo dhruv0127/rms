@@ -550,19 +550,19 @@
   <div class="drawer__overlay"></div>
 
   <div class="idiom-trust-bar">
-    <div class="idiom-trust-bar__item">free samples in every order</div>
-    <div class="idiom-trust-bar__item">5 star reviewed layering fragrances</div>
-    <div class="idiom-trust-bar__item">high-quality, british made eau du parfum</div>
+    <div class="idiom-trust-bar__item">{{ section.settings.trust_bar_text_1 }}</div>
+    <div class="idiom-trust-bar__item">{{ section.settings.trust_bar_text_2 }}</div>
+    <div class="idiom-trust-bar__item">{{ section.settings.trust_bar_text_3 }}</div>
   </div>
 
   <div class="idiom-trust-bar--marquee" aria-hidden="true">
     <div class="idiom-trust-bar--marquee__track">
-      <span class="idiom-trust-bar--marquee__item">free samples in every order</span>
-      <span class="idiom-trust-bar--marquee__item">5 star reviewed layering fragrances</span>
-      <span class="idiom-trust-bar--marquee__item">high-quality, british made eau du parfum</span>
-      <span class="idiom-trust-bar--marquee__item">free samples in every order</span>
-      <span class="idiom-trust-bar--marquee__item">5 star reviewed layering fragrances</span>
-      <span class="idiom-trust-bar--marquee__item">high-quality, british made eau du parfum</span>
+      <span class="idiom-trust-bar--marquee__item">{{ section.settings.trust_bar_text_1 }}</span>
+      <span class="idiom-trust-bar--marquee__item">{{ section.settings.trust_bar_text_2 }}</span>
+      <span class="idiom-trust-bar--marquee__item">{{ section.settings.trust_bar_text_3 }}</span>
+      <span class="idiom-trust-bar--marquee__item">{{ section.settings.trust_bar_text_1 }}</span>
+      <span class="idiom-trust-bar--marquee__item">{{ section.settings.trust_bar_text_2 }}</span>
+      <span class="idiom-trust-bar--marquee__item">{{ section.settings.trust_bar_text_3 }}</span>
     </div>
   </div>
 </header>
@@ -830,6 +830,28 @@
       "label": "Increase text transparency",
       "default": true,
       "info": "Add gradient when header is transparent"
+    },
+    {
+      "type": "header",
+      "content": "Trust bar"
+    },
+    {
+      "type": "text",
+      "id": "trust_bar_text_1",
+      "label": "Item 1",
+      "default": "free samples in every order"
+    },
+    {
+      "type": "text",
+      "id": "trust_bar_text_2",
+      "label": "Item 2",
+      "default": "5 star reviewed layering fragrances"
+    },
+    {
+      "type": "text",
+      "id": "trust_bar_text_3",
+      "label": "Item 3",
+      "default": "high-quality, british made eau du parfum"
     }
   ],
   "blocks": [
