@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "color_body_bg": "#fffbf3",
@@ -65,10 +74,12 @@
     "empty_cart_collection_overlay": true,
     "empty_cart_collection_text_color": "text-light",
     "empty_cart_collection_overlay_opacity": 20,
+    "empty_cart_button_text": "find your fragrance freedom",
+    "empty_cart_button_link": "shopify://collections/shop-everything",
     "empty_cart_buttons": "",
     "show_free_shipping_message": true,
     "free_shipping_limit": "40",
-    "cart_custom_message_text": "<p>Layer 2x full size fragrances for 15% off [<strong>CODE: LAYER2<\/strong>]<\/p>",
+    "cart_custom_message_text": "<p>Layer 2x full size fragrances for 15% off [<strong>CODE: LAYER2</strong>]</p>",
     "cart_custom_message_color": "text-light",
     "enable_accept_terms": false,
     "upsells_height": 120,
@@ -78,7 +89,7 @@
     "upsells_button_color": "btn--black",
     "upsells_button_style": "btn--solid",
     "upsells_button_size": "btn--small",
-    "loading_image": "shopify:\/\/shop_images\/idiom_logo_black.png",
+    "loading_image": "shopify://shop_images/idiom_logo_black.png",
     "loading_image_width": 150,
     "loading_background": "#e9ebca",
     "loading_appearance": "always",
@@ -103,13 +114,13 @@
     "color_swatches_product_style": "circle",
     "enable_infinity_scroll": true,
     "show_header_search": true,
-    "social_instagram_link": "https:\/\/www.instagram.com\/idiomfragrances\/",
-    "social_tiktok_link": "https:\/\/www.tiktok.com\/@idiomfragrances",
+    "social_instagram_link": "https://www.instagram.com/idiomfragrances/",
+    "social_tiktok_link": "https://www.tiktok.com/@idiomfragrances",
     "social_facebook_link": "",
     "social_twitter_link": "",
     "social_pinterest_link": "",
     "currency_code_enable": false,
-    "favicon": "shopify:\/\/shop_images\/idiom_favicon_1.png",
+    "favicon": "shopify://shop_images/idiom_favicon_1.png",
     "checkout_header_image": "",
     "checkout_logo_position": "left",
     "checkout_logo_size": "small",
@@ -126,12 +137,12 @@
     "content_for_index": [],
     "blocks": {
       "15119538188275799212": {
-        "type": "shopify:\/\/apps\/fontify\/blocks\/app-embed\/334490e2-2153-4a2e-a452-e90bdeffa3cc",
+        "type": "shopify://apps/fontify/blocks/app-embed/334490e2-2153-4a2e-a452-e90bdeffa3cc",
         "disabled": false,
         "settings": {}
       },
       "1986737046835575827": {
-        "type": "shopify:\/\/apps\/az-google-font-custom-fonts\/blocks\/arc_fontify_block-app-embed\/e720f1f7-5778-4825-85a3-3572dbcf27c4",
+        "type": "shopify://apps/az-google-font-custom-fonts/blocks/arc_fontify_block-app-embed/e720f1f7-5778-4825-85a3-3572dbcf27c4",
         "disabled": false,
         "settings": {}
       }
@@ -222,9 +233,9 @@
       "popular_searches_menu": "footer",
       "show_browse_categories_menu": false,
       "suggestions_terms_limit": 10,
-      "social_instagram_link": "https:\/\/www.instagram.com\/shopify",
-      "social_tiktok_link": "https:\/\/tiktok.com\/@shopify",
-      "social_facebook_link": "https:\/\/www.facebook.com\/shopify",
+      "social_instagram_link": "https://www.instagram.com/shopify",
+      "social_tiktok_link": "https://tiktok.com/@shopify",
+      "social_facebook_link": "https://www.facebook.com/shopify",
       "social_twitter_link": "",
       "social_pinterest_link": "",
       "currency_code_enable": false,
@@ -317,7 +328,10 @@
       "enable_gift_notes": false,
       "enable_additional_buttons": true,
       "cart_button_color": "btn--black",
-      "empty_cart_collection_list": ["small-bags-1", "work-bags"],
+      "empty_cart_collection_list": [
+        "small-bags-1",
+        "work-bags"
+      ],
       "empty_cart_collection_columns": "1",
       "empty_cart_collection_size": 90,
       "empty_cart_collection_overlay": true,
@@ -331,7 +345,7 @@
       "upsells_text_color": "#fff",
       "upsells_button_color": "btn--white",
       "upsells_button_style": "btn--text",
-      "loading_image": "shopify:\/\/shop_images\/Group_2_2.png",
+      "loading_image": "shopify://shop_images/Group_2_2.png",
       "loading_image_width": 150,
       "show_spacer_lines": false,
       "show_rounded_corners": false,
@@ -353,16 +367,16 @@
       "suggestions_results_limit": 3,
       "popular_searches_menu": "search-menu-2024",
       "show_browse_categories_menu": false,
-      "social_instagram_link": "https:\/\/www.instagram.com\/shopify",
-      "social_tiktok_link": "https:\/\/tiktok.com\/@shopify",
+      "social_instagram_link": "https://www.instagram.com/shopify",
+      "social_tiktok_link": "https://tiktok.com/@shopify",
       "social_facebook_link": "",
-      "social_twitter_link": "https:\/\/www.twitter.com\/shopify",
+      "social_twitter_link": "https://www.twitter.com/shopify",
       "social_pinterest_link": "",
-      "social_youtube_link": "https:\/\/youtube.com\/user\/shopify",
+      "social_youtube_link": "https://youtube.com/user/shopify",
       "currency_code_enable": false,
       "favicon": "",
       "checkout_header_image": "",
-      "checkout_logo_image": "shopify:\/\/shop_images\/demo-disclaimer.png",
+      "checkout_logo_image": "shopify://shop_images/demo-disclaimer.png",
       "checkout_logo_position": "left",
       "checkout_logo_size": "large",
       "checkout_body_background_image": "",
@@ -489,7 +503,7 @@
       "currency_code_enable": true,
       "info_page": "",
       "info_page_title_override": "Size chart",
-      "checkout_logo_image": "shopify:\/\/shop_images\/demo-disclaimer.png",
+      "checkout_logo_image": "shopify://shop_images/demo-disclaimer.png",
       "checkout_logo_position": "left",
       "checkout_logo_size": "large",
       "checkout_body_background_color": "#ffffff",
@@ -581,10 +595,10 @@
       "saving_text_color": "#fff",
       "saving_badge_type": "percentage",
       "color_swatches_product_style": "circle",
-      "social_instagram_link": "https:\/\/www.instagram.com\/shopify",
-      "social_tiktok_link": "https:\/\/tiktok.com\/@shopify",
+      "social_instagram_link": "https://www.instagram.com/shopify",
+      "social_tiktok_link": "https://tiktok.com/@shopify",
       "social_facebook_link": "",
-      "social_twitter_link": "https:\/\/www.twitter.com\/shopify",
+      "social_twitter_link": "https://www.twitter.com/shopify",
       "social_pinterest_link": "",
       "currency_code_enable": false,
       "favicon": "",
