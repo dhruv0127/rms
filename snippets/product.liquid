@@ -256,15 +256,27 @@
     >
       {%- comment -%} idiom PDP — single static background scene that stays put
           while the product images slide on top of it. Uses the per-product
-          metafield image when set, otherwise the theme's default PDP asset. {%- endcomment -%}
-      {%- assign pdp_bg_image = product.metafields.custom.pdp_background_image.value | default: product.metafields.custom.pdp_background_image -%}
+          banner metafield image when set, otherwise the theme's default PDP asset. {%- endcomment -%}
+      {%- assign pdp_bg_image = product.metafields.custom.pdp_main_banner_image.value -%}
+      {%- assign pdp_bg_image_mobile = product.metafields.custom.pdp_mob_main_banner_image.value | default: pdp_bg_image -%}
       {%- if pdp_bg_image != blank -%}
         {%- assign pdp_bg_url = pdp_bg_image | image_url: width: 1600 -%}
       {%- else -%}
         {%- assign pdp_bg_url = 'pdp-background.png' | asset_url -%}
       {%- endif -%}
+      {%- if pdp_bg_image_mobile != blank -%}
+        {%- assign pdp_bg_url_mobile = pdp_bg_image_mobile | image_url: width: 900 -%}
+      {%- else -%}
+        {%- assign pdp_bg_url_mobile = pdp_bg_url -%}
+      {%- endif -%}
       {%- if product.media.size > 0 and section_type != 'quickview' -%}
-        <div class="product-gallery__bg-scene" style="background-image: url('{{ pdp_bg_url }}');" aria-hidden="true"></div>
+        <div class="product-gallery__bg-scene" style="background-image: url('{{ pdp_bg_url_mobile }}');" aria-hidden="true">
+          <style>
+            @media (min-width: 769px) {
+              #ProductPhoto--{{ unique }} .product-gallery__bg-scene { background-image: url('{{ pdp_bg_url }}'); }
+            }
+          </style>
+        </div>
 
         {%- comment -%} idiom PDP (desktop only) — a single image centered over the
             scene. Clicking a thumbnail swaps this image's src. The Flickity

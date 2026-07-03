@@ -1,0 +1,30 @@
+<!-- /snippets/pdp-first-impressions.liquid -->
+{%- comment -%}
+  Renders the "FIRST IMPRESSIONS" image row on the PDP.
+
+  Accepts:
+  - product: {Object} Current product (required)
+
+  Usage:
+  {%- render 'pdp-first-impressions', product: product -%}
+{%- endcomment -%}
+
+{%- assign fi_images = product.metafields.custom.first_impression_images.value -%}
+<div class="idiom-first-impressions">
+  <p class="idiom-first-impressions__label">FIRST IMPRESSIONS:</p>
+  <div class="idiom-first-impressions__images">
+    {%- if fi_images != blank -%}
+      {%- for fi_image in fi_images -%}
+        <div class="idiom-first-impressions__img-wrap">
+          <img src="{{ fi_image | image_url: width: 400 }}" alt="First impression" loading="lazy">
+        </div>
+      {%- endfor -%}
+    {%- else -%}
+      {%- for i in (1..4) -%}
+        <div class="idiom-first-impressions__img-wrap">
+          <img src="{{ 'pdp-first-impression.png' | asset_url }}" alt="First impression" loading="lazy">
+        </div>
+      {%- endfor -%}
+    {%- endif -%}
+  </div>
+</div>
