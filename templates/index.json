@@ -46,11 +46,7 @@
           }
         }
       },
-      "block_order": [
-        "heading_idiom",
-        "text_idiom",
-        "button_idiom"
-      ],
+      "block_order": ["heading_idiom", "text_idiom", "button_idiom"],
       "settings": {
         "height": "six-fifty-height",
         "enable_mobile_height": true,
@@ -160,17 +156,51 @@
           }
         }
       },
-      "block_order": [
-        "panel_1",
-        "panel_2"
-      ],
+      "block_order": ["panel_1", "panel_2"],
       "settings": {}
+    },
+    "idiom-loyalty": {
+      "type": "idiom-loyalty",
+      "settings": {
+        "card_bg": "#9a9a35",
+        "text_color": "#fffbf3",
+        "image_width": 1.2,
+        "image_ratio": "1/1",
+        "eyebrow": "welcome to the society.",
+        "heading": "earn points for purchases to redeem scents you love. get access to exclusive products, sales, and more.",
+        "cta_label": "join the loyalty programme",
+        "cta_url": "",
+        "button_bg": "#1a1a1a",
+        "button_text_color": "#ffffff",
+        "cloud_image": "",
+        "cloud_size": 200,
+        "cloud_top": -14,
+        "cloud_left": 30,
+        "cloud_size_mobile": 100,
+        "cloud_top_mobile": -6,
+        "cloud_left_mobile": 20,
+        "butterfly_image": "shopify://shop_images/Group_5.png",
+        "butterfly_size": 110,
+        "butterfly_top": -8,
+        "butterfly_left": 44,
+        "butterfly_size_mobile": 55,
+        "butterfly_top_mobile": -4,
+        "butterfly_left_mobile": 60,
+        "moon_image": "shopify://shop_images/group6.png",
+        "moon_size": 220,
+        "moon_top": 60,
+        "moon_left": 90,
+        "moon_size_mobile": 100,
+        "moon_top_mobile": 92,
+        "moon_left_mobile": 66
+      }
     }
   },
   "order": [
     "section-banner-image",
     "idiom-brand-story",
     "idiom-product-cards",
-    "idiom-dual-promo"
+    "idiom-dual-promo",
+    "idiom-loyalty"
   ]
 }
