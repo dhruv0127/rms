@@ -1,9 +1,13 @@
 {{ 'idiom-theme.css' | asset_url | stylesheet_tag }}
 
 <style>
+  #shopify-section-{{ section.id }} {
+    position: relative;
+    overflow: hidden;
+  }
+
   #shopify-section-{{ section.id }} .idiom-loyalty-section {
     position: relative;
-    overflow: visible;
     padding: 60px 48px;
   }
 
