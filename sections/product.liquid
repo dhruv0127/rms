@@ -143,11 +143,17 @@
     if (realPrice && priceEl) priceEl.textContent = realPrice.textContent.trim();
   }
 
-  // Show the bar once the in-page form has scrolled out of view.
+  // Show the bar once the in-page form has scrolled out of view, but hide it
+  // again once the footer reaches the viewport so it doesn't sit on top of it.
   var anchor = realForm || section;
+  var footer = document.querySelector('.idiom-footer');
   function onScroll() {
     var rect = anchor.getBoundingClientRect();
     var show = rect.bottom < 80;
+    if (show && footer) {
+      var footerRect = footer.getBoundingClientRect();
+      if (footerRect.top < window.innerHeight) show = false;
+    }
     bar.classList.toggle('is-visible', show);
     bar.setAttribute('aria-hidden', show ? 'false' : 'true');
   }
