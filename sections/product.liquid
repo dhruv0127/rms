@@ -146,24 +146,40 @@
   // Show the bar once the in-page form has scrolled out of view, but hide it
   // again once the footer reaches the viewport so it doesn't sit on top of it.
   var anchor = realForm || section;
-  var footer = document.querySelector('.idiom-footer');
-  function onScroll() {
-    var rect = anchor.getBoundingClientRect();
-    var show = rect.bottom < 80;
-    if (show && footer) {
-      var footerRect = footer.getBoundingClientRect();
-      if (footerRect.top < window.innerHeight) show = false;
-    }
+  var formOutOfView = false;
+  var footerVisible = false;
+
+  function render() {
+    var show = formOutOfView && !footerVisible;
     bar.classList.toggle('is-visible', show);
     bar.setAttribute('aria-hidden', show ? 'false' : 'true');
   }
 
-  window.addEventListener('scroll', onScroll, { passive: true });
-  window.addEventListener('resize', onScroll, { passive: true });
+  new IntersectionObserver(function (entries) {
+    formOutOfView = entries[0].boundingClientRect.bottom < 80;
+    render();
+  }, { threshold: 0 }).observe(anchor);
+
+  // The footer section renders later in the document (after </main>), so it
+  // doesn't exist yet at this point in the parse — look it up once it does.
+  function observeFooter() {
+    var footer = document.querySelector('.idiom-footer');
+    if (!footer) return;
+    new IntersectionObserver(function (entries) {
+      footerVisible = entries[0].isIntersecting;
+      render();
+    }, { threshold: 0 }).observe(footer);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', observeFooter);
+  } else {
+    observeFooter();
+  }
+
   document.addEventListener('variant:change', syncState);
   section.addEventListener('change', syncState);
   syncState();
-  onScroll();
 })();
 </script>
 

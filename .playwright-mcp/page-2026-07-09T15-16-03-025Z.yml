@@ -1,0 +1,205 @@
+- generic [active] [ref=f10e1]:
+  - link "Skip to content" [ref=f10e2] [cursor=pointer]:
+    - /url: "#MainContent"
+  - group [ref=f10e7]:
+    - generic [ref=f10e14]: FREE SHIPPING ORDERS £35+
+  - banner [ref=f10e16]:
+    - generic [ref=f10e17]:
+      - button "Open navigation menu" [ref=f10e18] [cursor=pointer]:
+        - generic [ref=f10e19]: Open navigation menu
+        - img
+      - heading "idiom®" [level=1] [ref=f10e20]:
+        - link "idiom®" [ref=f10e21] [cursor=pointer]:
+          - /url: /
+          - img [ref=f10e22]
+      - navigation [ref=f10e24]:
+        - generic [ref=f10e25]:
+          - group [ref=f10e27]:
+            - button "Open search bar" [ref=f10e28] [cursor=pointer]:
+              - img
+              - generic [ref=f10e29]: Open search bar
+          - link "Open cart" [ref=f10e31] [cursor=pointer]:
+            - /url: /cart
+            - generic [ref=f10e32]: Open cart
+            - img
+    - generic [ref=f10e34]:
+      - generic [ref=f10e35]: free samples in every order ·
+      - generic [ref=f10e36]: 5 star reviewed layering fragrances ·
+      - generic [ref=f10e37]: high-quality, british made eau du parfum ·
+      - generic [ref=f10e38]: free samples in every order ·
+      - generic [ref=f10e39]: 5 star reviewed layering fragrances ·
+      - generic [ref=f10e40]: high-quality, british made eau du parfum ·
+  - main [ref=f10e41]:
+    - generic [ref=f10e42]:
+      - generic [ref=f10e45]:
+        - generic [ref=f10e46]:
+          - generic [ref=f10e49]:
+            - figure [ref=f10e53]:
+              - img "3D AMPLIFIER | EAU DE PARFUM" [ref=f10e54]
+            - figure [ref=f10e58]:
+              - img "3D AMPLIFIER | EAU DE PARFUM" [ref=f10e59]
+            - figure [ref=f10e63]:
+              - img "3D AMPLIFIER | EAU DE PARFUM" [ref=f10e64]
+            - figure [ref=f10e68]:
+              - img "3D AMPLIFIER | EAU DE PARFUM" [ref=f10e69]
+          - generic [ref=f10e72]:
+            - link "3D AMPLIFIER | EAU DE PARFUM" [ref=f10e74] [cursor=pointer]:
+              - /url: //idiomfragrances.com/cdn/shop/files/53_2048x.png?v=1763287976
+              - figure [ref=f10e75]:
+                - img "3D AMPLIFIER | EAU DE PARFUM" [ref=f10e76]
+            - link "3D AMPLIFIER | EAU DE PARFUM" [ref=f10e78] [cursor=pointer]:
+              - /url: //idiomfragrances.com/cdn/shop/files/32_302e1fca-1974-4e7b-8935-1cc313b16cfe_2048x.png?v=1763287996
+              - figure [ref=f10e79]:
+                - img "3D AMPLIFIER | EAU DE PARFUM" [ref=f10e80]
+            - link "3D AMPLIFIER | EAU DE PARFUM" [ref=f10e82] [cursor=pointer]:
+              - /url: //idiomfragrances.com/cdn/shop/files/63_ad7ea255-40ba-4e9c-a9f0-42285ca5ab6e_2048x.png?v=1763288334
+              - figure [ref=f10e83]:
+                - img "3D AMPLIFIER | EAU DE PARFUM" [ref=f10e84]
+            - link "3D AMPLIFIER | EAU DE PARFUM" [ref=f10e86] [cursor=pointer]:
+              - /url: //idiomfragrances.com/cdn/shop/files/61_2048x.png?v=1763288004
+              - figure [ref=f10e87]:
+                - img "3D AMPLIFIER | EAU DE PARFUM" [ref=f10e88]
+        - generic [ref=f10e90]:
+          - heading "3D AMPLIFIER | EAU DE PARFUM" [level=2] [ref=f10e93]
+          - paragraph [ref=f10e95]: BRIGHTEN. DEEPEN. EXTEND.
+          - generic [ref=f10e97]:
+            - generic [ref=f10e98]: ★★★★★
+            - generic [ref=f10e99]: 0 reviews
+          - generic [ref=f10e100]:
+            - paragraph [ref=f10e101]: a scent enhancer that elevates any fragrance. amplifies radiance, diffusion, depth, and longevity, in a subtle, magical way. worn solo, it’s a soft, enigmatic hum on skin.
+            - paragraph [ref=f10e102]:
+              - strong [ref=f10e103]: "wear solo:"
+              - text: a subtle skin aura, genderless and magnetic.
+            - paragraph [ref=f10e104]:
+              - strong [ref=f10e105]: "layer:"
+              - text: enhances, brightens, and extends.
+          - generic [ref=f10e107]:
+            - group "Size" [ref=f10e110]:
+              - generic [ref=f10e111]:
+                - generic [ref=f10e112]:
+                  - radio "30ml" [checked]
+                  - generic [ref=f10e114]: 30ml
+                - generic [ref=f10e115]:
+                  - radio "2ml"
+                  - generic [ref=f10e117]: 2ml
+            - button "add to bag | £38" [ref=f10e121] [cursor=pointer]:
+              - generic [ref=f10e122]: add to bag | £38
+          - generic [ref=f10e124]:
+            - paragraph [ref=f10e125]: "FIRST IMPRESSIONS:"
+            - generic [ref=f10e126]:
+              - img "First impression" [ref=f10e128]
+              - img "First impression" [ref=f10e130]
+              - img "First impression" [ref=f10e132]
+              - img "First impression" [ref=f10e134]
+          - button "key notes" [ref=f10e137] [cursor=pointer]:
+            - text: key notes
+            - img [ref=f10e138]
+            - img [ref=f10e140]
+          - button "how to wear" [ref=f10e143] [cursor=pointer]:
+            - text: how to wear
+            - img [ref=f10e144]
+            - img [ref=f10e146]
+          - button "full ingredient list" [ref=f10e149] [cursor=pointer]:
+            - text: full ingredient list
+            - img [ref=f10e150]
+            - img [ref=f10e152]
+      - generic [ref=f10e153]:
+        - generic [ref=f10e154]:
+          - generic [ref=f10e155]: 3D AMPLIFIER | EAU DE PARFUM
+          - generic [ref=f10e156]: £38
+        - button [ref=f10e157] [cursor=pointer]: add to bag
+    - generic [ref=f10e159]:
+      - generic [ref=f10e162]:
+        - generic [ref=f10e163]: smell like no one else™ · find your fragrance freedom · layer, or wear solo ·
+        - generic [ref=f10e164]: smell like no one else™ · find your fragrance freedom · layer, or wear solo ·
+        - generic [ref=f10e165]: smell like no one else™ · find your fragrance freedom · layer, or wear solo ·
+        - generic [ref=f10e166]: smell like no one else™ · find your fragrance freedom · layer, or wear solo ·
+        - generic [ref=f10e167]: smell like no one else™ · find your fragrance freedom · layer, or wear solo ·
+        - generic [ref=f10e168]: smell like no one else™ · find your fragrance freedom · layer, or wear solo ·
+      - generic [ref=f10e170]:
+        - generic [ref=f10e171]:
+          - paragraph [ref=f10e172]: wear solo,
+          - paragraph [ref=f10e173]: "or layer me with:"
+          - separator [ref=f10e174]
+          - paragraph [ref=f10e175]: these scents were made to mix.
+          - paragraph [ref=f10e176]: "* that's your part."
+        - generic [ref=f10e178]:
+          - link "ACOUSTIC ROSE | EAU DE PARFUM ACOUSTIC ROSE | EAU DE PARFUM £6.00" [ref=f10e179] [cursor=pointer]:
+            - /url: /products/acoustic-rose-30ml
+            - generic [ref=f10e180]:
+              - img "ACOUSTIC ROSE | EAU DE PARFUM" [ref=f10e183]
+              - generic [ref=f10e184]:
+                - paragraph [ref=f10e185]: ACOUSTIC ROSE | EAU DE PARFUM
+                - paragraph [ref=f10e186]: £6.00
+          - link "PALO SANTAL | EAU DE PARFUM PALO SANTAL | EAU DE PARFUM £6.00" [ref=f10e187] [cursor=pointer]:
+            - /url: /products/palo-santal-30ml
+            - generic [ref=f10e188]:
+              - img "PALO SANTAL | EAU DE PARFUM" [ref=f10e191]
+              - generic [ref=f10e192]:
+                - paragraph [ref=f10e193]: PALO SANTAL | EAU DE PARFUM
+                - paragraph [ref=f10e194]: £6.00
+          - link "BERGAMOT HI-FI | EAU DE PARFUM BERGAMOT HI-FI | EAU DE PARFUM £6.00" [ref=f10e195] [cursor=pointer]:
+            - /url: /products/bergamot-hi-fi-30ml
+            - generic [ref=f10e196]:
+              - img "BERGAMOT HI-FI | EAU DE PARFUM" [ref=f10e199]
+              - generic [ref=f10e200]:
+                - paragraph [ref=f10e201]: BERGAMOT HI-FI | EAU DE PARFUM
+                - paragraph [ref=f10e202]: £6.00
+    - generic [ref=f10e204]:
+      - heading "cool. meditative. lingering aromatic wood." [level=2] [ref=f10e205]
+      - paragraph [ref=f10e206]: subtle gourmand notes on warm skin. quietly radiant.
+  - contentinfo [ref=f10e222]:
+    - generic [ref=f10e223]:
+      - generic [ref=f10e224]:
+        - paragraph [ref=f10e225]: smell like no one else
+        - paragraph [ref=f10e226]: Idiom makes rule-breaking, layer-ready fragrances for skin that wants more. Designed to be mixed, and never made to behave.
+        - generic [ref=f10e227]:
+          - link "Instagram" [ref=f10e228] [cursor=pointer]:
+            - /url: https://instagram.com/idiomfragrances
+            - img [ref=f10e229]
+          - link "TikTok" [ref=f10e231] [cursor=pointer]:
+            - /url: https://tiktok.com/@idiomfragrances
+            - img [ref=f10e232]
+      - generic [ref=f10e234]:
+        - generic [ref=f10e235]:
+          - paragraph [ref=f10e236]: the boring stuff
+          - list [ref=f10e237]:
+            - listitem [ref=f10e238]:
+              - link "delivery" [ref=f10e239] [cursor=pointer]:
+                - /url: /policies/shipping-policy
+            - listitem [ref=f10e240]:
+              - link "returns" [ref=f10e241] [cursor=pointer]:
+                - /url: /policies/refund-policy
+            - listitem [ref=f10e242]:
+              - link "accounts" [ref=f10e243] [cursor=pointer]:
+                - /url: /account
+            - listitem [ref=f10e244]:
+              - link "faqs" [ref=f10e245] [cursor=pointer]:
+                - /url: /pages/faqs
+            - listitem [ref=f10e246]:
+              - link "contact" [ref=f10e247] [cursor=pointer]:
+                - /url: /pages/contact
+            - listitem [ref=f10e248]:
+              - link "terms & conditions" [ref=f10e249] [cursor=pointer]:
+                - /url: /policies/terms-of-service
+            - listitem [ref=f10e250]:
+              - link "privacy policy" [ref=f10e251] [cursor=pointer]:
+                - /url: /policies/privacy-policy
+        - generic [ref=f10e252]:
+          - paragraph [ref=f10e253]: shop by type
+          - list [ref=f10e254]:
+            - listitem [ref=f10e255]:
+              - link "full size" [ref=f10e256] [cursor=pointer]:
+                - /url: /collections/full-size
+            - listitem [ref=f10e257]:
+              - link "mini-oms" [ref=f10e258] [cursor=pointer]:
+                - /url: /collections/mini-oms
+            - listitem [ref=f10e259]:
+              - link "kits and gifts" [ref=f10e260] [cursor=pointer]:
+                - /url: /collections/kits-and-gifts
+    - img "idiom"
+    - generic [ref=f10e262]: © 2026 idiom fragrances. all rights reserved.
+  - generic [ref=f10e263] [cursor=pointer]:
+    - button "grab 10% off" [ref=f10e264]:
+      - generic [ref=f10e265]: grab 10% off
+    - button "Dismiss offer" [ref=f10e266]: ×

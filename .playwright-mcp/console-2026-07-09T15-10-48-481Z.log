@@ -1,0 +1,32 @@
+[    1674ms] [LOG] AZ: Google Font & Custom Fonts v1.0.3 @ https://idiomfragrances.com/products/3d-amp-100ml-copy?pb=0:977
+[    2409ms] ReferenceError: jdgm is not defined
+    at https://idiomfragrances.com/products/3d-amp-100ml-copy?pb=0:4184:3
+[    2478ms] [INFO] [HotReload] CLI hot reload disabled - No hot reload port specified. @ https://idiomfragrances.com/cdn/shopifycloud/theme-hot-reload/theme-hot-reload.js:316
+[    2910ms] Uncaught ReferenceError: jdgmSettings is not defined
+    at <anonymous> (https://cdnwidget.judge.me/shopify_v2.js:9:30529)
+    at <anonymous> (https://cdnwidget.judge.me/shopify_v2.js:9:30869)
+[    2917ms] Uncaught ReferenceError: jdgmSettings is not defined
+    at n (https://cdnwidget.judge.me/shopify_v2.js:9:12570)
+    at <anonymous> (https://cdnwidget.judge.me/shopify_v2.js:9:13296)
+    at l (https://cdnwidget.judge.me/shopify_v2.js:1:5733)
+    at fireWith (https://cdnwidget.judge.me/shopify_v2.js:1:6501)
+    at ready (https://cdnwidget.judge.me/shopify_v2.js:1:8318)
+[    7774ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3190
+[    7777ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3190
+[    7778ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :2823
+[   13000ms] [LOG] recaptchacompat disabled @ https://js.hcaptcha.com/1/api.js?render=explicit&recaptchacompat=off&onload=__shopify_hcap_load_s3pnfpky:3
+[   15593ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3190
+[   15595ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3190
+[   15596ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :2823
+[   19113ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3190
+[   19117ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3190
+[   19120ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :2823
+[   21510ms] [ERROR] Failed to load resource: net::ERR_TIMED_OUT @ https://shop.app/checkouts/internal/preloads.js?locale=en-GB&shop_id=91491172729:0
+[   28547ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3190
+[   28549ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3190
+[   41817ms] [WARNING] The resource https://idiomfragrances.com/cdn/shop/files/idiom_logo_black_150x45.png?v=1746711320 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://idiomfragrances.com/products/3d-amp-100ml-copy?pb=0:0
+[   41817ms] [WARNING] The resource https://idiomfragrances.com/cdn/shop/t/10/assets/loading.svg?v=91665432863842511931783077723 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://idiomfragrances.com/products/3d-amp-100ml-copy?pb=0:0
+[   72609ms] [WARNING] The resource https://idiomfragrances.com/cdn/shop/files/idiom_logo_black_150x45.png?v=1746711320 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://idiomfragrances.com/products/3d-amp-100ml-copy?pb=0:0
+[   72609ms] [WARNING] The resource https://idiomfragrances.com/cdn/shop/t/10/assets/loading.svg?v=91665432863842511931783077723 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://idiomfragrances.com/products/3d-amp-100ml-copy?pb=0:0
+[  118688ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3190
+[  118688ms] [VERBOSE] Rendering was performed in a subtree hidden by content-visibility. @ :3190
