@@ -194,6 +194,34 @@
         "moon_top_mobile": 92,
         "moon_left_mobile": 66
       }
+    },
+    "idiom-product-trio": {
+      "type": "idiom-product-trio",
+      "blocks": {
+        "trio_1": {
+          "type": "product",
+          "settings": {
+            "product": "3d-amp-100ml-copy",
+            "bottle_height": 82
+          }
+        },
+        "trio_2": {
+          "type": "product",
+          "settings": {
+            "product": "3d-amp-100ml-copy",
+            "bottle_height": 82
+          }
+        },
+        "trio_3": {
+          "type": "product",
+          "settings": {
+            "product": "3d-amp-100ml-copy",
+            "bottle_height": 82
+          }
+        }
+      },
+      "block_order": ["trio_1", "trio_2", "trio_3"],
+      "settings": {}
     }
   },
   "order": [
@@ -201,6 +229,7 @@
     "idiom-brand-story",
     "idiom-product-cards",
     "idiom-dual-promo",
-    "idiom-loyalty"
+    "idiom-loyalty",
+    "idiom-product-trio"
   ]
 }
