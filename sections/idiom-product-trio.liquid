@@ -120,10 +120,28 @@
     padding: 48px 24px;
   }
 
+  /* Mobile: horizontal scroll slider instead of stacked grid */
   .idiom-product-trio__grid {
-    grid-template-columns: 1fr;
-    gap: 48px;
-    max-width: 480px;
+    display: flex;
+    grid-template-columns: none;
+    max-width: none;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    /* bleed to the section edges so cards can peek */
+    margin: 0 -24px;
+    padding: 0 24px;
+  }
+
+  .idiom-product-trio__grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .idiom-product-trio__item {
+    flex: 0 0 82%;
+    scroll-snap-align: center;
   }
 }
 
@@ -134,6 +152,11 @@
 
   .idiom-product-trio__heading {
     margin-bottom: 32px;
+  }
+
+  .idiom-product-trio__grid {
+    margin: 0 -16px;
+    padding: 0 16px;
   }
 
   .idiom-product-trio__title {

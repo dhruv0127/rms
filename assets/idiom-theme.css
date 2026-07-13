@@ -9,6 +9,12 @@
 img {
   max-width: 100%;
 }
+/* Prevent decorative overflow (e.g. floating moon/cloud) from causing
+   horizontal page scroll, while still allowing vertical overflow to show. */
+html,
+body {
+  overflow-x: hidden;
+}
 
 /* --- Brand tokens --- */
 :root {
