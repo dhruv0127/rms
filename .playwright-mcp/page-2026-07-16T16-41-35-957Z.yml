@@ -1,0 +1,194 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#MainContent"
+  - group [ref=e7]:
+    - generic [ref=e8]: FREE SHIPPING ORDERS £35+
+  - banner [ref=e16]:
+    - generic [ref=e17]:
+      - heading [level=1] [ref=e18]:
+        - link "idiom®" [ref=e19] [cursor=pointer]:
+          - /url: /
+      - navigation [ref=e22]:
+        - generic [ref=e23]:
+          - link "Home" [ref=e25] [cursor=pointer]:
+            - /url: /
+          - navigation [ref=e27]:
+            - link "Shop" [ref=e28] [cursor=pointer]:
+              - /url: /collections/shop-everything
+          - link "Gallery" [ref=e31] [cursor=pointer]:
+            - /url: /pages/gallery
+          - link "About" [ref=e34] [cursor=pointer]:
+            - /url: /pages/story
+        - generic [ref=e36]:
+          - group [ref=e38]:
+            - button "Open search bar" [ref=e39] [cursor=pointer]
+          - link "My Account" [ref=e42] [cursor=pointer]:
+            - /url: /account
+          - link "Open cart" [ref=e45] [cursor=pointer]:
+            - /url: /cart
+    - generic [ref=e47]:
+      - generic [ref=e48]: free samples in every order
+      - generic [ref=e49]: 5 star reviewed layering fragrances
+      - generic [ref=e50]: high-quality, british made eau du parfum
+  - main [ref=e51]:
+    - generic [ref=e54]:
+      - img "127 unique fragrances, 1 kit." [ref=e55]
+      - generic [ref=e56]:
+        - heading "127 unique fragrances, 1 kit." [level=1] [ref=e57]
+        - paragraph [ref=e58]: discover your Flanker fragrance combinations with our 7-piece discovery kit.
+        - link "shop now | £17" [ref=e60] [cursor=pointer]:
+          - /url: /collections/all
+    - generic [ref=e62]:
+      - generic [ref=e64]:
+        - generic [ref=e65]: smell like no one else™
+        - generic [ref=e66]: find your fragrance freedom
+        - generic [ref=e67]: layer, or wear solo
+        - generic [ref=e68]: smell like no one else™
+        - generic [ref=e69]: find your fragrance freedom
+        - generic [ref=e70]: layer, or wear solo
+        - generic [ref=e71]: smell like no one else™
+        - generic [ref=e72]: find your fragrance freedom
+        - generic [ref=e73]: layer, or wear solo
+        - generic [ref=e74]: smell like no one else™
+        - generic [ref=e75]: find your fragrance freedom
+        - generic [ref=e76]: layer, or wear solo
+        - generic [ref=e77]: smell like no one else™
+        - generic [ref=e78]: find your fragrance freedom
+        - generic [ref=e79]: layer, or wear solo
+        - generic [ref=e80]: smell like no one else™
+        - generic [ref=e81]: find your fragrance freedom
+        - generic [ref=e82]: layer, or wear solo
+      - generic [ref=e83]:
+        - heading "sick of smelling like everyone else?" [level=2] [ref=e84]
+        - paragraph [ref=e85]: yeah, us too. idiom was born by 3 good friends who shared a passion for fragrance with the belief that individuality is everything and fragrance could be done better, high-quality, long lasting capsule eau du parfums ready to layer and always priced to be affordable.
+        - link "learn more" [ref=e87] [cursor=pointer]:
+          - /url: /pages/about
+    - generic [ref=e88]:
+      - generic [ref=e89]:
+        - heading "holy s#*%, what are you wearing?" [level=3] [ref=e90]
+        - paragraph [ref=e91]: get to know our crowd-pleasers...
+      - generic [ref=e95]:
+        - link [ref=e97] [cursor=pointer]:
+          - /url: /products/3d-amp-100ml-copy
+          - generic [ref=e98]:
+            - img "3D AMPLIFIER | EAU DE PARFUM" [ref=e101]
+            - generic [ref=e102]:
+              - paragraph [ref=e103]: 3D AMPLIFIER | EAU DE PARFUM
+              - paragraph [ref=e104]: £6.00
+        - link [ref=e106] [cursor=pointer]:
+          - /url: /products/3d-amp-100ml-copy
+          - generic [ref=e111]:
+            - paragraph [ref=e112]: 3D AMPLIFIER | EAU DE PARFUM
+            - paragraph [ref=e113]: £6.00
+        - link [ref=e115] [cursor=pointer]:
+          - /url: /products/3d-amp-100ml-copy
+          - generic [ref=e120]:
+            - paragraph [ref=e121]: 3D AMPLIFIER | EAU DE PARFUM
+            - paragraph [ref=e122]: £6.00
+        - link [ref=e124] [cursor=pointer]:
+          - /url: /products/3d-amp-100ml-copy
+          - generic [ref=e129]:
+            - paragraph [ref=e130]: 3D AMPLIFIER | EAU DE PARFUM
+            - paragraph [ref=e131]: £6.00
+    - generic [ref=e133]:
+      - generic [ref=e225]:
+        - img "the perfect saffron" [ref=e226]
+        - generic [ref=e134]:
+          - heading "the perfect saffron" [level=3] [ref=e135]
+          - paragraph [ref=e136]: golden, grounded saffron radiating dry amber, soft leather and sun-warmed earth.
+          - link "shop now | from £6" [ref=e137] [cursor=pointer]:
+            - /url: /products/saffran-haze-30ml
+      - generic [ref=e228]:
+        - img "citrusy + fresh af" [ref=e229]
+        - generic [ref=e138]:
+          - heading "citrusy + fresh af" [level=3] [ref=e139]
+          - paragraph [ref=e140]: a zesty burst of authentic calabrian bergamot with a petitgrain and mandarin twist.
+          - link "shop now | from £6" [ref=e141] [cursor=pointer]:
+            - /url: /products/bergamot-hi-fi-30ml
+    - generic [ref=e144]:
+      - figure [ref=e145]
+      - generic [ref=e146]:
+        - paragraph [ref=e147]: welcome to the society.
+        - heading "earn points for purchases to redeem scents you love. get access to exclusive products, sales, and more." [level=2] [ref=e148]
+        - link "join the loyalty programme" [ref=e150] [cursor=pointer]:
+          - /url: "#"
+    - generic [ref=e152]:
+      - generic [ref=e153]:
+        - heading "holy s#*%, what are you wearing?" [level=2] [ref=e154]
+        - paragraph [ref=e155]: get to know our crowd-pleasers...
+      - generic [ref=e156]:
+        - link "3D AMPLIFIER | EAU DE PARFUM 3D AMPLIFIER | EAU DE PARFUM from £6.00 BRIGHTEN. DEEPEN. EXTEND." [ref=e157] [cursor=pointer]:
+          - /url: /products/3d-amp-100ml-copy
+          - img "3D AMPLIFIER | EAU DE PARFUM" [ref=e231]
+          - generic [ref=e160]:
+            - generic [ref=e161]:
+              - heading "3D AMPLIFIER | EAU DE PARFUM" [level=3] [ref=e162]
+              - generic [ref=e163]: from £6.00
+            - paragraph [ref=e164]: BRIGHTEN. DEEPEN. EXTEND.
+        - link "3D AMPLIFIER | EAU DE PARFUM 3D AMPLIFIER | EAU DE PARFUM from £6.00 BRIGHTEN. DEEPEN. EXTEND." [ref=e165] [cursor=pointer]:
+          - /url: /products/3d-amp-100ml-copy
+          - img "3D AMPLIFIER | EAU DE PARFUM" [ref=e232]
+          - generic [ref=e168]:
+            - generic [ref=e169]:
+              - heading "3D AMPLIFIER | EAU DE PARFUM" [level=3] [ref=e170]
+              - generic [ref=e171]: from £6.00
+            - paragraph [ref=e172]: BRIGHTEN. DEEPEN. EXTEND.
+        - link "3D AMPLIFIER | EAU DE PARFUM 3D AMPLIFIER | EAU DE PARFUM from £6.00 BRIGHTEN. DEEPEN. EXTEND." [ref=e173] [cursor=pointer]:
+          - /url: /products/3d-amp-100ml-copy
+          - img "3D AMPLIFIER | EAU DE PARFUM" [ref=e233]
+          - generic [ref=e176]:
+            - generic [ref=e177]:
+              - heading "3D AMPLIFIER | EAU DE PARFUM" [level=3] [ref=e178]
+              - generic [ref=e179]: from £6.00
+            - paragraph [ref=e180]: BRIGHTEN. DEEPEN. EXTEND.
+  - contentinfo [ref=e182]:
+    - generic [ref=e183]:
+      - generic [ref=e184]:
+        - paragraph [ref=e185]: smell like no one else
+        - paragraph [ref=e186]: Idiom makes rule-breaking, layer-ready fragrances for skin that wants more. Designed to be mixed, and never made to behave.
+        - generic [ref=e187]:
+          - link "Instagram" [ref=e188] [cursor=pointer]:
+            - /url: https://instagram.com/idiomfragrances
+          - link "TikTok" [ref=e191] [cursor=pointer]:
+            - /url: https://tiktok.com/@idiomfragrances
+      - generic [ref=e194]:
+        - generic [ref=e195]:
+          - paragraph [ref=e196]: the boring stuff
+          - list [ref=e197]:
+            - listitem [ref=e198]:
+              - link "delivery" [ref=e199] [cursor=pointer]:
+                - /url: /policies/shipping-policy
+            - listitem [ref=e200]:
+              - link "returns" [ref=e201] [cursor=pointer]:
+                - /url: /policies/refund-policy
+            - listitem [ref=e202]:
+              - link "accounts" [ref=e203] [cursor=pointer]:
+                - /url: /account
+            - listitem [ref=e204]:
+              - link "faqs" [ref=e205] [cursor=pointer]:
+                - /url: /pages/faqs
+            - listitem [ref=e206]:
+              - link "contact" [ref=e207] [cursor=pointer]:
+                - /url: /pages/contact
+            - listitem [ref=e208]:
+              - link "terms & conditions" [ref=e209] [cursor=pointer]:
+                - /url: /policies/terms-of-service
+            - listitem [ref=e210]:
+              - link "privacy policy" [ref=e211] [cursor=pointer]:
+                - /url: /policies/privacy-policy
+        - generic [ref=e212]:
+          - paragraph [ref=e213]: shop by type
+          - list [ref=e214]:
+            - listitem [ref=e215]:
+              - link "full size" [ref=e216] [cursor=pointer]:
+                - /url: /collections/full-size
+            - listitem [ref=e217]:
+              - link "mini-oms" [ref=e218] [cursor=pointer]:
+                - /url: /collections/mini-oms
+            - listitem [ref=e219]:
+              - link "kits and gifts" [ref=e220] [cursor=pointer]:
+                - /url: /collections/kits-and-gifts
+    - img "idiom"
+  - generic [ref=e221] [cursor=pointer]:
+    - button "grab 10% off" [ref=e222]
+    - button "Dismiss offer" [ref=e224]: ×
