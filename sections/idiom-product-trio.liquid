@@ -70,11 +70,10 @@
   transform: scale(1.06);
 }
 
-/* Touch devices have no hover: keep the reveal image always visible */
+/* Touch devices have no hover: hide the reveal image, show only the bottle */
 @media (hover: none) {
   .idiom-product-trio__reveal {
-    opacity: 1;
-    transform: scale(1);
+    opacity: 0;
   }
 }
 
@@ -154,9 +153,24 @@
     margin-bottom: 32px;
   }
 
+  .idiom-product-trio__heading.idiom-section-heading h2 {
+    font-size: 22px;
+    margin-bottom: 4px;
+  }
+
+  .idiom-product-trio__heading.idiom-section-heading p {
+    font-size: 12px;
+  }
+
   .idiom-product-trio__grid {
     margin: 0 -16px;
     padding: 0 16px;
+  }
+
+  /* Enlarge the bottle image on mobile only */
+  .idiom-product-trio__bottle {
+    height: 100%;
+    max-width: 100%;
   }
 
   .idiom-product-trio__title {

@@ -1101,3 +1101,27 @@ body:not(.no-outline) .mobile-menu__item:focus-within {
 .no-js .nav [data-collapsible-content] {
   transform: none;
 }
+
+/* Hover: bold instead of animated underline */
+.navlink--toplevel > .navtext::before,
+.navlink--toplevel > .navtext::after,
+.navlink--icon .navtext::before,
+.navlink--icon .navtext::after,
+.grandparent .navlink--child > .navtext::before,
+.grandparent .navlink--child > .navtext::after {
+  display: none !important;
+}
+.navlink--dot > .navtext::after,
+.grandparent .navlink--dot > .navtext::after {
+  display: block !important;
+}
+.no-touch .navlink--toplevel > .navtext:hover,
+.no-touch .navlink--icon .navtext:hover,
+.no-touch .grandparent .navlink--child > .navtext:hover,
+.menu__item:hover > details > .navlink > .navtext,
+.menu__item:hover > .navlink > .navtext,
+.menu__item.is-visible > .navlink > .navtext,
+.grandparent .navlink--child:hover > .navtext {
+  font-weight: var(--FONT-WEIGHT-NAV-BOLD, 700);
+  font-family: var(--FONT-STACK-HEADING);
+}

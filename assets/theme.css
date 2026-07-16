@@ -19907,6 +19907,7 @@ body:not(.no-outline)
 
 .text-highlight__break {
   display: block;
+  font-family: "farro-bold (2)", sans-serif;
 }
 
 .haspercentoff a,

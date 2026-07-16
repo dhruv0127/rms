@@ -5,7 +5,7 @@
   .idiom-collection__header { text-align: center; padding: 48px 24px 32px; }
   .idiom-collection__title { font-size: 40px; font-weight: 700; color: var(--idiom-black); margin: 0 0 8px; }
   .idiom-collection__subtext { font-size: 14px; opacity: 0.6; margin: 0; }
-  .idiom-collection__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 0 24px 60px; }
+  .idiom-collection__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; padding: 0 24px 60px; }
   .idiom-collection__pagination { text-align: center; padding: 24px; }
   @media (max-width: 768px) { .idiom-collection__grid { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 480px) { .idiom-collection__grid { grid-template-columns: 1fr; } }
@@ -22,7 +22,7 @@
   {%- paginate collection.products by section.settings.products_per_page -%}
     <div class="idiom-collection__grid">
       {%- for product in collection.products -%}
-        {% render 'idiom-product-card', product: product %}
+        {% render 'idiom-collection-card', product: product %}
       {%- endfor -%}
     </div>
     {%- if paginate.pages > 1 -%}

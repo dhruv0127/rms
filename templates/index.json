@@ -67,13 +67,32 @@
         "heading": "127 unique fragrances, 1 kit.",
         "subtext": "discover your Flanker fragrance combinations with our 7-piece discovery kit.",
         "cta_label": "shop now | £17",
-        "cta_url": "shopify://collections/all",
-        "show_marquee": false,
-        "marquee_text": "smell like no one else™\nfind your fragrance freedom\nlayer, or wear solo\nsmell like no one else™\nfind your fragrance freedom\nlayer, or wear solo"
+        "cta_url": "shopify://collections/all"
       }
     },
     "idiom-brand-story": {
       "type": "idiom-brand-story",
+      "blocks": {
+        "phrase_1": {
+          "type": "phrase",
+          "settings": {
+            "text": "smell like no one else™"
+          }
+        },
+        "phrase_2": {
+          "type": "phrase",
+          "settings": {
+            "text": "find your fragrance freedom"
+          }
+        },
+        "phrase_3": {
+          "type": "phrase",
+          "settings": {
+            "text": "layer, or wear solo"
+          }
+        }
+      },
+      "block_order": ["phrase_1", "phrase_2", "phrase_3"],
       "settings": {
         "butterfly_image": "shopify://shop_images/Group_5.png",
         "moon_image": "shopify://shop_images/group6.png",
@@ -82,7 +101,6 @@
         "body": "yeah, us too. <br> idiom was born by 3 good friends who shared a passion for fragrance with the belief that individuality is everything and fragrance could be done better, high-quality, long lasting capsule eau du parfums ready to layer and always priced to be affordable.",
         "cta_label": "learn more",
         "cta_url": "/pages/about",
-        "marquee_text": "smell like no one else™ · find your fragrance freedom · layer, or wear solo ·",
         "grid_heading": "holy s#*%, what are you wearing?",
         "grid_subtext": "get to know our crowd-pleasers..."
       }
@@ -221,7 +239,10 @@
         }
       },
       "block_order": ["trio_1", "trio_2", "trio_3"],
-      "settings": {}
+      "settings": {
+        "heading": "holy s#*%, what are you wearing?",
+        "subtext": "get to know our crowd-pleasers..."
+      }
     }
   },
   "order": [

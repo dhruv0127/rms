@@ -114,7 +114,9 @@
   }
 
   .idiom-brand-story__marquee-strip .idiom-marquee-track span {
-    padding: 0 20px;
+    padding: 0 28px;
+    color: #fffbf3;
+    font-size: 14px;
   }
 
 
@@ -202,11 +204,14 @@
 </style>
 
 <div class="idiom-brand-story">
-  {%- assign marquee_items = section.settings.marquee_text | default: "smell like no one else™ · find your fragrance freedom · layer, or wear solo · " -%}
   <div class="idiom-brand-story__marquee-strip">
     <div class="idiom-marquee-track" aria-hidden="true">
       {%- for i in (1..6) -%}
-        <span>{{ marquee_items }}</span>
+        {%- for block in section.blocks -%}
+          {%- if block.settings.text != blank -%}
+            <span>{{ block.settings.text }}</span>
+          {%- endif -%}
+        {%- endfor -%}
       {%- endfor -%}
     </div>
   </div>
@@ -291,12 +296,6 @@
     },
     {
       "type": "text",
-      "id": "marquee_text",
-      "label": "Marquee text",
-      "default": "smell like no one else™ · find your fragrance freedom · layer, or wear solo · "
-    },
-    {
-      "type": "text",
       "id": "grid_heading",
       "label": "Grid transition heading",
       "default": "holy s#*%, what are you wearing?"
@@ -308,9 +307,29 @@
       "default": "get to know our crowd-pleasers..."
     }
   ],
+  "max_blocks": 12,
+  "blocks": [
+    {
+      "type": "phrase",
+      "name": "Marquee phrase",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Phrase text",
+          "default": "smell like no one else™"
+        }
+      ]
+    }
+  ],
   "presets": [
     {
-      "name": "Brand Story"
+      "name": "Brand Story",
+      "blocks": [
+        { "type": "phrase", "settings": { "text": "smell like no one else™" } },
+        { "type": "phrase", "settings": { "text": "find your fragrance freedom" } },
+        { "type": "phrase", "settings": { "text": "layer, or wear solo" } }
+      ]
     }
   ]
 }

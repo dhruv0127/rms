@@ -27,7 +27,11 @@
   text-transform: lowercase;
   gap: 0;
 }
-.idiom-layering__marquee .idiom-marquee-track span { padding: 0 4px; }
+.idiom-layering__marquee .idiom-marquee-track span {
+  padding: 0 28px;
+  color: #fffbf3;
+  font-size: 14px;
+}
 
 /* Floating state — sticks to the bottom of the viewport until the
    layering section scrolls up and the marquee docks into its home slot. */
@@ -60,7 +64,12 @@
 .idiom-layering__scroll::-webkit-scrollbar { display: none; }
 /* Show 2.5 cards in the scroll area (2 full + a peek of the 3rd). The 20px gap
    appears 2× across 2.5 visible cards, so subtract 2 gaps then divide by 2.5. */
-.idiom-layering__scroll .idiom-product-card-link { flex: 0 0 calc((100% - 40px) / 2.5); width: calc((100% - 40px) / 2.5); }
+.idiom-layering__scroll .idiom-collection-card { flex: 0 0 calc((100% - 40px) / 2.5); width: calc((100% - 40px) / 2.5); }
+
+/* White card text — scoped to this section (olive background) */
+.idiom-layering__scroll .idiom-collection-card__title,
+.idiom-layering__scroll .idiom-collection-card__price,
+.idiom-layering__scroll .idiom-collection-card__tagline { color: #fff; }
 
 @media (max-width: 768px) {
   .idiom-layering-wrap { margin: 12px 0 0 0; border-radius: 16px; }
@@ -70,24 +79,28 @@
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
   }
-  .idiom-layering { flex-direction: column; padding: 32px 20px; gap: 24px; }
-  .idiom-layering__text { flex: none; width: 100%; }
-  .idiom-layering__products { width: 100%; margin-right: -20px; }
-  .idiom-layering__scroll .idiom-product-card-link { flex: 0 0 58%; width: 58%; }
+  .idiom-layering { flex-direction: column; padding: 32px 0; gap: 24px; }
+  .idiom-layering__text { flex: none; width: 100%; padding: 0 20px; }
+  .idiom-layering__products { width: 100%; margin-right: 0; }
+  .idiom-layering__scroll { padding: 0 20px; }
+  /* Show ~1.2 cards per screen (1 full + a peek of the next) */
+  .idiom-layering__scroll .idiom-collection-card { flex: 0 0 78%; width: 78%; }
   .idiom-layering__text br {
     display: none;
   }
 }
 </style>
 
-{%- assign marquee_text = section.settings.marquee_text | default: "smell like no one else™ · find your fragrance freedom · layer, or wear solo · " -%}
-
 <div class="idiom-layering-wrap" id="idiom-layering-wrap-{{ section.id }}">
   <div class="idiom-layering__marquee-slot" data-marquee-slot>
     <div class="idiom-layering__marquee" data-marquee>
       <div class="idiom-marquee-track" aria-hidden="true">
         {%- for i in (1..6) -%}
-          <span>{{ marquee_text }}</span>
+          {%- for block in section.blocks -%}
+            {%- if block.settings.text != blank -%}
+              <span>{{ block.settings.text }}</span>
+            {%- endif -%}
+          {%- endfor -%}
         {%- endfor -%}
       </div>
     </div>
@@ -108,12 +121,12 @@
         {%- assign layer_collection = product.metafields.custom.pdp_layer_with_collection.value -%}
         {%- if layer_collection != blank -%}
           {%- for lp in layer_collection.products limit: 6 -%}
-            {% render 'idiom-product-card', product: lp %}
+            {% render 'idiom-collection-card', product: lp %}
           {%- endfor -%}
         {%- elsif section.settings.layering_collection != blank -%}
           {%- assign layer_col = collections[section.settings.layering_collection] -%}
           {%- for lp in layer_col.products limit: 6 -%}
-            {% render 'idiom-product-card', product: lp %}
+            {% render 'idiom-collection-card', product: lp %}
           {%- endfor -%}
         {%- endif -%}
       </div>
@@ -174,14 +187,32 @@
 {% schema %}
 {
   "name": "Layering Row",
+  "max_blocks": 12,
   "settings": [
-    { "type": "text", "id": "marquee_text", "label": "Marquee text", "default": "smell like no one else™ · find your fragrance freedom · layer, or wear solo · " },
     { "type": "text", "id": "heading_solo", "label": "Line 1", "default": "wear solo," },
     { "type": "text", "id": "heading_layer", "label": "Line 2", "default": "or layer me with:" },
     { "type": "text", "id": "subtext", "label": "Subtext", "default": "these scents were made to mix." },
     { "type": "text", "id": "fine_print", "label": "Fine print", "default": "* that's your part." },
     { "type": "collection", "id": "layering_collection", "label": "Fallback collection" }
   ],
-  "presets": [{ "name": "Layering Row" }]
+  "blocks": [
+    {
+      "type": "phrase",
+      "name": "Marquee phrase",
+      "settings": [
+        { "type": "text", "id": "text", "label": "Phrase text", "default": "smell like no one else™" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Layering Row",
+      "blocks": [
+        { "type": "phrase", "settings": { "text": "smell like no one else™" } },
+        { "type": "phrase", "settings": { "text": "find your fragrance freedom" } },
+        { "type": "phrase", "settings": { "text": "layer, or wear solo" } }
+      ]
+    }
+  ]
 }
 {% endschema %}

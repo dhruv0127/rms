@@ -15,15 +15,18 @@
   gap: 0;
 }
 .idiom-marquee-strip .idiom-marquee-track span {
-  padding: 0 20px;
+  padding: 0 40px;
 }
 </style>
 
-{%- assign marquee_items = section.settings.marquee_text | default: "smell like no one else™ · find your fragrance freedom · layer, or wear solo · " -%}
 <div class="idiom-marquee-strip">
   <div class="idiom-marquee-track" aria-hidden="true">
     {%- for i in (1..6) -%}
-      <span>{{ marquee_items }}</span>
+      {%- for block in section.blocks -%}
+        {%- if block.settings.text != blank -%}
+          <span>{{ block.settings.text }}</span>
+        {%- endif -%}
+      {%- endfor -%}
     {%- endfor -%}
   </div>
 </div>
@@ -31,14 +34,31 @@
 {% schema %}
 {
   "name": "Marquee Strip",
-  "settings": [
+  "max_blocks": 12,
+  "settings": [],
+  "blocks": [
     {
-      "type": "text",
-      "id": "marquee_text",
-      "label": "Marquee text",
-      "default": "smell like no one else™ · find your fragrance freedom · layer, or wear solo · "
+      "type": "phrase",
+      "name": "Phrase",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Phrase text",
+          "default": "smell like no one else™"
+        }
+      ]
     }
   ],
-  "presets": [{ "name": "Marquee Strip" }]
+  "presets": [
+    {
+      "name": "Marquee Strip",
+      "blocks": [
+        { "type": "phrase", "settings": { "text": "smell like no one else™" } },
+        { "type": "phrase", "settings": { "text": "find your fragrance freedom" } },
+        { "type": "phrase", "settings": { "text": "layer, or wear solo" } }
+      ]
+    }
+  ]
 }
 {% endschema %}
