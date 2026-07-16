@@ -25,6 +25,7 @@
     "nav_size": 70,
     "nav_top_level_links_size": 70,
     "nav_caps_megamenu": true,
+    "nav_caps_toplevel": false,
     "nav_letter_spacing": 25,
     "type_subheadings_font": "lato_n5",
     "subheading_caps": true,
