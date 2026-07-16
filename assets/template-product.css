@@ -719,11 +719,17 @@ body.template-product
     width: 100%;
     max-width: 100%;
   }
-  /* idiom PDP mobile — show the full-width background scene (the collage) behind
-     the bottle, matching desktop. Uses the mobile banner metafield when set. The
-     scene fills the gallery column edge-to-edge. */
+  /* idiom PDP mobile — show the background scene (the collage) behind the bottle,
+     matching desktop. Uses the mobile banner metafield when set. The base rule
+     stretches it to inset:0 (the whole gallery column, covering the thumbnail row
+     below the slider). Constrain it to ONLY the product slider's box: anchor to
+     the top and match the slide's 125% aspect frame, so the thumbnails below sit
+     on the plain background, not behind the image. */
   .product-gallery__bg-scene {
     display: block;
+    inset: 0 0 auto 0;
+    height: auto;
+    aspect-ratio: 1 / 1.25;
   }
   /* idiom PDP mobile — bleed the gallery to the viewport edges so the scene runs
      full-width (cancels the page container's left/right gutter). */
