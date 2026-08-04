@@ -34,7 +34,7 @@
           "settings": {
             "stacked_button": false,
             "button_1_text": "shop now | £17",
-            "button_1_link": "shopify://collections/all",
+            "button_1_link": "shopify://collections/shop-everything",
             "button_1_color": "btn--white",
             "button_1_style": "btn--solid-border",
             "button_1_size": "btn--medium",
@@ -46,7 +46,11 @@
           }
         }
       },
-      "block_order": ["heading_idiom", "text_idiom", "button_idiom"],
+      "block_order": [
+        "heading_idiom",
+        "text_idiom",
+        "button_idiom"
+      ],
       "settings": {
         "height": "six-fifty-height",
         "enable_mobile_height": true,
@@ -92,7 +96,11 @@
           }
         }
       },
-      "block_order": ["phrase_1", "phrase_2", "phrase_3"],
+      "block_order": [
+        "phrase_1",
+        "phrase_2",
+        "phrase_3"
+      ],
       "settings": {
         "butterfly_image": "shopify://shop_images/Group_5.png",
         "moon_image": "shopify://shop_images/group6.png",
@@ -174,7 +182,10 @@
           }
         }
       },
-      "block_order": ["panel_1", "panel_2"],
+      "block_order": [
+        "panel_1",
+        "panel_2"
+      ],
       "settings": {}
     },
     "idiom-loyalty": {
@@ -190,7 +201,6 @@
         "cta_url": "",
         "button_bg": "#1a1a1a",
         "button_text_color": "#ffffff",
-        "cloud_image": "",
         "cloud_size": 200,
         "cloud_top": -14,
         "cloud_left": 30,
@@ -220,25 +230,41 @@
           "type": "product",
           "settings": {
             "product": "3d-amp-100ml-copy",
-            "bottle_height": 82
+            "bottle_height": 82,
+            "title_override": "",
+            "tagline": "",
+            "price_label": "",
+            "link": ""
           }
         },
         "trio_2": {
           "type": "product",
           "settings": {
             "product": "3d-amp-100ml-copy",
-            "bottle_height": 82
+            "bottle_height": 82,
+            "title_override": "",
+            "tagline": "",
+            "price_label": "",
+            "link": ""
           }
         },
         "trio_3": {
           "type": "product",
           "settings": {
             "product": "3d-amp-100ml-copy",
-            "bottle_height": 82
+            "bottle_height": 82,
+            "title_override": "",
+            "tagline": "",
+            "price_label": "",
+            "link": ""
           }
         }
       },
-      "block_order": ["trio_1", "trio_2", "trio_3"],
+      "block_order": [
+        "trio_1",
+        "trio_2",
+        "trio_3"
+      ],
       "settings": {
         "heading": "holy s#*%, what are you wearing?",
         "subtext": "get to know our crowd-pleasers..."
