@@ -188,8 +188,35 @@
       ],
       "settings": {}
     },
+    "section_banner_image_9GBbAU": {
+      "type": "section-banner-image",
+      "settings": {
+        "height": "six-fifty-height",
+        "enable_mobile_height": true,
+        "mobile_height": "five-fifty-height-mobile",
+        "image": "shopify://shop_images/vcnfgv.png",
+        "image_mobile": "shopify://shop_images/fdabvdfsvdsav.png",
+        "overlay_opacity": 20,
+        "transition": "zoom-out",
+        "enable_zoom_animation": false,
+        "enable_card_scrolling": false,
+        "increase_border_radius": false,
+        "content_width": 60,
+        "text_position": "bottom_left",
+        "text_alignment": "text-center",
+        "text_color": "text-light",
+        "width": "wrapper--full",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "heading": "NEW: LIME BOSSA",
+        "subtext": "warm, juicy, skin-close rose, centre stage. a timeless, modern, universal rose. ",
+        "cta_label": "shop now | from £7",
+        "cta_url": "shopify://products/acoustic-rose-30ml"
+      }
+    },
     "idiom-loyalty": {
       "type": "idiom-loyalty",
+      "disabled": true,
       "settings": {
         "card_bg": "#9a9a35",
         "text_color": "#fffbf3",
@@ -265,6 +292,7 @@
         "trio_2",
         "trio_3"
       ],
+      "disabled": true,
       "settings": {
         "heading": "holy s#*%, what are you wearing?",
         "subtext": "get to know our crowd-pleasers..."
@@ -276,6 +304,7 @@
     "idiom-brand-story",
     "idiom-product-cards",
     "idiom-dual-promo",
+    "section_banner_image_9GBbAU",
     "idiom-loyalty",
     "idiom-product-trio"
   ]
