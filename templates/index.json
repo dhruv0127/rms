@@ -15,7 +15,7 @@
         "heading_idiom": {
           "type": "heading",
           "settings": {
-            "text": "<h1>127 unique fragrances, 1 kit.</h1>",
+            "text": "<h1>ACOUSTIC ROSE</h1>",
             "size": 130,
             "heading_highlight_type": "none",
             "highlight_color": "#000000",
@@ -25,7 +25,7 @@
         "text_idiom": {
           "type": "text",
           "settings": {
-            "text": "<p>discover your Flanker fragrance combinations with our 7-piece discovery kit.</p>",
+            "text": "<p>rose in all its blooming glory. a warm, juicy, skin-close floral.</p>",
             "size": 100
           }
         },
@@ -55,7 +55,7 @@
         "height": "six-fifty-height",
         "enable_mobile_height": true,
         "mobile_height": "five-fifty-height-mobile",
-        "image": "shopify://shop_images/FDSAFDA.gif",
+        "image": "shopify://shop_images/idiom_desktop_banner_rose.gif",
         "overlay_opacity": 20,
         "transition": "zoom-out",
         "enable_zoom_animation": false,
