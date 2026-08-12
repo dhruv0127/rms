@@ -18,7 +18,7 @@
           "type": "popup-with-image",
           "settings": {
             "position": "bottom-right",
-            "image": "shopify://shop_images/e0887a7e-17af-47a1-a70e-5e950b2359b1.png",
+            "image": "shopify://shop_images/32.png",
             "height": "three-fifty-height",
             "title": "start layering with 10% off your first basket",
             "text": "",
@@ -32,7 +32,7 @@
             "target_referrer": "",
             "target_device_enabled": false,
             "target_device": "mobile",
-            "bg_color": "#FFFBF3",
+            "bg_color": "#fffbf3",
             "text_color": "text-dark"
           }
         }
