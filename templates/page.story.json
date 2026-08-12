@@ -80,7 +80,7 @@
         "heading": "the joy of fragrance",
         "subline": "",
         "body": "Idiom is about discovering new fragrance combinations for any time or occasion, or to\nfit whatever mood you’re in.\n<br>\n<br>\n\nIt’s about wearing what smells good, what feels right in the moment. Not about one\nsignature scent. It’s about creating your own fragrance wardrobe. It’s the joy of fragrance, the joy of layering and that uplifting feeling of going your own way and finding something you love.",
-        "cta_label": "learn more",
+        "cta_label": "visit our soho store",
         "cta_url": "",
         "grid_heading": "holy s#*%, what are you wearing?",
         "grid_subtext": "get to know our crowd-pleasers..."
@@ -315,9 +315,8 @@
         },
         "button_FnACfL": {
           "type": "button",
-          "disabled": true,
           "settings": {
-            "button_text": "Read More",
+            "button_text": "VISIT OUR SOHO STORE",
             "button_link": "",
             "button_color": "btn--black",
             "button_style": "btn--solid",
