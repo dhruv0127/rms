@@ -119,7 +119,7 @@
       "settings": {
         "show_accordion_divider": true,
         "increase_border_radius": false,
-        "section_height": "six-fifty-height",
+        "section_height": "four-fifty-height",
         "enable_mobile_height": true,
         "mobile_height": "three-fifty-height-mobile",
         "layout": "inline",
@@ -142,8 +142,8 @@
       "settings": {
         "card_bg": "#9A9A35",
         "text_color": "#fffbf3",
-        "image_width": 1.2,
-        "image_ratio": "1/1",
+        "image_width": 1,
+        "image_ratio": "4/3",
         "girl_image": "shopify://shop_images/124567.gif",
         "eyebrow": "*Just ask Oscar W. Or was it MarkT.",
         "heading": "Short letters are much harder to write than long ones*",
@@ -151,6 +151,7 @@
         "cta_url": "",
         "button_bg": "#1a1a1a",
         "button_text_color": "#ffffff",
+        "cloud_image": "shopify://shop_images/3_ff4eebdd-a4d7-4cf1-959f-af017085cd0b.png",
         "cloud_size": 180,
         "cloud_top": -8,
         "cloud_left": 28,
@@ -163,18 +164,19 @@
         "butterfly_size_mobile": 55,
         "butterfly_top_mobile": -4,
         "butterfly_left_mobile": 60,
+        "moon_image": "shopify://shop_images/4_98de9911-5922-4f87-999e-1f1c83e77ed4.png",
         "moon_size": 200,
-        "moon_top": 54,
+        "moon_top": 80,
         "moon_left": 82,
         "moon_size_mobile": 100,
         "moon_top_mobile": 92,
         "moon_left_mobile": 66
       }
     },
-    "section_image_with_text_FjLNPr": {
+    "section_image_with_text_MRLHwq": {
       "type": "section-image-with-text",
       "blocks": {
-        "heading_bFUbdE": {
+        "heading_K7pthw": {
           "type": "heading",
           "settings": {
             "title": "<p><strong>an ingredient, a note, a thought.</strong></p>",
@@ -186,75 +188,10 @@
             "spacing_bottom": 12
           }
         },
-        "text_DEbVYc": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Each idiom fragrance expresses one focused idea. An ingredient, a note, or a thought.</p><p>Everything else is there to frame, support and complement it. Backing singers, if you</p><p>like. We call them single-minded fragrances.</p><p>This clarity is what makes idiom fragrances great for layering.</p><p>It sounds easy. But it means there is nowhere to hide. *Just ask Oscar W. Or was it Mark T.</p><p>Our ideas come from curiosity - about the world, the wacky people in it, and the</p><p>extraordinary palette of materials found in nature and chemistry. The new is out there,</p><p>just unassembled.</p><p>Then we refine, debate and test our ideas on whoever we can find. A lot. Getting</p><p>through a forest of smelling strips along the way. Until we find that elusive combination</p><p>of clarity, character and, dare we say it, soul that makes an idiom fragrance.</p>",
-            "size": 100,
-            "text_position": "left",
-            "spacing_bottom": 12
-          }
-        },
-        "button_WLDtNe": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "button_text": "shop now",
-            "button_link": "shopify://collections/all",
-            "button_color": "btn--black",
-            "button_style": "btn--outline",
-            "button_size": "btn--small",
-            "video_link": "",
-            "text_position": "left",
-            "spacing_bottom": 12
-          }
-        }
-      },
-      "block_order": [
-        "heading_bFUbdE",
-        "text_DEbVYc",
-        "button_WLDtNe"
-      ],
-      "name": "Image with text",
-      "settings": {
-        "show_accordion_divider": true,
-        "increase_border_radius": false,
-        "section_height": "six-fifty-height",
-        "enable_mobile_height": true,
-        "mobile_height": "three-fifty-height-mobile",
-        "layout": "inline",
-        "image_location": "right",
-        "image_width": "narrow",
-        "image": "shopify://shop_images/12.png",
-        "block_bg_color": "",
-        "text_color": "text-dark",
-        "bg_color": "#e9ebca",
-        "gradient": "",
-        "section_width": "wrapper--full-padded",
-        "add_gutter": true,
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
-    "section_image_with_text_MRLHwq": {
-      "type": "section-image-with-text",
-      "blocks": {
-        "heading_K7pthw": {
-          "type": "heading",
-          "settings": {
-            "title": "<p><strong>Elevated Single-minded fragrances</strong></p>",
-            "size": 120,
-            "text_position": "left",
-            "heading_highlight_type": "underline-hand-drawn",
-            "highlight_color": "#000000",
-            "highlight_text_color": "",
-            "spacing_bottom": 12
-          }
-        },
         "text_Fwn8Kf": {
           "type": "text",
           "settings": {
-            "text": "<p>Capturing the essence of a note, material, or idea with depth, clarity, and a f**k-me twist.</p><p></p><p><br/>Made with intent from nature and chemistry.</p><p></p><p><br/>Focused and true. Perfect for layering.</p>",
+            "text": "<p>Each idiom fragrance expresses one focused idea. An ingredient, a note, or a thought.</p><p>Everything else is there to frame, support and complement it. Backing singers, if you like. We call them single-minded fragrances.</p><p>This clarity is what makes idiom fragrances great for layering.</p><p>It sounds easy. But it means there is nowhere to hide. *Just ask Oscar W. Or was it Mark T.</p><p>Our ideas come from curiosity - about the world, the wacky people in it, and the</p><p>extraordinary palette of materials found in nature and chemistry. The new is out there, just unassembled.<br/></p><p>Then we refine, debate and test our ideas on whoever we can find. A lot. Getting through a forest of smelling strips along the way. Until we find that elusive combination of clarity, character and, dare we say it, soul that makes an idiom fragrance.</p>",
             "size": 100,
             "text_position": "left",
             "spacing_bottom": 12
@@ -269,12 +206,12 @@
       "settings": {
         "show_accordion_divider": true,
         "increase_border_radius": false,
-        "section_height": "six-fifty-height",
+        "section_height": "four-fifty-height",
         "enable_mobile_height": true,
         "mobile_height": "three-fifty-height-mobile",
         "layout": "inline",
         "image_location": "left",
-        "image_width": "wide",
+        "image_width": "standard",
         "image": "shopify://shop_images/134567890.gif",
         "block_bg_color": "",
         "text_color": "text-dark",
@@ -282,8 +219,8 @@
         "gradient": "",
         "section_width": "wrapper",
         "add_gutter": true,
-        "padding_top": 60,
-        "padding_bottom": 60
+        "padding_top": 32,
+        "padding_bottom": 16
       }
     },
     "idiom_brand_story_CpaKFp": {
@@ -412,7 +349,6 @@
     "idiom_brand_story_bVfL6X",
     "section_image_with_text_pieGKA",
     "idiom_loyalty_kib4za",
-    "section_image_with_text_FjLNPr",
     "section_image_with_text_MRLHwq",
     "idiom_brand_story_CpaKFp",
     "section_text_T6Apqa"
