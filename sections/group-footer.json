@@ -84,7 +84,7 @@
         "show_country_selector": true,
         "show_country_flag": false,
         "width": "wrapper--full-padded",
-        "padding_top": 38,
+        "padding_top": 50,
         "padding_bottom": 18
       }
     }
