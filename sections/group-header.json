@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "type": "header",
   "name": "Header",
@@ -25,7 +34,9 @@
           }
         }
       },
-      "block_order": ["announcement-text-0"],
+      "block_order": [
+        "announcement-text-0"
+      ],
       "settings": {
         "width": "wrapper--full",
         "layout": "slider",
@@ -38,7 +49,7 @@
         "direction": "ticker-ltr",
         "text_caps": true,
         "type_font": "space_mono_n4",
-        "text_size": 85,
+        "text_size": 70,
         "letter_spacing": 100,
         "message_spacing": 25,
         "bg_color": "#202020",
@@ -64,8 +75,12 @@
           }
         }
       },
-      "block_order": ["menu"],
-      "settings": { "logo_max_width": 100 }
+      "block_order": [
+        "menu"
+      ],
+      "settings": {
+        "logo_max_width": 100
+      }
     },
     "header": {
       "type": "header",
@@ -75,7 +90,7 @@
           "settings": {
             "position": "2",
             "image_second_menu": false,
-            "image": "shopify:\/\/shop_images\/134567890_3f2ccb0f-1555-454d-8f9a-5dbc3a29afa3.gif",
+            "image": "shopify://shop_images/134567890_3f2ccb0f-1555-454d-8f9a-5dbc3a29afa3.gif",
             "aspect_ratio": 0.6,
             "wide_image": true,
             "title": "",
@@ -89,13 +104,13 @@
           "settings": {
             "position": "2",
             "image_second_menu": false,
-            "image": "shopify:\/\/shop_images\/VFBGFXBDX.gif",
+            "image": "shopify://shop_images/VFBGFXBDX.gif",
             "aspect_ratio": 0.6,
             "wide_image": true,
             "title": "ELEVATE YOUR FRAGRANCES WITH 3D ENHANCER",
             "heading_size": 80,
             "link_text": "",
-            "link": "shopify:\/\/products\/acoustic-rose"
+            "link": "shopify://products/acoustic-rose"
           }
         },
         "image-2": {
@@ -127,14 +142,19 @@
           }
         }
       },
-      "block_order": ["image-0", "image-1", "image-2", "image-3"],
+      "block_order": [
+        "image-0",
+        "image-1",
+        "image-2",
+        "image-3"
+      ],
       "settings": {
         "sticky_header": true,
         "link_hover_effect": "line",
         "header_border": false,
         "header_border_color": "",
         "border_opacity": 50,
-        "logo_not_home": "shopify:\/\/shop_images\/idiom_logo_transparent.png",
+        "logo_not_home": "shopify://shop_images/idiom_logo_transparent.png",
         "logo_max_width": 140,
         "main-menu": "main-menu",
         "main_menu_secondary": "",
@@ -158,5 +178,9 @@
       }
     }
   },
-  "order": ["announcement-bar", "mobile-menu", "header"]
+  "order": [
+    "announcement-bar",
+    "mobile-menu",
+    "header"
+  ]
 }
