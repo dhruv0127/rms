@@ -18,8 +18,8 @@
           "type": "text",
           "settings": {
             "alignment": "text-left",
-            "title": "smell like no one else ™",
-            "footer_text": "<p>Idiom makes rule-breaking, layer-ready fragrances for skin that wants more. Designed to be mixed, and never made to behave.</p>",
+            "title": "smell like no one else™",
+            "footer_text": "<p>Single-minded fragrances, the joy of layering and that uplifting feeling of going your own way. Smell like no one else™</p>",
             "column_width": "25"
           }
         },
@@ -89,5 +89,7 @@
       }
     }
   },
-  "order": ["footer"]
+  "order": [
+    "footer"
+  ]
 }
