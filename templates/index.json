@@ -55,7 +55,7 @@
         "height": "six-fifty-height",
         "enable_mobile_height": true,
         "mobile_height": "five-fifty-height-mobile",
-        "image": "shopify://shop_images/idiom_desktop_banner_rose.gif",
+        "image": "shopify://shop_images/idiom_desktop_bannergresgbrfeas.gif",
         "overlay_opacity": 20,
         "transition": "zoom-out",
         "enable_zoom_animation": false,
@@ -63,14 +63,14 @@
         "increase_border_radius": false,
         "content_width": 60,
         "text_position": "bottom_left",
-        "text_alignment": "text-left",
+        "text_alignment": "text-center",
         "text_color": "text-light",
         "width": "wrapper--full",
         "padding_top": 0,
         "padding_bottom": 0,
         "heading": "ROSE IN BLOOMING GLORY",
         "subtext": "warm, juicy, skin-close rose, centre stage. a timeless, modern, universal rose. ",
-        "cta_label": "shop now | £17",
+        "cta_label": "shop now | from £7",
         "cta_url": "shopify://collections/all"
       }
     },
@@ -86,13 +86,13 @@
         "phrase_2": {
           "type": "phrase",
           "settings": {
-            "text": "find your fragrance freedom"
+            "text": "single-minded fragrances"
           }
         },
         "phrase_3": {
           "type": "phrase",
           "settings": {
-            "text": "layer, or wear solo"
+            "text": "made for layering"
           }
         }
       },
@@ -104,9 +104,9 @@
       "settings": {
         "butterfly_image": "shopify://shop_images/Group_5.png",
         "moon_image": "shopify://shop_images/group6.png",
-        "heading": "sick of smelling like everyone else?",
+        "heading": "smell like no one else™",
         "subline": "",
-        "body": "yeah, us too. <br> idiom was born by 3 good friends who shared a passion for fragrance with the belief that individuality is everything and fragrance could be done better, high-quality, long lasting capsule eau du parfums ready to layer and always priced to be affordable.",
+        "body": "idiom was born by 3 good friends who shared a passion for fragrance with the belief that individuality is everything and fragrance could be done better, high-quality, long lasting capsule eau du parfums ready to layer and always priced to be affordable.",
         "cta_label": "learn more",
         "cta_url": "/pages/about",
         "grid_heading": "holy s#*%, what are you wearing?",
